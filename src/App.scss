@@ -1,0 +1,42 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
+.app-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    &.scrollable {
+        overflow-y: scroll;
+    }
+    > .app-container-child {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &.app {
+            text-align: center;
+            max-width: 1170px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--fg);
+            text-decoration: none;
+        }
+    }
+}
