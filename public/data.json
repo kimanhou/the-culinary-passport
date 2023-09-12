@@ -3,12 +3,27 @@
         "id": 1,
         "name": "Le Plomb du Cantal",
         "description": "Auvergnat. À tester: aligot ou truffade. Purée de pommes de terres avec crème et fromage. Hyper bon",
-        "tags": ["Francais", "Prix moyen"]
+        "tags": [
+            "Francais",
+            "€€"
+        ]
     },
     {
         "id": 2,
-        "name": "Le Plomb du Cantal 2",
-        "description": "Auvergnat. À tester: aligot ou truffade. Purée de pommes de terres avec crème et fromage. Hyper bon",
-        "tags": ["Francais", "Prix moyen"]
+        "name": "Pho Bom",
+        "description": "Vietnamien. À tester: Bo bun cha gio et bun cha ha noi",
+        "tags": [
+            "Vietnamien",
+            "€€"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Bouillon Pigalle",
+        "description": "Parisien. À tester: oeufs mayo et confit de canard. Typique bistrot parisien",
+        "tags": [
+            "Francais",
+            "€"
+        ]
     }
 ]
