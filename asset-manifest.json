@@ -1,19 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.7545719e.css",
-    "main.js": "./static/js/main.b2aee1bb.js",
-    "static/js/787.d3a9eacb.chunk.js": "./static/js/787.d3a9eacb.chunk.js",
-    "static/media/Spectral-SemiBoldItalic.ttf": "./static/media/Spectral-SemiBoldItalic.9d21f4f80149d9d89f3b.ttf",
-    "static/media/Decimal-Semibold.otf": "./static/media/Decimal-Semibold.f90e9ecb00ef99ec80ea.otf",
-    "static/media/Decimal-Bold.ttf": "./static/media/Decimal-Bold.0d2b250ee65aa185a309.ttf",
+    "main.css": "./static/css/main.f74e9833.css",
+    "main.js": "./static/js/main.a7e3fabe.js",
+    "static/js/787.bff22d74.chunk.js": "./static/js/787.bff22d74.chunk.js",
     "static/media/logo.jpg": "./static/media/logo.572090dace2bcd403e21.jpg",
     "index.html": "./index.html",
-    "main.7545719e.css.map": "./static/css/main.7545719e.css.map",
-    "main.b2aee1bb.js.map": "./static/js/main.b2aee1bb.js.map",
-    "787.d3a9eacb.chunk.js.map": "./static/js/787.d3a9eacb.chunk.js.map"
+    "main.f74e9833.css.map": "./static/css/main.f74e9833.css.map",
+    "main.a7e3fabe.js.map": "./static/js/main.a7e3fabe.js.map",
+    "787.bff22d74.chunk.js.map": "./static/js/787.bff22d74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7545719e.css",
-    "static/js/main.b2aee1bb.js"
+    "static/css/main.f74e9833.css",
+    "static/js/main.a7e3fabe.js"
   ]
 }
