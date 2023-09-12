@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Le Plomb du Cantal",
+        "description": "Auvergnat. À tester: aligot ou truffade. Purée de pommes de terres avec crème et fromage. Hyper bon",
+        "tags": ["Francais", "Prix moyen"]
+    },
+    {
+        "id": 2,
+        "name": "Le Plomb du Cantal 2",
+        "description": "Auvergnat. À tester: aligot ou truffade. Purée de pommes de terres avec crème et fromage. Hyper bon",
+        "tags": ["Francais", "Prix moyen"]
+    }
+]

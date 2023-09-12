@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import { Paris } from "./components/Paris/Paris";
@@ -7,14 +7,8 @@ import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 
 function App() {
-    const [scrollableClassName, setScrollableClassName] = useState("");
-    useEffect(() => {
-        setTimeout(() => {
-            setScrollableClassName("scrollable");
-        }, 3600);
-    }, []);
     return (
-        <div className={`app-container ${scrollableClassName}`}>
+        <div className={`app-container`}>
             <div className="app app-container-child">
                 <HashRouter>
                     <Header />

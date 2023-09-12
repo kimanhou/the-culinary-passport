@@ -1,0 +1,71 @@
+import { FieldType } from "./FieldType";
+
+class JsonDeserializationHelper {
+    assertFieldExists = (json: any, field: string) => {
+        const rawValue = json[field];
+        if (rawValue == null) {
+            throw new Error(`Field ${field} did not exist.`);
+        }
+        return rawValue;
+    };
+
+    assertField = <IT, OT>(
+        json: any,
+        field: string,
+        type: FieldType<IT, OT>
+    ) => {
+        this.assertFieldExists(json, field);
+        const value = type.assertType(json[field]);
+        return value;
+    };
+
+    assertFieldOrDefault = <IT, OT>(
+        json: any,
+        field: string,
+        type: FieldType<IT, OT>,
+        defaultValue: OT
+    ) => {
+        const value = this.assertOptionalField(json, field, type);
+        if (value == null) {
+            return defaultValue;
+        }
+        return value;
+    };
+
+    assertOptionalField = <IT, OT>(
+        json: any,
+        field: string,
+        type: FieldType<IT, OT>
+    ) => {
+        let value = undefined;
+        const rawValue = json[field];
+        if (rawValue != null) {
+            value = this.assertField(json, field, type);
+        }
+        return value;
+    };
+
+    assertOptionalNullField = <IT, OT>(
+        json: any,
+        field: string,
+        type: FieldType<IT, OT>
+    ) => {
+        const optionalValue = this.assertOptionalField(json, field, type);
+        return optionalValue != null ? optionalValue : null;
+    };
+
+    assertArray = <T>(json: any, field: string, handler: (json: any) => T) => {
+        const array: T[] = [];
+        const elements = json[field];
+        if (elements == null || !Array.isArray(elements)) {
+            throw new Error(`Field ${field} was not an array.`);
+        }
+        for (const element of elements) {
+            array.push(handler(element));
+        }
+        return array;
+    };
+}
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default new JsonDeserializationHelper();
