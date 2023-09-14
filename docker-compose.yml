@@ -1,0 +1,7 @@
+version: '2.4'
+
+services:
+  the-culinary-passport:
+    image: the-culinary-passport
+    ports:
+      - "3000:3000"
