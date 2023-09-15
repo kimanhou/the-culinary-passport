@@ -1,3 +1,20 @@
 .food-place {
-    margin-bottom: var(--size-main-margin);
+    margin-bottom: 4rem;
+    text-align: left;
+    > .food-place-tags {
+        font-size: 0.8rem;
+        margin-top: 2rem;
+        > .food-place-tag {
+            background-color: var(--color-light-grey);
+            border-radius: 20px;
+            margin-right: 1rem;
+            padding: 2px 10px;
+        }
+    }
+    > .food-place-bottom-line {
+        height: 1px;
+        width: 100%;
+        background-color: var(--color-light-grey);
+        margin-top: 2rem;
+    }
 }

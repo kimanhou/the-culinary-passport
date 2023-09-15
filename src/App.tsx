@@ -9,22 +9,17 @@ import { Header } from "./components/Header/Header";
 function App() {
     return (
         <div className={`app-container`}>
-            <div className="app app-container-child">
-                <HashRouter>
-                    <Header />
-                    <Routes>
-                        <Route path={"/paris"} element={<Paris />}></Route>
+            <HashRouter>
+                <Header />
+                <Routes>
+                    <Route path={"/paris"} element={<Paris />}></Route>
 
-                        <Route
-                            path={"/montreal"}
-                            element={<Montreal />}
-                        ></Route>
+                    <Route path={"/montreal"} element={<Montreal />}></Route>
 
-                        <Route path={"/"} element={<Paris />}></Route>
-                    </Routes>
-                    <Footer />
-                </HashRouter>
-            </div>
+                    <Route path={"/"} element={<Paris />}></Route>
+                </Routes>
+                <Footer />
+            </HashRouter>
         </div>
     );
 }
