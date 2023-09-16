@@ -1,0 +1,20 @@
+/* Add this CSS to your stylesheet */
+.food-place-images {
+    display: flex;
+    flex-direction: column;
+    /* Stack images vertically */
+}
+
+.food-place-image {
+    margin-bottom: 10px;
+    /* Add margin to separate images */
+    width: 100%;
+    /* Make each image container take full width */
+}
+
+.food-place-image img {
+    max-width: 100%;
+    /* Ensure the image fits within its container */
+    height: auto;
+    /* Maintain aspect ratio */
+}

@@ -3,6 +3,7 @@ import FoodPlaceModel from "../../model/FoodPlace";
 import "./FoodPlace.scss";
 import FoodPlaceIcons from "./FoodPlaceIcons";
 import FoodPlaceTags from "./FoodPlaceTags";
+import FoodPlaceImages from './FoodPlaceImages';
 
 interface IFoodPlaceProps {
     foodPlace: FoodPlaceModel;
@@ -12,6 +13,7 @@ const FoodPlace: React.FC<IFoodPlaceProps> = (props) => {
     return (
         <div className={`food-place`}>
             <h3>{props.foodPlace.name}</h3>
+            <FoodPlaceImages images={[props.foodPlace.images]} />
             <p>{props.foodPlace.description}</p>
             <FoodPlaceIcons
                 googleMaps={props.foodPlace.googleMaps}

@@ -9,7 +9,8 @@
         ],
         "googleMaps": "https://maps.app.goo.gl/fvAeXH7Rj24s7T4L7",
         "instagram": "https://www.instagram.com/chezgladinesparis/",
-        "website": "https://chezgladines-butteauxcailles.fr/fr"
+        "website": "https://chezgladines-butteauxcailles.fr/fr",
+        "images": "./images/chez_gladines.jpg"
     },
     {
         "id": 2,
@@ -21,7 +22,8 @@
         ],
         "googleMaps": "https://goo.gl/maps/6xprM6DWxf75X4FX9",
         "instagram": "https://www.instagram.com/leplombducantal/",
-        "website": "http://www.leplombducantal.fr/"
+        "website": "http://www.leplombducantal.fr/",
+        "images": "./images/plomb.jpeg"
     },
     {
         "id": 3,
@@ -33,7 +35,8 @@
         ],
         "googleMaps": "https://maps.app.goo.gl/1bHsggZsvHgb1dUQ7",
         "instagram": "https://www.instagram.com/chezjanou/",
-        "website": "https://www.chezjanou.com/"
+        "website": "https://www.chezjanou.com/",
+        "images": "./images/chez_janou.jpeg"
     },
     {
         "id": 4,
