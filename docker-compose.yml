@@ -5,3 +5,5 @@ services:
     image: the-culinary-passport
     ports:
       - "3000:3000"
+    volumes:
+      - './public/data.json:/app/public/data.json'

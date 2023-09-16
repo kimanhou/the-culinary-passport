@@ -2,11 +2,14 @@
     {
         "id": 1,
         "name": "Chez Gladines",
-        "description": "typique du sud ouest",
+        "description": "Les fameux restaurants Chez Gladines continuent de conquérir Paris et de convaincre les Parisiens avec leurs plats directement venus du Sud Ouest, très copieux et peu onéreux",
         "tags": [
             "Francais",
             "€€"
-        ]
+        ],
+        "googleMaps": "https://maps.app.goo.gl/fvAeXH7Rj24s7T4L7",
+        "instagram": "https://www.instagram.com/chezgladinesparis/",
+        "website": "https://chezgladines-butteauxcailles.fr/fr"
     },
     {
         "id": 2,
@@ -23,11 +26,14 @@
     {
         "id": 3,
         "name": "Chez Janou",
-        "description": "typique provincial",
+        "description": "Un coin de garrigue au cœur de Paris... Dans la salle à manger aux accents du sud ou en terrasse à l'ombre des oliviers, vous pourrez y découvrir les saveurs d'une cuisine provençale ensoleillée et vous étourdir à la vue de notre carte des pastis.",
         "tags": [
             "Francais",
             "€€"
-        ]
+        ],
+        "googleMaps": "https://maps.app.goo.gl/1bHsggZsvHgb1dUQ7",
+        "instagram": "https://www.instagram.com/chezjanou/",
+        "website": "https://www.chezjanou.com/"
     },
     {
         "id": 4,
