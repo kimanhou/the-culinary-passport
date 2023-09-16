@@ -1,9 +1,9 @@
 version: '2.4'
 
 services:
-  the-culinary-passport:
-    image: the-culinary-passport
+  deploy-the-culinary-passport:
+    image: deploy-the-culinary-passport
     ports:
       - "3000:3000"
-    volumes:
-      - './public/data.json:/app/public/data.json'
+    # volumes:
+    #   - './public/data.json:/app/public/data.json'
