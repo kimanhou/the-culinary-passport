@@ -5,5 +5,7 @@ services:
     image: deploy-the-culinary-passport
     ports:
       - "3000:3000"
+    environment:
+      - GITHUB_TOKEN
     # volumes:
     #   - './public/data.json:/app/public/data.json'
