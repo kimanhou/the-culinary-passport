@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 16
 
@@ -25,18 +25,8 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: |
-          if [ ${{ github.event_name }} == "push" ]; then
-            echo "Deploying to GitHub Pages..."
-            git config --global user.email "actions@github.com"
-            git config --global user.name "GitHub Actions"
-            git checkout --orphan gh-pages
-            git push --set-upstream origin gh-pages
-            git rm -rf .
-            mv build/* .
-            git add .
-            git commit -m "Deploy to GitHub Pages"
-            git push origin gh-pages --force
-          fi
-        # env:
-        #   GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        uses: actions/deploy-pages@v2
+        with:
+          deploy_key: ${{ secrets.GH_PAGES_DEPLOY_KEY }}
+          publish_dir: ./build
+          publish_branch: gh-pages
