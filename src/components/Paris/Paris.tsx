@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import FoodPlaceController from "../../api/FoodPlaceController";
+import { FoodPlaceControllerParis } from "../../api/FoodPlaceController";
 import FoodPlaceList from "../FoodPlaceList/FoodPlaceList";
 import LoadData from "../LoadData";
 
 export const Paris: React.FC = (props) => {
-    const [promise] = useState(() => FoodPlaceController.get());
+    const [promise] = useState(() => FoodPlaceControllerParis.get());
 
     return (
         <section id="paris">
