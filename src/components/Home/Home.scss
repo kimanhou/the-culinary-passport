@@ -1,2 +1,14 @@
 #home {
+    > .home-cities {
+        justify-content: center;
+        gap: 2rem;
+        > .home-city {
+            width: 10rem;
+            height: 10rem;
+            justify-content: center;
+            align-items: center;
+            border: solid 1px var(--fg);
+            cursor: pointer;
+        }
+    }
 }

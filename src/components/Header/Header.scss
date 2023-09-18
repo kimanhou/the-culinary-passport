@@ -4,7 +4,9 @@ header {
     padding-top: 10px;
     padding-bottom: 10px;
 
-    >.logo-image {
-        height: 5rem;
+    > a {
+        > .logo-image {
+            height: 5rem;
+        }
     }
 }
