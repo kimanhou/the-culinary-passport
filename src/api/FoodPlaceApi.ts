@@ -2,9 +2,19 @@ import { arrayHandler } from "../model/deserialization/DeserializationUtils";
 import FoodPlace from "../model/FoodPlace";
 import { get } from "./JsonApiEndpoint";
 
-export const FOOD_PLACE_API_ENDPOINT = "data.json";
-
-const FoodPlaceApi = {
-    get: get(FOOD_PLACE_API_ENDPOINT, arrayHandler(FoodPlace.deserialize)),
+// Define API endpoints
+const FOOD_PLACE_API_ENDPOINTS = {
+    PARIS: "data_paris.json",
+    MONTREAL: "data_montreal.json",
 };
-export default FoodPlaceApi;
+
+// Create a reusable function to generate API objects
+const createFoodPlaceApi = (endpoint: string) => {
+    return {
+        get: get(endpoint, arrayHandler(FoodPlace.deserialize)),
+    };
+};
+
+// Create API objects
+export const FoodPlaceApiParis = createFoodPlaceApi(FOOD_PLACE_API_ENDPOINTS.PARIS);
+export const FoodPlaceApiMontreal = createFoodPlaceApi(FOOD_PLACE_API_ENDPOINTS.MONTREAL);

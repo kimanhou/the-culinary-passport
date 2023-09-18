@@ -23,7 +23,10 @@ export default class FoodPlace {
     description: string;
     price: string;
     neighborhood: Neighborhood;
-    link?: string;
+    images?: string[];
+    googleMaps?: string;
+    instagram?: string;
+    website?: string;
 
     constructor(
         name: string,
@@ -32,7 +35,10 @@ export default class FoodPlace {
         description: string,
         price: string,
         neighborhood: Neighborhood,
-        link?: string
+        images?: string[],
+        googleMaps?: string,
+        instagram?: string,
+        website?: string
     ) {
         this.name = name;
         this.location = location;
@@ -40,7 +46,10 @@ export default class FoodPlace {
         this.description = description;
         this.price = price;
         this.neighborhood = neighborhood;
-        this.link = link;
+        this.images = images;
+        this.googleMaps = googleMaps;
+        this.instagram = instagram;
+        this.website = website;
     }
 
     static deserialize = (data: any) => {
@@ -79,9 +88,26 @@ export default class FoodPlace {
                 FieldType.STRING,
                 ""
             ) as Neighborhood;
-        const link = JsonDeserializationHelper.assertFieldOrDefault(
+        const images = JsonDeserializationHelper.assertArray(
             data,
-            "link",
+            "images",
+            (t) => t.toString()
+        );
+        const googleMaps = JsonDeserializationHelper.assertFieldOrDefault(
+            data,
+            "googleMaps",
+            FieldType.STRING,
+            ""
+        );
+        const instagram = JsonDeserializationHelper.assertFieldOrDefault(
+            data,
+            "instagram",
+            FieldType.STRING,
+            ""
+        );
+        const website = JsonDeserializationHelper.assertFieldOrDefault(
+            data,
+            "website",
             FieldType.STRING,
             ""
         );
@@ -92,7 +118,10 @@ export default class FoodPlace {
             description,
             price,
             neighborhood,
-            link
+            images,
+            googleMaps,
+            instagram,
+            website
         );
     };
 }

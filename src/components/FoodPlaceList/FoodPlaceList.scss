@@ -1,0 +1,9 @@
+ul.food-place-list {
+    li:last-child {
+        > .food-place {
+            > .food-place-bottom-line {
+                display: none;
+            }
+        }
+    }
+}

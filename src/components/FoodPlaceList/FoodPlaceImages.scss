@@ -1,0 +1,10 @@
+.food-place-images {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    > img {
+        margin-bottom: 10px;
+        width: 10rem;
+        height: auto;
+    }
+}

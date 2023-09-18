@@ -1,6 +1,7 @@
 import React from "react";
 import FoodPlaceModel from "../../model/FoodPlace";
 import FoodPlace from "./FoodPlace";
+import "./FoodPlaceList.scss";
 
 interface IFoodPlaceListProps {
     foodPlaceList: FoodPlaceModel[];
@@ -8,7 +9,7 @@ interface IFoodPlaceListProps {
 
 const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
     return (
-        <ul>
+        <ul className="food-place-list">
             {props.foodPlaceList.map((t) => (
                 <li key={t.name}>
                     <FoodPlace foodPlace={t} />

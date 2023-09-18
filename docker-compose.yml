@@ -5,3 +5,6 @@ services:
     image: the-culinary-passport
     ports:
       - "3000:3000"
+    volumes:
+      - './public/data_paris.json:/app/public/data_paris.json'
+      - './public/data_montreal.json:/app/public/data_montreal.json'
