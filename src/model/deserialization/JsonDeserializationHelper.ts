@@ -57,8 +57,11 @@ class JsonDeserializationHelper {
     assertArray = <T>(json: any, field: string, handler: (json: any) => T) => {
         const array: T[] = [];
         const elements = json[field];
-        if (elements == null || !Array.isArray(elements)) {
-            throw new Error(`Field ${field} was not an array.`);
+        if (elements == null) {
+            return elements;
+        }
+        if (!Array.isArray(elements)) {
+            throw new Error(`Field ${field} is not an array.`);
         }
         for (const element of elements) {
             array.push(handler(element));

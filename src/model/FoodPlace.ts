@@ -20,10 +20,10 @@ export default class FoodPlace {
     name: string;
     location: string;
     tags: FoodPlaceTag[];
-    images: string;
     description: string;
     price: string;
     neighborhood: Neighborhood;
+    images?: string[];
     googleMaps?: string;
     instagram?: string;
     website?: string;
@@ -32,10 +32,10 @@ export default class FoodPlace {
         name: string,
         location: string,
         tags: FoodPlaceTag[],
-        images: string,
         description: string,
         price: string,
         neighborhood: Neighborhood,
+        images?: string[],
         googleMaps?: string,
         instagram?: string,
         website?: string
@@ -43,10 +43,10 @@ export default class FoodPlace {
         this.name = name;
         this.location = location;
         this.tags = tags;
-        this.images = images;
         this.description = description;
         this.price = price;
         this.neighborhood = neighborhood;
+        this.images = images;
         this.googleMaps = googleMaps;
         this.instagram = instagram;
         this.website = website;
@@ -69,12 +69,6 @@ export default class FoodPlace {
             "tags",
             (t) => t as FoodPlaceTag
         );
-        const images = JsonDeserializationHelper.assertFieldOrDefault(
-            data,
-            "images",
-            FieldType.STRING,
-            ""
-        );
         const description = JsonDeserializationHelper.assertFieldOrDefault(
             data,
             "description",
@@ -94,6 +88,11 @@ export default class FoodPlace {
                 FieldType.STRING,
                 ""
             ) as Neighborhood;
+        const images = JsonDeserializationHelper.assertArray(
+            data,
+            "images",
+            (t) => t.toString()
+        );
         const googleMaps = JsonDeserializationHelper.assertFieldOrDefault(
             data,
             "googleMaps",
@@ -116,10 +115,10 @@ export default class FoodPlace {
             name,
             location,
             tags,
-            images,
             description,
             price,
             neighborhood,
+            images,
             googleMaps,
             instagram,
             website
