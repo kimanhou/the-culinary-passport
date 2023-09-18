@@ -6,7 +6,7 @@ interface IHomeCityProps {
 
 const HomeCity: React.FC<IHomeCityProps> = (props) => {
     return (
-        <a className="home-city flex-row" href={`/#/${props.city}`}>
+        <a className="home-city flex-row" href={`./${props.city}`}>
             {props.city.toUpperCase()}
         </a>
     );
