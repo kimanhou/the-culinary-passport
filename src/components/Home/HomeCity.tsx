@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface IHomeCityProps {
     city: string;
@@ -6,9 +7,9 @@ interface IHomeCityProps {
 
 const HomeCity: React.FC<IHomeCityProps> = (props) => {
     return (
-        <a className="home-city flex-row" href={`/#/${props.city}`}>
+        <Link className="home-city flex-row" to={props.city}>
             {props.city.toUpperCase()}
-        </a>
+        </Link>
     );
 };
 
