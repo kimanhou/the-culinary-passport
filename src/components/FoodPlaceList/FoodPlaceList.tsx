@@ -10,11 +10,21 @@ interface IFoodPlaceListProps {
 const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
     return (
         <ul className="food-place-list">
-            {props.foodPlaceList.map((t) => (
-                <li key={t.name}>
-                    <FoodPlace foodPlace={t} />
-                </li>
-            ))}
+            {props.foodPlaceList
+                .sort(function (a, b) {
+                    if (a.name < b.name) {
+                        return -1;
+                    }
+                    if (a.name > b.name) {
+                        return 1;
+                    }
+                    return 0;
+                })
+                .map((t) => (
+                    <li key={t.name}>
+                        <FoodPlace foodPlace={t} />
+                    </li>
+                ))}
         </ul>
     );
 };
