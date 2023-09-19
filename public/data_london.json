@@ -1,12 +1,13 @@
 [
     {
         "id": 1,
-        "name": "Mui Mui London",
-        "description": "Asiatique moderne, recettes originales et super bien exécutées. Prendre 4/5 plats pour 2. Assez cher mais original et excellent",
-        "tags": ["Asiatique", "$$$"],
-        "googleMaps": "https://maps.app.goo.gl/bQTyZ4v7SPamHreJ9",
-        "instagram": "https://www.instagram.com/muimuimtl/",
-        "website": "https://muimuimtl.com/",
-        "images": ["https://tastet.ca/wp-content/uploads/2021/02/miu-miu-6.jpg"]
+        "name": "Yuzu",
+        "description": "Minuscule restaurant japonais caché dans une allée derrière Spitafields Market. Ambiance tamisée, intimiste, minimaliste et moderne. Le propriétaire Nasser est un algérien tombé amoureux du Japon (il parle très bien Japonais et français d'ailleurs), il est aidé par son frère. Ce sont de loin les meilleurs sushis de Londres. Mention spéciale pour les petits plats chauds: l'anguille et le karaage. Tapis roulant le midi.",
+        "tags": ["Japonais", "££"],
+        "googleMaps": "https://maps.app.goo.gl/2yHC4juAb8eaBfuo7",
+        "instagram": "https://www.instagram.com/yuzulondon/?hl=en",
+        "images": [
+            "https://media-cdn.tripadvisor.com/media/photo-s/0f/41/39/cf/sushi-set.jpg"
+        ]
     }
 ]
