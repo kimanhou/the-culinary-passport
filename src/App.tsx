@@ -24,6 +24,7 @@ function App() {
                         <Route
                             path={`/${t.name}`}
                             element={<City city={t} />}
+                            key={t.name}
                         ></Route>
                     ))}
 

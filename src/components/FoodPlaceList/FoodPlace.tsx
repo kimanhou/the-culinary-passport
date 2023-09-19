@@ -33,7 +33,7 @@ const FoodPlace: React.FC<IFoodPlaceProps> = (props) => {
                             ...props.foodPlace.tags,
                             ...props.foodPlace.typeOfCuisine,
                             props.foodPlace.price,
-                        ]}
+                        ].filter((t) => t !== "")}
                     />
                 </div>
             </div>
