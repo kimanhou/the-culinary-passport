@@ -1,28 +1,12 @@
 import { FieldType } from "./deserialization/FieldType";
 import JsonDeserializationHelper from "./deserialization/JsonDeserializationHelper";
 
-export enum Neighborhood {
-    ANY = "Any",
-    EXARCHIA = "Exarchia",
-    KOLONAKI = "Kolonaki",
-    HISTORICAL = "Historical center",
-    KERAMIKOS = "Keramikos",
-    PANGRATI = "Pangrati",
-}
-
-export enum FoodPlaceTag {
-    CHEAP = "Cheap",
-    LOCAL = "Local",
-    FAST = "Fast",
-}
-
 export default class FoodPlace {
     name: string;
     location: string;
-    tags: FoodPlaceTag[];
+    tags: string[];
     description: string;
     price: string;
-    neighborhood: Neighborhood;
     images?: string[];
     googleMaps?: string;
     instagram?: string;
@@ -31,10 +15,9 @@ export default class FoodPlace {
     constructor(
         name: string,
         location: string,
-        tags: FoodPlaceTag[],
+        tags: string[],
         description: string,
         price: string,
-        neighborhood: Neighborhood,
         images?: string[],
         googleMaps?: string,
         instagram?: string,
@@ -45,7 +28,6 @@ export default class FoodPlace {
         this.tags = tags;
         this.description = description;
         this.price = price;
-        this.neighborhood = neighborhood;
         this.images = images;
         this.googleMaps = googleMaps;
         this.instagram = instagram;
@@ -64,10 +46,8 @@ export default class FoodPlace {
             FieldType.STRING,
             ""
         );
-        const tags = JsonDeserializationHelper.assertArray(
-            data,
-            "tags",
-            (t) => t as FoodPlaceTag
+        const tags = JsonDeserializationHelper.assertArray(data, "tags", (t) =>
+            t.toString()
         );
         const description = JsonDeserializationHelper.assertFieldOrDefault(
             data,
@@ -81,13 +61,6 @@ export default class FoodPlace {
             FieldType.STRING,
             ""
         );
-        const neighborhood: Neighborhood =
-            JsonDeserializationHelper.assertFieldOrDefault(
-                data,
-                "neighborhood",
-                FieldType.STRING,
-                ""
-            ) as Neighborhood;
         const images = JsonDeserializationHelper.assertArray(
             data,
             "images",
@@ -117,7 +90,6 @@ export default class FoodPlace {
             tags,
             description,
             price,
-            neighborhood,
             images,
             googleMaps,
             instagram,

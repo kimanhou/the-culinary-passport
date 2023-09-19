@@ -1,0 +1,18 @@
+[
+    {
+        "name": "paris",
+        "file": "data_paris.json"
+    },
+    {
+        "name": "montreal",
+        "file": "data_montreal.json"
+    },
+    {
+        "name": "tokyo",
+        "file": "data_tokyo.json"
+    },
+    {
+        "name": "london",
+        "file": "data_london.json"
+    }
+]

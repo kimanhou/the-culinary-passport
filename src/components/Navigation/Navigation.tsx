@@ -1,18 +1,20 @@
 import React from "react";
+import City from "../../model/City";
 import "./Navigation.scss";
 import NavigationLink from "./NavigationLink";
 
-interface INavigationProps {}
+interface INavigationProps {
+    cities: City[];
+}
 
 const Navigation: React.FC<INavigationProps> = (props) => {
     return (
         <div id="navigation" className={`flex-row`}>
-            <NavigationLink to="/paris" selected={true}>
-                PARIS
-            </NavigationLink>
-            <NavigationLink to="/montreal" selected={true}>
-                MONTREAL
-            </NavigationLink>
+            {props.cities.map((t) => (
+                <NavigationLink to={`/${t.name}`}>
+                    {t.name.toLocaleUpperCase()}
+                </NavigationLink>
+            ))}
         </div>
     );
 };

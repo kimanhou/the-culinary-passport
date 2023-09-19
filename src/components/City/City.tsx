@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { FoodPlaceController } from "../../api/FoodPlaceController";
+import CityModel from "../../model/City";
 import FoodPlace from "../../model/FoodPlace";
 import FoodPlaceList from "../FoodPlaceList/FoodPlaceList";
 import LoadData from "../LoadData";
 import "./City.scss";
 
 interface ICityProps {
-    city: string;
+    city: CityModel;
 }
 
 const City: React.FC<ICityProps> = (props) => {
@@ -20,7 +21,7 @@ const City: React.FC<ICityProps> = (props) => {
 
     return (
         <section id="city">
-            <h1>{props.city.toLocaleUpperCase()}</h1>
+            <h1>{props.city.name.toLocaleUpperCase()}</h1>
             <LoadData promise={promise}>
                 {(foodPlaceList) => (
                     <FoodPlaceList foodPlaceList={foodPlaceList} />

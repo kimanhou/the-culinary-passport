@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "Mui Mui London",
+        "description": "Asiatique moderne, recettes originales et super bien exécutées. Prendre 4/5 plats pour 2. Assez cher mais original et excellent",
+        "tags": ["Asiatique", "$$$"],
+        "googleMaps": "https://maps.app.goo.gl/bQTyZ4v7SPamHreJ9",
+        "instagram": "https://www.instagram.com/muimuimtl/",
+        "website": "https://muimuimtl.com/",
+        "images": ["https://tastet.ca/wp-content/uploads/2021/02/miu-miu-6.jpg"]
+    }
+]
