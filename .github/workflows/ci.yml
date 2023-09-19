@@ -1,32 +1,26 @@
-name: Deploy to GitHub Pages
+name: Run CI
 
 on:
-  push:
-    branches-ignore:
-      - master
+  pull_request:
+    branches:
+      - master 
+  workflow_call:
 
 jobs:
-  build-and-deploy:
+  build-and-test:
     runs-on: ubuntu-latest
-
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    timeout-minutes: 3
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-
       - name: Install dependencies
         run: npm install
-
       - name: Build
         run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
-        with:
-          deploy_key: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: gh-pages
