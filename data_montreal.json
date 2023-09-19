@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Mui Mui",
+        "description": "Asiatique moderne, recettes originales et super bien exécutées. Prendre 4/5 plats pour 2. Assez cher mais original et excellent",
+        "tags": [
+            "Asiatique",
+            "$$$"
+        ],
+        "googleMaps": "https://maps.app.goo.gl/bQTyZ4v7SPamHreJ9",
+        "instagram": "https://www.instagram.com/muimuimtl/",
+        "website": "https://muimuimtl.com/",
+        "images": [
+            "https://tastet.ca/wp-content/uploads/2021/02/miu-miu-6.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Moccione",
+        "description": "Best pizza à Montreal",
+        "tags": [
+            "Italien",
+            "$$"
+        ],
+        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
+        "instagram": "https://www.instagram.com/moccione.restaurant/",
+        "website": "https://moccione.com/",
+        "images": [
+            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+        ]
+    }
+]
