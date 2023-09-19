@@ -58,7 +58,7 @@ class JsonDeserializationHelper {
         const array: T[] = [];
         const elements = json[field];
         if (elements == null) {
-            return elements;
+            return [];
         }
         if (!Array.isArray(elements)) {
             throw new Error(`Field ${field} is not an array.`);

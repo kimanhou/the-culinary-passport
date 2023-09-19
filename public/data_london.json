@@ -3,7 +3,10 @@
         "id": 1,
         "name": "Yuzu",
         "description": "Minuscule restaurant japonais caché dans une allée derrière Spitafields Market. Ambiance tamisée, intimiste, minimaliste et moderne. Le propriétaire Nasser est un algérien tombé amoureux du Japon (il parle très bien Japonais et français d'ailleurs), il est aidé par son frère. Ce sont de loin les meilleurs sushis de Londres. Mention spéciale pour les petits plats chauds: l'anguille et le karaage. Tapis roulant le midi.",
-        "tags": ["Japonais", "££"],
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Japonais"],
+        "neighborhood": "Liverpool Street",
         "googleMaps": "https://maps.app.goo.gl/2yHC4juAb8eaBfuo7",
         "instagram": "https://www.instagram.com/yuzulondon/?hl=en",
         "images": [

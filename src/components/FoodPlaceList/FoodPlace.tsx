@@ -23,11 +23,18 @@ const FoodPlace: React.FC<IFoodPlaceProps> = (props) => {
                     <h3>{props.foodPlace.name}</h3>
                     <p>{props.foodPlace.description}</p>
                     <FoodPlaceIcons
+                        neighborhood={props.foodPlace.neighborhood}
                         googleMaps={props.foodPlace.googleMaps}
                         instagram={props.foodPlace.instagram}
                         website={props.foodPlace.website}
                     />
-                    <FoodPlaceTags tags={props.foodPlace.tags} />
+                    <FoodPlaceTags
+                        tags={[
+                            ...props.foodPlace.tags,
+                            ...props.foodPlace.typeOfCuisine,
+                            props.foodPlace.price,
+                        ].filter((t) => t !== "")}
+                    />
                 </div>
             </div>
 
