@@ -1,5 +1,6 @@
 /public @kimanhou
 /src @kimanhou
+/.github @kimanhou
 package.json @kimanhou
 package-lock.json @kimanhou
 Dockerfile @aqwvinh
