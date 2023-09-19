@@ -7,6 +7,8 @@ export default class FoodPlace {
     tags: string[];
     description: string;
     price: string;
+    typeOfCuisine: string[];
+    neighborhood?: string;
     images?: string[];
     googleMaps?: string;
     instagram?: string;
@@ -18,6 +20,8 @@ export default class FoodPlace {
         tags: string[],
         description: string,
         price: string,
+        typeOfCuisine: string[],
+        neighborhood?: string,
         images?: string[],
         googleMaps?: string,
         instagram?: string,
@@ -28,6 +32,8 @@ export default class FoodPlace {
         this.tags = tags;
         this.description = description;
         this.price = price;
+        this.typeOfCuisine = typeOfCuisine;
+        this.neighborhood = neighborhood;
         this.images = images;
         this.googleMaps = googleMaps;
         this.instagram = instagram;
@@ -61,6 +67,17 @@ export default class FoodPlace {
             FieldType.STRING,
             ""
         );
+        const typeOfCuisine = JsonDeserializationHelper.assertArray(
+            data,
+            "typeOfCuisine",
+            (t) => t.toString()
+        );
+        const neighborhood = JsonDeserializationHelper.assertFieldOrDefault(
+            data,
+            "neighborhood",
+            FieldType.STRING,
+            ""
+        );
         const images = JsonDeserializationHelper.assertArray(
             data,
             "images",
@@ -90,6 +107,8 @@ export default class FoodPlace {
             tags,
             description,
             price,
+            typeOfCuisine,
+            neighborhood,
             images,
             googleMaps,
             instagram,
