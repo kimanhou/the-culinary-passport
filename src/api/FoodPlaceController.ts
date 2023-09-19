@@ -1,20 +1,10 @@
-import { FoodPlaceApiParis, FoodPlaceApiMontreal } from "./FoodPlaceApi";
+import City from "../model/City";
+import { createFoodPlaceApi } from "./FoodPlaceApi";
 
 export class FoodPlaceController {
-    constructor(private city: string) {}
+    constructor(private city: City) {}
 
     get = () => {
-        switch (this.city.toLocaleLowerCase()) {
-            case "paris":
-                return FoodPlaceApiParis.get();
-            case "montreal":
-                return FoodPlaceApiMontreal.get();
-            default:
-                throw new Error(`Unsupported city: ${this.city}`);
-        }
+        return createFoodPlaceApi(this.city.file).get();
     };
 }
-
-// eslint-disable-next-line import/no-anonymous-default-export
-// export const FoodPlaceController = new FoodPlaceController("Paris");
-// export const FoodPlaceControllerMontreal = new FoodPlaceController("Montreal");

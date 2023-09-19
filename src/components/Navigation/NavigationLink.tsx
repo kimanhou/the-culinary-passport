@@ -4,7 +4,6 @@ import { Link, useLocation, matchPath } from "react-router-dom";
 
 interface INavigationLinkProps {
     to: string;
-    selected: boolean;
     children: React.ReactNode;
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import { Footer } from "./components/Footer/Footer";
@@ -7,22 +7,30 @@ import Home from "./components/Home/Home";
 import City from "./components/City/City";
 
 function App() {
+    const [cities, setCities] = useState<any[]>([]);
+
+    useEffect(() => {
+        fetch("./cities.json")
+            .then((response) => response.json())
+            .then((t) => setCities(t));
+    }, []);
+
     return (
         <div className={`app-container`}>
             <HashRouter>
-                <Header />
+                <Header cities={cities} />
                 <Routes>
-                    <Route
-                        path={"/paris"}
-                        element={<City city="paris" />}
-                    ></Route>
+                    {cities.map((t) => (
+                        <Route
+                            path={`/${t.name}`}
+                            element={<City city={t} />}
+                        ></Route>
+                    ))}
 
                     <Route
-                        path={"/montreal"}
-                        element={<City city="montreal" />}
+                        path={"/"}
+                        element={<Home cities={cities} />}
                     ></Route>
-
-                    <Route path={"/"} element={<Home />}></Route>
                 </Routes>
                 <Footer />
             </HashRouter>
