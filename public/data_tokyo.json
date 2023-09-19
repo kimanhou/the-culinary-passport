@@ -10,5 +10,26 @@
         "images": [
             "https://kamachiku.com/wp-content/themes/udonn/img/bg3_pc.jpg"
         ]
+    },
+    {
+        "id": 2,
+        "name": "Pizza 17",
+        "description": "Les meilleures pizzas de Tokyo ! L'endroit est minuscule: en bas on s'assoit au comptoir d'où on peut observer le chef, à l'étage quelques tables permettent d'être plus au calme. Pâte napolitaine légèrement croustillante. Une boisson par personne obligatoire.",
+        "tags": ["Pizza", "¥¥"],
+        "googleMaps": "https://maps.app.goo.gl/Ga9pXQMAzY2fNtQ7A",
+        "website": "https://tabelog.com/tokyo/A1317/A131703/13152264/",
+        "images": [
+            "https://media-cdn.tripadvisor.com/media/photo-s/1d/0c/53/3d/caption.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Kitayoshi - 喜多由(きたよし)",
+        "description": "Okonomiyaki à préparer soi-même. L'endroit est une institution dans le quartier depuis de nombreuses années. C'est local (et donc un peu archaïque, pas de site web, pas de réseau social, juste le téléphone), convivial et pas cher. Il y a aussi des monja (plus fin et liquide) et des soba.",
+        "tags": ["Okonomiyaki", "¥"],
+        "googleMaps": "https://maps.app.goo.gl/Cj8KUW87hFfFyoS9A",
+        "images": [
+            "https://imgfp.hotp.jp/IMGH/75/85/P013187585/P013187585_238.jpg"
+        ]
     }
 ]
