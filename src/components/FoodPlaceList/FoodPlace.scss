@@ -23,3 +23,11 @@
         margin-top: 2rem;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .food-place {
+        > .food-place-container {
+            flex-direction: column;
+        }
+    }
+}
