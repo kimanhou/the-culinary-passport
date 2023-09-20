@@ -2,11 +2,12 @@
     {
         "id": 1,
         "name": "Mui Mui",
-        "description": "Asiatique moderne, recettes originales et super bien exécutées. Prendre 4/5 plats pour 2. Assez cher mais original et excellent",
+        "description": "Modern Asian, original recipes, and superb execution. Take 4/5 dishes for 2. Quite expensive but original and excellent.",
         "tags": [
-            "Asiatique",
+            "Asian",
             "$$$"
         ],
+        "neighborhood": "Mile-Ex",
         "googleMaps": "https://maps.app.goo.gl/bQTyZ4v7SPamHreJ9",
         "instagram": "https://www.instagram.com/muimuimtl/",
         "website": "https://muimuimtl.com/",
@@ -17,11 +18,12 @@
     {
         "id": 2,
         "name": "Moccione",
-        "description": "Meilleure pizza à Montreal. Conseillé par des Italiens. Pizzas napolitaines",
+        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
         "tags": [
-            "Italien",
+            "Italian",
             "$$"
         ],
+        "neighborhood": "Villeray",
         "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
         "instagram": "https://www.instagram.com/moccione.restaurant/",
         "website": "https://moccione.com/",
