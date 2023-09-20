@@ -1,7 +1,9 @@
 #home {
+    flex: 1;
     > .home-cities {
         justify-content: center;
         gap: 2rem;
+        flex-wrap: wrap;
         > .home-city {
             width: 10rem;
             height: 10rem;
@@ -10,6 +12,17 @@
             border: solid 1px var(--fg);
             cursor: pointer;
             font-family: Rammetto;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #home {
+        > .home-cities {
+            > .home-city {
+                width: 7.5rem;
+                height: 7.5rem;
+            }
         }
     }
 }

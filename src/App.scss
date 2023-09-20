@@ -8,6 +8,9 @@
     padding-left: 16px;
     padding-right: 16px;
     font-family: Calibri;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 
     .flex-row {
         display: flex;
@@ -26,5 +29,6 @@
 
     ul {
         list-style-type: none;
+        padding-inline-start: 0;
     }
 }

@@ -6,13 +6,13 @@ interface IFoodPlaceTagsProps {
 
 const FoodPlaceTags: React.FC<IFoodPlaceTagsProps> = (props) => {
     return (
-        <div className="food-place-tags flex-row">
+        <ul className="food-place-tags flex-row">
             {props.tags.map((tag, i) => (
-                <div className="food-place-tag" key={i}>
+                <li className="food-place-tag" key={i}>
                     {tag}
-                </div>
+                </li>
             ))}
-        </div>
+        </ul>
     );
 };
 

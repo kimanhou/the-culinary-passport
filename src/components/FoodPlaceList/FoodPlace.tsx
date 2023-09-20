@@ -20,14 +20,17 @@ const FoodPlace: React.FC<IFoodPlaceProps> = (props) => {
                     />
                 )}
                 <div className="food-place-content">
-                    <h3>{props.foodPlace.name}</h3>
+                    <div className="food-place-content-header flex-row">
+                        <h3>{props.foodPlace.name}</h3>
+                        <FoodPlaceIcons
+                            neighborhood={props.foodPlace.neighborhood}
+                            googleMaps={props.foodPlace.googleMaps}
+                            instagram={props.foodPlace.instagram}
+                            website={props.foodPlace.website}
+                        />
+                    </div>
+
                     <p>{props.foodPlace.description}</p>
-                    <FoodPlaceIcons
-                        neighborhood={props.foodPlace.neighborhood}
-                        googleMaps={props.foodPlace.googleMaps}
-                        instagram={props.foodPlace.instagram}
-                        website={props.foodPlace.website}
-                    />
                     <FoodPlaceTags
                         tags={[
                             ...props.foodPlace.tags,

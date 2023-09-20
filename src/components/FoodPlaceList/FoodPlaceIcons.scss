@@ -6,4 +6,9 @@
             margin-right: 1rem;
         }
     }
+    a:last-child {
+        > .food-place-icons-icon {
+            margin-right: 0;
+        }
+    }
 }

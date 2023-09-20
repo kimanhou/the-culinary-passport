@@ -8,3 +8,12 @@
         height: auto;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .food-place-images {
+        margin-right: 0;
+        > img {
+            width: 100%;
+        }
+    }
+}
