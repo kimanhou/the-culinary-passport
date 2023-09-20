@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Nezu Kamachiku",
-        "description": "La spécialité est le kama-age udon, des nouilles servies directement dans le pot de cuisson. Le décor dans une ancienne usine en briques des années 1910 rénovée et un batiment contemporain est sublime. J'adore particulièrement la grande table commune avec vue sur le jardin japonais.",
+        "description": "The signature dish is kama-age udon, noodles served directly from the cooking pot. The decor in a 1910s former brick warehouse next to a modern building is amazing. The communal table with view on the Japanese garden is particularly nice.",
         "tags": [],
         "price": "¥",
         "typeOfCuisine": ["Udon"],
@@ -17,7 +17,7 @@
     {
         "id": 2,
         "name": "Pizza 17",
-        "description": "Les meilleures pizzas de Tokyo ! L'endroit est minuscule: en bas on s'assoit au comptoir d'où on peut observer le chef, à l'étage quelques tables permettent d'être plus au calme. Pâte napolitaine légèrement croustillante. Une boisson par personne obligatoire.",
+        "description": "Best pizza in Tokyo ! The place is tiny: downstairs you sit at the counter where you can watch the chef, upstairs a few tables are more quiet. The pizza is the perfect balance between chewy and crispy. One mandatory drink per person.",
         "tags": [],
         "price": "¥¥",
         "typeOfCuisine": ["Pizza"],
@@ -31,7 +31,7 @@
     {
         "id": 3,
         "name": "Kitayoshi - 喜多由(きたよし)",
-        "description": "Okonomiyaki à préparer soi-même. L'endroit est une institution dans le quartier depuis de nombreuses années. C'est local (et donc un peu archaïque, pas de site web, pas de réseau social, juste le téléphone), convivial et pas cher. Il y a aussi des monja (plus fin et liquide) et des soba.",
+        "description": "Self-prepared okonomiyaki. The place has been popular in the neighborhood for years. It's local (no website, no social media, only phone), friendly and cheap. On the menu, there are also monja (more liquid with stock) and yaki soba.",
         "tags": [],
         "price": "¥",
         "typeOfCuisine": ["Okonomiyaki"],
@@ -40,5 +40,30 @@
         "images": [
             "https://imgfp.hotp.jp/IMGH/75/85/P013187585/P013187585_238.jpg"
         ]
+    },
+    {
+        "id": 4,
+        "name": "Izumi sushi - 和泉鮨",
+        "description": "Set lunch menu for 1,300¥ makes it the best value for sushi. For this price, you get miso soup, 6 nigiri and 6 maki, including 2 tuna nigiri which are the best we've found so far. We come here twice a week and never get bored.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Sushi"],
+        "neighborhood": "Oyamadai",
+        "googleMaps": "https://maps.app.goo.gl/XwQEpFfdH63Dy2rK7",
+        "images": [
+            "https://tblg.k-img.com/restaurant/images/Rvw/188066/640x640_rect_88849c5ab6f27a8f75b8972bb34a793c.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Togoshiya",
+        "description": "Small place that serves onigiri in Shibuya. Seats are on a long counter. You order from a table hidden a small drawer. Onigiri comes in 2 sizes (regular and big) and are around 300¥ each. After trying them here, you will never be able to go back to onigiri from the kombini.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Onigiri"],
+        "neighborhood": "Shibuya",
+        "googleMaps": "https://maps.app.goo.gl/p3XSfYFBy4gzcdDh9",
+        "website": "https://www.togoshiya.jp/",
+        "images": ["https://www.togoshiya.jp/shared/img/index/s3_img.png"]
     }
 ]
