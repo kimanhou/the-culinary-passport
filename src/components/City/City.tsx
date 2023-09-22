@@ -17,23 +17,46 @@ const City: React.FC<ICityProps> = (props) => {
     const [typeOfCuisineOptions, setTypeOfCuisineOptions] = useState<string[]>(
         []
     );
+    const [selectedCuisine, setSelectedCuisine] = useState<string>("");
 
     useEffect(() => {
         const controller = new FoodPlaceController(props.city);
-        const foodPlaces = controller.get();
-        setPromise(() => foodPlaces);
-        foodPlaces.then((t) => {
+        const foodPlacesPromise = controller.get();
+        setPromise(() => foodPlacesPromise);
+        foodPlacesPromise.then((foodPlaces) => {
             setTypeOfCuisineOptions(
-                Array.from(new Set<string>(t.flatMap((v) => v.typeOfCuisine)))
+                Array.from(
+                    new Set<string>(foodPlaces.flatMap((v) => v.typeOfCuisine))
+                )
             );
+
+            if (
+                selectedCuisine !== "" &&
+                selectedCuisine.toLocaleLowerCase() !== "all"
+            ) {
+                setPromise(
+                    () =>
+                        new Promise<FoodPlace[]>((resolve, reject) =>
+                            resolve(
+                                foodPlaces.filter((t) =>
+                                    t.typeOfCuisine.includes(selectedCuisine)
+                                )
+                            )
+                        )
+                );
+            }
         });
-    }, [props.city]);
+    }, [props.city, selectedCuisine]);
 
     return (
         <section id="city">
             <h1>{props.city.name.toLocaleUpperCase()}</h1>
             {typeOfCuisineOptions.length > 0 && (
-                <FilterDropDown options={typeOfCuisineOptions} />
+                <FilterDropDown
+                    options={typeOfCuisineOptions}
+                    selectedOption={selectedCuisine}
+                    setSelectedOption={setSelectedCuisine}
+                />
             )}
             <LoadData promise={promise}>
                 {(foodPlaceList) => (
