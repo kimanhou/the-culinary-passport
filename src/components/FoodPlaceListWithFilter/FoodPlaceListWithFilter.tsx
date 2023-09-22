@@ -30,6 +30,8 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                     t.typeOfCuisine.includes(selectedCuisine)
                 )
             );
+        } else {
+            setDisplayedFoodPlaces(props.foodPlaces);
         }
     }, [selectedCuisine, props.foodPlaces]);
 
