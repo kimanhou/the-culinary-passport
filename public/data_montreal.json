@@ -3,9 +3,10 @@
         "id": 1,
         "name": "Mui Mui",
         "description": "Modern Asian, original recipes, and superb execution. Take 4/5 dishes for 2. Quite expensive but original and excellent.",
-        "tags": [
-            "Asian",
-            "$$$"
+        "tags": [],
+        "price": "$$$",
+        "typeOfCuisine": [
+            "Asian"
         ],
         "neighborhood": "Mile-Ex",
         "googleMaps": "https://maps.app.goo.gl/bQTyZ4v7SPamHreJ9",
@@ -19,9 +20,10 @@
         "id": 2,
         "name": "Moccione",
         "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
-        "tags": [
-            "Italian",
-            "$$"
+        "tags": [],
+        "price": "$$",
+        "typeOfCuisine": [
+            "Italian"
         ],
         "neighborhood": "Villeray",
         "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
