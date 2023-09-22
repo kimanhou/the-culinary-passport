@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { FoodPlaceController } from "../../api/FoodPlaceController";
 import CityModel from "../../model/City";
 import FoodPlace from "../../model/FoodPlace";
-import FoodPlaceList from "../FoodPlaceList/FoodPlaceList";
+import FoodPlaceListWithFilter from "../FoodPlaceListWithFilter/FoodPlaceListWithFilter";
 import LoadData from "../LoadData";
 import "./City.scss";
 
@@ -24,7 +24,7 @@ const City: React.FC<ICityProps> = (props) => {
             <h1>{props.city.name.toLocaleUpperCase()}</h1>
             <LoadData promise={promise}>
                 {(foodPlaceList) => (
-                    <FoodPlaceList foodPlaceList={foodPlaceList} />
+                    <FoodPlaceListWithFilter foodPlaces={foodPlaceList} />
                 )}
             </LoadData>
         </section>
