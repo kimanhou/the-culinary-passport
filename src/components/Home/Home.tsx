@@ -10,7 +10,7 @@ interface IHomeProps {
 const Home: React.FC<IHomeProps> = (props) => {
     return (
         <div id="home">
-            <h1>Choose your city</h1>
+            <h1>Choose your destination</h1>
             <div className="home-cities flex-row">
                 {props.cities.map((t) => (
                     <HomeCity city={t.name} key={t.name} />
