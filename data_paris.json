@@ -2,8 +2,13 @@
     {
         "id": 1,
         "name": "Chez Gladines",
-        "description": "Les fameux restaurants Chez Gladines continuent de conquérir Paris et de convaincre les Parisiens avec leurs plats directement venus du Sud Ouest, très copieux et peu onéreux",
-        "tags": ["Francais", "€€"],
+        "description": "The famous Chez Gladines restaurants continue to conquer Paris and convince Parisians with their hearty and affordable dishes directly from the Southwest of France.",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "Place d'Italie",
         "googleMaps": "https://maps.app.goo.gl/fvAeXH7Rj24s7T4L7",
         "instagram": "https://www.instagram.com/chezgladinesparis/",
         "website": "https://chezgladines-butteauxcailles.fr/fr",
@@ -14,8 +19,13 @@
     {
         "id": 2,
         "name": "Le Plomb du Cantal",
-        "description": "Auvergnat. À tester: aligot ou truffade. Purée de pommes de terres avec crème et fromage. Hyper bon",
-        "tags": ["Francais", "€€"],
+        "description": "Auvergnat. To try: aligot or truffade. Mashed potatoes with cream and cheese. Very tasty",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "Montparnase",
         "googleMaps": "https://goo.gl/maps/6xprM6DWxf75X4FX9",
         "instagram": "https://www.instagram.com/leplombducantal/",
         "website": "http://www.leplombducantal.fr/",
@@ -26,8 +36,13 @@
     {
         "id": 3,
         "name": "Chez Janou",
-        "description": "Un coin de garrigue au cœur de Paris... Dans la salle à manger aux accents du sud ou en terrasse à l'ombre des oliviers, vous pourrez y découvrir les saveurs d'une cuisine provençale ensoleillée et vous étourdir à la vue de notre carte des pastis.",
-        "tags": ["Francais", "€€"],
+        "description": "A corner of garrigue in the heart of Paris... In the dining room with southern accents or on the terrace in the shade of olive trees, you can discover the flavors of sunny Provencal cuisine and be dazzled by our pastis menu.",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "Bastille",
         "googleMaps": "https://maps.app.goo.gl/1bHsggZsvHgb1dUQ7",
         "instagram": "https://www.instagram.com/chezjanou/",
         "website": "https://www.chezjanou.com/",
@@ -38,88 +53,149 @@
     {
         "id": 4,
         "name": "Chez Papa",
-        "description": "typique du sud ouest, moins bon que chez gladines mais y'en a plus dans Paris",
-        "tags": ["Francais", "€€"],
+        "description": "Typical of the southwest, not as good as at Gladines but there are more of them in Paris",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "Bastille",
         "images": [
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeRlCYQZ29h24sv6JAN-4YkpvkLvWd1G7WFw&usqp=CAU"
         ]
     },
     {
-        "id": 5,
-        "name": "Le petit canard",
-        "description": "Resto familial à pigalle, spécialité canard",
-        "tags": ["Francais", "€€"]
-    },
-    {
         "id": 6,
         "name": "Le chalet savoyard",
-        "description": "Vraie raclette avec la meule. Rien à voir avec une raclette en machine classique",
-        "tags": ["Francais", "€€"]
+        "description": "Real raclette with the wheel. Nothing like a classic machine raclette",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "Charonne"
     },
     {
         "id": 7,
         "name": "Le petit Benoît",
-        "description": "Bistrot classique parisien de quartier. Bonne crème brûlée. Lieu mythique mais service pas ouf",
-        "tags": ["Francais", "€€"]
+        "description": "Classic Parisian neighborhood bistro. Good crème brûlée. Legendary place but service is not great",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "Saint Germain des Près"
     },
     {
         "id": 8,
         "name": "La crêperie de josselin",
-        "description": "Dans le quartier de Montparnasse, c'est le quartier des bretons. Là où il faut manger une crêpe. Crêperie josselin fait une crêpe au sarrasin succulente. Si trop de monde, Crêperie Plougastel dans la même rue",
-        "tags": ["Francais", "€"]
+        "description": "In the Montparnasse district, it's the Breton neighborhood. Where you have to eat a crêpe. Crêperie Josselin makes a delicious buckwheat crêpe. If it's too crowded, try Crêperie Plougastel in the same street",
+        "tags": [],
+        "price": "€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "Montparnasse"
     },
     {
         "id": 9,
         "name": "Fou de dessert",
-        "description": "Restaurant trompe l'œil. Les entrées et plats ressemblent à des desserts et les dessers à des plats ! Visuellement surprenant mais bouffe pas incroyable. A tester pour les curieux",
-        "tags": ["Francais", "€€"]
+        "description": "Trompe-l'oeil restaurant. Starters and main courses look like desserts and desserts look like main courses! Visually surprising but the food is not amazing. Worth trying for the curious",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "Batignolles"
     },
     {
         "id": 10,
         "name": "Godaille",
-        "description": "Nouveau resto ouvert par mes potes Étienne et Derrick. Ils ont un bar à vin Purvin juste à côté. Super qualité prix, un bistronomique. Supers endroits!!",
-        "tags": ["Francais", "€€"]
+        "description": "New restaurant opened by my friends Étienne and Derrick. They have a wine bar Purvin right next door. Great quality-price ratio, a bistronomic place. Great places!!",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "Charonne"
     },
     {
         "id": 11,
         "name": "Bao family",
-        "description": "gros bao, petit bao, bleu bao. Valeur sûre de la street food. De Hong Kong. Aubergines à tomber",
-        "tags": ["Asiatique", "€€"]
+        "description": "Big bao, small bao, blue bao. Street food favorite. From Hong Kong. Eggplants to die for",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "Asian"
+        ],
+        "neighborhood": "Canal Saint-Martin"
     },
     {
         "id": 12,
         "name": "Big mamma",
-        "description": "félicita, pizza populare etc, valeur sûre de la bouffe italienne dans un décor très sympa",
-        "tags": ["Italien", "€€"]
+        "description": "Félicita, popular pizza, etc. A sure value of Italian food in a very nice setting",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "French"
+        ],
+        "neighborhood": "BNF"
     },
     {
         "id": 13,
         "name": "Happatei",
-        "description": "Rue Sainte Anne, quartier des resto jap. A manger takoyaki et okonomiyaki",
-        "tags": ["Japonais", "€€"]
+        "description": "Rue Sainte Anne, Japanese restaurant district. Try takoyaki and okonomiyaki",
+        "tags": [],
+        "price": "€",
+        "typeOfCuisine": [
+            "Japanese"
+        ],
+        "neighborhood": "Pyramides"
     },
     {
         "id": 14,
         "name": "Tiger milk",
-        "description": "Dans le quartier hyper animé de Montorgueuil, bistrot trendy péruvien. Très bons cocktails aussi",
-        "tags": ["Péruvien", "€€"]
+        "description": "In the lively Montorgueuil district, trendy Peruvian bistro. Very good cocktails too",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "Peruvian"
+        ],
+        "neighborhood": "Sentier"
     },
     {
         "id": 15,
         "name": "Area",
-        "description": "Resto brésilien libanais. Proprio Édouard hyper sympa. Dites que vous venez de ma part et vous aurez des trucs gratuits. Ambiance taverne, chacun fait ce qu'il veut et bouffe excellent. Riz noir à conseiller",
-        "tags": ["Brésilien", "Libanais", "€€"]
+        "description": "Brazilian Lebanese restaurant. Owner Édouard is super nice. Say you're coming from me and you'll get free stuff. Tavern atmosphere, everyone does as they please, and excellent food. Black rice is recommended",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "Brazilian",
+            "Libanese"
+        ],
+        "neighborhood": "Bastille",
+        "images": [
+            "https://res.cloudinary.com/tf-lab/image/upload/w_3840,c_fill,q_auto,f_auto/f_auto,q_auto,w_800,c_limit/customer/097f188a-c083-40ad-9945-e1ec5d39e601/0337d35b-ed03-4d67-b929-606312a9d0db.jpg"
+        ]
     },
     {
         "id": 16,
         "name": "Pho Bom",
-        "description": "Vietnamien. À tester: Bo bun cha gio et bun cha ha noi",
-        "tags": ["Vietnamien", "€€"]
+        "description": "Vietnamese. To try: Bo bun cha gio and bun cha ha noi",
+        "tags": [],
+        "price": "€€",
+        "typeOfCuisine": [
+            "Vietnamese"
+        ]
     },
     {
         "id": 17,
         "name": "Bouillon Pigalle",
-        "description": "Parisien. À tester: oeufs mayo et confit de canard. Typique bistrot parisien",
-        "tags": ["Francais", "€"]
+        "description": "Parisian. To try: oeufs mayo and confit de canard. Typical Parisian bistro",
+        "tags": [],
+        "price": "€",
+        "typeOfCuisine": [
+            "French"
+        ]
     }
 ]
