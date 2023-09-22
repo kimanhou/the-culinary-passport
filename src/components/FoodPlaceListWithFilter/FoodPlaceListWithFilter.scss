@@ -1,0 +1,11 @@
+#food-place-list-with-filter {
+    > #food-place-list-with-filter-filters {
+        justify-content: center;
+        > .filter {
+            margin-right: 4rem;
+        }
+        > .filter:last-child {
+            margin-right: 0;
+        }
+    }
+}
