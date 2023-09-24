@@ -18,7 +18,7 @@ const FilterDropDown: React.FC<IFilterDropDownProps> = (props) => {
                 onChange={(e) => props.setSelectedOption(e.target.value)}
             >
                 <option key="all">All</option>
-                {props.options.map((t) => (
+                {props.options.sort().map((t) => (
                     <option key={t}>{t}</option>
                 ))}
             </select>
