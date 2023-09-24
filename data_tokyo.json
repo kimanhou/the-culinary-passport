@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Nezu Kamachiku",
-        "description": "The signature dish is kama-age udon, noodles served directly from the cooking pot. The decor in a 1910s former brick warehouse next to a modern building is amazing. The communal table with view on the Japanese garden is particularly nice.",
+        "description": "The signature dish is udon. You choose between hot (kama-age udon) or cold (zaru udon), the size (regular or large) and the toppings. The plain option comes with green onions, ginger and tempura flakes. The decor in a 1910s former brick warehouse next to a modern building is amazing. The communal table with view on the Japanese garden is particularly nice. Prices start at ¥990.",
         "tags": [],
         "price": "¥",
         "typeOfCuisine": ["Udon"],
@@ -65,5 +65,46 @@
         "googleMaps": "https://maps.app.goo.gl/p3XSfYFBy4gzcdDh9",
         "website": "https://www.togoshiya.jp/",
         "images": ["https://www.togoshiya.jp/shared/img/index/s3_img.png"]
+    },
+    {
+        "id": 6,
+        "name": "Tenkazushi",
+        "description": "Conveyor belt sushi of decent quality. The location in a basement of Dogenzaka's main street is convenient and there is no need to book, even though it's not suitable for big parties as seats are around a counter. You can take plates from the conveyor belt or ask the chefs to make something from the menu.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Sushi"],
+        "neighborhood": "Shibuya",
+        "googleMaps": "https://maps.app.goo.gl/h8SmB9P2tByLoiYSA",
+        "website": "http://www.tenkazushi.co.jp/",
+        "images": [
+            "https://shibuyadogenzaka.com/wp-content/uploads/2023/06/photo20230613-1-1024x768.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Yuuyuu - ゆうゆう食堂",
+        "description": "Local traditional Japanese canteen. It's basically like going to your grandma's for lunch. The food is simple homemade dishes like fried fish and katsu curry, accompanied with soup, salad and picked vegetables. A set menu costs ¥1,100 and will fill your belly.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Teishoku"],
+        "neighborhood": "Todoroki",
+        "googleMaps": "https://maps.app.goo.gl/oBvwcwEfWCySXs4S6",
+        "website": "https://yuyu-shokudo.jp/",
+        "images": [
+            "https://tblg.k-img.com/restaurant/images/Rvw/167507/640x640_rect_92d028dbb0c4a9c3f811e9e07efcc25f.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Yakitori Todorokiten",
+        "description": "Right next to Yuuyuu, this place is a locals' favourites. You write your order on a small piece of paper (yes, in Japanese), including the sauce: tare (soy sauce) or shio (salt). It's not the cleanest of places but the karaage is delicious and the atmosphere is typical of a Japanese bar.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Yakitori"],
+        "neighborhood": "Todoroki",
+        "googleMaps": "https://maps.app.goo.gl/BtFTnvuw84FLzW4s6",
+        "images": [
+            "https://tblg.k-img.com/restaurant/images/Rvw/211140/640x640_rect_334f98cecc68fc231f184f796d6e74a9.jpg"
+        ]
     }
 ]
