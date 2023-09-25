@@ -133,5 +133,19 @@
         "images": [
             "https://ximg.retty.me/crop/s400x400/q80/das/-/retty/img_repo/l/01/29792193.jpg"
         ]
+    },
+    {
+        "id": 11,
+        "name": "Sanaka",
+        "description": "A tiny place hidden in the hip area of Harajuku. It's located in a residential building above a grocery store, you have to go up the stairs to the 2F. Take one of the set menus and, if you sit at the counter, the chef will put the sushi in your plate as you eat. Arrive early !",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Sushi"],
+        "neighborhood": "Harajuku",
+        "googleMaps": "https://maps.app.goo.gl/Ue4XEa6aXJLwiJG47",
+        "instagram": "https://www.instagram.com/sanakajingumae/",
+        "images": [
+            "https://tblg.k-img.com/restaurant/images/Rvw/190349/3435022ab55f37f24ff4a5ef5334b90e.jpg"
+        ]
     }
 ]
