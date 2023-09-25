@@ -106,5 +106,32 @@
         "images": [
             "https://tblg.k-img.com/restaurant/images/Rvw/211140/640x640_rect_334f98cecc68fc231f184f796d6e74a9.jpg"
         ]
+    },
+    {
+        "id": 9,
+        "name": "Banh Xeo Saigon",
+        "description": "A place to fix your craving for Vietnamese food. Pho, banh cuon (sadly without cha), banh xeo and excellent cha gio.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Vietnamese"],
+        "neighborhood": "Ebisu",
+        "googleMaps": "https://maps.app.goo.gl/RBes7t44CZQe1p68A",
+        "website": "https://vietnamese-restaurant-in-tokyo.business.site/",
+        "images": [
+            "https://lh3.googleusercontent.com/p/AF1QipPhASfYn11SdTZqFj4ziEYLEAMRnZ_EoWka6Db9=w1080-h608-p-no-v0"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Fanji Xi'an Meat Dumplings - 凡記 西安肉夾饃",
+        "description": "Ikebukuro is the new Chinatown. This sichuan restaurant is very appreciated by the Chinese community living in the neighborhood. Food is legit spicy !",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Chinese"],
+        "neighborhood": "Ikebukuro",
+        "googleMaps": "https://maps.app.goo.gl/6G4b7EXaNM8vRRAr7",
+        "images": [
+            "https://ximg.retty.me/crop/s400x400/q80/das/-/retty/img_repo/l/01/29792193.jpg"
+        ]
     }
 ]
