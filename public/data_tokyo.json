@@ -147,5 +147,19 @@
         "images": [
             "https://tblg.k-img.com/restaurant/images/Rvw/190349/3435022ab55f37f24ff4a5ef5334b90e.jpg"
         ]
+    },
+    {
+        "id": 12,
+        "name": "Tempura Kanno",
+        "description": "Excellent family restaurant in a quiet and local neighborhood. The owners are the sweetest of people and the food is amazing.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Tempura"],
+        "neighborhood": "Umegaoka",
+        "googleMaps": "https://maps.app.goo.gl/mr3z6uFjYfauUmSj8",
+        "website": "https://www.tenpurakanno.com/",
+        "images": [
+            "https://media-cdn.tripadvisor.com/media/photo-s/05/d5/1c/48/tempura-kanno.jpg"
+        ]
     }
 ]
