@@ -161,5 +161,19 @@
         "images": [
             "https://media-cdn.tripadvisor.com/media/photo-s/05/d5/1c/48/tempura-kanno.jpg"
         ]
+    },
+    {
+        "id": 13,
+        "name": "Sushi no midori",
+        "description": "The place listed here is inside Shibuya Mark City but there are also branches in Umegaoka (the original), Ginza and Asakasa. There is always a queue but you can take a ticket and follow the virtual queue on Line (the application called Line, it's not a typo). Very decent sushi platters for a decent price.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Sushi"],
+        "neighborhood": "Shibuya",
+        "googleMaps": "https://maps.app.goo.gl/XQm1s2WVt63jFzDVA",
+        "website": "https://www.sushinomidori.co.jp/",
+        "images": [
+            "https://tblg.k-img.com/restaurant/images/Rvw/154735/640x640_rect_154735187.jpg"
+        ]
     }
 ]
