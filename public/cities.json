@@ -1,18 +1,22 @@
 [
     {
         "name": "paris",
-        "file": "data_paris.json"
+        "dataFile": "data_paris.json",
+        "mapCenter": [48.858148, 2.340852]
     },
     {
         "name": "montreal",
-        "file": "data_montreal.json"
+        "dataFile": "data_montreal.json",
+        "mapCenter": [45.509282, -73.634297]
     },
     {
         "name": "tokyo",
-        "file": "data_tokyo.json"
+        "dataFile": "data_tokyo.json",
+        "mapCenter": [35.688566, 139.737815]
     },
     {
         "name": "london",
-        "file": "data_london.json"
+        "dataFile": "data_london.json",
+        "mapCenter": [51.511767, -0.107933]
     }
 ]

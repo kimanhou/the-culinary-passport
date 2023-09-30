@@ -1,13 +1,17 @@
+import { LatLngExpression } from "leaflet";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import FoodPlace from "../../model/FoodPlace";
 import { getValueOrDefault } from "../../utils";
 import FilterDropDown from "../FilterDropDown/FilterDropDown";
 import FoodPlaceList from "../FoodPlaceList/FoodPlaceList";
+import Map from "../Map/Map";
 import "./FoodPlaceListWithFilter.scss";
 
 interface IFoodPlaceListWithFilterProps {
     foodPlaces: FoodPlace[];
+    mapCenter: LatLngExpression;
+    mapZoom: number;
 }
 
 const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
@@ -90,6 +94,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
 
     return (
         <section id="food-place-list-with-filter">
+            <Map center={props.mapCenter} zoom={props.mapZoom} />
             <div id="food-place-list-with-filter-filters" className="flex-row">
                 {typeOfCuisineOptions.length > 0 && (
                     <FilterDropDown

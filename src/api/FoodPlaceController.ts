@@ -5,6 +5,6 @@ export class FoodPlaceController {
     constructor(private city: City) {}
 
     get = () => {
-        return createFoodPlaceApi(this.city.file).get();
+        return createFoodPlaceApi(this.city.dataFile).get();
     };
 }
