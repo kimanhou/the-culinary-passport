@@ -1,15 +1,16 @@
 import { LatLngExpression } from "leaflet";
 import React from "react";
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
+import MapMarker from "../../model/MapMarker";
 import "./Map.scss";
 
 interface IMapProps {
     center: LatLngExpression;
     zoom: number;
+    markers: MapMarker[];
 }
 
 const Map: React.FC<IMapProps> = (props) => {
-    console.log("MAP", props.center, props.zoom);
     return (
         <MapContainer
             id="map"
@@ -22,11 +23,14 @@ const Map: React.FC<IMapProps> = (props) => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[51.505, -0.09]}>
-                <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
+            {props.markers.map((t) => (
+                <Marker position={t.coordinates}>
+                    <Popup>{t.popUpText}</Popup>
+                </Marker>
+            ))}
+            {/* <Marker position={[35.6488256, 139.6983938]}>
+                <Popup>Banh Xeo Saigon</Popup>
+            </Marker> */}
         </MapContainer>
     );
 };

@@ -1,3 +1,4 @@
+import { LatLngExpression } from "leaflet";
 import { FieldType } from "./deserialization/FieldType";
 import JsonDeserializationHelper from "./deserialization/JsonDeserializationHelper";
 
@@ -13,6 +14,7 @@ export default class FoodPlace {
     googleMaps?: string;
     instagram?: string;
     website?: string;
+    coordinates?: LatLngExpression;
 
     constructor(
         name: string,
@@ -25,7 +27,8 @@ export default class FoodPlace {
         images?: string[],
         googleMaps?: string,
         instagram?: string,
-        website?: string
+        website?: string,
+        coordinates?: LatLngExpression
     ) {
         this.name = name;
         this.location = location;
@@ -38,6 +41,7 @@ export default class FoodPlace {
         this.googleMaps = googleMaps;
         this.instagram = instagram;
         this.website = website;
+        this.coordinates = coordinates;
     }
 
     static deserialize = (data: any) => {
@@ -101,6 +105,11 @@ export default class FoodPlace {
             FieldType.STRING,
             ""
         );
+
+        const coordinates = JsonDeserializationHelper.assertLatLngExpression(
+            data.coordinates
+        );
+
         return new FoodPlace(
             name,
             location,
@@ -112,7 +121,8 @@ export default class FoodPlace {
             images,
             googleMaps,
             instagram,
-            website
+            website,
+            coordinates
         );
     };
 }

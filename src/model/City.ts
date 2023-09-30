@@ -33,21 +33,9 @@ export default class City {
             FieldType.STRING
         );
 
-        if (!Array.isArray(data.mapCenter)) {
-            throw Error("Expected mapCenter to be an array");
-        }
-        if ((data.mapCenter as any[]).length < 2) {
-            throw Error("Expected mapCenter to contain at least two numbers");
-        }
-        if ((data.mapCenter as any[]).length > 3) {
-            throw Error("Expected mapCenter to contain at most three numbers");
-        }
-        if (
-            (data.mapCenter as any[]).find((x) => typeof x !== "number") != null
-        ) {
-            throw Error("Expected mapCenter to contain only numbers");
-        }
-        const mapCenter = data.mapCenter as LatLngExpression;
+        const mapCenter = JsonDeserializationHelper.assertLatLngExpression(
+            data.mapCenter
+        );
 
         const mapZoom = JsonDeserializationHelper.assertFieldOrDefault(
             data,
