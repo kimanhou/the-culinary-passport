@@ -1,13 +1,23 @@
+import { LatLngExpression } from "leaflet";
 import { FieldType } from "./deserialization/FieldType";
 import JsonDeserializationHelper from "./deserialization/JsonDeserializationHelper";
 
 export default class City {
     name: string;
-    file: string;
+    dataFile: string;
+    mapCenter: LatLngExpression;
+    mapZoom: number;
 
-    constructor(name: string, file: string) {
+    constructor(
+        name: string,
+        dataFile: string,
+        mapCenter: LatLngExpression,
+        mapZoom: number
+    ) {
         this.name = name;
-        this.file = file;
+        this.dataFile = dataFile;
+        this.mapCenter = mapCenter;
+        this.mapZoom = mapZoom;
     }
 
     static deserialize = (data: any) => {
@@ -16,13 +26,24 @@ export default class City {
             "name",
             FieldType.STRING
         );
-        const file = JsonDeserializationHelper.assertFieldOrDefault(
+
+        const dataFile = JsonDeserializationHelper.assertField(
             data,
-            "file",
-            FieldType.STRING,
-            ""
+            "dataFile",
+            FieldType.STRING
         );
 
-        return new City(name, file);
+        const mapCenter = JsonDeserializationHelper.assertLatLngExpression(
+            data.mapCenter
+        );
+
+        const mapZoom = JsonDeserializationHelper.assertFieldOrDefault(
+            data,
+            "mapZoom",
+            FieldType.NUMBER,
+            13
+        );
+
+        return new City(name, dataFile, mapCenter, mapZoom);
     };
 }

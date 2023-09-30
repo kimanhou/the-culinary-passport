@@ -1,3 +1,4 @@
+import { LatLngExpression } from "leaflet";
 import { FieldType } from "./FieldType";
 
 class JsonDeserializationHelper {
@@ -67,6 +68,23 @@ class JsonDeserializationHelper {
             array.push(handler(element));
         }
         return array;
+    };
+
+    assertLatLngExpression = (value: any) => {
+        if (!value) return value;
+        if (!Array.isArray(value)) {
+            throw Error("Expected mapCenter to be an array");
+        }
+        if ((value as any[]).length < 2) {
+            throw Error("Expected mapCenter to contain at least two numbers");
+        }
+        if ((value as any[]).length > 3) {
+            throw Error("Expected mapCenter to contain at most three numbers");
+        }
+        if ((value as any[]).find((x) => typeof x !== "number") != null) {
+            throw Error("Expected mapCenter to contain only numbers");
+        }
+        return value as LatLngExpression;
     };
 }
 

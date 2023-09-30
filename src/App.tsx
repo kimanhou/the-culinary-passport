@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import City from "./components/City/City";
+import CityModel from "./model/City";
 
 function App() {
     const [cities, setCities] = useState<any[]>([]);
@@ -12,6 +13,7 @@ function App() {
     useEffect(() => {
         fetch("./cities.json")
             .then((response) => response.json())
+            .then((json) => json.map((x: any) => CityModel.deserialize(x)))
             .then((t) => setCities(t));
     }, []);
 

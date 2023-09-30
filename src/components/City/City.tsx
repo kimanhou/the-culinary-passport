@@ -24,7 +24,11 @@ const City: React.FC<ICityProps> = (props) => {
             <h1>{props.city.name.toLocaleUpperCase()}</h1>
             <LoadData promise={promise}>
                 {(foodPlaceList) => (
-                    <FoodPlaceListWithFilter foodPlaces={foodPlaceList} />
+                    <FoodPlaceListWithFilter
+                        foodPlaces={foodPlaceList}
+                        mapCenter={props.city.mapCenter}
+                        mapZoom={props.city.mapZoom}
+                    />
                 )}
             </LoadData>
         </section>

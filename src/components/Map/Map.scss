@@ -1,0 +1,10 @@
+#map {
+    margin-bottom: 3rem;
+    .leaflet-div-icon {
+        background: unset !important;
+        border: unset !important;
+    }
+    .marker-popup-icon {
+        cursor: pointer;
+    }
+}

@@ -1,5 +1,9 @@
 @import "./colors.scss";
 
+html {
+    scroll-behavior: smooth;
+}
+
 .app-container {
     text-align: center;
     max-width: 1170px;
