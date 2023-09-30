@@ -11,7 +11,7 @@ interface IFoodPlaceProps {
 
 const FoodPlace: React.FC<IFoodPlaceProps> = (props) => {
     return (
-        <div className={`food-place`}>
+        <div className={`food-place`} id={`food-place-${props.foodPlace.name}`}>
             <div className="food-place-container flex-row">
                 {props.foodPlace.images && (
                     <FoodPlaceImages
