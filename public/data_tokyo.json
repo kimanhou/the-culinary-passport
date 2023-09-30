@@ -175,5 +175,19 @@
         "images": [
             "https://tblg.k-img.com/restaurant/images/Rvw/154735/640x640_rect_154735187.jpg"
         ]
+    },
+    {
+        "id": 14,
+        "name": "Flipper's",
+        "description": "Instagrammable pancake place ! The pancakes are fuwa fuwa, like a jingling cloud. There are plenty of toppings to choose from, however there is usually a bit of a wait. Prices are around ¥1,400 for 3 pancakes, enough for 2 people to share as a snack. There are also branches in Jiyugaoka, Shimo Kitazawa and Kichijoji.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Dessert"],
+        "neighborhood": "Shibuya",
+        "googleMaps": "https://maps.app.goo.gl/2QSq7kXaAcqGR3tz9",
+        "website": "https://www.flavorworks.co.jp/brand/flippers.html",
+        "images": [
+            "https://www.flavorworks.co.jp/_src/31887887/grand_menu.jpg?v=1641878155930"
+        ]
     }
 ]
