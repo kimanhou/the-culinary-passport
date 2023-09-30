@@ -1,6 +1,4 @@
 import { LatLngExpression } from "leaflet";
-import { FieldType } from "./deserialization/FieldType";
-import JsonDeserializationHelper from "./deserialization/JsonDeserializationHelper";
 
 export default class MapMarker {
     coordinates: LatLngExpression;

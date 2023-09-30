@@ -2,6 +2,7 @@ import { LatLngExpression } from "leaflet";
 import React from "react";
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
 import MapMarker from "../../model/MapMarker";
+import { icon } from "./Icon";
 import "./Map.scss";
 
 interface IMapProps {
@@ -24,13 +25,10 @@ const Map: React.FC<IMapProps> = (props) => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {props.markers.map((t) => (
-                <Marker position={t.coordinates}>
+                <Marker position={t.coordinates} icon={icon}>
                     <Popup>{t.popUpText}</Popup>
                 </Marker>
             ))}
-            {/* <Marker position={[35.6488256, 139.6983938]}>
-                <Popup>Banh Xeo Saigon</Popup>
-            </Marker> */}
         </MapContainer>
     );
 };
