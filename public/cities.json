@@ -7,12 +7,14 @@
     {
         "name": "montreal",
         "dataFile": "data_montreal.json",
-        "mapCenter": [45.509282, -73.634297]
+        "mapCenter": [45.509282, -73.634297],
+        "mapZoom": 12
     },
     {
         "name": "tokyo",
         "dataFile": "data_tokyo.json",
-        "mapCenter": [35.688566, 139.737815]
+        "mapCenter": [35.641429, 139.662924],
+        "mapZoom": 12
     },
     {
         "name": "london",
