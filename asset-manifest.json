@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.35e9c81c.css",
-    "main.js": "./static/js/main.6cd0b064.js",
+    "main.css": "./static/css/main.4aac1a55.css",
+    "main.js": "./static/js/main.a8db98c0.js",
     "static/js/787.bff22d74.chunk.js": "./static/js/787.bff22d74.chunk.js",
     "static/media/food-blog-logo.png": "./static/media/food-blog-logo.500d9cb1fe278aaa5e75.png",
     "static/media/instagram.png": "./static/media/instagram.776123b8753198399fdd.png",
     "static/media/googleMaps.png": "./static/media/googleMaps.f6f6a5a923f7741ef206.png",
     "static/media/website.png": "./static/media/website.976b59becb66eba12d62.png",
     "index.html": "./index.html",
-    "main.35e9c81c.css.map": "./static/css/main.35e9c81c.css.map",
-    "main.6cd0b064.js.map": "./static/js/main.6cd0b064.js.map",
+    "main.4aac1a55.css.map": "./static/css/main.4aac1a55.css.map",
+    "main.a8db98c0.js.map": "./static/js/main.a8db98c0.js.map",
     "787.bff22d74.chunk.js.map": "./static/js/787.bff22d74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35e9c81c.css",
-    "static/js/main.6cd0b064.js"
+    "static/css/main.4aac1a55.css",
+    "static/js/main.a8db98c0.js"
   ]
 }
