@@ -204,5 +204,23 @@
             "https://www.flavorworks.co.jp/_src/31887887/grand_menu.jpg?v=1641878155930"
         ],
         "coordinates": [35.6635575, 139.6969786]
+    },
+    {
+        "id": 15,
+        "name": "Spontini",
+        "description": "Coming from Milan, it's a fast food place that makes super thick pizza. They are fried underneath, which makes them crispy. It's a bit hidden but there is plenty of room.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Pizza"],
+        "neighborhood": "Harajuku",
+        "googleMaps": "https://maps.app.goo.gl/pPVDcT9scJguKqXp6",
+        "website": "http://spontini.jp/harajuku.html",
+        "instagram": "https://www.instagram.com/spontini_pizza_jp/",
+        "images": [
+            "https://media.timeout.com/images/102877166/image.jpg",
+            "https://tblg.k-img.com/restaurant/images/Rvw/44260/640x640_rect_44260680.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/13/12/de/3a/pizza.jpg"
+        ],
+        "coordinates": [35.670066, 139.701203]
     }
 ]
