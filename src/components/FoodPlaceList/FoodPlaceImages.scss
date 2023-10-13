@@ -42,7 +42,11 @@
             > img {
                 height: unset;
                 width: calc(100vw - 32px);
+                scroll-snap-align: start;
             }
+        }
+        > .carousel-button {
+            display: none;
         }
     }
 }
