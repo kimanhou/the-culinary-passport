@@ -222,5 +222,38 @@
             "https://media-cdn.tripadvisor.com/media/photo-s/13/12/de/3a/pizza.jpg"
         ],
         "coordinates": [35.670066, 139.701203]
+    },
+    {
+        "id": 16,
+        "name": "Yai Yai",
+        "description": "Okonomiyaki place in the heart of Harajuku. No need to book, you just have to queue. You don't cook it yourself but if you sit at the counter, you can watch the chef cook.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Okonomiyaki"],
+        "neighborhood": "Harajuku",
+        "googleMaps": "https://maps.app.goo.gl/HDynDN7fgwm3nGaNA",
+        "website": "https://www.opefac.com/restaurant/yaiyai/",
+        "images": [
+            "https://www.opefac.com/wp-content/uploads/2022/04/241A8146_a.jpg",
+            "https://www.opefac.com/wp-content/uploads/2022/04/241A7343.jpg"
+        ],
+        "coordinates": [35.6670421, 139.7031319]
+    },
+    {
+        "id": 17,
+        "name": "Cold Stone Creamery Tokyo",
+        "description": "Ice cream in a cone shaped like a bowl with many toppings. The staff will sing a song while making your ice cream. There is a beautiful wall for pictures. To go only.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Dessert"],
+        "neighborhood": "Harajuku",
+        "googleMaps": "https://maps.app.goo.gl/8e8KA37GXbac2NwD9",
+        "website": "https://www.coldstonecreamery.co.jp/",
+        "instagram": "https://www.instagram.com/coldstonejapan/",
+        "images": [
+            "https://cdn.macaro-ni.jp/image/summary/128/128403/oigEgtu2uK9T0bv0gGjBduOZqpUw6cEjSHCLXt3P.jpg",
+            "https://cdn.macaro-ni.jp/image/summary/128/128403/SCGVgiRvzXefRstqU6yQzluQtI6lYUm9ofJW839a.jpg"
+        ],
+        "coordinates": [35.6674556, 139.7029129]
     }
 ]

@@ -25,7 +25,9 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
         const scrollValue =
             window.innerWidth < 600 ? window.innerWidth - 16 : 300;
         document
-            .querySelector(`#food-place-images-${props.foodPlaceName}`)
+            .querySelector(
+                `#food-place-images-${props.foodPlaceName.replace(/ /g, "")}`
+            )
             ?.scrollTo({
                 left: selectedIndex * scrollValue,
                 behavior: "smooth",
@@ -35,7 +37,10 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
     return (
         <div className="food-place-images-container">
             <div
-                id={`food-place-images-${props.foodPlaceName}`}
+                id={`food-place-images-${props.foodPlaceName.replace(
+                    / /g,
+                    ""
+                )}`}
                 className={`food-place-images flex-row`}
             >
                 {props.images.map((image, i) => (
