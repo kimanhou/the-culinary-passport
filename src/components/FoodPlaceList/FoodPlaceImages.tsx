@@ -21,28 +21,20 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
         setSelectedIndex(newSelectedIndex);
     };
 
+    const id = `food-place-images-${props.foodPlaceName.replace(/ /g, "")}`;
+
     const scrollToImage = (selectedIndex: number) => {
         const scrollValue =
             window.innerWidth < 600 ? window.innerWidth - 16 : 300;
-        document
-            .querySelector(
-                `#food-place-images-${props.foodPlaceName.replace(/ /g, "")}`
-            )
-            ?.scrollTo({
-                left: selectedIndex * scrollValue,
-                behavior: "smooth",
-            });
+        document.querySelector(`#${id}`)?.scrollTo({
+            left: selectedIndex * scrollValue,
+            behavior: "smooth",
+        });
     };
 
     return (
         <div className="food-place-images-container">
-            <div
-                id={`food-place-images-${props.foodPlaceName.replace(
-                    / /g,
-                    ""
-                )}`}
-                className={`food-place-images flex-row`}
-            >
+            <div id={id} className={`food-place-images flex-row`}>
                 {props.images.map((image, i) => (
                     <img
                         src={image}
