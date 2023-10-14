@@ -255,5 +255,22 @@
             "https://cdn.macaro-ni.jp/image/summary/128/128403/SCGVgiRvzXefRstqU6yQzluQtI6lYUm9ofJW839a.jpg"
         ],
         "coordinates": [35.6674556, 139.7029129]
+    },
+    {
+        "id": 18,
+        "name": "Gonpachi Nori Temaki",
+        "description": "This place serves a great selection of temaki (big sushi that you eat with the hand). You roll them yourself. You sit around a massive counter.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Sushi"],
+        "neighborhood": "Harajuku",
+        "googleMaps": "https://maps.app.goo.gl/jWGucx7mJ1xeHvk47",
+        "website": "https://gonpachi.jp/nori-temaki/",
+        "images": [
+            "https://gonpachi.jp/wp-content/uploads/sites/18/2020/03/noritemaki-takeout-news.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/16/33/4c/e8/caption.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/16/33/4d/4f/caption.jpg"
+        ],
+        "coordinates": [35.6691113, 139.7008644]
     }
 ]
