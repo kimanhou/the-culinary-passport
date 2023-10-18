@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "../Navigation/Navigation";
 import "./Header.scss";
-import logo from "./food-blog-logo.png";
+import logo from "./food-blog-logo.jpeg";
 import City from "../../model/City";
 
 interface IHeaderProps {
