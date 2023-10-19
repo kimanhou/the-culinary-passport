@@ -217,274 +217,284 @@
     {
         "id": 11,
         "name": "Mr. Azteca",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Small simple Mexican restaurants on St-Hubert street, surrounded by other good South American restaurants. Tacos are surprisingly good. I prefer this place than La Toxica next door where there is always a line.",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Mexican"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/h2ZdNCHfyf5r1gxz6",
+        "instagram": "https://www.instagram.com/explore/locations/253259033/mr-azteca/",
+        "website": "https://tastet.ca/en/reviews/mr-azteca-excellent-mexican-restaurant-on-st-hubert/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://tastet.ca/wp-content/uploads/merchants/cover/mr-azteca-1.jpg",
+            "https://tastet.ca/wp-content/uploads/merchants/cover/mr-azteca-10.jpg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.542087643538295,
+            -73.61497382265927
         ]
     },
     {
         "id": 12,
         "name": "Lahmajoune Villeray",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Delicious Turkish pizzas. Family business. Must try is Lahmajoune but also other flavors. Very cheap and good. Take away only.",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Mediterranean"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/QuH44gBchastpaZXA",
+        "instagram": "https://www.instagram.com/lahmajoune_villeray/",
+        "website": "https://montreal.eater.com/2021/5/14/22434925/villeray-syrian-lebanese-armenian-lahmajoune-chez-apo",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://d1ralsognjng37.cloudfront.net/ae98ce89-9575-4821-9d8a-cccc0fd0bd60.jpeg",
+            "https://images.radio-canada.ca/v1/alimentation/articles/16x9/pique-nique-resto-emporter-parcs-bonnes-adresses.jpg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.54057177609291,
+            -73.61943750767954
         ]
     },
     {
         "id": 13,
         "name": "Pho Do",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Best bun bo hue in Montreal. Very cheap (small bowl less than $10), 3 colors (dessert/drink) is also nice. They also have some rice meals.",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Vietnamese"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/wuaCGTnZwB5FR2Tb7",
+        "instagram": "https://www.instagram.com/explore/search/keyword/?q=pho%20do%20montreal",
+        "website": "https://www.facebook.com/PhoDo676Jarry/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://www.marionskitchen.com/wp-content/uploads/2021/09/Bun-Bo-Hue8624.jpg",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/87/79/2f/caption.jpg?w=600&h=400&s=1"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.545239265597225,
+            -73.62670726350343
         ]
     },
     {
         "id": 14,
         "name": "Sae Low",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Same owner as Mui Mui. Concept of Café Buvette (basically similar to previous Café Coquetel). Nice drinks and foot. A bit pricy though. The terrace is nice",
         "tags": [],
-        "price": "$$",
+        "price": "$$$",
         "typeOfCuisine": [
-            "Italian"
+            "Vietnamese"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/MQkEmqFC2uhpaT5K8",
+        "instagram": "https://www.instagram.com/saelow_mtl/?hl=en",
+        "website": "https://tastet.ca/en/reviews/sae-low-a-new-little-brother-for-mui-mui-and-anemone/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://tastet.ca/wp-content/uploads/merchants/cover/sae-low-6.jpg",
+            "https://tastet.ca/wp-content/uploads/merchants/cover/sae-low-8.jpg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.54060994536609,
+            -73.61961955865885
         ]
     },
     {
         "id": 15,
         "name": "MangeDansMonHood",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Best smash burgers. Fries are delicious too, with a special sauce. Always lots of people. Few seats to eat there. Very nice vibe. Location not so great.",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Burger"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/XymLz7LeUMJqNBSA6",
+        "instagram": "https://www.instagram.com/mangedansmonhood/",
+        "website": "https://www.mangedansmonhood.ca/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://tastet.ca/wp-content/uploads/merchants/cover/casse-croute-mangedansmonhood-1.jpg",
+            "https://uploads-ssl.webflow.com/6242929cc532942a30613081/6440240c925d51ff521d9dd1_burgers%20cropped.jpg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.54594998328902,
+            -73.61053984289103
         ]
     },
     {
         "id": 16,
         "name": "Tousignant",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "2nd best smash burgers. More North American vibe. They have more seats. In a nice area and less expensive than MDMH.",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Burger"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
+        "googleMaps": "https://maps.app.goo.gl/XmQuZzdbER5a1PYR8",
         "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "website": "https://cheztousignant.com/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://tastet.ca/wp-content/uploads/2020/07/chez-tousignant.jpg",
+            "https://cultmtl.com/wp-content/uploads/2017/09/ct-inside.jpg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.5363102089693,
+            -73.61153015427305
         ]
     },
     {
         "id": 17,
         "name": "L'Hamburger",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "3rd best smash burgers. Nice portion of fries. Great location.",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Burger"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/v6XMBCAbxiTwzKvWA",
+        "instagram": "https://www.instagram.com/lhamburgermtl/",
+        "website": "https://www.lhamburger.ca/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://portal.restomontreal.ca/lhamburger/gallery/images/01_lhamburger_895-2021-05-18.jpg",
+            "https://tastet.ca/wp-content/uploads/merchants/cover/lhamburger-4.jpg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.53858863364919,
+            -73.60526541378951
         ]
     },
     {
         "id": 18,
         "name": "Le Kahéra",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Egyptian street food. Shakshouka in a sandwich is nice. Quite small portions though but because it's delicious. Just next to the Jean Talon Market. Also a depanneur and nice coffee/latte (cardamone).",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Mediterranean"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/9KjVQSY63nLxUF1p6",
+        "instagram": "https://www.instagram.com/lekaheramtl/?hl=en",
+        "website": "https://tastet.ca/en/reviews/le-kahera-superb-depanneur-with-egyptian-roots/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://tastet.ca/wp-content/uploads/2022/09/le-kahera-4.jpg",
+            "https://d1ralsognjng37.cloudfront.net/6c9084e5-b4d3-4b60-ab22-86c677591d76.jpeg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.536087582721066,
+            -73.61319835924031
         ]
     },
     {
         "id": 19,
         "name": "Hiroko Sushi",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Casual sushis on St-Denis/Jean Talon. Good price. Perfect for a chill sushis night at home.",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Asian"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/pzRK9pjvoHMwAYpq6",
+        "instagram": "https://www.instagram.com/explore/locations/297813224/hiroko-sushi/",
+        "website": "http://www.hirokosushi.com/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://s3-media0.fl.yelpcdn.com/bphoto/cCpxp0NOL9mn3S9AcBK58A/348s.jpg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.538940695430085,
+            -73.6152541169105
         ]
     },
     {
         "id": 20,
-        "name": "Hung Phat",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "name": "Marché Hung Phat",
+        "description": "Best banh mi around Jean Talon. Other Vietnamese meals, snacks, drinks and products.",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Vietnamese"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/bJNk7WYeYnqTLphh6",
+        "instagram": "https://www.instagram.com/marchehungphat/",
+        "website": "https://www.marchehungphat.com/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://www.marchehungphat.com/_next/image?url=%2Fbanhmi.jpg&w=1920&q=75"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.53834728233618,
+            -73.61304738495431
         ]
     },
     {
         "id": 21,
         "name": "Petit Marché Végé",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Vietnamese vegetarian restaurant. Several flavors for banh mi too. You can also buy pre-cooked meals for home",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Vietnamese"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/hK1WYW1CdfHTD747A",
+        "instagram": "https://www.instagram.com/explore/locations/1031257983/petit-marche-vege/",
+        "website": "https://www.happycow.net/reviews/petit-marche-vege-montreal-48515",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://images.happycow.net/venues/1024/48/51/hcmp48515_1344173.jpeg",
+            "https://images.happycow.net/venues/1024/48/51/hcmp48515_468738.jpeg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.53808466411869,
+            -73.61244323893237
         ]
     },
     {
         "id": 22,
         "name": "Le Système",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Bar and night club that offers $5 beer and burger between 5-7. Nice terrace.",
         "tags": [],
-        "price": "$$",
+        "price": "$",
         "typeOfCuisine": [
-            "Italian"
+            "Burger"
         ],
         "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "googleMaps": "https://maps.app.goo.gl/3bzT4kw185UPGuqx7",
+        "instagram": "https://www.instagram.com/systeme_mtl/",
+        "website": "https://www.systememtl.com/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://tastet.ca/wp-content/uploads/merchants/cover/le-systeme-9.jpg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.54066238868367,
+            -73.61209762117402
         ]
     },
     {
         "id": 23,
         "name": "Bar Mamie",
-        "description": "Best pizza in Montreal. Recommended by Italians. Neapolitan pizzas.",
+        "description": "Nice French bar for wine, cheese and charcuterie. Lots of people but lots of seats. Perfect for a nice apéro. A bit pricy",
         "tags": [],
         "price": "$$",
         "typeOfCuisine": [
-            "Italian"
+            "French"
         ],
-        "neighborhood": "Villeray",
-        "googleMaps": "https://maps.app.goo.gl/NaeTqLJPtX59vwkX8",
-        "instagram": "https://www.instagram.com/moccione.restaurant/",
-        "website": "https://moccione.com/",
+        "neighborhood": "Rosemont",
+        "googleMaps": "https://maps.app.goo.gl/zniDstAkQeuHKU6m6",
+        "instagram": "https://www.instagram.com/barmamie/",
+        "website": "https://tastet.ca/en/reviews/bar-mamie-on-opening-a-cheese-and-charcuterie-bar-in-the-middle-of-a-pandemic/",
         "images": [
-            "https://tastet.ca/wp-content/uploads/2021/11/moccione-pizza-23.jpg"
+            "https://tastet.ca/wp-content/uploads/2020/05/bar-mamie-rosemont-19.jpg",
+            "https://canadas100best.com/wp-content/uploads/2022/05/Bar-Mamie-2022-1.jpg"
         ],
         "coordinates": [
-            45.5404455,
-            -73.6256078
+            45.53319327261646,
+            -73.60502711748211
         ]
     }
 ]
