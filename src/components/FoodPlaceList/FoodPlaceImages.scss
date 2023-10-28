@@ -41,13 +41,20 @@
         height: unset;
         width: calc(100vw - 32px);
         > .food-place-images {
-            height: unset;
+            height: 50vh;
             width: calc(100vw - 32px);
+            overflow-x: auto;
+            scroll-snap-coordinate: 0 0;
+            scroll-snap-points-x: repeat(100%);
             scroll-snap-type: x mandatory;
-            > img {
-                height: unset;
+            > .food-place-image-container {
+                height: 50vh;
                 width: calc(100vw - 32px);
                 scroll-snap-align: start;
+                > img {
+                    height: 50vh;
+                    width: calc(100vw - 32px);
+                }
             }
         }
         > .carousel-button {
