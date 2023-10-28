@@ -36,11 +36,13 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
         <div className="food-place-images-container">
             <div id={id} className={`food-place-images flex-row`}>
                 {props.images.map((image, i) => (
-                    <img
-                        src={image}
-                        alt={`${i} - ${props.foodPlaceName}`}
-                        key={i}
-                    />
+                    <div className="food-place-image-container">
+                        <img
+                            src={image}
+                            alt={`${i} - ${props.foodPlaceName}`}
+                            key={i}
+                        />
+                    </div>
                 ))}
             </div>
             {props.images.length > 1 && (

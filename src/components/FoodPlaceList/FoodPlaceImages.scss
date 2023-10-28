@@ -7,10 +7,15 @@
         height: 200px;
         width: 300px;
         overflow: hidden;
-        > img {
-            object-fit: cover;
+        > .food-place-image-container {
             height: 200px;
             width: 300px;
+            background-color: transparent;
+            > img {
+                object-fit: contain;
+                height: 200px;
+                width: 300px;
+            }
         }
     }
     > .carousel-button {
