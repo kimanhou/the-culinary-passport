@@ -255,5 +255,39 @@
             "https://cdn.macaro-ni.jp/image/summary/128/128403/SCGVgiRvzXefRstqU6yQzluQtI6lYUm9ofJW839a.jpg"
         ],
         "coordinates": [35.6674556, 139.7029129]
+    },
+    {
+        "id": 18,
+        "name": "Gonpachi Nori Temaki",
+        "description": "This place serves a great selection of temaki (big sushi that you eat with the hand). You roll them yourself. You sit around a massive counter.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Sushi"],
+        "neighborhood": "Harajuku",
+        "googleMaps": "https://maps.app.goo.gl/jWGucx7mJ1xeHvk47",
+        "website": "https://gonpachi.jp/nori-temaki/",
+        "images": [
+            "https://gonpachi.jp/wp-content/uploads/sites/18/2020/03/noritemaki-takeout-news.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/16/33/4c/e8/caption.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/16/33/4d/4f/caption.jpg"
+        ],
+        "coordinates": [35.6691113, 139.7008644]
+    },
+    {
+        "id": 19,
+        "name": "Tsujihan",
+        "description": "This is the Akasaka branch (there is one in Roppongi and one around Tokyo station but they are way more crowded, expect 3-4 hours wait). They serve kaisen don: rice topped with a mountain of raw fish. The base bowl is at 1,250¥, then for extra crab and ikura it's 1650¥. For 2,200¥, you will get sea urchin, and it goes on. Best quality / quantity / price / wait time for sushi in Tokyo but no reservation possible.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Sushi"],
+        "neighborhood": "Akasaka",
+        "googleMaps": "https://maps.app.goo.gl/qvw6EuK4psCtEdT36",
+        "website": "https://www.tsujihan-jp.com/",
+        "images": [
+            "https://static.wixstatic.com/media/927fc6_289c6d524b88484c9b9ae4c3e6e9e107~mv2.jpg/v1/crop/x_549,y_420,w_1990,h_1943/fill/w_406,h_396,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/%E6%9D%BE2021%E5%B9%B4_JPG.jpg",
+            "https://www.ehills.co.jp/rp/dfw/EHILLS/shop/180807_tsujihan/main.jpg",
+            "https://tblg.k-img.com/restaurant/images/Rvw/157880/640x640_rect_157880027.jpg"
+        ],
+        "coordinates": [35.6673655, 139.737444]
     }
 ]
