@@ -48,18 +48,20 @@
             height: unset;
             width: calc(100vw - 32px);
             > .food-place-images {
-                height: 50vh;
+                height: unset;
                 width: calc(100vw - 32px);
                 overflow-x: auto;
                 scroll-snap-coordinate: 0 0;
                 scroll-snap-points-x: repeat(100%);
                 scroll-snap-type: x mandatory;
                 > .food-place-image-container {
-                    height: 50vh;
+                    display: flex;
+                    align-items: center;
+                    height: unset;
                     width: calc(100vw - 32px);
                     scroll-snap-align: start;
                     > img {
-                        height: 50vh;
+                        height: unset;
                         width: calc(100vw - 32px);
                     }
                 }
@@ -74,6 +76,7 @@
             gap: 5px;
             height: 10px;
             width: 100%;
+            margin-top: 1rem;
             > .dot {
                 height: 10px;
                 width: 10px;

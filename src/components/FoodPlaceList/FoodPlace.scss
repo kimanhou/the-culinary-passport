@@ -31,6 +31,7 @@
 
 @media screen and (max-width: 600px) {
     .food-place {
+        margin-bottom: 2rem;
         > .food-place-container {
             flex-direction: column;
         }
