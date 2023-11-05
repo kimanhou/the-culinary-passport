@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import FoodPlaceImage from "./FoodPlaceImage";
 import "./FoodPlaceImages.scss";
 
 interface IFoodPlaceImagesProps {
@@ -33,33 +34,48 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
     };
 
     return (
-        <div className="food-place-images-container">
-            <div id={id} className={`food-place-images flex-row`}>
-                {props.images.map((image, i) => (
-                    <div className="food-place-image-container">
-                        <img
-                            src={image}
-                            alt={`${i} - ${props.foodPlaceName}`}
-                            key={i}
-                        />
-                    </div>
-                ))}
+        <div className="food-place-images-wrapper flex-column">
+            <div className="food-place-images-container">
+                <div id={id} className={`food-place-images flex-row`}>
+                    {props.images.map((image, i) => (
+                        <div className="food-place-image-container" key={i}>
+                            <FoodPlaceImage
+                                src={image}
+                                index={i}
+                                foodPlaceName={props.foodPlaceName}
+                                setSelectedIndex={setSelectedIndex}
+                            />
+                        </div>
+                    ))}
+                </div>
+                {props.images.length > 1 && (
+                    <>
+                        <button
+                            className="carousel-button carousel-button-prev"
+                            onClick={onClickPrevious}
+                        >
+                            &#8592;
+                        </button>
+                        <button
+                            className="carousel-button carousel-button-next"
+                            onClick={onClickNext}
+                        >
+                            &#8594;
+                        </button>
+                    </>
+                )}
             </div>
             {props.images.length > 1 && (
-                <>
-                    <button
-                        className="carousel-button carousel-button-prev"
-                        onClick={onClickPrevious}
-                    >
-                        &#8592;
-                    </button>
-                    <button
-                        className="carousel-button carousel-button-next"
-                        onClick={onClickNext}
-                    >
-                        &#8594;
-                    </button>
-                </>
+                <div className="carousel-dots">
+                    {props.images.map((t, i) => (
+                        <span
+                            className={`dot ${
+                                selectedIndex === i ? "selected" : ""
+                            }`}
+                            key={i}
+                        ></span>
+                    ))}
+                </div>
             )}
         </div>
     );
