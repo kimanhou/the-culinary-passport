@@ -14,6 +14,7 @@ interface IFoodPlaceIconsProps {
 const FoodPlaceIcons: React.FC<IFoodPlaceIconsProps> = (props) => {
     return (
         <div className="food-place-icons flex-row">
+            &nbsp;{props.neighborhood}&nbsp;
             {props.googleMaps && (
                 <a href={props.googleMaps} target="_blank" rel="noreferrer">
                     <img
@@ -23,7 +24,6 @@ const FoodPlaceIcons: React.FC<IFoodPlaceIconsProps> = (props) => {
                     />
                 </a>
             )}
-            &nbsp;{props.neighborhood}&nbsp;
             {props.instagram && (
                 <a href={props.instagram} target="_blank" rel="noreferrer">
                     <img
