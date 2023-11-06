@@ -13,5 +13,73 @@
             "https://media-cdn.tripadvisor.com/media/photo-s/0f/41/39/cf/sushi-set.jpg"
         ],
         "coordinates": [51.5181162, -0.0798211]
+    },
+    {
+        "id": 2,
+        "name": "Spitalfieds Market",
+        "description": "Open everyday, it's where everyone working in the city comes for lunch.",
+        "tags": [],
+        "price": "£",
+        "typeOfCuisine": ["Market"],
+        "neighborhood": "Liverpool Street",
+        "googleMaps": "https://maps.app.goo.gl/FFgpYmJ7wQAYwNpc6",
+        "website": "https://www.spitalfields.co.uk/",
+        "images": [
+            "https://www.silverkris.com/wp-content/uploads/2018/05/Old-Spitalfields-Market-Photo-Kiev-Victor-Shutterstock.com-1200x852-1.jpg",
+            "https://assets.londonist.com/uploads/2018/05/i730/old_spitalfields_market_street_food.jpg",
+            "https://images.squarespace-cdn.com/content/v1/5e3dacad99fe132f5997c769/1612875098519-QW7LARESDM6FN9TCDU5K/AdobeStock_303435052_Editorial_Use_Only.jpeg"
+        ],
+        "coordinates": [51.5197474, -0.0786437]
+    },
+    {
+        "id": 3,
+        "name": "Brick Lane Market",
+        "description": "Open on Sunday. The food stalls are on Brick Lane from Fournier Street to Bethnal Green Road and in halls. There is not only street food but also lots of vintage stuff. You can have a picnic in Allen Gardens and enjoy Spitalfieds City farm.",
+        "tags": [],
+        "price": "£",
+        "typeOfCuisine": ["Market"],
+        "neighborhood": "Liverpool Street",
+        "googleMaps": "https://maps.app.goo.gl/rKhx4CRUVE9FgL7C7",
+        "website": "http://www.sundayupmarket.co.uk/",
+        "instagram": "https://www.instagram.com/bricklanetrumanmarkets/?hl=en",
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/6/6e/LondonMarketScene2.jpg",
+            "https://www.londonmalanders.com/wp-content/uploads/2018/02/Brick-Lane-Market-London-1.jpg"
+        ],
+        "coordinates": [51.5204022, -0.0746396]
+    },
+    {
+        "id": 4,
+        "name": "Camden Lock Market",
+        "description": "Open everyday. It's huge and crowded but such a mythic place.",
+        "tags": [],
+        "price": "£",
+        "typeOfCuisine": ["Market"],
+        "neighborhood": "Camden",
+        "googleMaps": "https://maps.app.goo.gl/n4TPvwvUp5eezoiY9",
+        "website": "https://www.camdenmarket.com/",
+        "instagram": "https://www.instagram.com/camdenmarketldn/",
+        "images": [
+            "https://media.timeout.com/images/105857286/image.jpg",
+            "https://lp-cms-production.s3.amazonaws.com/public/2020-11/shutterstockRF_377180338.jpg",
+            "https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2017/07/18173751/halloumi-fries-camden-market-e1500902048605.jpg"
+        ],
+        "coordinates": [51.5419034, -0.1501269]
+    },
+    {
+        "id": 5,
+        "name": "Broadway Market",
+        "description": "Open on Saturday. It's the smallest markets listed here and the most local. Best duck burger in London",
+        "tags": [],
+        "price": "£",
+        "typeOfCuisine": ["Market"],
+        "neighborhood": "East London",
+        "googleMaps": "https://maps.app.goo.gl/o72M6bGUVw8DyXaW8",
+        "website": "https://broadwaymarket.co.uk/gallery/market/",
+        "images": [
+            "https://broadwaymarket.co.uk/wp-content/uploads/2019/02/GettyImages-680780021-5b0d96788e1b6e003e73cf53-1.jpg",
+            "https://broadwaymarket.co.uk/wp-content/uploads/2019/02/1962d8013400742bc2f3e2c8d5be369b.jpg"
+        ],
+        "coordinates": [51.5367009, -0.0643241]
     }
 ]
