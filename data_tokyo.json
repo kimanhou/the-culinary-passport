@@ -13,7 +13,7 @@
         "images": [
             "https://kamachiku.com/wp-content/themes/udonn/img/bg3_pc.jpg"
         ],
-        "coordinates": [35.7180872, 139.7643897]
+        "coordinates": [35.7180829, 139.7669646]
     },
     {
         "id": 2,
@@ -28,7 +28,7 @@
         "images": [
             "https://media-cdn.tripadvisor.com/media/photo-s/1d/0c/53/3d/caption.jpg"
         ],
-        "coordinates": [35.607215, 139.6640968]
+        "coordinates": [35.607210699999996, 139.6666717]
     },
     {
         "id": 3,
@@ -42,7 +42,7 @@
         "images": [
             "https://imgfp.hotp.jp/IMGH/75/85/P013187585/P013187585_238.jpg"
         ],
-        "coordinates": [35.6086905, 139.6664063]
+        "coordinates": [35.60868620000001, 139.6689812]
     },
     {
         "id": 4,
@@ -56,7 +56,7 @@
         "images": [
             "https://tblg.k-img.com/restaurant/images/Rvw/188066/640x640_rect_88849c5ab6f27a8f75b8972bb34a793c.jpg"
         ],
-        "coordinates": [35.604473, 139.6511932]
+        "coordinates": [35.604473, 139.652384]
     },
     {
         "id": 5,
@@ -66,10 +66,10 @@
         "price": "¥",
         "typeOfCuisine": ["Onigiri"],
         "neighborhood": "Shibuya",
-        "googleMaps": "https://maps.app.goo.gl/fHqmTuBAPoXDgiEb8",
+        "googleMaps": "https://maps.app.goo.gl/iJgenAqvcjmugmi38",
         "website": "https://www.togoshiya.jp/",
         "images": ["https://www.togoshiya.jp/shared/img/index/s3_img.png"],
-        "coordinates": [35.6579052, 139.6942078]
+        "coordinates": [35.6579009, 139.6967827]
     },
     {
         "id": 6,
@@ -84,7 +84,7 @@
         "images": [
             "https://shibuyadogenzaka.com/wp-content/uploads/2023/06/photo20230613-1-1024x768.jpg"
         ],
-        "coordinates": [35.6588881, 139.695492]
+        "coordinates": [35.658883800000005, 139.6980669]
     },
     {
         "id": 7,
@@ -99,7 +99,7 @@
         "images": [
             "https://tblg.k-img.com/restaurant/images/Rvw/167507/640x640_rect_92d028dbb0c4a9c3f811e9e07efcc25f.jpg"
         ],
-        "coordinates": [35.6103155, 139.6462482]
+        "coordinates": [35.6103133, 139.6475357]
     },
     {
         "id": 8,
@@ -113,7 +113,7 @@
         "images": [
             "https://tblg.k-img.com/restaurant/images/Rvw/211140/640x640_rect_334f98cecc68fc231f184f796d6e74a9.jpg"
         ],
-        "coordinates": [35.6103416, 139.6468571]
+        "coordinates": [35.6103405, 139.6475008]
     },
     {
         "id": 9,
@@ -129,7 +129,7 @@
             "https://lh3.googleusercontent.com/p/AF1QipPhASfYn11SdTZqFj4ziEYLEAMRnZ_EoWka6Db9=w1080-h608-p-no-v0",
             "https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/142899/142899880.jpg?token=80d77d4&api=v2"
         ],
-        "coordinates": [35.6488299, 139.7053461]
+        "coordinates": [35.648825599999995, 139.707921]
     },
     {
         "id": 10,
@@ -143,7 +143,7 @@
         "images": [
             "https://ximg.retty.me/crop/s400x400/q80/das/-/retty/img_repo/l/01/29792193.jpg"
         ],
-        "coordinates": [35.7344067, 139.7091262]
+        "coordinates": [35.7344024, 139.7117011]
     },
     {
         "id": 11,
@@ -158,7 +158,7 @@
         "images": [
             "https://tblg.k-img.com/restaurant/images/Rvw/190349/3435022ab55f37f24ff4a5ef5334b90e.jpg"
         ],
-        "coordinates": [35.6665087, 139.7032472]
+        "coordinates": [35.6665044, 139.7058221]
     },
     {
         "id": 12,
@@ -173,7 +173,7 @@
         "images": [
             "https://media-cdn.tripadvisor.com/media/photo-s/05/d5/1c/48/tempura-kanno.jpg"
         ],
-        "coordinates": [35.6553419, 139.6518917]
+        "coordinates": [35.655337599999996, 139.6544666]
     },
     {
         "id": 13,
@@ -188,7 +188,7 @@
         "images": [
             "https://tblg.k-img.com/restaurant/images/Rvw/154735/640x640_rect_154735187.jpg"
         ],
-        "coordinates": [35.6583496, 139.6964126]
+        "coordinates": [35.6583453, 139.6989875]
     },
     {
         "id": 14,
@@ -203,7 +203,7 @@
         "images": [
             "https://www.flavorworks.co.jp/_src/31887887/grand_menu.jpg?v=1641878155930"
         ],
-        "coordinates": [35.6635575, 139.6969786]
+        "coordinates": [35.663553199999996, 139.6995535]
     },
     {
         "id": 15,
@@ -221,7 +221,7 @@
             "https://tblg.k-img.com/restaurant/images/Rvw/44260/640x640_rect_44260680.jpg",
             "https://media-cdn.tripadvisor.com/media/photo-s/13/12/de/3a/pizza.jpg"
         ],
-        "coordinates": [35.670066, 139.701203]
+        "coordinates": [35.6700617, 139.7037779]
     },
     {
         "id": 16,
@@ -237,7 +237,7 @@
             "https://www.opefac.com/wp-content/uploads/2022/04/241A8146_a.jpg",
             "https://www.opefac.com/wp-content/uploads/2022/04/241A7343.jpg"
         ],
-        "coordinates": [35.6670421, 139.7031319]
+        "coordinates": [35.667037799999996, 139.7057068]
     },
     {
         "id": 17,
@@ -254,7 +254,7 @@
             "https://cdn.macaro-ni.jp/image/summary/128/128403/oigEgtu2uK9T0bv0gGjBduOZqpUw6cEjSHCLXt3P.jpg",
             "https://cdn.macaro-ni.jp/image/summary/128/128403/SCGVgiRvzXefRstqU6yQzluQtI6lYUm9ofJW839a.jpg"
         ],
-        "coordinates": [35.6674556, 139.7029129]
+        "coordinates": [35.6674513, 139.7054878]
     },
     {
         "id": 18,
@@ -271,7 +271,7 @@
             "https://media-cdn.tripadvisor.com/media/photo-s/16/33/4c/e8/caption.jpg",
             "https://media-cdn.tripadvisor.com/media/photo-s/16/33/4d/4f/caption.jpg"
         ],
-        "coordinates": [35.6691113, 139.7008644]
+        "coordinates": [35.669107, 139.70343929999999]
     },
     {
         "id": 19,
@@ -288,6 +288,6 @@
             "https://www.ehills.co.jp/rp/dfw/EHILLS/shop/180807_tsujihan/main.jpg",
             "https://tblg.k-img.com/restaurant/images/Rvw/157880/640x640_rect_157880027.jpg"
         ],
-        "coordinates": [35.6673612, 139.7400189]
+        "coordinates": [35.667361199999995, 139.7400189]
     }
 ]
