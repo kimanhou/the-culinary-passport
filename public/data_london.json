@@ -102,5 +102,23 @@
             "https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2020/06/20113744/dishoom-delivery-1024x714.jpg"
         ],
         "coordinates": [51.5244793, -0.079069]
+    },
+    {
+        "id": 7,
+        "name": "Pizza Union",
+        "description": "Cheapest and fastest pizza in town. 6-8£ per pizza, 5£ for a glass of wine, 5.50£ for a frozen margarita. The crust is thin and crispy. Communal wood tables in an industrial decor. Locations: Spitafields, Hoxton, Aldgate, Dalston, Holborn & King's Cross.",
+        "tags": [],
+        "price": "£",
+        "typeOfCuisine": ["Pizza"],
+        "neighborhood": "Liverpool Street",
+        "googleMaps": "https://maps.app.goo.gl/1M1Ly2NhtkeRNSmi7",
+        "website": "https://www.pizzaunion.com/",
+        "instagram": "https://www.instagram.com/pizzaunion/",
+        "images": [
+            "https://madeinshoreditch.co.uk/wp-content/uploads/2018/03/Pizza-Union-Dish-1-scaled.jpg",
+            "https://thelondoneatslist.com/wp-content/uploads/2022/08/pizza-union-cheap-pizzas-768x1024.png",
+            "https://static.designmynight.com/uploads/2018/03/pizza-union-dalston-optimised.jpg"
+        ],
+        "coordinates": [51.5177287, -0.079832]
     }
 ]
