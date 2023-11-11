@@ -120,5 +120,44 @@
             "https://static.designmynight.com/uploads/2018/03/pizza-union-dalston-optimised.jpg"
         ],
         "coordinates": [51.5177287, -0.079832]
+    },
+    {
+        "id": 8,
+        "name": "Pizza Pilgrims",
+        "description": "Neapolitan pizza. The crust is crispy and bubbly. Prices start at 10£ for a Margherita and go up to 15£ for a full meat pizza. They have restaurants everywhere in London, including Liverpool Street and Shoreditch.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Pizza"],
+        "neighborhood": "Liverpool Street",
+        "googleMaps": "https://maps.app.goo.gl/Kb3679as6YjSxK2t5",
+        "website": "https://www.pizzapilgrims.co.uk/",
+        "instagram": "https://www.instagram.com/pizzapilgrims/?hl=en",
+        "images": [
+            "https://rs-menus-api.roocdn.com/images/9f3b00d1-681a-4776-8b29-f055c7f74122/image.jpeg",
+            "https://www.philipwattsinteriors.com/uploads/9/8/5/5/98556164/1_11_orig.jpg",
+            "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/cbc8f628-34dd-11ed-9e0a-0a0e4a26b22e.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/1f/6a/75/f9/pizza-pilgrims.jpg"
+        ],
+        "coordinates": [51.5150969, -0.0866157]
+    },
+    {
+        "id": 9,
+        "name": "Gloria",
+        "description": "Big Mama group in London ! Same concept as in France, and same crowd. Locations: Gloria in Shoreditch (we used to live above !), Circolo Popolare in Tottenham Court Road, Ave Mario in Covent Garden, Jacuzzi in High Street Kensington and Carlotta in Baker Street.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Pizza"],
+        "neighborhood": "Liverpool Street",
+        "googleMaps": "https://maps.app.goo.gl/yAwxQQcrThXN6NP2A",
+        "website": "https://www.bigmammagroup.com/en/accueil",
+        "instagram": "https://www.instagram.com/bigmamma.uk/",
+        "images": [
+            "https://globeinfinite.com/wp-content/uploads/2023/06/gloria-8.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/16/96/3d/c3/mammargherita.jpg",
+            "https://loti.b-cdn.net/wp-content/uploads/2019/01/gloria.jpg?x19544",
+            "https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2022/02/25131217/Jacuzzi_Resturant_Interios_Nacho_Rivera_Photographer_London_-1-15-1024x682.jpg",
+            "https://www.bigmammagroup.com/admin/wp-content/uploads/2019/06/Header-Circolo3.jpg"
+        ],
+        "coordinates": [51.525109, -0.0839263]
     }
 ]
