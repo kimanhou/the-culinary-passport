@@ -178,5 +178,23 @@
             "https://images.squarespace-cdn.com/content/v1/5edc691de451f275e3b4ae86/0369483d-779d-4430-8564-e5fb8199b3a3/Patty-and-Bun-Trapeze-Media-Digital-Marketing-Hospitality.jpg"
         ],
         "coordinates": [51.5173124, -0.0849906]
+    },
+    {
+        "id": 11,
+        "name": "Honest Burgers",
+        "description": "Great British burgers with homemade rosemary chips included in the price. They have a choice of meat and vegetarian / vegan options, and also a smashed version. Locations everywhere in London.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Burger"],
+        "neighborhood": "Liverpool Street",
+        "googleMaps": "https://maps.app.goo.gl/nB7h1S4rbethAsBs9",
+        "website": "https://www.honestburgers.co.uk/",
+        "instagram": "https://www.instagram.com/honestburgers/",
+        "images": [
+            "https://media.timeout.com/images/105227883/image.jpg",
+            "https://www.honestburgers.co.uk/wp-content/uploads/2018/07/plant-page-2.jpg",
+            "https://www.honestburgers.co.uk/wp-content/uploads/2017/10/ealing-honest-burgers-restaurant-8.jpg"
+        ],
+        "coordinates": [51.5180146, -0.0806125]
     }
 ]
