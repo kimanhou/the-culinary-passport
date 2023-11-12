@@ -70,7 +70,7 @@
     {
         "id": 5,
         "name": "Broadway Market",
-        "description": "Open on Saturday. It's the smallest markets listed here and the most local. Best duck burger in London",
+        "description": "Open on Saturday. It's the smallest markets listed here and the most local. Best duck burger in London.",
         "tags": [],
         "price": "£",
         "typeOfCuisine": ["Market"],
@@ -196,5 +196,23 @@
             "https://www.honestburgers.co.uk/wp-content/uploads/2017/10/ealing-honest-burgers-restaurant-8.jpg"
         ],
         "coordinates": [51.5180146, -0.0806125]
+    },
+    {
+        "id": 12,
+        "name": "Poppies",
+        "description": "Historic fish and chips place. Locations in Spitalfields, Soho and Camden.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Fish and Chips"],
+        "neighborhood": "Liverpool Street",
+        "googleMaps": "https://maps.app.goo.gl/a4mjydeGSTE1YMAfA",
+        "website": "https://poppiesfishandchips.co.uk/",
+        "instagram": "https://www.instagram.com/popsfishnchips/",
+        "images": [
+            "https://i0.wp.com/www.etfoodvoyage.com/wp-content/uploads/2020/10/Poppies-Fish-Chips-scaled.jpg?fit=819%2C1024&ssl=1",
+            "https://1.bp.blogspot.com/-h1zz8DFKXgQ/XjEBwl1hRGI/AAAAAAAAQno/0-KqVRABv7MjMQa8O_Zt7mdb4D8FKC89gCLcBGAsYHQ/s1600/DSC05254.JPG",
+            "https://2.bp.blogspot.com/-4meDnK9hjd0/VDmHmt_Ih_I/AAAAAAAAMEs/IBFXDU7dzf8/w1200-h630-p-k-no-nu/Poppies%2BFish%2Band%2BChips%2C%2BSpitalfields.JPG"
+        ],
+        "coordinates": [51.5202074, -0.0766099]
     }
 ]
