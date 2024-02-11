@@ -5,7 +5,6 @@ import instagram from "./instagram.png";
 import website from "./website.png";
 
 interface IFoodPlaceIconsProps {
-    neighborhood?: string;
     googleMaps?: string;
     instagram?: string;
     website?: string;
@@ -13,8 +12,7 @@ interface IFoodPlaceIconsProps {
 
 const FoodPlaceIcons: React.FC<IFoodPlaceIconsProps> = (props) => {
     return (
-        <div className="food-place-icons flex-row">
-            &nbsp;{props.neighborhood}&nbsp;
+        <div className="food-place-icons flex-row justify-content-center">
             {props.googleMaps && (
                 <a href={props.googleMaps} target="_blank" rel="noreferrer">
                     <img

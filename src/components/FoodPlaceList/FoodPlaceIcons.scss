@@ -1,14 +1,19 @@
 .food-place-icons {
     align-items: center;
     > a {
-        > .food-place-icons-icon {
+        border: solid 1px var(--color-primary-5);
+        border-radius: 100%;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > img.food-place-icons-icon {
             height: 1.4rem;
-            margin-right: 1rem;
         }
     }
     a:last-child {
-        > .food-place-icons-icon {
-            margin-right: 0;
-        }
+        margin-right: 0;
     }
 }

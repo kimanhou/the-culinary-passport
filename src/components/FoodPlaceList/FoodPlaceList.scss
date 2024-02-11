@@ -1,4 +1,6 @@
 ul.food-place-list {
+    flex-wrap: wrap;
+    gap: 2rem;
     li:last-child {
         > .food-place {
             > .food-place-bottom-line {

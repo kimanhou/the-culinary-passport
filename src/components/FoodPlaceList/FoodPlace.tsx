@@ -4,17 +4,14 @@ import "./FoodPlace.scss";
 import FoodPlaceIcons from "./FoodPlaceIcons";
 import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceImages from "./FoodPlaceImages";
+import { getFoodPlaceId } from "utils";
 
 interface IFoodPlaceProps {
     foodPlace: FoodPlaceModel;
 }
 
 const FoodPlace: React.FC<IFoodPlaceProps> = (props) => {
-    const foodPlaceId = `food-place-${props.foodPlace.name
-        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
-        .replace(/'/g, "")
-        .replace(/\s+/g, "-")
-        .toLocaleLowerCase()}`;
+    const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
 
     return (
         <div className={`food-place`} id={`food-place-${foodPlaceId}`}>
@@ -30,7 +27,6 @@ const FoodPlace: React.FC<IFoodPlaceProps> = (props) => {
                     <div className="food-place-content-header flex-row">
                         <h3>{props.foodPlace.name}</h3>
                         <FoodPlaceIcons
-                            neighborhood={props.foodPlace.neighborhood}
                             googleMaps={props.foodPlace.googleMaps}
                             instagram={props.foodPlace.instagram}
                             website={props.foodPlace.website}
