@@ -6,6 +6,7 @@ import "./FoodPlaceImages.scss";
 interface IFoodPlaceImagesProps {
     images: string[];
     foodPlaceName: string;
+    foodPlaceId: string;
 }
 
 const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
@@ -22,12 +23,12 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
         setSelectedIndex(newSelectedIndex);
     };
 
-    const id = `food-place-images-${props.foodPlaceName.replace(/ /g, "")}`;
+    const imagesId = `food-place-images-${props.foodPlaceId}`;
 
     const scrollToImage = (selectedIndex: number) => {
         const scrollValue =
             window.innerWidth < 600 ? window.innerWidth - 16 : 300;
-        document.querySelector(`#${id}`)?.scrollTo({
+        document.querySelector(`#${imagesId}`)?.scrollTo({
             left: selectedIndex * scrollValue,
             behavior: "smooth",
         });
@@ -36,7 +37,7 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
     return (
         <div className="food-place-images-wrapper flex-column">
             <div className="food-place-images-container">
-                <div id={id} className={`food-place-images flex-row`}>
+                <div id={imagesId} className={`food-place-images flex-row`}>
                     {props.images.map((image, i) => (
                         <div className="food-place-image-container" key={i}>
                             <FoodPlaceImage

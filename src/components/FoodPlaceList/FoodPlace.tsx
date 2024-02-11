@@ -10,13 +10,20 @@ interface IFoodPlaceProps {
 }
 
 const FoodPlace: React.FC<IFoodPlaceProps> = (props) => {
+    const foodPlaceId = `food-place-${props.foodPlace.name
+        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+        .replace(/'/g, "")
+        .replace(/\s+/g, "-")
+        .toLocaleLowerCase()}`;
+
     return (
-        <div className={`food-place`} id={`food-place-${props.foodPlace.name}`}>
+        <div className={`food-place`} id={`food-place-${foodPlaceId}`}>
             <div className="food-place-container flex-row">
                 {props.foodPlace.images && (
                     <FoodPlaceImages
                         images={props.foodPlace.images}
                         foodPlaceName={props.foodPlace.name}
+                        foodPlaceId={foodPlaceId}
                     />
                 )}
                 <div className="food-place-content">
