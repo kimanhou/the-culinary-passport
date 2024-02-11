@@ -289,5 +289,129 @@
             "https://assets.londonist.com/uploads/2018/06/i730/img_5285.jpg"
         ],
         "coordinates": [51.5224984, -0.08075467]
+    },
+    {
+        "id": 17,
+        "name": "The Lamb",
+        "description": "Small Victorian pub with a no-music policy, old-fashioned interior, and traditional British menu.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Pub"],
+        "neighborhood": "Soho",
+        "googleMaps": "https://maps.app.goo.gl/uN1r4dPixqZo3qqy9",
+        "website": "https://www.thelamblondon.com/",
+        "instagram": "https://www.instagram.com/lamb.bloomsbury",
+        "images": [
+            "https://onthegrid.city/imager/s3_amazonaws_com/onthegrid.city/assets/grid/london/bloomsbury/the-lamb/DSCF2800_299006722e285f47655d17d1c9136337.jpg",
+            "https://www.thelamblondon.com/youngs/uploads/sites/320/2022/09/roast-dinner-15-1450x966.jpg",
+            "https://www.thelamblondon.com/youngs/uploads/sites/320/2024/01/349A9368-768x512.jpg"
+        ],
+        "coordinates": [51.5231095, -0.1215919]
+    },
+    {
+        "id": 18,
+        "name": "The Porterhouse",
+        "description": "Huge popular pub in Soho with multiple floors, live music and sport events. Always lively and loud.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Pub"],
+        "neighborhood": "Soho",
+        "googleMaps": "https://maps.app.goo.gl/2xeAfkmSPpmHoFH579",
+        "website": "https://www.porterhouse.london/",
+        "instagram": "https://www.instagram.com/porterhouselondon",
+        "images": [
+            "https://www.porterhouse.london/wp-content/uploads/2019/10/Porterhouse-Pint-Porter2.jpg",
+            "https://www.porterhouse.london/wp-content/uploads/2019/10/Porterhouse-Covent-Garden-Interior-1.jpg",
+            "https://whatpub-new.s3.eu-west-1.amazonaws.com/images/pubs/800x600%402x/WLD-16686-94032-porterhouse-london.jpg",
+            "https://www.porterhouse.london/wp-content/gallery/main-gallery/Porterhouse-London-Bar-Images-2.jpg"
+        ],
+        "coordinates": [51.5231095, -0.1215919]
+    },
+    {
+        "id": 19,
+        "name": "The Dove",
+        "description": "Local pub in Broadway market with vegetarian options. Great selection of local and international beers, including hard to find Belgian beers like Delirium on draft.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Pub"],
+        "neighborhood": "East London",
+        "googleMaps": "https://maps.app.goo.gl/mA6XyswjCXrg9wzF6",
+        "website": "http://dovepubs.com/",
+        "images": [
+            "https://media-cdn.tripadvisor.com/media/photo-s/0e/a2/9e/03/the-dove-broadway-market.jpg",
+            "https://broadwaymarket.co.uk/wp-content/uploads/2019/02/180307_Burger_Dovetail_1494.jpg"
+        ],
+        "coordinates": [51.5231095, -0.1215919]
+    },
+    {
+        "id": 20,
+        "name": "The Scolt Head",
+        "description": "Gastropub in the middle of nowhere between Dalson and Haggerston, with a nice terrace and great food. Very local.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Pub"],
+        "neighborhood": "East London",
+        "googleMaps": "https://maps.app.goo.gl/CTi4RPj1sd7eRMJH6",
+        "website": "https://www.thescolthead.co.uk/",
+        "instagram": "https://www.instagram.com/thescolthead",
+        "images": [
+            "https://pubs.sawdays.co.uk/var/self_catering_site/storage/images/special-places/britain/england/london/the-scolt-head/the-scolt-head-gallery/external1/182960763-2-eng-GB@pubs/external1_gallery_preview.jpg",
+            "https://www.thescolthead.co.uk/scolt-head/wp-content/uploads/2018/05/SCOLT_HEAD_PubDog_Monkey.png",
+            "https://whatpub-new.s3.eu-west-1.amazonaws.com/images/pubs/800x600%402x/NLD-5470-95216-scolt-head-london.jpg"
+        ],
+        "coordinates": [51.5231095, -0.1215919]
+    },
+    {
+        "id": 21,
+        "name": "The Virgin Queen",
+        "description": "Local pub with good fish and chips, board games and a nice veranda. It can be quiet enough on a weekday to have an actual conversation. Huge drawing of a fish on the exterior wall.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Pub"],
+        "neighborhood": "East London",
+        "googleMaps": "https://maps.app.goo.gl/SucL2Fganx9rk1qg9",
+        "website": "https://thevirginqueenpub.co.uk/",
+        "instagram": "https://www.instagram.com/virginqueenpub/",
+        "images": [
+            "https://thevirginqueenpub.co.uk/wp-content/uploads/2020/06/VQ-exterior.jpg",
+            "https://media.timeout.com/images/105157301/750/422/image.jpg",
+            "https://media.timeout.com/images/105157304/750/422/image.jpg",
+            "https://thevirginqueenpub.co.uk/wp-content/uploads/2020/06/wide.jpg"
+        ],
+        "coordinates": [51.5231095, -0.1215919]
+    },
+    {
+        "id": 22,
+        "name": "Dalston Eastern Curve Garden",
+        "description": "Community garden on an old railway line with beds for residents to grow food, and wildlife-friendly plants. Perfect to spend a laid back summer afternoon. They serve pizza, tea and beer. Dogs and kids allowed.",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Pub"],
+        "neighborhood": "East London",
+        "googleMaps": "https://maps.app.goo.gl/apLSCuGZL3t9C4Ue8",
+        "website": "https://dalstongarden.org/",
+        "images": [
+            "https://media.timeout.com/images/105218005/750/422/image.jpg",
+            "https://content.presspage.com/uploads/722/1920_dalston-curvegarden-jmf-001.jpg?10000",
+            "https://i0.wp.com/enthusiasticgardener.com/wp-content/uploads/2018/05/18-5-30-dalston-curve-lr-1865.jpg?ssl=1"
+        ],
+        "coordinates": [51.5231095, -0.1215919]
+    },
+    {
+        "id": 23,
+        "name": "Kingly Court",
+        "description": "Lively food court just off Carnaby street in the heart of London. Rum bar, pizza place, ceviche and so much more...",
+        "tags": [],
+        "price": "££",
+        "typeOfCuisine": ["Food Court"],
+        "neighborhood": "Soho",
+        "googleMaps": "https://maps.app.goo.gl/XzEGkFvD5dLVi6xx8",
+        "website": "https://www.carnaby.co.uk/",
+        "images": [
+            "https://www.londonxlondon.com/wp-content/uploads/2023/08/Kingly-Court-shutterstock_2086461379.jpg",
+            "https://cdn.londonandpartners.com/asset/kingly-court-kingly-court-f7153189afcf5a37ea2e03420ca6ade9.jpg",
+            "https://www.miw.co.uk/wp-content/uploads/2018/05/shutterstock_537943402-11-1732x800.jpg"
+        ],
+        "coordinates": [51.5231095, -0.1215919]
     }
 ]
