@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-// import { faInstagram } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import "./FoodPlaceIcons.scss";
 
 interface IFoodPlaceIconsProps {
@@ -20,7 +20,7 @@ const FoodPlaceIcons: React.FC<IFoodPlaceIconsProps> = (props) => {
             )}
             {props.instagram && (
                 <a href={props.instagram} target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon icon={faLocationDot} color={"#f25c54"} />
+                    <FontAwesomeIcon icon={faInstagram} color={"#f25c54"} />
                 </a>
             )}
             {props.website && (
