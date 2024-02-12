@@ -1,8 +1,8 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+// import { faInstagram } from "@fortawesome/free-solid-svg-icons";
 import "./FoodPlaceIcons.scss";
-import googleMaps from "./googleMaps.png";
-import instagram from "./instagram.png";
-import website from "./website.png";
 
 interface IFoodPlaceIconsProps {
     googleMaps?: string;
@@ -15,29 +15,17 @@ const FoodPlaceIcons: React.FC<IFoodPlaceIconsProps> = (props) => {
         <div className="food-place-icons flex-row justify-content-center">
             {props.googleMaps && (
                 <a href={props.googleMaps} target="_blank" rel="noreferrer">
-                    <img
-                        src={googleMaps}
-                        className="food-place-icons-icon food-place-icons-google-maps"
-                        alt="Google Maps icon"
-                    />
+                    <FontAwesomeIcon icon={faLocationDot} color={"#f25c54"} />
                 </a>
             )}
             {props.instagram && (
                 <a href={props.instagram} target="_blank" rel="noreferrer">
-                    <img
-                        src={instagram}
-                        className="food-place-icons-icon food-place-icons-instagram"
-                        alt="Instagram icon"
-                    />
+                    <FontAwesomeIcon icon={faLocationDot} color={"#f25c54"} />
                 </a>
             )}
             {props.website && (
                 <a href={props.website} target="_blank" rel="noreferrer">
-                    <img
-                        src={website}
-                        className="food-place-icons-icon food-place-icons-website"
-                        alt="Website icon"
-                    />
+                    <FontAwesomeIcon icon={faLink} color={"#f25c54"} />
                 </a>
             )}
         </div>
