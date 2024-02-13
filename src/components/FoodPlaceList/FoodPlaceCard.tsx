@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./FoodPlaceIcons";
@@ -11,7 +11,25 @@ interface IFoodPlaceCardProps {
 }
 
 const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
+    const [lineClamp, setLineClamp] = useState<number | undefined>(5);
+    const [maxHeight, setMaxHeight] = useState<number | undefined>(300);
     const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
+
+    const onClickReadMore = () => {
+        setLineClamp((t) => {
+            if (t) {
+                return undefined;
+            }
+            return 5;
+        });
+
+        setMaxHeight((t) => {
+            if (t) {
+                return undefined;
+            }
+            return 300;
+        });
+    };
 
     return (
         <div className="food-place-card" id={`food-place-${foodPlaceId}`}>
@@ -23,7 +41,10 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                 />
             )}
 
-            <div className="food-place-card-content flex-column">
+            <div
+                className="food-place-card-content flex-column"
+                style={{ maxHeight }}
+            >
                 <h5>{props.foodPlace.neighborhood}</h5>
                 <h3>{props.foodPlace.name}</h3>
                 <FoodPlaceTags
@@ -33,7 +54,11 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                         props.foodPlace.price,
                     ].filter((t) => t !== "")}
                 />
-                <p>{props.foodPlace.description}</p>
+                <p style={{ WebkitLineClamp: lineClamp }}>
+                    {props.foodPlace.description}
+                </p>
+                {lineClamp && <button onClick={onClickReadMore}>+</button>}
+                {!lineClamp && <button onClick={onClickReadMore}>-</button>}
                 <FoodPlaceIcons
                     googleMaps={props.foodPlace.googleMaps}
                     instagram={props.foodPlace.instagram}
