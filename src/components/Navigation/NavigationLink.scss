@@ -2,26 +2,26 @@
     text-transform: uppercase;
     margin: 0 20px;
     letter-spacing: 0px;
-    animation: letter-spacing-animation .6s ease-in 1s forwards;
-    transition: color .2s ease-in;
+    animation: letter-spacing-animation 0.6s ease-in 1s forwards;
+    transition: color 0.2s ease-in;
     position: relative;
     &.selected {
-        color: var(--color-grey);
+        color: var(--color-primary-2);
     }
-    >.text {
+    > .text {
         &.grey {
-            color: var(--color-grey);
+            color: var(--color-primary-2);
             position: absolute;
             left: 0;
             bottom: 0;
             overflow: hidden;
-            transition: width .6s;
+            transition: width 0.6s;
             white-space: nowrap;
             width: 0;
         }
     }
     &:hover {
-        >.text {
+        > .text {
             &.grey {
                 width: 100%;
             }
