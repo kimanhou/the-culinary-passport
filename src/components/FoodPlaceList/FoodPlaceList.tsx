@@ -1,6 +1,5 @@
 import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
-import FoodPlace from "./FoodPlace";
 import FoodPlaceCard from "./FoodPlaceCard";
 import "./FoodPlaceList.scss";
 
