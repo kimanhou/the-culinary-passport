@@ -27,4 +27,16 @@
             margin-bottom: 2rem;
         }
     }
+    &:hover {
+        > .food-place-images-wrapper {
+            > .food-place-images-container {
+                > .carousel-button {
+                    opacity: 0.8;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }

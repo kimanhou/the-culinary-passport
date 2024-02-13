@@ -1,6 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import FoodPlaceImage from "./FoodPlaceImage";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faChevronRight,
+    faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import "./FoodPlaceImages.scss";
 
 interface IFoodPlaceImagesProps {
@@ -11,16 +16,18 @@ interface IFoodPlaceImagesProps {
 
 const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
+    const canPrevious = props.images.length > 1 && selectedIndex > 0;
+    const canNext =
+        props.images.length > 1 && selectedIndex < props.images.length - 1;
 
     const onClickPrevious = () => {
-        setSelectedIndex((selectedIndex - 1) % props.images.length);
-        scrollToImage(selectedIndex);
+        setSelectedIndex((t) => t - 1);
+        scrollToImage(selectedIndex - 1);
     };
 
     const onClickNext = () => {
-        const newSelectedIndex = (selectedIndex + 1) % props.images.length;
-        scrollToImage(newSelectedIndex);
-        setSelectedIndex(newSelectedIndex);
+        setSelectedIndex((t) => t + 1);
+        scrollToImage(selectedIndex + 1);
     };
 
     const imagesId = `food-place-images-${props.foodPlaceId}`;
@@ -51,18 +58,22 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
                 </div>
                 {props.images.length > 1 && (
                     <>
-                        <button
-                            className="carousel-button carousel-button-prev"
-                            onClick={onClickPrevious}
-                        >
-                            &#8592;
-                        </button>
-                        <button
-                            className="carousel-button carousel-button-next"
-                            onClick={onClickNext}
-                        >
-                            &#8594;
-                        </button>
+                        {canPrevious && (
+                            <button
+                                className="carousel-button carousel-button-prev flex-row align-items-center justify-content-center"
+                                onClick={onClickPrevious}
+                            >
+                                <FontAwesomeIcon icon={faChevronLeft} />
+                            </button>
+                        )}
+                        {canNext && (
+                            <button
+                                className="carousel-button carousel-button-next flex-row align-items-center justify-content-center"
+                                onClick={onClickNext}
+                            >
+                                <FontAwesomeIcon icon={faChevronRight} />
+                            </button>
+                        )}
                     </>
                 )}
             </div>
