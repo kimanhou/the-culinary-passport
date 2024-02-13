@@ -1,22 +1,28 @@
 import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
-import "./FoodPlaceCard.scss";
 import FoodPlaceIcons from "./FoodPlaceIcons";
+import FoodPlaceImages from "./FoodPlaceImages";
+import { getFoodPlaceId } from "utils";
+import "./FoodPlaceCard.scss";
 
 interface IFoodPlaceCardProps {
     foodPlace: FoodPlaceModel;
 }
 
 const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
-    const foodPlaceId = `food-place-${props.foodPlace.name
-        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
-        .replace(/'/g, "")
-        .replace(/\s+/g, "-")
-        .toLocaleLowerCase()}`;
+    const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
 
     return (
-        <div className="food-place-card" id={`food-place-card-${foodPlaceId}`}>
+        <div className="food-place-card" id={`food-place-${foodPlaceId}`}>
+            {props.foodPlace.images && (
+                <FoodPlaceImages
+                    images={props.foodPlace.images}
+                    foodPlaceName={props.foodPlace.name}
+                    foodPlaceId={foodPlaceId}
+                />
+            )}
+
             <div className="food-place-card-content flex-column">
                 <h5>{props.foodPlace.neighborhood}</h5>
                 <h3>{props.foodPlace.name}</h3>

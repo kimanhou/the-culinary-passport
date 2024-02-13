@@ -14,7 +14,9 @@ interface IMapProps {
 
 const Map: React.FC<IMapProps> = (props) => {
     const onIconClick = (foodPlaceName: string) => {
-        scrollTo({ elementId: `food-place-${getFoodPlaceId(foodPlaceName)}` });
+        scrollTo({
+            elementId: `food-place-${getFoodPlaceId(foodPlaceName)}`,
+        });
     };
 
     return (
