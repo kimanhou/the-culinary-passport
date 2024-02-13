@@ -5,13 +5,18 @@ import "./RoundIcon.scss";
 
 interface IRoundIconProps {
     icon: IconDefinition;
+    href: string;
 }
 
 const RoundIcon: React.FC<IRoundIconProps> = (props) => {
     return (
-        <a href="#" className="round-icon">
-            <span className="inner"></span>
-            {/* <i className="icon-home"></i> */}
+        <a
+            className="round-icon"
+            href={props.href}
+            target="_blank"
+            rel="noreferrer"
+        >
+            <span className="round-icon-inner"></span>
             <FontAwesomeIcon icon={props.icon} />
         </a>
     );
