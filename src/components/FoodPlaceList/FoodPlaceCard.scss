@@ -1,8 +1,10 @@
 .food-place-card {
+    scroll-margin: 2rem;
     width: 300px;
     // height: 300px;
     border-radius: 12px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
     > .food-place-card-content {
         padding: 1rem;
         text-align: left;
@@ -15,7 +17,7 @@
         }
         > h3 {
             margin-block: 0;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
         > .food-place-tags {
             margin-bottom: 2rem;
