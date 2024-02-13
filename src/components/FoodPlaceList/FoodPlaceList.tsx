@@ -22,7 +22,6 @@ const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
                 })
                 .map((t) => (
                     <li key={t.name}>
-                        {/* <FoodPlace foodPlace={t} /> */}
                         <FoodPlaceCard foodPlace={t} />
                     </li>
                 ))}
