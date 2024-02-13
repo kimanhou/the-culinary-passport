@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import "./FoodPlaceIcons.scss";
+import RoundIcon from "components/common/RoundIcon/RoundIcon";
 
 interface IFoodPlaceIconsProps {
     googleMaps?: string;
@@ -28,6 +29,7 @@ const FoodPlaceIcons: React.FC<IFoodPlaceIconsProps> = (props) => {
                     <FontAwesomeIcon icon={faLink} color={"#f25c54"} />
                 </a>
             )}
+            <RoundIcon icon={faInstagram} />
         </div>
     );
 };

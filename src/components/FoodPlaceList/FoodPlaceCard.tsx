@@ -20,7 +20,6 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
             <div className="food-place-card-content flex-column">
                 <h5>{props.foodPlace.neighborhood}</h5>
                 <h3>{props.foodPlace.name}</h3>
-                <p>{props.foodPlace.description}</p>
                 <FoodPlaceTags
                     tags={[
                         ...props.foodPlace.tags,
@@ -28,6 +27,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                         props.foodPlace.price,
                     ].filter((t) => t !== "")}
                 />
+                <p>{props.foodPlace.description}</p>
                 <FoodPlaceIcons
                     googleMaps={props.foodPlace.googleMaps}
                     instagram={props.foodPlace.instagram}

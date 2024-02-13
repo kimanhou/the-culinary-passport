@@ -9,20 +9,20 @@
         > h5 {
             color: var(--color-primary-5);
             margin-block: 0;
-            margin-bottom: 1rem;
+            margin-bottom: 1.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
         > h3 {
             margin-block: 0;
+            margin-bottom: 0.8rem;
+        }
+        > .food-place-tags {
             margin-bottom: 2rem;
         }
         > p {
             margin-block: 0;
             margin-bottom: 2rem;
-        }
-        > .food-place-tags {
-            margin-bottom: 1rem;
         }
     }
 }
