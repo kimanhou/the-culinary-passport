@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.e375d57e.css",
-    "main.js": "./static/js/main.5051c35f.js",
+    "main.css": "./static/css/main.5e899fce.css",
+    "main.js": "./static/js/main.631a4168.js",
     "static/js/787.bff22d74.chunk.js": "./static/js/787.bff22d74.chunk.js",
     "static/media/Kalnia-VariableFont_wdth,wght.ttf": "./static/media/Kalnia-VariableFont_wdth,wght.ea93935ecef30006ea44.ttf",
     "static/media/googleMaps.png": "./static/media/googleMaps.f6f6a5a923f7741ef206.png",
     "index.html": "./index.html",
-    "main.e375d57e.css.map": "./static/css/main.e375d57e.css.map",
-    "main.5051c35f.js.map": "./static/js/main.5051c35f.js.map",
+    "main.5e899fce.css.map": "./static/css/main.5e899fce.css.map",
+    "main.631a4168.js.map": "./static/js/main.631a4168.js.map",
     "787.bff22d74.chunk.js.map": "./static/js/787.bff22d74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e375d57e.css",
-    "static/js/main.5051c35f.js"
+    "static/css/main.5e899fce.css",
+    "static/js/main.631a4168.js"
   ]
 }
