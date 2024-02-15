@@ -22,14 +22,22 @@
         > .food-place-tags {
             margin-bottom: 2rem;
         }
-        > p {
-            margin-block: 0;
+        .food-place-card-description-wrapper {
             margin-bottom: 2rem;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            // -webkit-line-clamp: 5; /* From which line on to truncate */
-            overflow: hidden;
-            flex: 1;
+            > p {
+                margin-block: 0;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            > button {
+                color: var(--color-primary-2);
+                border: none;
+                cursor: pointer;
+                background-color: transparent;
+                padding: 0;
+                font-size: 0.8rem;
+            }
         }
     }
     &:hover {

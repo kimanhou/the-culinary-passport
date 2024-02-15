@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./FoodPlaceIcons";
@@ -11,16 +11,19 @@ interface IFoodPlaceCardProps {
 }
 
 const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
-    const [lineClamp, setLineClamp] = useState<number | undefined>(5);
+    const descriptionRef = useRef<HTMLParagraphElement>(null);
+    const [lineClamp, setLineClamp] = useState<number | undefined>(4);
     const [maxHeight, setMaxHeight] = useState<number | undefined>(300);
+    const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
+    const [isReadLessVisible, setIsReadLessVisible] = useState(false);
     const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
 
-    const onClickReadMore = () => {
+    const onClickReadButton = () => {
         setLineClamp((t) => {
             if (t) {
                 return undefined;
             }
-            return 5;
+            return 4;
         });
 
         setMaxHeight((t) => {
@@ -29,7 +32,20 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
             }
             return 300;
         });
+
+        setIsReadLessVisible((t) => !t);
+        setIsReadMoreVisible((t) => !t);
     };
+
+    useEffect(() => {
+        if (
+            descriptionRef?.current &&
+            descriptionRef.current.offsetHeight <
+                descriptionRef.current.scrollHeight
+        ) {
+            setIsReadMoreVisible(true);
+        }
+    }, []);
 
     return (
         <div className="food-place-card" id={`food-place-${foodPlaceId}`}>
@@ -54,11 +70,20 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                         props.foodPlace.price,
                     ].filter((t) => t !== "")}
                 />
-                <p style={{ WebkitLineClamp: lineClamp }}>
-                    {props.foodPlace.description}
-                </p>
-                {lineClamp && <button onClick={onClickReadMore}>+</button>}
-                {!lineClamp && <button onClick={onClickReadMore}>-</button>}
+                <div className="food-place-card-description-wrapper flex-1">
+                    <p
+                        style={{ WebkitLineClamp: lineClamp }}
+                        ref={descriptionRef}
+                    >
+                        {props.foodPlace.description}
+                    </p>
+                    {isReadMoreVisible && (
+                        <button onClick={onClickReadButton}>Read more</button>
+                    )}
+                    {isReadLessVisible && (
+                        <button onClick={onClickReadButton}>Read less</button>
+                    )}
+                </div>
                 <FoodPlaceIcons
                     googleMaps={props.foodPlace.googleMaps}
                     instagram={props.foodPlace.instagram}
