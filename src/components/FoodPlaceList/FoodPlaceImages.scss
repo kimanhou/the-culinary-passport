@@ -50,15 +50,10 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .food-place-images-wrapper {
         > .food-place-images-container {
-            margin-right: 0;
-            height: unset;
-            width: calc(100vw - 32px);
             > .food-place-images {
-                height: unset;
-                width: calc(100vw - 32px);
                 overflow-x: auto;
                 scroll-snap-coordinate: 0 0;
                 scroll-snap-points-x: repeat(100%);
@@ -66,13 +61,7 @@
                 > .food-place-image-container {
                     display: flex;
                     align-items: center;
-                    height: unset;
-                    width: calc(100vw - 32px);
                     scroll-snap-align: start;
-                    > img {
-                        height: unset;
-                        width: calc(100vw - 32px);
-                    }
                 }
             }
             > .carousel-button {
