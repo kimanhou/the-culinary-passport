@@ -180,7 +180,9 @@
         "googleMaps": "https://maps.app.goo.gl/uGumiyW6xQRzxCz18",
         "instagram": "https://www.instagram.com/sanakajingumae/",
         "images": [
-            "https://tblg.k-img.com/restaurant/images/Rvw/190349/3435022ab55f37f24ff4a5ef5334b90e.jpg"
+            "https://tblg.k-img.com/restaurant/images/Rvw/225587/640x640_rect_fd99c78be3a53e40fc43e24b6f9eb084.jpg",
+            "https://tblg.k-img.com/restaurant/images/Rvw/190349/3435022ab55f37f24ff4a5ef5334b90e.jpg",
+            "https://usanco.com/wp-content/uploads/2020/03/IMG_0983.jpg"
         ],
         "coordinates": [35.6665044, 139.7058221]
     },
@@ -195,14 +197,18 @@
         "googleMaps": "https://maps.app.goo.gl/mr3z6uFjYfauUmSj8",
         "website": "https://www.tenpurakanno.com/",
         "images": [
-            "https://media-cdn.tripadvisor.com/media/photo-s/05/d5/1c/48/tempura-kanno.jpg"
+            "https://www.tenpurakanno.com/wp-content/uploads/2019/02/04-01.jpg",
+            "https://www.tenpurakanno.com/wp-content/uploads/2018/12/kanno-dinner-594x594.png",
+            "https://www.tenpurakanno.com/wp-content/uploads/2018/12/sakura-594x594.png",
+            "https://www.tenpurakanno.com/wp-content/uploads/2019/03/topimg_resize.jpg",
+            "https://www.tenpurakanno.com/wp-content/uploads/2019/02/04-02.jpg"
         ],
         "coordinates": [35.655337599999996, 139.6544666]
     },
     {
         "id": 13,
         "name": "Sushi no midori",
-        "description": "The place listed here is inside Shibuya Mark City but there are also branches in Umegaoka (the original), Ginza and Asakasa. There is always a queue but you can take a ticket and follow the virtual queue on Line (the application called Line, it's not a typo). Very decent sushi platters for a decent price.",
+        "description": "The place listed here is inside Shibuya Mark City but there are also branches in Umegaoka (the original), Ginza and Asakasa. There is always a queue but you can take a ticket and follow the virtual queue on Line (the application is called Line, it's not a typo). Very decent sushi platters for a decent price.",
         "tags": [],
         "price": "¥¥",
         "typeOfCuisine": ["Sushi"],
@@ -210,7 +216,10 @@
         "googleMaps": "https://maps.app.goo.gl/XQm1s2WVt63jFzDVA",
         "website": "https://www.sushinomidori.co.jp/",
         "images": [
-            "https://tblg.k-img.com/restaurant/images/Rvw/154735/640x640_rect_154735187.jpg"
+            "https://img.poibank.com/bjd00up61kn8GnFp6r0otBoduEM=/W3siZm9ybWF0Ijoid2VicCJ9LHsia2V5Ijoic3VnZ2VzdGlvbi8yNjQ2NDM5MS80NTMwMjc0LzE2NzY4ODU4NjQ2NjcifSx7InJlc2l6ZSI6eyJ3aWR0aCI6IjYwMCJ9fV0=",
+            "https://tblg.k-img.com/restaurant/images/Rvw/154735/640x640_rect_154735187.jpg",
+            "https://a0.cdn.japantravel.com/photo/53844-191080/800!/tokyo-sushi-no-midori-shibuya-191080.jpg",
+            "https://thateconomist.files.wordpress.com/2016/03/img_6467.jpg"
         ],
         "coordinates": [35.6583453, 139.6989875]
     },
@@ -225,7 +234,10 @@
         "googleMaps": "https://maps.app.goo.gl/19MxtxELZddPWyTe6",
         "website": "https://www.flavorworks.co.jp/brand/flippers.html",
         "images": [
-            "https://www.flavorworks.co.jp/_src/31887887/grand_menu.jpg?v=1641878155930"
+            "https://rimage.gnst.jp/rest/img/9m3r8pss0000/s_0n5r.jpg?t=1680002386&g=670",
+            "https://www.flavorworks.co.jp/_src/31887887/grand_menu.jpg?v=1641878155930",
+            "https://imgfp.hotp.jp/IMGH/47/14/P037414714/P037414714_480.jpg",
+            "https://emomiu.jp/wp/wp-content/uploads/2019/11/FLIPPER_S%E3%80%80%E6%B8%8B%E8%B0%B7%E5%BA%97.jpg"
         ],
         "coordinates": [35.663553199999996, 139.6995535]
     },
