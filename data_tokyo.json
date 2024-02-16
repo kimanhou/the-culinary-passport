@@ -11,7 +11,10 @@
         "instagram": "https://www.instagram.com/kamachiku.nezu/",
         "website": "https://kamachiku.com/",
         "images": [
-            "https://kamachiku.com/wp-content/themes/udonn/img/bg3_pc.jpg"
+            "https://tblg.k-img.com/restaurant/images/Rvw/150268/640x640_rect_150268344.jpg",
+            "https://media.timeout.com/images/105269741/image.jpg",
+            "https://kamachiku.com/wp-content/themes/udonn/img/bg3_pc.jpg",
+            "https://tblg.k-img.com/restaurant/images/Rvw/105828/320x320_square_105828587.jpg"
         ],
         "coordinates": [35.7180829, 139.7669646]
     },
@@ -26,7 +29,11 @@
         "googleMaps": "https://maps.app.goo.gl/Ga9pXQMAzY2fNtQ7A",
         "website": "https://tabelog.com/tokyo/A1317/A131703/13152264/",
         "images": [
-            "https://media-cdn.tripadvisor.com/media/photo-s/1d/0c/53/3d/caption.jpg"
+            "https://media-assets.aumo.jp/uploads/photo/snap_photo/data/20387659/large_webp_2ffe8a4d-abfb-41fb-b4bd-95ec5a439dd0.webp",
+            "https://wine-no-kanpe.com/contents/wp-content/uploads/2019/06/pizza1701.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/1d/0c/53/3d/caption.jpg",
+            "https://tokyo-tabearuki.com/wp-content/uploads/Pizza17-11.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/13/90/5b/86/photo0jpg.jpg"
         ],
         "coordinates": [35.607210699999996, 139.6666717]
     },
@@ -40,7 +47,9 @@
         "neighborhood": "Jiyugaoka",
         "googleMaps": "https://maps.app.goo.gl/eTU6gdo9YLFjKawk9",
         "images": [
-            "https://imgfp.hotp.jp/IMGH/75/85/P013187585/P013187585_238.jpg"
+            "https://tblg.k-img.com/restaurant/images/Rvw/209107/640x640_rect_30484e256e805d5fb121c086e92a0b8c.jpg",
+            "https://imgfp.hotp.jp/IMGH/75/85/P013187585/P013187585_238.jpg",
+            "https://tblg.k-img.com/restaurant/images/Rvw/218454/640x640_rect_240183166b6cd4246e61dfbad4c7cc0a.jpg"
         ],
         "coordinates": [35.60868620000001, 139.6689812]
     },
@@ -54,7 +63,8 @@
         "neighborhood": "Oyamadai",
         "googleMaps": "https://maps.app.goo.gl/XwQEpFfdH63Dy2rK7",
         "images": [
-            "https://tblg.k-img.com/restaurant/images/Rvw/188066/640x640_rect_88849c5ab6f27a8f75b8972bb34a793c.jpg"
+            "https://tblg.k-img.com/restaurant/images/Rvw/188066/640x640_rect_88849c5ab6f27a8f75b8972bb34a793c.jpg",
+            "https://stat.ameba.jp/user_images/20230214/09/fallergy/f2/05/j/o1080081015242936233.jpg"
         ],
         "coordinates": [35.604473, 139.652384]
     },
@@ -68,7 +78,12 @@
         "neighborhood": "Shibuya",
         "googleMaps": "https://maps.app.goo.gl/iJgenAqvcjmugmi38",
         "website": "https://www.togoshiya.jp/",
-        "images": ["https://www.togoshiya.jp/shared/img/index/s3_img.png"],
+        "images": [
+            "https://www.togoshiya.jp/shared/img/index/s3_img.png",
+            "https://www.togoshiya.jp/shared/img/index/s6_img.jpg",
+            "https://p16-va.lemon8cdn.com/tos-maliva-v-ac5634-us/0a9f347b7dcc4beeb82cf8a3dce1c4e1~tplv-tej9nj120t-origin.webp",
+            "https://media-cdn.tripadvisor.com/media/photo-s/28/ec/e6/0d/caption.jpg"
+        ],
         "coordinates": [35.6579009, 139.6967827]
     },
     {
@@ -82,7 +97,11 @@
         "googleMaps": "https://maps.app.goo.gl/h8SmB9P2tByLoiYSA",
         "website": "http://www.tenkazushi.co.jp/",
         "images": [
-            "https://shibuyadogenzaka.com/wp-content/uploads/2023/06/photo20230613-1-1024x768.jpg"
+            "https://shibuyadogenzaka.com/wp-content/uploads/2023/06/photo20230613-1-1024x768.jpg",
+            "https://shiblog.town/wp-content/uploads/2020/02/2020-01-31-22-16-16-921-1024x720.jpg",
+            "https://shiblog.town/wp-content/uploads/2020/02/2020-01-31-22-21-52-618-1024x720.jpg",
+            "https://shiblog.town/wp-content/uploads/2020/02/2020-01-31-22-17-09-695-1024x720.jpg",
+            "https://shiblog.town/wp-content/uploads/2020/02/2020-01-31-22-19-07-636-1024x720.jpg"
         ],
         "coordinates": [35.658883800000005, 139.6980669]
     },
@@ -97,7 +116,9 @@
         "googleMaps": "https://maps.app.goo.gl/ZzAMKWuHNJcUSkPu9",
         "website": "https://yuyu-shokudo.jp/",
         "images": [
-            "https://tblg.k-img.com/restaurant/images/Rvw/167507/640x640_rect_92d028dbb0c4a9c3f811e9e07efcc25f.jpg"
+            "https://tblg.k-img.com/restaurant/images/Rvw/167507/640x640_rect_92d028dbb0c4a9c3f811e9e07efcc25f.jpg",
+            "https://yuyu-shokudo.jp/wp-content/uploads/2022/01/F06D96FB-1EA3-4DB8-9707-045D218C7FE5.jpg",
+            "https://yuyu-shokudo.jp/wp-content/uploads/2022/01/S__64225308.jpg"
         ],
         "coordinates": [35.6103133, 139.6475357]
     },
@@ -111,7 +132,10 @@
         "neighborhood": "Todoroki",
         "googleMaps": "https://maps.app.goo.gl/SruNcgLgimvWvXi1A",
         "images": [
-            "https://tblg.k-img.com/restaurant/images/Rvw/211140/640x640_rect_334f98cecc68fc231f184f796d6e74a9.jpg"
+            "https://tblg.k-img.com/restaurant/images/Rvw/211140/640x640_rect_334f98cecc68fc231f184f796d6e74a9.jpg",
+            "https://ximg.retty.me/crop/s400x400/q80/das/-/retty/img_repo/2l/01/10632147.jpg",
+            "https://www.todoroki.net/yakitori_todorokiten/img/pic2.jpg",
+            "https://pic1.homemate-research.com/pubuser1/pubuser_facility_img/1/0/2/60000000000000013201/0000024185/60000000000000013201_0000024185_3.jpg"
         ],
         "coordinates": [35.6103405, 139.6475008]
     },
@@ -156,7 +180,9 @@
         "googleMaps": "https://maps.app.goo.gl/uGumiyW6xQRzxCz18",
         "instagram": "https://www.instagram.com/sanakajingumae/",
         "images": [
-            "https://tblg.k-img.com/restaurant/images/Rvw/190349/3435022ab55f37f24ff4a5ef5334b90e.jpg"
+            "https://tblg.k-img.com/restaurant/images/Rvw/225587/640x640_rect_fd99c78be3a53e40fc43e24b6f9eb084.jpg",
+            "https://tblg.k-img.com/restaurant/images/Rvw/190349/3435022ab55f37f24ff4a5ef5334b90e.jpg",
+            "https://usanco.com/wp-content/uploads/2020/03/IMG_0983.jpg"
         ],
         "coordinates": [35.6665044, 139.7058221]
     },
@@ -171,14 +197,18 @@
         "googleMaps": "https://maps.app.goo.gl/mr3z6uFjYfauUmSj8",
         "website": "https://www.tenpurakanno.com/",
         "images": [
-            "https://media-cdn.tripadvisor.com/media/photo-s/05/d5/1c/48/tempura-kanno.jpg"
+            "https://www.tenpurakanno.com/wp-content/uploads/2019/02/04-01.jpg",
+            "https://www.tenpurakanno.com/wp-content/uploads/2018/12/kanno-dinner-594x594.png",
+            "https://www.tenpurakanno.com/wp-content/uploads/2018/12/sakura-594x594.png",
+            "https://www.tenpurakanno.com/wp-content/uploads/2019/03/topimg_resize.jpg",
+            "https://www.tenpurakanno.com/wp-content/uploads/2019/02/04-02.jpg"
         ],
         "coordinates": [35.655337599999996, 139.6544666]
     },
     {
         "id": 13,
         "name": "Sushi no midori",
-        "description": "The place listed here is inside Shibuya Mark City but there are also branches in Umegaoka (the original), Ginza and Asakasa. There is always a queue but you can take a ticket and follow the virtual queue on Line (the application called Line, it's not a typo). Very decent sushi platters for a decent price.",
+        "description": "The place listed here is inside Shibuya Mark City but there are also branches in Umegaoka (the original), Ginza and Asakasa. There is always a queue but you can take a ticket and follow the virtual queue on Line (the application is called Line, it's not a typo). Very decent sushi platters for a decent price.",
         "tags": [],
         "price": "¥¥",
         "typeOfCuisine": ["Sushi"],
@@ -186,7 +216,10 @@
         "googleMaps": "https://maps.app.goo.gl/XQm1s2WVt63jFzDVA",
         "website": "https://www.sushinomidori.co.jp/",
         "images": [
-            "https://tblg.k-img.com/restaurant/images/Rvw/154735/640x640_rect_154735187.jpg"
+            "https://img.poibank.com/bjd00up61kn8GnFp6r0otBoduEM=/W3siZm9ybWF0Ijoid2VicCJ9LHsia2V5Ijoic3VnZ2VzdGlvbi8yNjQ2NDM5MS80NTMwMjc0LzE2NzY4ODU4NjQ2NjcifSx7InJlc2l6ZSI6eyJ3aWR0aCI6IjYwMCJ9fV0=",
+            "https://tblg.k-img.com/restaurant/images/Rvw/154735/640x640_rect_154735187.jpg",
+            "https://a0.cdn.japantravel.com/photo/53844-191080/800!/tokyo-sushi-no-midori-shibuya-191080.jpg",
+            "https://thateconomist.files.wordpress.com/2016/03/img_6467.jpg"
         ],
         "coordinates": [35.6583453, 139.6989875]
     },
@@ -201,7 +234,10 @@
         "googleMaps": "https://maps.app.goo.gl/19MxtxELZddPWyTe6",
         "website": "https://www.flavorworks.co.jp/brand/flippers.html",
         "images": [
-            "https://www.flavorworks.co.jp/_src/31887887/grand_menu.jpg?v=1641878155930"
+            "https://rimage.gnst.jp/rest/img/9m3r8pss0000/s_0n5r.jpg?t=1680002386&g=670",
+            "https://www.flavorworks.co.jp/_src/31887887/grand_menu.jpg?v=1641878155930",
+            "https://imgfp.hotp.jp/IMGH/47/14/P037414714/P037414714_480.jpg",
+            "https://emomiu.jp/wp/wp-content/uploads/2019/11/FLIPPER_S%E3%80%80%E6%B8%8B%E8%B0%B7%E5%BA%97.jpg"
         ],
         "coordinates": [35.663553199999996, 139.6995535]
     },
