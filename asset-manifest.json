@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.5e899fce.css",
-    "main.js": "./static/js/main.631a4168.js",
+    "main.css": "./static/css/main.5536f4b0.css",
+    "main.js": "./static/js/main.299c0a6e.js",
     "static/js/787.bff22d74.chunk.js": "./static/js/787.bff22d74.chunk.js",
-    "static/media/Kalnia-VariableFont_wdth,wght.ttf": "./static/media/Kalnia-VariableFont_wdth,wght.ea93935ecef30006ea44.ttf",
+    "static/media/instagram.png": "./static/media/instagram.776123b8753198399fdd.png",
+    "static/media/food-blog-logo.png": "./static/media/food-blog-logo.2feed9e783d44f015315.png",
     "static/media/googleMaps.png": "./static/media/googleMaps.f6f6a5a923f7741ef206.png",
+    "static/media/website.png": "./static/media/website.976b59becb66eba12d62.png",
     "index.html": "./index.html",
-    "main.5e899fce.css.map": "./static/css/main.5e899fce.css.map",
-    "main.631a4168.js.map": "./static/js/main.631a4168.js.map",
+    "main.5536f4b0.css.map": "./static/css/main.5536f4b0.css.map",
+    "main.299c0a6e.js.map": "./static/js/main.299c0a6e.js.map",
     "787.bff22d74.chunk.js.map": "./static/js/787.bff22d74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e899fce.css",
-    "static/js/main.631a4168.js"
+    "static/css/main.5536f4b0.css",
+    "static/js/main.299c0a6e.js"
   ]
 }
