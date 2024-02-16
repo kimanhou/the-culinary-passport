@@ -58,6 +58,11 @@
                 scroll-snap-coordinate: 0 0;
                 scroll-snap-points-x: repeat(100%);
                 scroll-snap-type: x mandatory;
+                -ms-overflow-style: none; /* Internet Explorer 10+ */
+                scrollbar-width: none; /* Firefox */
+                &::-webkit-scrollbar {
+                    display: none; /* Safari and Chrome */
+                }
                 > .food-place-image-container {
                     display: flex;
                     align-items: center;
