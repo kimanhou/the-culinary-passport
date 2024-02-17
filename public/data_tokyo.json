@@ -157,17 +157,22 @@
     },
     {
         "id": 10,
-        "name": "Fanji Xi'an Meat Dumplings - 凡記 西安肉夾饃",
-        "description": "Ikebukuro is the new Chinatown. This sichuan restaurant is very appreciated by the Chinese community living in the neighborhood. Food is legit spicy !",
+        "name": "Gyukatsu Iroha - 牛かつ いろは",
+        "description": "Gyukatsu places are popular and there is always a long line. Iroha is in Ikebukuro, a local enough neighborhood so that you usually don't have to wait long to get a seat. Gyukatsu is a deep-fried cutlet made with wagyu beef. The beef is seasoned, coated in breadcrumbs, and then fried until it becomes crispy. You cook it yourself on a mini individual stone stove. Prices start at 1,630¥ for a 130g piece, then it's 2,300¥ for 195g and 2,760¥ for 260g.",
         "tags": [],
-        "price": "¥",
-        "typeOfCuisine": ["Chinese"],
+        "price": "¥¥",
+        "typeOfCuisine": ["Gyukatsu"],
         "neighborhood": "Ikebukuro",
-        "googleMaps": "https://maps.app.goo.gl/XMXmBJkgS4uu18657",
+        "googleMaps": "https://maps.app.goo.gl/nzuuX7hVSt58CahJ7",
+        "website": "https://tabelog.com/tokyo/A1305/A130501/13175782/",
         "images": [
-            "https://ximg.retty.me/crop/s400x400/q80/das/-/retty/img_repo/l/01/29792193.jpg"
+            "https://media-cdn.tripadvisor.com/media/photo-s/1a/87/2f/3d/caption.jpg",
+            "https://tblg.k-img.com/restaurant/images/Rvw/198895/640x640_rect_44063f7f6c1dc6cc1562c751324f0de9.jpg",
+            "https://www.huraton.com/wp-content/uploads/hatena/20160410234109.jpg",
+            "https://san-tatsu.jp/assets/uploads/2022/11/06183406/1995a544dff1b535318f9f4bc578678c.jpg",
+            "https://kannnonn.com/wp-content/uploads/2015/10/IDSC01012.jpg"
         ],
-        "coordinates": [35.7344024, 139.7117011]
+        "coordinates": [35.73117339999999, 139.7142784]
     },
     {
         "id": 11,
@@ -325,5 +330,39 @@
             "https://tblg.k-img.com/restaurant/images/Rvw/157880/640x640_rect_157880027.jpg"
         ],
         "coordinates": [35.667361199999995, 139.7400189]
+    },
+    {
+        "id": 20,
+        "name": "Tamazushi - 築地玉寿司",
+        "description": "No reservation needed (it's rare in the neighborhood) and super fresh. The platters are the best value for money. The main restaurant is in Tsukiji, but they also have branches a bit everywhere in Tokyo and some of them offer a very good all you can eat deal !",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Sushi"],
+        "neighborhood": "Tsukiji",
+        "googleMaps": "https://maps.app.goo.gl/HTxMD5GeJr7Cwsps8",
+        "website": "https://www.tamasushi.co.jp/shop/tsukiji_honten/",
+        "images": [
+            "https://www.tamasushi.co.jp/wordpress/wp-content/uploads/2018/01/7b31385b9e10b975a6ca09380161b631.jpg",
+            "https://www.tamasushi.co.jp/wordpress/wp-content/uploads/2018/01/%E3%80%90%E6%9C%AC%E5%BA%97%E3%80%91%E6%A5%B5%E3%81%AB%E3%81%8E%E3%82%8A2952.jpg",
+            "https://www.tamasushi.co.jp/wordpress/wp-content/uploads/2018/01/1-17.jpg",
+            "https://www.tamasushi.co.jp/wordpress/wp-content/uploads/2018/01/8.jpg"
+        ],
+        "coordinates": [35.6693001, 139.7717295]
+    },
+    {
+        "id": 21,
+        "name": "Gindaco",
+        "description": "A cheap chain of izakaya-like restaurants that serve takoyaki, fried ball of batter with an octopus piece inside. They are everywhere, the place listed here is located at the foot of Godzilla in Shinjuku. It's chill, cheap and fast. They also do take out if you just want to try takoyaki.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Takoyaki"],
+        "neighborhood": "Shinjuku",
+        "googleMaps": "https://maps.app.goo.gl/xanxGJBGdepeL4j77",
+        "website": "https://www.gindaco.com/",
+        "images": [
+            "https://a0.cdn.japantravel.com/photo/66485-222026/738x491.8798828125!/tokyo-delish-takoyaki-at-gindaco-222026.jpg",
+            "https://assets-pergikuliner.com/v9z8j6t3wi0Xm-ALnLJoZPIcSi8=/fit-in/1366x768/smart/filters:no_upscale()/https://assets-pergikuliner.com/uploads/image/picture/1432947/picture-1559727010.JPG"
+        ],
+        "coordinates": [35.695319999999995, 139.701969]
     }
 ]
