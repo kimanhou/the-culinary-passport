@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.2306d271.css",
+    "main.css": "./static/css/main.9b6cf229.css",
     "main.js": "./static/js/main.631a4168.js",
     "static/js/787.bff22d74.chunk.js": "./static/js/787.bff22d74.chunk.js",
     "static/media/Kalnia-VariableFont_wdth,wght.ttf": "./static/media/Kalnia-VariableFont_wdth,wght.ea93935ecef30006ea44.ttf",
     "static/media/googleMaps.png": "./static/media/googleMaps.f6f6a5a923f7741ef206.png",
     "index.html": "./index.html",
-    "main.2306d271.css.map": "./static/css/main.2306d271.css.map",
+    "main.9b6cf229.css.map": "./static/css/main.9b6cf229.css.map",
     "main.631a4168.js.map": "./static/js/main.631a4168.js.map",
     "787.bff22d74.chunk.js.map": "./static/js/787.bff22d74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2306d271.css",
+    "static/css/main.9b6cf229.css",
     "static/js/main.631a4168.js"
   ]
 }
