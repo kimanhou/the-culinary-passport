@@ -1,11 +1,10 @@
 import React from "react";
+import { faLink, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import RoundIcon from "components/common/RoundIcon/RoundIcon";
 import "./FoodPlaceIcons.scss";
-import googleMaps from "./googleMaps.png";
-import instagram from "./instagram.png";
-import website from "./website.png";
 
 interface IFoodPlaceIconsProps {
-    neighborhood?: string;
     googleMaps?: string;
     instagram?: string;
     website?: string;
@@ -13,35 +12,14 @@ interface IFoodPlaceIconsProps {
 
 const FoodPlaceIcons: React.FC<IFoodPlaceIconsProps> = (props) => {
     return (
-        <div className="food-place-icons flex-row">
-            &nbsp;{props.neighborhood}&nbsp;
+        <div className="food-place-icons flex-row justify-content-center">
             {props.googleMaps && (
-                <a href={props.googleMaps} target="_blank" rel="noreferrer">
-                    <img
-                        src={googleMaps}
-                        className="food-place-icons-icon food-place-icons-google-maps"
-                        alt="Google Maps icon"
-                    />
-                </a>
+                <RoundIcon icon={faLocationDot} href={props.googleMaps} />
             )}
             {props.instagram && (
-                <a href={props.instagram} target="_blank" rel="noreferrer">
-                    <img
-                        src={instagram}
-                        className="food-place-icons-icon food-place-icons-instagram"
-                        alt="Instagram icon"
-                    />
-                </a>
+                <RoundIcon icon={faInstagram} href={props.instagram} />
             )}
-            {props.website && (
-                <a href={props.website} target="_blank" rel="noreferrer">
-                    <img
-                        src={website}
-                        className="food-place-icons-icon food-place-icons-website"
-                        alt="Website icon"
-                    />
-                </a>
-            )}
+            {props.website && <RoundIcon icon={faLink} href={props.website} />}
         </div>
     );
 };

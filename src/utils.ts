@@ -12,3 +12,11 @@ export const scrollTo = ({ elementId }: { elementId: string }) => {
 
     myElement.scrollIntoView();
 };
+
+export const getFoodPlaceId = (foodPlaceName: string) => {
+    return foodPlaceName
+        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+        .replace(/'/g, "")
+        .replace(/\s+/g, "-")
+        .toLocaleLowerCase();
+};

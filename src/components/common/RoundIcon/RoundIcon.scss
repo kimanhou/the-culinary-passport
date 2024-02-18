@@ -1,0 +1,51 @@
+$dark: var(--color-primary-5);
+$light: var(--bg);
+$spacing: 16px;
+$border: 2px;
+
+$hover-size: $spacing * 2 - $border * 2;
+$hover-margin: $spacing * (-1) + $border;
+
+a.round-icon {
+    background-color: $light;
+    color: $dark;
+    display: block;
+    height: $spacing * 2;
+    width: $spacing * 2;
+    position: relative;
+    text-decoration: none;
+
+    border-radius: 50%;
+    transition: all 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > svg {
+        position: relative;
+        z-index: 1;
+    }
+
+    > .round-icon-inner {
+        background-color: $dark;
+        display: block;
+        height: 0;
+        left: 50%;
+        width: 0;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        border-radius: 50%;
+        transition: all 0.1s;
+    }
+
+    &:hover {
+        color: $light;
+        .round-icon-inner {
+            height: $hover-size;
+            margin-left: $hover-margin;
+            margin-top: $hover-margin;
+            width: $hover-size;
+        }
+    }
+}
