@@ -28,14 +28,14 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                 .filter((t) => t !== "")
         )
     );
-    const [selectedCuisine, setSelectedCuisine] = useState<string>("");
+    const [selectedCuisines, setSelectedCuisines] = useState<string[]>([]);
 
     const priceOptions = Array.from(
         new Set<string>(
             props.foodPlaces.map((v) => v.price).filter((t) => t !== "")
         )
     );
-    const [selectedPrice, setSelectedPrice] = useState<string>("");
+    const [selectedPrices, setSelectedPrices] = useState<string[]>([]);
 
     const neighborhoodOptions = Array.from(
         new Set<string>(
@@ -44,8 +44,9 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                 .filter((t) => t !== "")
         )
     );
-    const [selectedNeighborhood, setSelectedNeighborhood] =
-        useState<string>("");
+    const [selectedNeighborhoods, setSelectedNeighborhoods] = useState<
+        string[]
+    >([]);
 
     const [displayedFoodPlaces, setDisplayedFoodPlaces] = useState<FoodPlace[]>(
         props.foodPlaces
@@ -53,46 +54,40 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
 
     useEffect(() => {
         if (
-            selectedCuisine === "all" &&
-            selectedNeighborhood === "all" &&
-            selectedPrice === "all"
+            selectedCuisines.length === 0 &&
+            selectedNeighborhoods.length === 0 &&
+            selectedPrices.length === 0
         ) {
             setDisplayedFoodPlaces(props.foodPlaces);
         } else {
             let filteredFoodPlaces = props.foodPlaces;
-            if (
-                selectedCuisine !== "" &&
-                selectedCuisine.toLocaleLowerCase() !== "all"
-            ) {
-                filteredFoodPlaces = filteredFoodPlaces.filter((t) =>
-                    t.typeOfCuisine.includes(selectedCuisine)
-                );
-            }
-            if (
-                selectedNeighborhood !== "" &&
-                selectedNeighborhood.toLocaleLowerCase() !== "all"
-            ) {
+            if (selectedCuisines.length > 0) {
                 filteredFoodPlaces = filteredFoodPlaces.filter(
                     (t) =>
-                        getValueOrDefault(t.neighborhood) ===
-                        selectedNeighborhood
+                        selectedCuisines.filter((x) =>
+                            t.typeOfCuisine.includes(x)
+                        ).length > 0
                 );
             }
-            if (
-                selectedPrice !== "" &&
-                selectedPrice.toLocaleLowerCase() !== "all"
-            ) {
-                filteredFoodPlaces = filteredFoodPlaces.filter(
-                    (t) => t.price === selectedPrice
+            if (selectedNeighborhoods.length > 0) {
+                filteredFoodPlaces = filteredFoodPlaces.filter((t) =>
+                    selectedNeighborhoods.includes(
+                        getValueOrDefault(t.neighborhood)
+                    )
+                );
+            }
+            if (selectedPrices.length > 0) {
+                filteredFoodPlaces = filteredFoodPlaces.filter((t) =>
+                    selectedPrices.includes(t.price)
                 );
             }
 
             setDisplayedFoodPlaces(filteredFoodPlaces);
         }
     }, [
-        selectedCuisine,
-        selectedNeighborhood,
-        selectedPrice,
+        selectedCuisines,
+        selectedNeighborhoods,
+        selectedPrices,
         props.foodPlaces,
     ]);
 
@@ -117,8 +112,8 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                         filterName="Cuisine"
                         icon={<img src={ramen} alt={"Cuisine filter icon"} />}
                         options={typeOfCuisineOptions}
-                        selectedOption={selectedCuisine}
-                        setSelectedOption={setSelectedCuisine}
+                        selectedOptions={selectedCuisines}
+                        setSelectedOptions={setSelectedCuisines}
                     />
                 )}
                 {priceOptions.length > 0 && (
@@ -126,8 +121,8 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                         filterName="Price"
                         icon={<img src={coin} alt={"Price filter icon"} />}
                         options={priceOptions}
-                        selectedOption={selectedPrice}
-                        setSelectedOption={setSelectedPrice}
+                        selectedOptions={selectedPrices}
+                        setSelectedOptions={setSelectedPrices}
                     />
                 )}
                 {neighborhoodOptions.length > 0 && (
@@ -137,8 +132,8 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                             <img src={map} alt={"Neighborhood filter icon"} />
                         }
                         options={neighborhoodOptions}
-                        selectedOption={selectedNeighborhood}
-                        setSelectedOption={setSelectedNeighborhood}
+                        selectedOptions={selectedNeighborhoods}
+                        setSelectedOptions={setSelectedNeighborhoods}
                     />
                 )}
             </div>

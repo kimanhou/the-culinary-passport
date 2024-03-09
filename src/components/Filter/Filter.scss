@@ -3,6 +3,8 @@
     > .filter-header {
         cursor: pointer;
         gap: 0.4rem;
+        text-transform: uppercase;
+        color: var(--color-primary-5);
         > img {
             height: 40px;
             width: 40px;

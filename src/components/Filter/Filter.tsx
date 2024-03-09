@@ -1,4 +1,10 @@
-import React, { FC, ReactNode, useState } from "react";
+import React, {
+    Dispatch,
+    FC,
+    ReactNode,
+    SetStateAction,
+    useState,
+} from "react";
 import "./Filter.scss";
 import FilterOption from "./FilterOption";
 
@@ -6,8 +12,8 @@ interface IFilterProps {
     filterName: string;
     icon: ReactNode;
     options: string[];
-    selectedOption: string;
-    setSelectedOption: (selectedOption: string) => void;
+    selectedOptions: string[];
+    setSelectedOptions: Dispatch<SetStateAction<string[]>>;
 }
 
 const Filter: FC<IFilterProps> = (props) => {
@@ -32,8 +38,8 @@ const Filter: FC<IFilterProps> = (props) => {
                         <FilterOption
                             key={t}
                             option={t}
-                            isSelected={props.selectedOption === t}
-                            setSelectedOption={props.setSelectedOption}
+                            isSelected={props.selectedOptions.includes(t)}
+                            setSelectedOptions={props.setSelectedOptions}
                         />
                     ))}
                 </div>
