@@ -1,12 +1,15 @@
 import { LatLngExpression } from "leaflet";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import FoodPlace from "../../model/FoodPlace";
-import MapMarker from "../../model/MapMarker";
-import { getValueOrDefault } from "../../utils";
-import FilterDropDown from "../FilterDropDown/FilterDropDown";
-import FoodPlaceList from "../FoodPlaceList/FoodPlaceList";
-import Map from "../Map/Map";
+import FoodPlace from "model/FoodPlace";
+import MapMarker from "model/MapMarker";
+import { getValueOrDefault } from "utils";
+import Filter from "components/Filter/Filter";
+import FoodPlaceList from "components/FoodPlaceList/FoodPlaceList";
+import Map from "components/Map/Map";
+import ramen from "assets/ramen.png";
+import coin from "assets/coin.png";
+import map from "assets/map.png";
 import "./FoodPlaceListWithFilter.scss";
 
 interface IFoodPlaceListWithFilterProps {
@@ -110,24 +113,29 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
             />
             <div id="food-place-list-with-filter-filters" className="flex-row">
                 {typeOfCuisineOptions.length > 0 && (
-                    <FilterDropDown
-                        filterName="Type of cuisine"
+                    <Filter
+                        filterName="Cuisine"
+                        icon={<img src={ramen} alt={"Cuisine filter icon"} />}
                         options={typeOfCuisineOptions}
                         selectedOption={selectedCuisine}
                         setSelectedOption={setSelectedCuisine}
                     />
                 )}
                 {priceOptions.length > 0 && (
-                    <FilterDropDown
+                    <Filter
                         filterName="Price"
+                        icon={<img src={coin} alt={"Price filter icon"} />}
                         options={priceOptions}
                         selectedOption={selectedPrice}
                         setSelectedOption={setSelectedPrice}
                     />
                 )}
                 {neighborhoodOptions.length > 0 && (
-                    <FilterDropDown
+                    <Filter
                         filterName="Neighborhood"
+                        icon={
+                            <img src={map} alt={"Neighborhood filter icon"} />
+                        }
                         options={neighborhoodOptions}
                         selectedOption={selectedNeighborhood}
                         setSelectedOption={setSelectedNeighborhood}
