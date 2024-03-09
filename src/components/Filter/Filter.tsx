@@ -12,6 +12,7 @@ interface IFilterProps {
 
 const Filter: FC<IFilterProps> = (props) => {
     const [areOptionsVisible, setAreOptionsVisible] = useState(false);
+    const underlineVisibleClassName = areOptionsVisible ? "visible" : "";
 
     return (
         <div className={`filter`}>
@@ -22,6 +23,8 @@ const Filter: FC<IFilterProps> = (props) => {
                 {props.icon}
                 <label className={`filter-label`}>{props.filterName}</label>
             </div>
+
+            <div className={`filter-underline ${underlineVisibleClassName}`} />
 
             {areOptionsVisible && (
                 <div className="filter-options-container flex-row">

@@ -8,10 +8,10 @@ button.filter-option {
     border-radius: 8px;
     overflow: hidden;
     max-width: 200px;
-    background: none;
+    background-color: var(--color-primary-5);
     &::before {
         content: "";
-        background: var(--color-primary-5);
+        background: var(--bg);
         transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
         position: absolute;
         top: 0;
@@ -23,14 +23,19 @@ button.filter-option {
         &::before {
             transform: translate3d(0, -100%, 0);
         }
+        > span {
+            color: var(--bg);
+        }
     }
     > span {
         color: var(--color-primary-5);
         position: relative;
-        mix-blend-mode: difference;
+        transition: color 0.3s cubic-bezier(0.7, 0, 0.2, 1);
     }
     &.selected {
-        background-color: var(--color-primary-5);
+        &::before {
+            transform: translate3d(0, -100%, 0);
+        }
         > span {
             color: var(--bg);
         }

@@ -8,10 +8,22 @@
             width: 40px;
         }
     }
+
+    > .filter-underline {
+        height: 2px;
+        width: 0;
+        background-color: var(--color-primary-5);
+        transition: width 0.4s ease-in;
+        &.visible {
+            width: 100%;
+        }
+    }
+
     > .filter-options-container {
         gap: 0.4rem;
         max-width: 200px;
         flex-wrap: wrap;
+        margin-top: 1rem;
         > span.filter-option {
             cursor: pointer;
             color: var(--color-primary-5);
@@ -19,6 +31,12 @@
             text-wrap: nowrap;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+        }
+    }
+
+    &:hover {
+        > .filter-underline {
+            width: 100%;
         }
     }
 }
