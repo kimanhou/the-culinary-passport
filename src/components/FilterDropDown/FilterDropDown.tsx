@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import "./FilterDropDown.scss";
 
 interface IFilterDropDownProps {
@@ -8,7 +8,7 @@ interface IFilterDropDownProps {
     setSelectedOption: (selectedOption: string) => void;
 }
 
-const FilterDropDown: React.FC<IFilterDropDownProps> = (props) => {
+const FilterDropDown: FC<IFilterDropDownProps> = (props) => {
     return (
         <div className={`filter`}>
             <label className={`filter-label`}>{props.filterName}</label>
