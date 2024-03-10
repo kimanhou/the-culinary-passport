@@ -9,8 +9,15 @@ interface IFilterOptionProps {
 
 const FilterOption: FC<IFilterOptionProps> = (props) => {
     const isSelectedClassName = props.isSelected ? "selected" : "";
+
     const onClick = () => {
-        props.setSelectedOptions((t) => [...t, props.option]);
+        if (!props.isSelected) {
+            props.setSelectedOptions((t) => [...t, props.option]);
+        } else {
+            props.setSelectedOptions((t) =>
+                t.filter((t) => t !== props.option)
+            );
+        }
     };
 
     return (

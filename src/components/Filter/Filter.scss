@@ -23,9 +23,16 @@
 
     > .filter-options-container {
         gap: 0.4rem;
-        max-width: 200px;
+        max-width: 300px;
         flex-wrap: wrap;
         margin-top: 1rem;
+        transition: opacity 0.4s, height 0.4s;
+        opacity: 0;
+        height: 0;
+        &.visible {
+            opacity: 1;
+            height: unset;
+        }
         > span.filter-option {
             cursor: pointer;
             color: var(--color-primary-5);
@@ -39,6 +46,20 @@
     &:hover {
         > .filter-underline {
             width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .filter {
+        > .filter-underline {
+            &.visible {
+                width: 300px;
+                margin: 0 auto;
+            }
+        }
+        > .filter-options-container {
+            margin: 1rem auto 0;
         }
     }
 }

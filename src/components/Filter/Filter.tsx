@@ -19,6 +19,7 @@ interface IFilterProps {
 const Filter: FC<IFilterProps> = (props) => {
     const [areOptionsVisible, setAreOptionsVisible] = useState(false);
     const underlineVisibleClassName = areOptionsVisible ? "visible" : "";
+    const optionsVisibleClassName = areOptionsVisible ? "visible" : "";
 
     return (
         <div className={`filter`}>
@@ -32,18 +33,18 @@ const Filter: FC<IFilterProps> = (props) => {
 
             <div className={`filter-underline ${underlineVisibleClassName}`} />
 
-            {areOptionsVisible && (
-                <div className="filter-options-container flex-row">
-                    {props.options.sort().map((t) => (
-                        <FilterOption
-                            key={t}
-                            option={t}
-                            isSelected={props.selectedOptions.includes(t)}
-                            setSelectedOptions={props.setSelectedOptions}
-                        />
-                    ))}
-                </div>
-            )}
+            <div
+                className={`filter-options-container flex-row ${optionsVisibleClassName}`}
+            >
+                {props.options.sort().map((t) => (
+                    <FilterOption
+                        key={t}
+                        option={t}
+                        isSelected={props.selectedOptions.includes(t)}
+                        setSelectedOptions={props.setSelectedOptions}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
