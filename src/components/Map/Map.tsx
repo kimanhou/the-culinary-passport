@@ -25,7 +25,7 @@ const Map: React.FC<IMapProps> = (props) => {
             center={props.center}
             zoom={props.zoom}
             scrollWheelZoom={false}
-            style={{ height: "500px" }}
+            style={{ height: "calc(100vh - 4rem)" }}
         >
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

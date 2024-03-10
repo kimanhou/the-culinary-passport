@@ -1,0 +1,32 @@
+$leftMargin: 100px;
+
+.side-sheet {
+    background-color: rgba(26, 24, 24, 0.7);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    visibility: hidden;
+    &.is-transitioning {
+        visibility: visible;
+    }
+    > .side-sheet-content-container {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        bottom: 0;
+        right: 0;
+        background-color: var(--color-primary-1);
+        transition: left 0.4s;
+        padding: 2rem;
+    }
+    &.visible {
+        visibility: visible;
+        > .side-sheet-content-container {
+            left: $leftMargin;
+        }
+    }
+}

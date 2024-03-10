@@ -91,21 +91,8 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
         props.foodPlaces,
     ]);
 
-    const mapMarkers: MapMarker[] = props.foodPlaces
-        .filter((t) => t.coordinates !== undefined)
-        .map((t) => {
-            return {
-                coordinates: t.coordinates!,
-                popUpText: t.name,
-            };
-        });
     return (
         <section id="food-place-list-with-filter">
-            <Map
-                center={props.mapCenter}
-                zoom={props.mapZoom}
-                markers={mapMarkers}
-            />
             <div id="food-place-list-with-filter-filters" className="flex-row">
                 {typeOfCuisineOptions.length > 0 && (
                     <Filter
