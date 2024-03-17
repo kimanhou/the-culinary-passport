@@ -1,7 +1,7 @@
-import { LatLngExpression, Map as LeafletMap } from "leaflet";
-import React, { useEffect, useRef, useState } from "react";
-import { MapContainer, TileLayer, Popup, Marker, useMap } from "react-leaflet";
-import MapMarker from "../../model/MapMarker";
+import React from "react";
+import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
+import { LatLngExpression } from "leaflet";
+import MapMarker from "model/MapMarker";
 import { icon } from "./Icon";
 import { scrollTo, getFoodPlaceId } from "utils";
 import "./Map.scss";

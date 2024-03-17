@@ -1,6 +1,8 @@
 #show-map-button {
     position: fixed;
     bottom: 40px;
+    left: 50%;
+    transform: translate(-50%);
     background: none;
     border: none;
     background-color: var(--color-primary-5);
@@ -21,6 +23,6 @@
         box-shadow: none;
     }
     &:hover {
-        transform: scale(1.05);
+        transform: translate(-50%) scale(1.05);
     }
 }
