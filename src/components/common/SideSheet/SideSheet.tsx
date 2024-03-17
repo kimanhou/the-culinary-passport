@@ -15,6 +15,8 @@ interface ISideSheetProps {
     isVisible: boolean;
     setIsVisible: Dispatch<SetStateAction<boolean>>;
     children: ReactNode;
+    onEnter?: () => void;
+    onExit?: () => void;
 }
 
 const SideSheet: FC<ISideSheetProps> = (props) => {
@@ -62,6 +64,22 @@ const SideSheet: FC<ISideSheetProps> = (props) => {
         setIsVisibleInternal(props.isVisible);
         setIsTransitioning(true);
     }, [props.isVisible]);
+
+    useEffect(() => {
+        if (isVisibleInternal && !isTransitioning) {
+            // On enter
+            if (props.onEnter) {
+                props.onEnter();
+            }
+        }
+
+        if (!isVisibleInternal && !isTransitioning) {
+            // On exit
+            if (props.onExit) {
+                props.onExit();
+            }
+        }
+    }, [isVisibleInternal, isTransitioning]);
 
     return (
         <div
