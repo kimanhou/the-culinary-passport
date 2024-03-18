@@ -5,7 +5,7 @@
         "description": "The signature dish is udon. You choose between hot (kama-age udon) or cold (zaru udon), the size (regular or large) and the toppings. The plain option comes with green onions, ginger and tempura flakes. The decor in a 1910s former brick warehouse next to a modern building is amazing. The communal table with view on the Japanese garden is particularly nice. Prices start at ¥990.",
         "tags": [],
         "price": "¥",
-        "typeOfCuisine": ["Udon"],
+        "typeOfCuisine": ["Japanese"],
         "neighborhood": "Nezu",
         "googleMaps": "https://maps.app.goo.gl/7Q85G43PJSoKUQk19",
         "instagram": "https://www.instagram.com/kamachiku.nezu/",
@@ -43,7 +43,7 @@
         "description": "Self-prepared okonomiyaki. The place has been popular in the neighborhood for years. It's local (no website, no social media, only phone), friendly and cheap. On the menu, there are also monja (more liquid with stock) and yaki soba.",
         "tags": [],
         "price": "¥",
-        "typeOfCuisine": ["Okonomiyaki"],
+        "typeOfCuisine": ["Japanese"],
         "neighborhood": "Jiyugaoka",
         "googleMaps": "https://maps.app.goo.gl/eTU6gdo9YLFjKawk9",
         "images": [
@@ -74,7 +74,7 @@
         "description": "Small place that serves onigiri in Shibuya. Seats are on a long counter. You order from a table hidden a small drawer. Onigiri comes in 2 sizes (regular and big) and are around 300¥ each. After trying them here, you will never be able to go back to onigiri from the kombini.",
         "tags": [],
         "price": "¥",
-        "typeOfCuisine": ["Onigiri"],
+        "typeOfCuisine": ["Japanese"],
         "neighborhood": "Shibuya",
         "googleMaps": "https://maps.app.goo.gl/iJgenAqvcjmugmi38",
         "website": "https://www.togoshiya.jp/",
@@ -111,7 +111,7 @@
         "description": "Local traditional Japanese canteen. It's basically like going to your grandma's for lunch. The food is simple homemade dishes like fried fish and katsu curry, accompanied with soup, salad and picked vegetables. A set menu costs ¥1,100 and will fill your belly.",
         "tags": [],
         "price": "¥",
-        "typeOfCuisine": ["Teishoku"],
+        "typeOfCuisine": ["Japanese"],
         "neighborhood": "Todoroki",
         "googleMaps": "https://maps.app.goo.gl/ZzAMKWuHNJcUSkPu9",
         "website": "https://yuyu-shokudo.jp/",
@@ -128,7 +128,7 @@
         "description": "Right next to Yuuyuu, this place is a locals' favourites. You write your order on a small piece of paper (yes, in Japanese), including the sauce: tare (soy sauce) or shio (salt). It's not the cleanest of places but the karaage is delicious and the atmosphere is typical of a Japanese bar.",
         "tags": [],
         "price": "¥¥",
-        "typeOfCuisine": ["Yakitori"],
+        "typeOfCuisine": ["Japanese"],
         "neighborhood": "Todoroki",
         "googleMaps": "https://maps.app.goo.gl/SruNcgLgimvWvXi1A",
         "images": [
@@ -161,7 +161,7 @@
         "description": "Gyukatsu places are popular and there is always a long line. Iroha is in Ikebukuro, a local enough neighborhood so that you usually don't have to wait long to get a seat. Gyukatsu is a deep-fried cutlet made with wagyu beef. The beef is seasoned, coated in breadcrumbs, and then fried until it becomes crispy. You cook it yourself on a mini individual stone stove. Prices start at 1,630¥ for a 130g piece, then it's 2,300¥ for 195g and 2,760¥ for 260g.",
         "tags": [],
         "price": "¥¥",
-        "typeOfCuisine": ["Gyukatsu"],
+        "typeOfCuisine": ["Japanese"],
         "neighborhood": "Ikebukuro",
         "googleMaps": "https://maps.app.goo.gl/nzuuX7hVSt58CahJ7",
         "website": "https://tabelog.com/tokyo/A1305/A130501/13175782/",
@@ -197,7 +197,7 @@
         "description": "Excellent family restaurant in a quiet and local neighborhood. The owners are the sweetest of people and the food is amazing.",
         "tags": [],
         "price": "¥¥",
-        "typeOfCuisine": ["Tempura"],
+        "typeOfCuisine": ["Japanese"],
         "neighborhood": "Umegaoka",
         "googleMaps": "https://maps.app.goo.gl/mr3z6uFjYfauUmSj8",
         "website": "https://www.tenpurakanno.com/",
@@ -270,7 +270,7 @@
         "description": "Okonomiyaki place in the heart of Harajuku. No need to book, you just have to queue. You don't cook it yourself but if you sit at the counter, you can watch the chef cook.",
         "tags": [],
         "price": "¥",
-        "typeOfCuisine": ["Okonomiyaki"],
+        "typeOfCuisine": ["Japanese"],
         "neighborhood": "Harajuku",
         "googleMaps": "https://maps.app.goo.gl/HDynDN7fgwm3nGaNA",
         "website": "https://www.opefac.com/restaurant/yaiyai/",
@@ -355,7 +355,7 @@
         "description": "A cheap chain of izakaya-like restaurants that serve takoyaki, fried ball of batter with an octopus piece inside. They are everywhere, the place listed here is located at the foot of Godzilla in Shinjuku. It's chill, cheap and fast. They also do take out if you just want to try takoyaki.",
         "tags": [],
         "price": "¥",
-        "typeOfCuisine": ["Takoyaki"],
+        "typeOfCuisine": ["Japanese"],
         "neighborhood": "Shinjuku",
         "googleMaps": "https://maps.app.goo.gl/xanxGJBGdepeL4j77",
         "website": "https://www.gindaco.com/",
@@ -364,5 +364,61 @@
             "https://assets-pergikuliner.com/v9z8j6t3wi0Xm-ALnLJoZPIcSi8=/fit-in/1366x768/smart/filters:no_upscale()/https://assets-pergikuliner.com/uploads/image/picture/1432947/picture-1559727010.JPG"
         ],
         "coordinates": [35.695319999999995, 139.701969]
+    },
+    {
+        "id": 22,
+        "name": "Grill Bon",
+        "description": "A tiny gyukatsu sandwich restaurant on the corner of a busy Ginza street. The bread is slightly toasted, the meat is tender and very tasty. They only serve gyukatsu sandwiches in 2 sizes: half for 1,220¥ (it's one sandwich cut in 4) and the full is 2,440¥ (2 sandwiches). No sides. It's only open from 11am to 8am during the week and 11am to 5pm on Saturday (closed on Sunday).",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Japanese"],
+        "neighborhood": "Ginza",
+        "googleMaps": "https://maps.app.goo.gl/MbA8LJMCNRngHuoJA",
+        "instagram": "https://www.instagram.com/g_bon_ginza/",
+        "images": [
+            "https://image.entabe.jp/upload/20191121/images/IMG_4861.jpg",
+            "https://image.entabe.jp/upload/20191121/images/IMG_4853.jpg",
+            "https://image.entabe.jp/upload/20191121/images/IMG_4849.jpg"
+        ],
+        "coordinates": [35.66769839999999, 139.7652907]
+    },
+    {
+        "id": 23,
+        "name": "Café Breizh",
+        "description": "An authentic French crêperie bringing a piece of Britanny to Tokyo. The galettes are amazing and should be accompanied with the traditional bolée of cider. Everybody wears a marinière and speaks French, yes even the Japanese waiter.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Galettes bretonnes"],
+        "neighborhood": "Harajuku",
+        "googleMaps": "https://maps.app.goo.gl/CQFePVALS5KAjhq27",
+        "website": "https://le-bretagne.com/creperie/omotesando/",
+        "instagram": "https://www.instagram.com/breizhcafe/",
+        "images": [
+            "https://le-bretagne.com/wp-content/uploads/2022/07/Omotesando3.webp",
+            "https://images.squarespace-cdn.com/content/v1/619f05c41ec5d21532f581fb/24e5a3b2-c15d-43eb-8750-03494f46cc58/Hero_3000.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/0b/58/0e/d9/photo0jpg.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/18/96/d0/3c/photo0jpg.jpg",
+            "https://media-cdn.tripadvisor.com/media/photo-s/0c/93/67/eb/caption.jpg"
+        ],
+        "coordinates": [35.668746, 139.7123]
+    },
+    {
+        "id": 24,
+        "name": "Crane",
+        "description": "Popular spot for burgers and milkshakes. Their signature dishes are the Super Cheese Burger (the patty is drowned in overflowing melted cheese) and the Luther Burger (the bun is replaced with a glazed donut).",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Burger"],
+        "neighborhood": "Akihabara",
+        "googleMaps": "https://maps.app.goo.gl/HxjJweQn5QmJMNLy7",
+        "instagram": "https://www.instagram.com/crane.burger_and_milkshake",
+        "images": [
+            "https://d1ralsognjng37.cloudfront.net/430fd9e2-7b62-4172-9c0d-8ed53b389db6.jpeg",
+            "https://storage.googleapis.com/recotori-prod-0820.appspot.com/review/x_thumbnail/9pBiAgFVtWctBqA4Koe0DWdDTiG2/3C5AF0D5-A311-47B8-80F8-6310E28ED754.jpg",
+            "https://hamburger-lab.net/wp-content/uploads/2020/08/DSC01351.jpg",
+            "https://pds.exblog.jp/pds/1/202001/22/13/e0160313_20094815.jpg",
+            "https://www.jalan.net/jalan/images/pictLL/Y8/L396168/L3961680005747116.jpg"
+        ],
+        "coordinates": [35.7049756, 139.7714255]
     }
 ]

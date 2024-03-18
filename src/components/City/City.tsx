@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { FoodPlaceController } from "../../api/FoodPlaceController";
-import CityModel from "../../model/City";
-import FoodPlace from "../../model/FoodPlace";
-import FoodPlaceListWithFilter from "../FoodPlaceListWithFilter/FoodPlaceListWithFilter";
-import LoadData from "../LoadData";
+import { FoodPlaceController } from "api/FoodPlaceController";
+import CityModel from "model/City";
+import FoodPlace from "model/FoodPlace";
+import LoadData from "components/LoadData";
+import FoodPlaceListWithFilter from "components/FoodPlaceListWithFilter/FoodPlaceListWithFilter";
+import ShowMapButton from "components/Map/ShowMapButton";
+import SideSheet from "components/common/SideSheet/SideSheet";
+import Map from "components/Map/Map";
+import { useIsMobile } from "hooks/useIsMobile";
 import "./City.scss";
 
 interface ICityProps {
@@ -13,6 +17,13 @@ interface ICityProps {
 
 const City: React.FC<ICityProps> = (props) => {
     const [promise, setPromise] = useState(new Promise<FoodPlace[]>(() => {}));
+    const [isMapShown, setIsMapShown] = useState(false);
+    const [isMapReady, setIsMapReady] = useState(false);
+    const isMobile = useIsMobile();
+
+    const resetMap = () => {
+        setIsMapReady(true);
+    };
 
     useEffect(() => {
         const controller = new FoodPlaceController(props.city);
@@ -24,11 +35,42 @@ const City: React.FC<ICityProps> = (props) => {
             <h1>{props.city.name.toLocaleUpperCase()}</h1>
             <LoadData promise={promise}>
                 {(foodPlaceList) => (
-                    <FoodPlaceListWithFilter
-                        foodPlaces={foodPlaceList}
-                        mapCenter={props.city.mapCenter}
-                        mapZoom={props.city.mapZoom}
-                    />
+                    <>
+                        <FoodPlaceListWithFilter
+                            foodPlaces={foodPlaceList}
+                            mapCenter={props.city.mapCenter}
+                            mapZoom={props.city.mapZoom}
+                        />
+                        {!isMobile && (
+                            <ShowMapButton
+                                isMapShown={isMapShown}
+                                setIsMapShown={setIsMapShown}
+                            />
+                        )}
+                        <SideSheet
+                            isVisible={isMapShown}
+                            setIsVisible={setIsMapShown}
+                            onEnter={resetMap}
+                            onExit={() => setIsMapReady(false)}
+                        >
+                            {isMapReady && (
+                                <Map
+                                    center={props.city.mapCenter}
+                                    zoom={props.city.mapZoom}
+                                    markers={foodPlaceList
+                                        .filter(
+                                            (t) => t.coordinates !== undefined
+                                        )
+                                        .map((t) => {
+                                            return {
+                                                coordinates: t.coordinates!,
+                                                popUpText: t.name,
+                                            };
+                                        })}
+                                />
+                            )}
+                        </SideSheet>
+                    </>
                 )}
             </LoadData>
         </section>

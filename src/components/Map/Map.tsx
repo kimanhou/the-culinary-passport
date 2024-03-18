@@ -1,6 +1,6 @@
-import { LatLngExpression } from "leaflet";
-import React from "react";
-import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
+import { LatLngExpression, Map as LeafletMap } from "leaflet";
+import React, { useEffect, useRef, useState } from "react";
+import { MapContainer, TileLayer, Popup, Marker, useMap } from "react-leaflet";
 import MapMarker from "../../model/MapMarker";
 import { icon } from "./Icon";
 import { scrollTo, getFoodPlaceId } from "utils";
@@ -25,7 +25,7 @@ const Map: React.FC<IMapProps> = (props) => {
             center={props.center}
             zoom={props.zoom}
             scrollWheelZoom={false}
-            style={{ height: "500px" }}
+            style={{ height: "calc(100vh - 4rem)" }}
         >
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

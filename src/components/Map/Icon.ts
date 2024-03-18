@@ -1,9 +1,9 @@
 import L from "leaflet";
 
 const icon = new L.Icon({
-    iconUrl: require("../FoodPlaceList/googleMaps.png"),
-    iconRetinaUrl: require("../FoodPlaceList/googleMaps.png"),
-    iconSize: new L.Point(18, 30),
+    iconUrl: require("../../assets/location-pin.png"),
+    iconRetinaUrl: require("../../assets/location-pin.png"),
+    iconSize: new L.Point(30, 30),
     className: "leaflet-div-icon",
 });
 
