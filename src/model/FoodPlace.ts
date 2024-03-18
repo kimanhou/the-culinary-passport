@@ -3,8 +3,8 @@ import { FieldType } from "./deserialization/FieldType";
 import JsonDeserializationHelper from "./deserialization/JsonDeserializationHelper";
 
 export default class FoodPlace {
+    id: number;
     name: string;
-    location: string;
     tags: string[];
     description: string;
     price: string;
@@ -17,8 +17,8 @@ export default class FoodPlace {
     coordinates?: LatLngExpression;
 
     constructor(
+        id: number,
         name: string,
-        location: string,
         tags: string[],
         description: string,
         price: string,
@@ -30,8 +30,8 @@ export default class FoodPlace {
         website?: string,
         coordinates?: LatLngExpression
     ) {
+        this.id = id;
         this.name = name;
-        this.location = location;
         this.tags = tags;
         this.description = description;
         this.price = price;
@@ -45,16 +45,15 @@ export default class FoodPlace {
     }
 
     static deserialize = (data: any) => {
+        const id = JsonDeserializationHelper.assertField(
+            data,
+            "id",
+            FieldType.NUMBER
+        );
         const name = JsonDeserializationHelper.assertField(
             data,
             "name",
             FieldType.STRING
-        );
-        const location = JsonDeserializationHelper.assertFieldOrDefault(
-            data,
-            "location",
-            FieldType.STRING,
-            ""
         );
         const tags = JsonDeserializationHelper.assertArray(data, "tags", (t) =>
             t.toString()
@@ -111,8 +110,8 @@ export default class FoodPlace {
         );
 
         return new FoodPlace(
+            id,
             name,
-            location,
             tags,
             description,
             price,

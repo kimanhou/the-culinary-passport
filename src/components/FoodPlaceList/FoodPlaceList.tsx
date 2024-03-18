@@ -5,6 +5,7 @@ import "./FoodPlaceList.scss";
 
 interface IFoodPlaceListProps {
     foodPlaceList: FoodPlaceModel[];
+    city: string;
 }
 
 const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
@@ -22,7 +23,7 @@ const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
                 })
                 .map((t) => (
                     <li key={t.name}>
-                        <FoodPlaceCard foodPlace={t} />
+                        <FoodPlaceCard city={props.city} foodPlace={t} />
                     </li>
                 ))}
         </ul>

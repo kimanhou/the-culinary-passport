@@ -13,6 +13,7 @@ interface IFoodPlaceListWithFilterProps {
     foodPlaces: FoodPlace[];
     mapCenter: LatLngExpression;
     mapZoom: number;
+    city: string;
 }
 
 const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
@@ -123,7 +124,10 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
             </div>
 
             {displayedFoodPlaces.length > 0 && (
-                <FoodPlaceList foodPlaceList={displayedFoodPlaces} />
+                <FoodPlaceList
+                    city={props.city}
+                    foodPlaceList={displayedFoodPlaces}
+                />
             )}
             {displayedFoodPlaces.length === 0 && (
                 <p>Sorry, nothing matches your selection.</p>

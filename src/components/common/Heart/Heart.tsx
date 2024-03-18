@@ -1,6 +1,19 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
+import "./Heart.scss";
 
-const Heart: FC = () => {
+interface IHeartPropsType {
+    isFilled: boolean;
+    setInLocalStorage: () => void;
+}
+
+const Heart: FC<IHeartPropsType> = (props: IHeartPropsType) => {
+    const [isFilled, setIsFilled] = useState(props.isFilled);
+
+    const onClick = () => {
+        setIsFilled((t) => !t);
+        props.setInLocalStorage();
+    };
+
     return (
         <button
             className="heart"
@@ -10,6 +23,7 @@ const Heart: FC = () => {
                 paddingBlock: 0,
                 paddingInline: 0,
             }}
+            onClick={onClick}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +33,9 @@ const Heart: FC = () => {
                 focusable="false"
                 style={{
                     display: "block",
-                    fill: "rgba(0, 0, 0, 0.5)",
+                    fill: isFilled
+                        ? "var(--color-primary-5)"
+                        : "rgba(0, 0, 0, 0.5)",
                     height: "24px",
                     width: "24px",
                     stroke: "white",

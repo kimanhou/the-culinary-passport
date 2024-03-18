@@ -7,6 +7,7 @@ import { getFoodPlaceId } from "utils";
 import "./FoodPlaceCard.scss";
 
 interface IFoodPlaceCardProps {
+    city: string;
     foodPlace: FoodPlaceModel;
 }
 
@@ -37,6 +38,44 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         setIsReadMoreVisible((t) => !t);
     };
 
+    const localStorageKey = "culinary-passport-favorites";
+    const localStoragePlaceId = `${props.city}-${props.foodPlace.id}`;
+
+    const isLiked = () => {
+        const stored = localStorage.getItem(localStorageKey);
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            return parsed.includes(localStoragePlaceId);
+        }
+
+        return false;
+    };
+
+    const setInLocalStorage = () => {
+        const stored = localStorage.getItem(localStorageKey);
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            if (parsed.includes(localStoragePlaceId)) {
+                const index = parsed.indexOf(localStoragePlaceId);
+                if (index > -1) {
+                    parsed.splice(index, 1);
+                    localStorage.setItem(
+                        localStorageKey,
+                        JSON.stringify(parsed)
+                    );
+                }
+            } else {
+                parsed.push(localStoragePlaceId);
+                localStorage.setItem(localStorageKey, JSON.stringify(parsed));
+            }
+        } else {
+            localStorage.setItem(
+                localStorageKey,
+                JSON.stringify([localStoragePlaceId])
+            );
+        }
+    };
+
     useEffect(() => {
         if (
             descriptionRef?.current &&
@@ -54,6 +93,8 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                     images={props.foodPlace.images}
                     foodPlaceName={props.foodPlace.name}
                     foodPlaceId={foodPlaceId}
+                    isLiked={isLiked()}
+                    setInLocalStorage={setInLocalStorage}
                 />
             )}
 
