@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import FoodPlaceImage from "./FoodPlaceImage";
+import Heart from "assets/Heart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faChevronRight,
@@ -45,6 +45,7 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
         <div className="food-place-images-wrapper flex-column">
             <div className="food-place-images-container">
                 <div id={imagesId} className={`food-place-images flex-row`}>
+                    <Heart />
                     {props.images.map((image, i) => (
                         <div className="food-place-image-container" key={i}>
                             <FoodPlaceImage

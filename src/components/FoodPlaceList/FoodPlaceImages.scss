@@ -19,6 +19,12 @@
                     border-radius: 12px 12px 0 0;
                 }
             }
+            > .heart {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
         }
         > .carousel-button {
             position: absolute;

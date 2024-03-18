@@ -1,15 +1,12 @@
+import React, { useState, useEffect } from "react";
 import { LatLngExpression } from "leaflet";
-import React, { useState } from "react";
-import { useEffect } from "react";
 import FoodPlace from "model/FoodPlace";
-import MapMarker from "model/MapMarker";
-import { getValueOrDefault } from "utils";
 import Filter from "components/Filter/Filter";
 import FoodPlaceList from "components/FoodPlaceList/FoodPlaceList";
-import Map from "components/Map/Map";
 import ramen from "assets/ramen.png";
 import coin from "assets/coin.png";
 import map from "assets/map.png";
+import { getValueOrDefault } from "utils";
 import "./FoodPlaceListWithFilter.scss";
 
 interface IFoodPlaceListWithFilterProps {
