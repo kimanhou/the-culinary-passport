@@ -88,22 +88,20 @@
     },
     {
         "id": 6,
-        "name": "Tenkazushi",
-        "description": "Conveyor belt sushi of decent quality. The location in a basement of Dogenzaka's main street is convenient and there is no need to book, even though it's not suitable for big parties as seats are around a counter. You can take plates from the conveyor belt or ask the chefs to make something from the menu.",
+        "name": "Mawashi Sushi Katsu Midori",
+        "description": "Excellent conveyor belt sushi, the ratio quality/price is unbeatable. Take plates from the conveyor belt or order from a tablet. No booking but you might need to wait a bit. There are 2 tables that seats 6 people each for groups.",
         "tags": [],
         "price": "¥",
         "typeOfCuisine": ["Sushi"],
-        "neighborhood": "Shibuya",
-        "googleMaps": "https://maps.app.goo.gl/h8SmB9P2tByLoiYSA",
-        "website": "http://www.tenkazushi.co.jp/",
+        "neighborhood": "Meguro",
+        "googleMaps": "https://maps.app.goo.gl/TDqHj4SynnBov9DPA",
+        "website": "https://katumidori.co.jp/shop/?id=meguro",
+        "instagram": "https://www.instagram.com/katsumidori_sushi/",
         "images": [
-            "https://shiblog.town/wp-content/uploads/2020/02/2020-01-31-22-17-09-695-1024x720.jpg",
-            "https://shiblog.town/wp-content/uploads/2020/02/2020-01-31-22-19-07-636-1024x720.jpg",
-            "https://shiblog.town/wp-content/uploads/2020/02/2020-01-31-22-16-16-921-1024x720.jpg",
-            "https://shiblog.town/wp-content/uploads/2020/02/2020-01-31-22-21-52-618-1024x720.jpg",
-            "https://shibuyadogenzaka.com/wp-content/uploads/2023/06/photo20230613-1-1024x768.jpg"
+            "https://imageproxy.wolt.com/venue/602c9953ac9f51f1d94cbb24/9c1fd1c6-7648-11eb-8831-5613106b6eef_________top__.jpg",
+            "https://delaymania.com/wp/wp-content/uploads/2018/06/meguro-midorishushi-katsu-gaikan.jpg"
         ],
-        "coordinates": [35.658883800000005, 139.6980669]
+        "coordinates": [35.6329208, 139.7159799]
     },
     {
         "id": 7,
