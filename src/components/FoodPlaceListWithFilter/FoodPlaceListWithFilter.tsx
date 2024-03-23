@@ -1,4 +1,6 @@
 import React from "react";
+import { useFilters } from "hooks/useFilters";
+import { hasFavourites as hasFavouritesFunc } from "ts/favouriteUtils";
 import { LatLngExpression } from "leaflet";
 import FoodPlace from "model/FoodPlace";
 import Filter from "components/Filter/Filter";
@@ -7,9 +9,7 @@ import FoodPlaceList from "components/FoodPlaceList/FoodPlaceList";
 import ramen from "assets/ramen.png";
 import coin from "assets/coin.png";
 import map from "assets/map.png";
-import { hasFavourites as hasFavouritesFunc } from "ts/favouriteUtils";
 import "./FoodPlaceListWithFilter.scss";
-import { useFilters } from "hooks/useFilters";
 
 interface IFoodPlaceListWithFilterProps {
     foodPlaces: FoodPlace[];

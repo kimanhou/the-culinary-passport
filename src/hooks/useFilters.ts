@@ -35,37 +35,39 @@ export const useFilters = ({
 
         const typeOfCuisineOptions =
             getTypeOfCuisineOptions(favouriteFoodPlaces);
-        filterState.selectedCuisines = filterState.selectedCuisines.filter(
-            (t) => typeOfCuisineOptions.includes(t)
+        const selectedCuisines = filterState.selectedCuisines.filter((t) =>
+            typeOfCuisineOptions.includes(t)
         );
 
         const priceOptions = getPriceOptions(favouriteFoodPlaces);
-        filterState.selectedPrices = filterState.selectedPrices.filter((t) =>
+        const selectedPrices = filterState.selectedPrices.filter((t) =>
             priceOptions.includes(t)
         );
 
         const neighborhoodOptions =
             getNeighborhoodsOptions(favouriteFoodPlaces);
-        filterState.selectedNeighborhoods =
-            filterState.selectedNeighborhoods.filter((t) =>
-                neighborhoodOptions.includes(t)
-            );
+        const selectedNeighborhoods = filterState.selectedNeighborhoods.filter(
+            (t) => neighborhoodOptions.includes(t)
+        );
 
         const displayedFoodPlaces = filterFoodPlaces({
             city,
             foodPlaces: favouriteFoodPlaces,
-            selectedCuisines: filterState.selectedCuisines,
-            selectedNeighborhoods: filterState.selectedNeighborhoods,
-            selectedPrices: filterState.selectedPrices,
+            selectedCuisines,
+            selectedNeighborhoods,
+            selectedPrices,
             isFavouritesSelected: filterState.isFavouritesSelected,
         });
 
         return {
-            ...filterState,
             displayedFoodPlaces,
             typeOfCuisineOptions,
+            selectedCuisines,
             priceOptions,
+            selectedPrices,
             neighborhoodOptions,
+            selectedNeighborhoods,
+            isFavouritesSelected: filterState.isFavouritesSelected,
         };
     };
 
@@ -82,16 +84,21 @@ export const useFilters = ({
         })
     );
 
+    const filterSelectedOnOption = (selected: string[], option: string) => {
+        if (selected.includes(option)) {
+            return selected.filter((t) => t !== option);
+        } else {
+            return [...selected, option];
+        }
+    };
+
     const toggleTypeOfCuisineOptions = (option: string) => {
         setFilterState((oldFilterState) => {
             const filterState = Object.assign({}, oldFilterState);
-            let selected = filterState.selectedCuisines;
-            if (selected.includes(option)) {
-                selected = selected.filter((t) => t !== option);
-            } else {
-                selected = [...selected, option];
-            }
-            filterState.selectedCuisines = selected;
+            filterState.selectedCuisines = filterSelectedOnOption(
+                filterState.selectedCuisines,
+                option
+            );
             return computeFilterState(filterState);
         });
     };
@@ -99,13 +106,10 @@ export const useFilters = ({
     const togglePriceOptions = (option: string) => {
         setFilterState((oldFilterState) => {
             const filterState = Object.assign({}, oldFilterState);
-            let selected = filterState.selectedPrices;
-            if (selected.includes(option)) {
-                selected = selected.filter((t) => t !== option);
-            } else {
-                selected = [...selected, option];
-            }
-            filterState.selectedPrices = selected;
+            filterState.selectedPrices = filterSelectedOnOption(
+                filterState.selectedPrices,
+                option
+            );
             return computeFilterState(filterState);
         });
     };
@@ -113,14 +117,10 @@ export const useFilters = ({
     const toggleNeighbourhoodOptions = (option: string) => {
         setFilterState((oldFilterState) => {
             const filterState = Object.assign({}, oldFilterState);
-            let selected = filterState.selectedNeighborhoods;
-            if (selected.includes(option)) {
-                selected = selected.filter((t) => t !== option);
-            } else {
-                selected = [...selected, option];
-            }
-            filterState.selectedNeighborhoods = selected;
-
+            filterState.selectedNeighborhoods = filterSelectedOnOption(
+                filterState.selectedNeighborhoods,
+                option
+            );
             return computeFilterState(filterState);
         });
     };
