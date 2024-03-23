@@ -72,3 +72,18 @@ export const setInLocalStorage = ({
         );
     }
 };
+
+export const hasFavourites = (city: string) => {
+    const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
+
+    if (stored == null) {
+        return false;
+    }
+
+    const parsed = JSON.parse(stored);
+
+    return (
+        parsed.length > 0 &&
+        parsed.filter((t: string) => t.startsWith(city)).length > 0
+    );
+};
