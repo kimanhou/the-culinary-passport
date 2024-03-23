@@ -19,7 +19,7 @@ interface IFoodPlaceListWithFilterProps {
 const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
     props
 ) => {
-    const touristFoodPlaces = props.foodPlaces.filter((t) => t.isTourist);
+    const touristFoodPlaces = props.foodPlaces.filter((t) => !t.isLocal);
     const [displayedFoodPlaces, setDisplayedFoodPlaces] =
         useState<FoodPlace[]>(touristFoodPlaces);
 
@@ -86,7 +86,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
         selectedCuisines,
         selectedNeighborhoods,
         selectedPrices,
-        touristFoodPlaces,
+        props.foodPlaces,
     ]);
 
     return (
