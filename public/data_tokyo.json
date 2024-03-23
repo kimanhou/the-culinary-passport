@@ -419,5 +419,25 @@
             "https://www.jalan.net/jalan/images/pictLL/Y8/L396168/L3961680005747116.jpg"
         ],
         "coordinates": [35.7049756, 139.7714255]
+    },
+    {
+        "id": 25,
+        "name": "The little bakery",
+        "description": "Amazing donuts in an American and vintage decor. They also serve pastries, coffee and light lunch. Vegan options available.",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Dessert"],
+        "neighborhood": "Harajuku",
+        "googleMaps": "https://maps.app.goo.gl/2ubxXQNrhQBoJLCHA",
+        "website": "https://goodtown.thebase.in/",
+        "instagram": "https://www.instagram.com/thelittlebakerytokyo/",
+        "images": [
+            "https://fashionsnap-assets.com/asset/format=auto,width=1088/article/images/2021/02/thelittlebakerytokyo_20210215_003.jpg",
+            "https://stat.ameba.jp/user_images/20210217/00/sakura-beautiful/f1/52/j/o1080081014897558856.jpg",
+            "https://imgfp.hotp.jp/IMGH/00/15/P038760015/P038760015_480.jpg",
+            "https://media.timeout.com/images/105753803/750/422/image.jpg",
+            "https://images.keizai.biz/shibukei/headline/1620403949_photo.jpg"
+        ],
+        "coordinates": [35.66641260000001, 139.70505359999999]
     }
 ]
