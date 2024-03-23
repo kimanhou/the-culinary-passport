@@ -34,6 +34,27 @@ export const getFilterOptions = (foodPlaces: FoodPlace[]) => {
     return { neighborhoodsOptions, pricesOptions, cuisinesOptions };
 };
 
+export const filteredFavouriteFoodPlaces = ({
+    city,
+    foodPlaces,
+    isFavouritesSelected,
+}: {
+    city: string;
+    foodPlaces: FoodPlace[];
+    isFavouritesSelected: boolean;
+}) => {
+    if (!isFavouritesSelected) return foodPlaces;
+
+    return foodPlaces.filter((t) =>
+        isLiked({
+            localStoragePlaceId: getLocalStoragePlaceId({
+                city,
+                foodPlaceId: t.id,
+            }),
+        })
+    );
+};
+
 export const filterFoodPlaces = ({
     city,
     foodPlaces,
