@@ -15,6 +15,7 @@ export default class FoodPlace {
     instagram?: string;
     website?: string;
     coordinates?: LatLngExpression;
+    isTourist?: boolean;
 
     constructor(
         id: number,
@@ -28,7 +29,8 @@ export default class FoodPlace {
         googleMaps?: string,
         instagram?: string,
         website?: string,
-        coordinates?: LatLngExpression
+        coordinates?: LatLngExpression,
+        isTourist?: boolean
     ) {
         this.id = id;
         this.name = name;
@@ -42,6 +44,7 @@ export default class FoodPlace {
         this.instagram = instagram;
         this.website = website;
         this.coordinates = coordinates;
+        this.isTourist = isTourist;
     }
 
     static deserialize = (data: any) => {
@@ -109,6 +112,13 @@ export default class FoodPlace {
             data.coordinates
         );
 
+        const isTourist = JsonDeserializationHelper.assertFieldOrDefault(
+            data,
+            "isTourist",
+            FieldType.BOOLEAN,
+            true
+        );
+
         return new FoodPlace(
             id,
             name,
@@ -121,7 +131,8 @@ export default class FoodPlace {
             googleMaps,
             instagram,
             website,
-            coordinates
+            coordinates,
+            isTourist
         );
     };
 }

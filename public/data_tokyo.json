@@ -151,7 +151,8 @@
             "https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/142899/142899880.jpg?token=80d77d4&api=v2",
             "https://lh3.googleusercontent.com/p/AF1QipPhASfYn11SdTZqFj4ziEYLEAMRnZ_EoWka6Db9=w1080-h608-p-no-v0"
         ],
-        "coordinates": [35.648825599999995, 139.707921]
+        "coordinates": [35.648825599999995, 139.707921],
+        "isTourist": false
     },
     {
         "id": 10,

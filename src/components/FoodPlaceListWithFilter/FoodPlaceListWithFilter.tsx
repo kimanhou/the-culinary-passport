@@ -19,9 +19,13 @@ interface IFoodPlaceListWithFilterProps {
 const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
     props
 ) => {
+    const touristFoodPlaces = props.foodPlaces.filter((t) => t.isTourist);
+    const [displayedFoodPlaces, setDisplayedFoodPlaces] =
+        useState<FoodPlace[]>(touristFoodPlaces);
+
     const typeOfCuisineOptions = Array.from(
         new Set<string>(
-            props.foodPlaces
+            touristFoodPlaces
                 .flatMap((v) => v.typeOfCuisine)
                 .filter((t) => t !== "")
         )
@@ -30,14 +34,14 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
 
     const priceOptions = Array.from(
         new Set<string>(
-            props.foodPlaces.map((v) => v.price).filter((t) => t !== "")
+            touristFoodPlaces.map((v) => v.price).filter((t) => t !== "")
         )
     );
     const [selectedPrices, setSelectedPrices] = useState<string[]>([]);
 
     const neighborhoodOptions = Array.from(
         new Set<string>(
-            props.foodPlaces
+            touristFoodPlaces
                 .map((v) => getValueOrDefault(v.neighborhood))
                 .filter((t) => t !== "")
         )
@@ -46,19 +50,15 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
         string[]
     >([]);
 
-    const [displayedFoodPlaces, setDisplayedFoodPlaces] = useState<FoodPlace[]>(
-        props.foodPlaces
-    );
-
     useEffect(() => {
         if (
             selectedCuisines.length === 0 &&
             selectedNeighborhoods.length === 0 &&
             selectedPrices.length === 0
         ) {
-            setDisplayedFoodPlaces(props.foodPlaces);
+            setDisplayedFoodPlaces(touristFoodPlaces);
         } else {
-            let filteredFoodPlaces = props.foodPlaces;
+            let filteredFoodPlaces = touristFoodPlaces;
             if (selectedCuisines.length > 0) {
                 filteredFoodPlaces = filteredFoodPlaces.filter(
                     (t) =>
@@ -86,7 +86,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
         selectedCuisines,
         selectedNeighborhoods,
         selectedPrices,
-        props.foodPlaces,
+        touristFoodPlaces,
     ]);
 
     return (

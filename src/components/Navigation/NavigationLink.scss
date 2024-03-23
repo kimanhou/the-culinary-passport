@@ -6,11 +6,11 @@
     transition: color 0.2s ease-in;
     position: relative;
     &.selected {
-        color: var(--color-primary-2);
+        color: var(--color-primary-5);
     }
     > .text {
         &.grey {
-            color: var(--color-primary-2);
+            color: var(--color-primary-5);
             position: absolute;
             left: 0;
             bottom: 0;
