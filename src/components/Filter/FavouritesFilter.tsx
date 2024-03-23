@@ -3,7 +3,7 @@ import heart from "assets/heart.png";
 
 interface IFavouritesFilterProps {
     isSelected: boolean;
-    setIsSelected: Dispatch<SetStateAction<boolean>>;
+    onChange: () => void;
 }
 
 const FavouritesFilter: FC<IFavouritesFilterProps> = (props) => {
@@ -11,7 +11,7 @@ const FavouritesFilter: FC<IFavouritesFilterProps> = (props) => {
         <div className={`filter`}>
             <div
                 className="filter-header flex-column align-items-center"
-                onClick={() => props.setIsSelected((t) => !t)}
+                onClick={() => props.onChange()}
             >
                 <img src={heart} alt={"Favourites filter icon"} />
                 <label className={`filter-label`}>My favorites</label>

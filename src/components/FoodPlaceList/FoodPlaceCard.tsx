@@ -3,12 +3,12 @@ import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./FoodPlaceIcons";
 import FoodPlaceImages from "./FoodPlaceImages";
+import { getFoodPlaceId } from "ts/utils";
 import {
-    isLiked,
     getLocalStoragePlaceId,
-    getFoodPlaceId,
     setInLocalStorage,
-} from "utils";
+    isLiked,
+} from "ts/favouriteUtils";
 import "./FoodPlaceCard.scss";
 
 interface IFoodPlaceCardProps {

@@ -1,25 +1,4 @@
-export const getValueOrDefault = (s: string | null | undefined) => {
-    if (!s) {
-        return "";
-    }
-
-    return s;
-};
-
-export const scrollTo = ({ elementId }: { elementId: string }) => {
-    const myElement = document.getElementById(elementId);
-    if (!myElement) return;
-
-    myElement.scrollIntoView();
-};
-
-export const getFoodPlaceId = (foodPlaceName: string) => {
-    return foodPlaceName
-        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
-        .replace(/'/g, "")
-        .replace(/\s+/g, "-")
-        .toLocaleLowerCase();
-};
+const LOCAL_STORAGE_KEY = "culinary_passport_favorites";
 
 export const getLocalStoragePlaceId = ({
     city,
@@ -30,8 +9,6 @@ export const getLocalStoragePlaceId = ({
 }) => {
     return `${city}-${foodPlaceId}`;
 };
-
-const LOCAL_STORAGE_KEY = "culinary_passport_favorites";
 
 export const isLiked = ({
     localStoragePlaceId,
