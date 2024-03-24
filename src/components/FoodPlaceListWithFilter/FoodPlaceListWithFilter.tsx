@@ -36,6 +36,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
         togglePriceOptions,
         toggleNeighbourhoodOptions,
         toggleFavourite,
+        onLike,
     } = useFilters({ city: props.city, foodPlaces: touristFoodPlaces });
 
     const hasFavourites = hasFavouritesFunc(props.city);
@@ -84,6 +85,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                 <FoodPlaceList
                     city={props.city}
                     foodPlaceList={displayedFoodPlaces}
+                    onLike={onLike}
                 />
             )}
             {displayedFoodPlaces.length === 0 && (

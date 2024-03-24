@@ -13,7 +13,7 @@ interface IFoodPlaceImagesProps {
     foodPlaceName: string;
     foodPlaceId: string;
     isLiked: boolean;
-    setInLocalStorage: () => void;
+    onLike: () => void;
 }
 
 const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
@@ -49,7 +49,7 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
                 <div id={imagesId} className={`food-place-images flex-row`}>
                     <Heart
                         isFilled={props.isLiked}
-                        setInLocalStorage={props.setInLocalStorage}
+                        setInLocalStorage={props.onLike}
                     />
                     {props.images.map((image, i) => (
                         <div className="food-place-image-container" key={i}>

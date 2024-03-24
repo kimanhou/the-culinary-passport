@@ -6,6 +6,7 @@ import "./FoodPlaceList.scss";
 interface IFoodPlaceListProps {
     foodPlaceList: FoodPlaceModel[];
     city: string;
+    onLike: (foodPlaceId: number) => void;
 }
 
 const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
@@ -23,7 +24,11 @@ const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
                 })
                 .map((t) => (
                     <li key={t.name}>
-                        <FoodPlaceCard city={props.city} foodPlace={t} />
+                        <FoodPlaceCard
+                            city={props.city}
+                            foodPlace={t}
+                            onLike={props.onLike}
+                        />
                     </li>
                 ))}
         </ul>

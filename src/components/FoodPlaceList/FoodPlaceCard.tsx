@@ -4,16 +4,13 @@ import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./FoodPlaceIcons";
 import FoodPlaceImages from "./FoodPlaceImages";
 import { getFoodPlaceId } from "ts/utils";
-import {
-    getLocalStoragePlaceId,
-    setInLocalStorage,
-    isLiked,
-} from "ts/favouriteUtils";
+import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
 import "./FoodPlaceCard.scss";
 
 interface IFoodPlaceCardProps {
     city: string;
     foodPlace: FoodPlaceModel;
+    onLike: (foodPlaceId: number) => void;
 }
 
 const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
@@ -65,9 +62,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                     foodPlaceName={props.foodPlace.name}
                     foodPlaceId={foodPlaceId}
                     isLiked={isLiked({ localStoragePlaceId })}
-                    setInLocalStorage={() =>
-                        setInLocalStorage({ localStoragePlaceId })
-                    }
+                    onLike={() => props.onLike(props.foodPlace.id)}
                 />
             )}
 

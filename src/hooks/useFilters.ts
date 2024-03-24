@@ -7,6 +7,7 @@ import {
     filteredFavouriteFoodPlaces,
 } from "ts/filterUtils";
 import FoodPlace from "model/FoodPlace";
+import { getLocalStoragePlaceId, setInLocalStorage } from "ts/favouriteUtils";
 
 interface IFilterState {
     displayedFoodPlaces: FoodPlace[];
@@ -134,11 +135,26 @@ export const useFilters = ({
         });
     };
 
+    const onLike = (foodPlaceId: number) => {
+        setInLocalStorage({
+            localStoragePlaceId: getLocalStoragePlaceId({
+                city,
+                foodPlaceId: foodPlaceId,
+            }),
+        });
+
+        setFilterState((oldFilterState) => {
+            const filterState = Object.assign({}, oldFilterState);
+            return computeFilterState(filterState);
+        });
+    };
+
     return {
         ...filterState,
         toggleTypeOfCuisineOptions,
         togglePriceOptions,
         toggleNeighbourhoodOptions,
         toggleFavourite,
+        onLike,
     };
 };
