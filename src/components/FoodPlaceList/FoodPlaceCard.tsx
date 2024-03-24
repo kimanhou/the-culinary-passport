@@ -4,11 +4,12 @@ import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./FoodPlaceIcons";
 import FoodPlaceImages from "./FoodPlaceImages";
 import { getFoodPlaceId } from "ts/utils";
+import { CityEnum } from "ts/enum";
 import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
 import "./FoodPlaceCard.scss";
 
 interface IFoodPlaceCardProps {
-    city: string;
+    city: CityEnum;
     foodPlace: FoodPlaceModel;
     onLike: (foodPlaceId: number) => void;
 }

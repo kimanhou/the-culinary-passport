@@ -38,7 +38,7 @@ const City: React.FC<ICityProps> = (props) => {
                             foodPlaces={foodPlaceList}
                             mapCenter={props.city.mapCenter}
                             mapZoom={props.city.mapZoom}
-                            city={props.city.name.toLocaleUpperCase()}
+                            city={props.city.name}
                         />
                         <ShowMapButton
                             isMapShown={isMapShown}

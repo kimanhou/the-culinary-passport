@@ -1,6 +1,7 @@
 import React from "react";
 import { useFilters } from "hooks/useFilters";
 import { hasFavourites as hasFavouritesFunc } from "ts/favouriteUtils";
+import { CityEnum } from "ts/enum";
 import { LatLngExpression } from "leaflet";
 import FoodPlace from "model/FoodPlace";
 import Filter from "components/Filter/Filter";
@@ -15,7 +16,7 @@ interface IFoodPlaceListWithFilterProps {
     foodPlaces: FoodPlace[];
     mapCenter: LatLngExpression;
     mapZoom: number;
-    city: string;
+    city: CityEnum;
 }
 
 const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (

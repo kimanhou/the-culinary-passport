@@ -8,6 +8,7 @@ import {
 } from "ts/filterUtils";
 import FoodPlace from "model/FoodPlace";
 import { getLocalStoragePlaceId, setInLocalStorage } from "ts/favouriteUtils";
+import { CityEnum } from "ts/enum";
 
 interface IFilterState {
     displayedFoodPlaces: FoodPlace[];
@@ -24,7 +25,7 @@ export const useFilters = ({
     city,
     foodPlaces,
 }: {
-    city: string;
+    city: CityEnum;
     foodPlaces: FoodPlace[];
 }) => {
     const computeFilterState = (filterState: IFilterState): IFilterState => {

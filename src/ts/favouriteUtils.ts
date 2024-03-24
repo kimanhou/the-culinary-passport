@@ -1,10 +1,12 @@
+import { CityEnum } from "ts/enum";
+
 const LOCAL_STORAGE_KEY = "culinary_passport_favorites";
 
 export const getLocalStoragePlaceId = ({
     city,
     foodPlaceId,
 }: {
-    city: string;
+    city: CityEnum;
     foodPlaceId: number;
 }) => {
     return `${city}-${foodPlaceId}`;
@@ -50,7 +52,7 @@ export const setInLocalStorage = ({
     }
 };
 
-export const hasFavourites = (city: string) => {
+export const hasFavourites = (city: CityEnum) => {
     const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
 
     if (stored == null) {

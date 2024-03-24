@@ -1,6 +1,7 @@
 import FoodPlace from "model/FoodPlace";
 import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
 import { getValueOrDefault } from "ts/utils";
+import { CityEnum } from "./enum";
 
 export const getNeighborhoodsOptions = (foodPlaces: FoodPlace[]) => {
     return Array.from(
@@ -39,7 +40,7 @@ export const filteredFavouriteFoodPlaces = ({
     foodPlaces,
     isFavouritesSelected,
 }: {
-    city: string;
+    city: CityEnum;
     foodPlaces: FoodPlace[];
     isFavouritesSelected: boolean;
 }) => {
@@ -63,7 +64,7 @@ export const filterFoodPlaces = ({
     selectedCuisines,
     isFavouritesSelected,
 }: {
-    city: string;
+    city: CityEnum;
     foodPlaces: FoodPlace[];
     selectedNeighborhoods: string[];
     selectedPrices: string[];

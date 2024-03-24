@@ -1,15 +1,16 @@
 import { LatLngExpression } from "leaflet";
 import { FieldType } from "./deserialization/FieldType";
 import JsonDeserializationHelper from "./deserialization/JsonDeserializationHelper";
+import { CityEnum } from "ts/enum";
 
 export default class City {
-    name: string;
+    name: CityEnum;
     dataFile: string;
     mapCenter: LatLngExpression;
     mapZoom: number;
 
     constructor(
-        name: string,
+        name: CityEnum,
         dataFile: string,
         mapCenter: LatLngExpression,
         mapZoom: number
@@ -25,7 +26,7 @@ export default class City {
             data,
             "name",
             FieldType.STRING
-        );
+        ).toLocaleUpperCase() as CityEnum;
 
         const dataFile = JsonDeserializationHelper.assertField(
             data,

@@ -1,11 +1,12 @@
 import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceCard from "./FoodPlaceCard";
+import { CityEnum } from "ts/enum";
 import "./FoodPlaceList.scss";
 
 interface IFoodPlaceListProps {
     foodPlaceList: FoodPlaceModel[];
-    city: string;
+    city: CityEnum;
     onLike: (foodPlaceId: number) => void;
 }
 
