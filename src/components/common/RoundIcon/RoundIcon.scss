@@ -24,6 +24,9 @@ a.round-icon {
     > svg {
         position: relative;
         z-index: 1;
+        > path {
+            fill: $dark;
+        }
     }
 
     > .round-icon-inner {
@@ -46,6 +49,11 @@ a.round-icon {
             margin-left: $hover-margin;
             margin-top: $hover-margin;
             width: $hover-size;
+        }
+        > svg {
+            > path {
+                fill: $light;
+            }
         }
     }
 }

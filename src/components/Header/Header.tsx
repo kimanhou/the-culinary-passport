@@ -23,7 +23,9 @@ export const Header: React.FC<IHeaderProps> = (props) => {
                 <div className="tag-line-decoration right" />
             </div>
 
-            <h1 className="typeface-primary">Culinary passport</h1>
+            <h1 className="typeface-primary">
+                <a href="./">Culinary passport</a>
+            </h1>
             <Navigation cities={props.cities} />
             <Divider />
         </header>

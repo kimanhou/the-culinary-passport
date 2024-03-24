@@ -1,6 +1,7 @@
 import { LatLngExpression } from "leaflet";
 import { FieldType } from "./deserialization/FieldType";
 import JsonDeserializationHelper from "./deserialization/JsonDeserializationHelper";
+import { StayEnum } from "ts/enum";
 
 export default class FoodPlace {
     id: number;
@@ -15,7 +16,7 @@ export default class FoodPlace {
     instagram?: string;
     website?: string;
     coordinates?: LatLngExpression;
-    isLocal?: boolean;
+    stayType?: keyof typeof StayEnum;
 
     constructor(
         id: number,
@@ -30,7 +31,7 @@ export default class FoodPlace {
         instagram?: string,
         website?: string,
         coordinates?: LatLngExpression,
-        isLocal?: boolean
+        stayType?: keyof typeof StayEnum
     ) {
         this.id = id;
         this.name = name;
@@ -44,7 +45,7 @@ export default class FoodPlace {
         this.instagram = instagram;
         this.website = website;
         this.coordinates = coordinates;
-        this.isLocal = isLocal;
+        this.stayType = stayType;
     }
 
     static deserialize = (data: any) => {
@@ -112,12 +113,12 @@ export default class FoodPlace {
             data.coordinates
         );
 
-        const isLocal = JsonDeserializationHelper.assertFieldOrDefault(
+        const stayType = JsonDeserializationHelper.assertFieldOrDefault(
             data,
-            "isLocal",
-            FieldType.BOOLEAN,
-            false
-        );
+            "stayType",
+            FieldType.STRING,
+            undefined
+        ) as keyof typeof StayEnum | undefined;
 
         return new FoodPlace(
             id,
@@ -132,7 +133,7 @@ export default class FoodPlace {
             instagram,
             website,
             coordinates,
-            isLocal
+            stayType
         );
     };
 }

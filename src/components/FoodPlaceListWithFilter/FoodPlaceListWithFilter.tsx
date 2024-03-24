@@ -7,6 +7,7 @@ import FoodPlace from "model/FoodPlace";
 import Filter from "components/Filter/Filter";
 import FavouritesFilter from "components/Filter/FavouritesFilter";
 import FoodPlaceList from "components/FoodPlaceList/FoodPlaceList";
+import TouristToggle from "components/Filter/TouristToggle";
 import ramen from "assets/ramen.png";
 import coin from "assets/coin.png";
 import map from "assets/map.png";
@@ -22,8 +23,6 @@ interface IFoodPlaceListWithFilterProps {
 const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
     props
 ) => {
-    const touristFoodPlaces = props.foodPlaces.filter((t) => !t.isLocal);
-
     const {
         displayedFoodPlaces,
         typeOfCuisineOptions,
@@ -33,18 +32,24 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
         neighborhoodOptions,
         selectedNeighborhoods,
         isFavouritesSelected,
+        stayType,
         toggleTypeOfCuisineOptions,
         togglePriceOptions,
         toggleNeighbourhoodOptions,
         toggleFavourite,
         onLike,
-    } = useFilters({ city: props.city, foodPlaces: touristFoodPlaces });
+        onStayTypeChange,
+    } = useFilters({ city: props.city, foodPlaces: props.foodPlaces });
 
     const hasFavourites = hasFavouritesFunc(props.city);
 
     return (
         <section id="food-place-list-with-filter">
             <div id="food-place-list-with-filter-filters" className="flex-row">
+                <TouristToggle
+                    stayType={stayType}
+                    onStayTypeChange={onStayTypeChange}
+                />
                 {typeOfCuisineOptions.length > 0 && (
                     <Filter
                         filterName="Cuisine"

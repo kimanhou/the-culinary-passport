@@ -1,7 +1,7 @@
 import FoodPlace from "model/FoodPlace";
 import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
 import { getValueOrDefault } from "ts/utils";
-import { CityEnum } from "./enum";
+import { CityEnum, StayEnum } from "ts/enum";
 
 export const getNeighborhoodsOptions = (foodPlaces: FoodPlace[]) => {
     return Array.from(
@@ -33,6 +33,18 @@ export const getFilterOptions = (foodPlaces: FoodPlace[]) => {
     const cuisinesOptions = getTypeOfCuisineOptions(foodPlaces);
 
     return { neighborhoodsOptions, pricesOptions, cuisinesOptions };
+};
+
+export const filterByStayType = ({
+    foodPlaces,
+    stayType,
+}: {
+    foodPlaces: FoodPlace[];
+    stayType: keyof typeof StayEnum;
+}) => {
+    return foodPlaces.filter(
+        (t) => t.stayType === undefined || t.stayType === stayType
+    );
 };
 
 export const filteredFavouriteFoodPlaces = ({

@@ -5,10 +5,11 @@ import {
     getNeighborhoodsOptions,
     filterFoodPlaces,
     filteredFavouriteFoodPlaces,
+    filterByStayType,
 } from "ts/filterUtils";
 import FoodPlace from "model/FoodPlace";
 import { getLocalStoragePlaceId, setInLocalStorage } from "ts/favouriteUtils";
-import { CityEnum } from "ts/enum";
+import { CityEnum, StayEnum } from "ts/enum";
 
 interface IFilterState {
     displayedFoodPlaces: FoodPlace[];
@@ -19,6 +20,7 @@ interface IFilterState {
     neighborhoodOptions: string[];
     selectedNeighborhoods: string[];
     isFavouritesSelected: boolean;
+    stayType: keyof typeof StayEnum;
 }
 
 export const useFilters = ({
@@ -29,9 +31,14 @@ export const useFilters = ({
     foodPlaces: FoodPlace[];
 }) => {
     const computeFilterState = (filterState: IFilterState): IFilterState => {
+        const baseFoodPlaces = filterByStayType({
+            foodPlaces,
+            stayType: filterState.stayType,
+        });
+
         const favouriteFoodPlaces = filteredFavouriteFoodPlaces({
             city,
-            foodPlaces,
+            foodPlaces: baseFoodPlaces,
             isFavouritesSelected: filterState.isFavouritesSelected,
         });
 
@@ -70,6 +77,7 @@ export const useFilters = ({
             neighborhoodOptions,
             selectedNeighborhoods,
             isFavouritesSelected: filterState.isFavouritesSelected,
+            stayType: filterState.stayType,
         };
     };
 
@@ -83,6 +91,7 @@ export const useFilters = ({
             neighborhoodOptions: getNeighborhoodsOptions(foodPlaces),
             selectedNeighborhoods: [],
             isFavouritesSelected: false,
+            stayType: StayEnum.TOURIST as keyof typeof StayEnum,
         })
     );
 
@@ -150,6 +159,19 @@ export const useFilters = ({
         });
     };
 
+    const onStayTypeChange = () => {
+        setFilterState((oldFilterState) => {
+            const filterState = Object.assign({}, oldFilterState);
+            if (oldFilterState.stayType === StayEnum.TOURIST) {
+                filterState.stayType = StayEnum.LOCAL as keyof typeof StayEnum;
+            } else {
+                filterState.stayType =
+                    StayEnum.TOURIST as keyof typeof StayEnum;
+            }
+            return computeFilterState(filterState);
+        });
+    };
+
     return {
         ...filterState,
         toggleTypeOfCuisineOptions,
@@ -157,5 +179,6 @@ export const useFilters = ({
         toggleNeighbourhoodOptions,
         toggleFavourite,
         onLike,
+        onStayTypeChange,
     };
 };

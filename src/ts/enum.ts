@@ -4,3 +4,8 @@ export type CityEnum = keyof {
     LONDON: "LONDON";
     TOKYO: "TOKYO";
 };
+
+export const StayEnum = {
+    TOURIST: "TOURIST",
+    LOCAL: "LOCAL",
+};

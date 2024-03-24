@@ -1,7 +1,7 @@
 import React from "react";
-import City from "../../model/City";
-import "./Home.scss";
+import City from "model/City";
 import HomeCity from "./HomeCity";
+import "./Home.scss";
 
 interface IHomeProps {
     cities: City[];
