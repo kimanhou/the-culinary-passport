@@ -125,3 +125,7 @@ export const filterFoodPlaces = ({
         return filteredFoodPlaces;
     }
 };
+
+export const hasStayType = (foodPlaces: FoodPlace[]): boolean => {
+    return foodPlaces.some((t) => t.stayType != null);
+};

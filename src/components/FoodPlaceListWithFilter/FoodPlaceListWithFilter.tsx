@@ -1,6 +1,7 @@
 import React from "react";
 import { useFilters } from "hooks/useFilters";
 import { hasFavourites as hasFavouritesFunc } from "ts/favouriteUtils";
+import { hasStayType as hasStayTypeFunc } from "ts/filterUtils";
 import { CityEnum } from "ts/enum";
 import { LatLngExpression } from "leaflet";
 import FoodPlace from "model/FoodPlace";
@@ -42,14 +43,17 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
     } = useFilters({ city: props.city, foodPlaces: props.foodPlaces });
 
     const hasFavourites = hasFavouritesFunc(props.city);
+    const hasStayType = hasStayTypeFunc(props.foodPlaces);
 
     return (
         <section id="food-place-list-with-filter">
             <div id="food-place-list-with-filter-filters" className="flex-row">
-                <TouristToggle
-                    stayType={stayType}
-                    onStayTypeChange={onStayTypeChange}
-                />
+                {hasStayType && (
+                    <TouristToggle
+                        stayType={stayType}
+                        onStayTypeChange={onStayTypeChange}
+                    />
+                )}
                 {typeOfCuisineOptions.length > 0 && (
                     <Filter
                         filterName="Cuisine"
