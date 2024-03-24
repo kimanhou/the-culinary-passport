@@ -2,9 +2,7 @@
     > #food-place-list-with-filter-filters {
         justify-content: center;
         margin-bottom: 2rem;
-        > .filter {
-            margin-right: 4rem;
-        }
+        gap: 4rem;
         > .filter:last-child {
             margin-right: 0;
         }

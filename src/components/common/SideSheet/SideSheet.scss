@@ -30,3 +30,13 @@ $leftMargin: 100px;
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .side-sheet {
+        &.visible {
+            > .side-sheet-content-container {
+                left: 0;
+            }
+        }
+    }
+}

@@ -1,10 +1,13 @@
 import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceCard from "./FoodPlaceCard";
+import { CityEnum } from "ts/enum";
 import "./FoodPlaceList.scss";
 
 interface IFoodPlaceListProps {
     foodPlaceList: FoodPlaceModel[];
+    city: CityEnum;
+    onLike: (foodPlaceId: number) => void;
 }
 
 const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
@@ -22,7 +25,11 @@ const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
                 })
                 .map((t) => (
                     <li key={t.name}>
-                        <FoodPlaceCard foodPlace={t} />
+                        <FoodPlaceCard
+                            city={props.city}
+                            foodPlace={t}
+                            onLike={props.onLike}
+                        />
                     </li>
                 ))}
         </ul>

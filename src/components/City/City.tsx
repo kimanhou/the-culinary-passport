@@ -8,7 +8,6 @@ import FoodPlaceListWithFilter from "components/FoodPlaceListWithFilter/FoodPlac
 import ShowMapButton from "components/Map/ShowMapButton";
 import SideSheet from "components/common/SideSheet/SideSheet";
 import Map from "components/Map/Map";
-import { useIsMobile } from "hooks/useIsMobile";
 import "./City.scss";
 
 interface ICityProps {
@@ -19,7 +18,6 @@ const City: React.FC<ICityProps> = (props) => {
     const [promise, setPromise] = useState(new Promise<FoodPlace[]>(() => {}));
     const [isMapShown, setIsMapShown] = useState(false);
     const [isMapReady, setIsMapReady] = useState(false);
-    const isMobile = useIsMobile();
 
     const resetMap = () => {
         setIsMapReady(true);
@@ -40,13 +38,12 @@ const City: React.FC<ICityProps> = (props) => {
                             foodPlaces={foodPlaceList}
                             mapCenter={props.city.mapCenter}
                             mapZoom={props.city.mapZoom}
+                            city={props.city.name}
                         />
-                        {!isMobile && (
-                            <ShowMapButton
-                                isMapShown={isMapShown}
-                                setIsMapShown={setIsMapShown}
-                            />
-                        )}
+                        <ShowMapButton
+                            isMapShown={isMapShown}
+                            setIsMapShown={setIsMapShown}
+                        />
                         <SideSheet
                             isVisible={isMapShown}
                             setIsVisible={setIsMapShown}

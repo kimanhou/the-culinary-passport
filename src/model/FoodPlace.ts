@@ -3,8 +3,8 @@ import { FieldType } from "./deserialization/FieldType";
 import JsonDeserializationHelper from "./deserialization/JsonDeserializationHelper";
 
 export default class FoodPlace {
+    id: number;
     name: string;
-    location: string;
     tags: string[];
     description: string;
     price: string;
@@ -15,10 +15,11 @@ export default class FoodPlace {
     instagram?: string;
     website?: string;
     coordinates?: LatLngExpression;
+    isLocal?: boolean;
 
     constructor(
+        id: number,
         name: string,
-        location: string,
         tags: string[],
         description: string,
         price: string,
@@ -28,10 +29,11 @@ export default class FoodPlace {
         googleMaps?: string,
         instagram?: string,
         website?: string,
-        coordinates?: LatLngExpression
+        coordinates?: LatLngExpression,
+        isLocal?: boolean
     ) {
+        this.id = id;
         this.name = name;
-        this.location = location;
         this.tags = tags;
         this.description = description;
         this.price = price;
@@ -42,19 +44,19 @@ export default class FoodPlace {
         this.instagram = instagram;
         this.website = website;
         this.coordinates = coordinates;
+        this.isLocal = isLocal;
     }
 
     static deserialize = (data: any) => {
+        const id = JsonDeserializationHelper.assertField(
+            data,
+            "id",
+            FieldType.NUMBER
+        );
         const name = JsonDeserializationHelper.assertField(
             data,
             "name",
             FieldType.STRING
-        );
-        const location = JsonDeserializationHelper.assertFieldOrDefault(
-            data,
-            "location",
-            FieldType.STRING,
-            ""
         );
         const tags = JsonDeserializationHelper.assertArray(data, "tags", (t) =>
             t.toString()
@@ -110,9 +112,16 @@ export default class FoodPlace {
             data.coordinates
         );
 
+        const isLocal = JsonDeserializationHelper.assertFieldOrDefault(
+            data,
+            "isLocal",
+            FieldType.BOOLEAN,
+            false
+        );
+
         return new FoodPlace(
+            id,
             name,
-            location,
             tags,
             description,
             price,
@@ -122,7 +131,8 @@ export default class FoodPlace {
             googleMaps,
             instagram,
             website,
-            coordinates
+            coordinates,
+            isLocal
         );
     };
 }

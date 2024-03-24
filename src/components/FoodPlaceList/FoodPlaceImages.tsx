@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import FoodPlaceImage from "./FoodPlaceImage";
+import Heart from "components/common/Heart/Heart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faChevronRight,
@@ -12,6 +12,8 @@ interface IFoodPlaceImagesProps {
     images: string[];
     foodPlaceName: string;
     foodPlaceId: string;
+    isLiked: boolean;
+    onLike: () => void;
 }
 
 const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
@@ -45,6 +47,10 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
         <div className="food-place-images-wrapper flex-column">
             <div className="food-place-images-container">
                 <div id={imagesId} className={`food-place-images flex-row`}>
+                    <Heart
+                        isFilled={props.isLiked}
+                        setInLocalStorage={props.onLike}
+                    />
                     {props.images.map((image, i) => (
                         <div className="food-place-image-container" key={i}>
                             <FoodPlaceImage

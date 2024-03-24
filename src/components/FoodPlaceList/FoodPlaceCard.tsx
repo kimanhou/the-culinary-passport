@@ -3,11 +3,15 @@ import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./FoodPlaceIcons";
 import FoodPlaceImages from "./FoodPlaceImages";
-import { getFoodPlaceId } from "utils";
+import { getFoodPlaceId } from "ts/utils";
+import { CityEnum } from "ts/enum";
+import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
 import "./FoodPlaceCard.scss";
 
 interface IFoodPlaceCardProps {
+    city: CityEnum;
     foodPlace: FoodPlaceModel;
+    onLike: (foodPlaceId: number) => void;
 }
 
 const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
@@ -17,6 +21,10 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
     const [isReadLessVisible, setIsReadLessVisible] = useState(false);
     const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
+    const localStoragePlaceId = getLocalStoragePlaceId({
+        city: props.city,
+        foodPlaceId: props.foodPlace.id,
+    });
 
     const onClickReadButton = () => {
         setLineClamp((t) => {
@@ -54,6 +62,8 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                     images={props.foodPlace.images}
                     foodPlaceName={props.foodPlace.name}
                     foodPlaceId={foodPlaceId}
+                    isLiked={isLiked({ localStoragePlaceId })}
+                    onLike={() => props.onLike(props.foodPlace.id)}
                 />
             )}
 

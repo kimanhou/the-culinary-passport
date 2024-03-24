@@ -1,12 +1,12 @@
+import React from "react";
+import { useFilters } from "hooks/useFilters";
+import { hasFavourites as hasFavouritesFunc } from "ts/favouriteUtils";
+import { CityEnum } from "ts/enum";
 import { LatLngExpression } from "leaflet";
-import React, { useState } from "react";
-import { useEffect } from "react";
 import FoodPlace from "model/FoodPlace";
-import MapMarker from "model/MapMarker";
-import { getValueOrDefault } from "utils";
 import Filter from "components/Filter/Filter";
+import FavouritesFilter from "components/Filter/FavouritesFilter";
 import FoodPlaceList from "components/FoodPlaceList/FoodPlaceList";
-import Map from "components/Map/Map";
 import ramen from "assets/ramen.png";
 import coin from "assets/coin.png";
 import map from "assets/map.png";
@@ -16,80 +16,31 @@ interface IFoodPlaceListWithFilterProps {
     foodPlaces: FoodPlace[];
     mapCenter: LatLngExpression;
     mapZoom: number;
+    city: CityEnum;
 }
 
 const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
     props
 ) => {
-    const typeOfCuisineOptions = Array.from(
-        new Set<string>(
-            props.foodPlaces
-                .flatMap((v) => v.typeOfCuisine)
-                .filter((t) => t !== "")
-        )
-    );
-    const [selectedCuisines, setSelectedCuisines] = useState<string[]>([]);
+    const touristFoodPlaces = props.foodPlaces.filter((t) => !t.isLocal);
 
-    const priceOptions = Array.from(
-        new Set<string>(
-            props.foodPlaces.map((v) => v.price).filter((t) => t !== "")
-        )
-    );
-    const [selectedPrices, setSelectedPrices] = useState<string[]>([]);
-
-    const neighborhoodOptions = Array.from(
-        new Set<string>(
-            props.foodPlaces
-                .map((v) => getValueOrDefault(v.neighborhood))
-                .filter((t) => t !== "")
-        )
-    );
-    const [selectedNeighborhoods, setSelectedNeighborhoods] = useState<
-        string[]
-    >([]);
-
-    const [displayedFoodPlaces, setDisplayedFoodPlaces] = useState<FoodPlace[]>(
-        props.foodPlaces
-    );
-
-    useEffect(() => {
-        if (
-            selectedCuisines.length === 0 &&
-            selectedNeighborhoods.length === 0 &&
-            selectedPrices.length === 0
-        ) {
-            setDisplayedFoodPlaces(props.foodPlaces);
-        } else {
-            let filteredFoodPlaces = props.foodPlaces;
-            if (selectedCuisines.length > 0) {
-                filteredFoodPlaces = filteredFoodPlaces.filter(
-                    (t) =>
-                        selectedCuisines.filter((x) =>
-                            t.typeOfCuisine.includes(x)
-                        ).length > 0
-                );
-            }
-            if (selectedNeighborhoods.length > 0) {
-                filteredFoodPlaces = filteredFoodPlaces.filter((t) =>
-                    selectedNeighborhoods.includes(
-                        getValueOrDefault(t.neighborhood)
-                    )
-                );
-            }
-            if (selectedPrices.length > 0) {
-                filteredFoodPlaces = filteredFoodPlaces.filter((t) =>
-                    selectedPrices.includes(t.price)
-                );
-            }
-
-            setDisplayedFoodPlaces(filteredFoodPlaces);
-        }
-    }, [
+    const {
+        displayedFoodPlaces,
+        typeOfCuisineOptions,
         selectedCuisines,
-        selectedNeighborhoods,
+        priceOptions,
         selectedPrices,
-        props.foodPlaces,
-    ]);
+        neighborhoodOptions,
+        selectedNeighborhoods,
+        isFavouritesSelected,
+        toggleTypeOfCuisineOptions,
+        togglePriceOptions,
+        toggleNeighbourhoodOptions,
+        toggleFavourite,
+        onLike,
+    } = useFilters({ city: props.city, foodPlaces: touristFoodPlaces });
+
+    const hasFavourites = hasFavouritesFunc(props.city);
 
     return (
         <section id="food-place-list-with-filter">
@@ -100,7 +51,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                         icon={<img src={ramen} alt={"Cuisine filter icon"} />}
                         options={typeOfCuisineOptions}
                         selectedOptions={selectedCuisines}
-                        setSelectedOptions={setSelectedCuisines}
+                        setSelectedOptions={toggleTypeOfCuisineOptions}
                     />
                 )}
                 {priceOptions.length > 0 && (
@@ -109,7 +60,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                         icon={<img src={coin} alt={"Price filter icon"} />}
                         options={priceOptions}
                         selectedOptions={selectedPrices}
-                        setSelectedOptions={setSelectedPrices}
+                        setSelectedOptions={togglePriceOptions}
                     />
                 )}
                 {neighborhoodOptions.length > 0 && (
@@ -120,13 +71,23 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                         }
                         options={neighborhoodOptions}
                         selectedOptions={selectedNeighborhoods}
-                        setSelectedOptions={setSelectedNeighborhoods}
+                        setSelectedOptions={toggleNeighbourhoodOptions}
+                    />
+                )}
+                {hasFavourites && (
+                    <FavouritesFilter
+                        isSelected={isFavouritesSelected}
+                        onChange={toggleFavourite}
                     />
                 )}
             </div>
 
             {displayedFoodPlaces.length > 0 && (
-                <FoodPlaceList foodPlaceList={displayedFoodPlaces} />
+                <FoodPlaceList
+                    city={props.city}
+                    foodPlaceList={displayedFoodPlaces}
+                    onLike={onLike}
+                />
             )}
             {displayedFoodPlaces.length === 0 && (
                 <p>Sorry, nothing matches your selection.</p>

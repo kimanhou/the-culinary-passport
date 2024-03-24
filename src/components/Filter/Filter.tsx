@@ -1,10 +1,4 @@
-import React, {
-    Dispatch,
-    FC,
-    ReactNode,
-    SetStateAction,
-    useState,
-} from "react";
+import React, { FC, ReactNode, useState } from "react";
 import "./Filter.scss";
 import FilterOption from "./FilterOption";
 
@@ -13,7 +7,7 @@ interface IFilterProps {
     icon: ReactNode;
     options: string[];
     selectedOptions: string[];
-    setSelectedOptions: Dispatch<SetStateAction<string[]>>;
+    setSelectedOptions: (value: string) => void;
 }
 
 const Filter: FC<IFilterProps> = (props) => {
