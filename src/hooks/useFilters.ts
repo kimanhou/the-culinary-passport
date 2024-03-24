@@ -10,6 +10,10 @@ import {
 import FoodPlace from "model/FoodPlace";
 import { getLocalStoragePlaceId, setInLocalStorage } from "ts/favouriteUtils";
 import { CityEnum, StayEnum } from "ts/enum";
+import {
+    getStayTypeFromLocalStorage,
+    setStayTypeInLocalStorage,
+} from "ts/stayTypeUtils";
 
 interface IFilterState {
     displayedFoodPlaces: FoodPlace[];
@@ -91,7 +95,9 @@ export const useFilters = ({
             neighborhoodOptions: getNeighborhoodsOptions(foodPlaces),
             selectedNeighborhoods: [],
             isFavouritesSelected: false,
-            stayType: StayEnum.TOURIST as keyof typeof StayEnum,
+            stayType: getStayTypeFromLocalStorage({
+                city,
+            }) as keyof typeof StayEnum,
         })
     );
 
@@ -149,7 +155,7 @@ export const useFilters = ({
         setInLocalStorage({
             localStoragePlaceId: getLocalStoragePlaceId({
                 city,
-                foodPlaceId: foodPlaceId,
+                foodPlaceId,
             }),
         });
 
@@ -164,9 +170,17 @@ export const useFilters = ({
             const filterState = Object.assign({}, oldFilterState);
             if (oldFilterState.stayType === StayEnum.TOURIST) {
                 filterState.stayType = StayEnum.LOCAL as keyof typeof StayEnum;
+                setStayTypeInLocalStorage({
+                    city,
+                    stayType: StayEnum.LOCAL as keyof typeof StayEnum,
+                });
             } else {
                 filterState.stayType =
                     StayEnum.TOURIST as keyof typeof StayEnum;
+                setStayTypeInLocalStorage({
+                    city,
+                    stayType: StayEnum.TOURIST as keyof typeof StayEnum,
+                });
             }
             return computeFilterState(filterState);
         });
