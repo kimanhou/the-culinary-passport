@@ -118,7 +118,8 @@
             "https://yuyu-shokudo.jp/wp-content/uploads/2022/01/F06D96FB-1EA3-4DB8-9707-045D218C7FE5.jpg",
             "https://yuyu-shokudo.jp/wp-content/uploads/2022/01/S__64225308.jpg"
         ],
-        "coordinates": [35.6103133, 139.6475357]
+        "coordinates": [35.6103133, 139.6475357],
+        "isLocal": true
     },
     {
         "id": 8,
@@ -439,5 +440,61 @@
             "https://images.keizai.biz/shibukei/headline/1620403949_photo.jpg"
         ],
         "coordinates": [35.66641260000001, 139.70505359999999]
+    },
+    {
+        "id": 26,
+        "name": "Men-Urata - 麺うらた",
+        "description": "Clean place serving high quality ramen. You have the choice between classic salt soup and yuzu soup. This is not the basic usual ramen place: the service feels more like an actual restaurant, the meat is almost raw, there is some truffle in your bowl and jazz music playing in the background. The good news is: it's the same price as a regular ramen.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Ramen"],
+        "neighborhood": "Jiyugaoka",
+        "googleMaps": "https://maps.app.goo.gl/fTrYLTdKjsWWmqdF8",
+        "images": [
+            "https://magazine.vacan.com/wp-content/uploads/2021/10/VZ8A0411-1024x688.webp",
+            "https://tblg.k-img.com/restaurant/images/Rvw/235575/640x640_rect_0f0107ee5a2f1880c3b15c49f282bd47.jpg",
+            "https://anime-and-otherthings.com/wp-content/uploads/2023/03/DSC_5135-2048x1152.jpg",
+            "https://stat.ameba.jp/user_images/20210630/02/jiyugaoka-net/07/62/j/o0960072014965019832.jpg"
+        ],
+        "coordinates": [35.6079096, 139.6696441],
+        "isLocal": true
+    },
+    {
+        "id": 27,
+        "name": "Nishi-Azabu Shūichi",
+        "description": "Curry ramen place with good Japanese pop music playlist. It's a bit hidden, located on 2F, in between Sukiya and Saint-Germain. The noodles are thick and curly. They have apron !",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Ramen"],
+        "neighborhood": "Todoroki",
+        "googleMaps": "https://maps.app.goo.gl/5LY4ZKiYZ6LK1z227",
+        "website": "http://birth-corporation.com/tenpo_shuuichi_todoroki.html",
+        "images": [
+            "https://cdn.sarah30.com/reviews/photos/000/919/090/medium/6c2ff4ba2adbb7e23a35560c427dd67491217831.jpg",
+            "https://obs.line-scdn.net/0hxrLLk71BJ11xNQ5InJ5YCk9nJzICWTgVFQ84bQArAREqa2UOT1t3QDVDeWVfDWcPRVQtOgZlLmxaUTI/a750_60_sharpen",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMHsWBSrkS-beJqec7ZLngSY_Rv8iMVT9-cA&s"
+        ],
+        "coordinates": [35.6089153, 139.6474915],
+        "isLocal": true
+    },
+    {
+        "id": 28,
+        "name": "Ippudo",
+        "description": "Chain of ramen restaurants from Hokkaido. The branch listed here is located on 8F of Lumine Est in Shinjuku station and has a vegan option. The whole floor is filled with restaurants and dessert places, it's a good option when in Shinjuku with no plan.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Ramen"],
+        "neighborhood": "Shinjuku",
+        "googleMaps": "https://maps.app.goo.gl/QFqkzN4X1fwuvPdN8",
+        "website": "https://stores.ippudo.com/1127?utm_source=Yext&utm_medium=Yext&utm_campaign=Listings",
+        "instagram": "https://www.instagram.com/ippudo_jp/",
+        "images": [
+            "https://s3-ap-northeast-1.amazonaws.com/chikara-htdocs/ippudo.com/wp/wp-content/uploads/2023/07/05133905/5a26707dcff7c14847b979ff845d9a48.jpg",
+            "https://www.lumine.ne.jp/shop/pict/20231125_1700875984_photo2.jpg",
+            "https://tblg.k-img.com/restaurant/images/Rvw/194387/640x640_rect_0eef8450836eb926e4773286f1fb5879.jpg",
+            "https://ascii.jp/img/2022/07/08/3388056/l/67b407d463735c55.jpg",
+            "https://dynl.mktgcdn.com/p/7dk1Ymt0YLsCw2klY_JJIdfmwEnDx6aXhZRlTbrwgwU/760x570.jpg"
+        ],
+        "coordinates": [35.691365399999995, 139.70107959999999]
     }
 ]
