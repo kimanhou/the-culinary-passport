@@ -14,7 +14,12 @@ const FavouritesFilter: FC<IFavouritesFilterProps> = (props) => {
                 onClick={() => props.onChange()}
             >
                 <img src={heart} alt={"Favourites filter icon"} />
-                <label className={`filter-label`}>My favorites</label>
+                <label
+                    className={`filter-label`}
+                    style={{ whiteSpace: "nowrap" }}
+                >
+                    My favorites
+                </label>
             </div>
 
             <div

@@ -47,13 +47,13 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
 
     return (
         <section id="food-place-list-with-filter">
+            {hasStayType && (
+                <TouristToggle
+                    stayType={stayType}
+                    onStayTypeChange={onStayTypeChange}
+                />
+            )}
             <div id="food-place-list-with-filter-filters" className="flex-row">
-                {hasStayType && (
-                    <TouristToggle
-                        stayType={stayType}
-                        onStayTypeChange={onStayTypeChange}
-                    />
-                )}
                 {typeOfCuisineOptions.length > 0 && (
                     <Filter
                         filterName="Cuisine"

@@ -1,4 +1,14 @@
-img {
-    width: 40px;
-    height: 40px;
+.tourist-toggle {
+    display: inline-flex;
+    gap: 1rem;
+    img {
+        width: 40px;
+        height: 40px;
+    }
+
+    span.toggle-label {
+        color: var(--color-primary-5);
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
 }
