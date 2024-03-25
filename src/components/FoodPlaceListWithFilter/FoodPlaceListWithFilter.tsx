@@ -54,24 +54,6 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                 />
             )}
             <div id="food-place-list-with-filter-filters" className="flex-row">
-                {typeOfCuisineOptions.length > 0 && (
-                    <Filter
-                        filterName="Cuisine"
-                        icon={<img src={ramen} alt={"Cuisine filter icon"} />}
-                        options={typeOfCuisineOptions}
-                        selectedOptions={selectedCuisines}
-                        setSelectedOptions={toggleTypeOfCuisineOptions}
-                    />
-                )}
-                {priceOptions.length > 0 && (
-                    <Filter
-                        filterName="Price"
-                        icon={<img src={coin} alt={"Price filter icon"} />}
-                        options={priceOptions}
-                        selectedOptions={selectedPrices}
-                        setSelectedOptions={togglePriceOptions}
-                    />
-                )}
                 {neighborhoodOptions.length > 0 && (
                     <Filter
                         filterName="Neighborhood"
@@ -83,6 +65,25 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                         setSelectedOptions={toggleNeighbourhoodOptions}
                     />
                 )}
+                {priceOptions.length > 0 && (
+                    <Filter
+                        filterName="Price"
+                        icon={<img src={coin} alt={"Price filter icon"} />}
+                        options={priceOptions}
+                        selectedOptions={selectedPrices}
+                        setSelectedOptions={togglePriceOptions}
+                    />
+                )}
+                {typeOfCuisineOptions.length > 0 && (
+                    <Filter
+                        filterName="Cuisine"
+                        icon={<img src={ramen} alt={"Cuisine filter icon"} />}
+                        options={typeOfCuisineOptions}
+                        selectedOptions={selectedCuisines}
+                        setSelectedOptions={toggleTypeOfCuisineOptions}
+                    />
+                )}
+
                 {hasFavourites && (
                     <FavouritesFilter
                         isSelected={isFavouritesSelected}
