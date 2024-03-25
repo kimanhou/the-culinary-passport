@@ -1,6 +1,9 @@
 .tourist-toggle {
     display: inline-flex;
     gap: 1rem;
+    background: var(--color-primary-1);
+    padding: 1.4rem 2rem;
+    border-radius: 40px;
     img {
         width: 40px;
         height: 40px;
