@@ -24,7 +24,7 @@ interface IFilterState {
     neighborhoodOptions: string[];
     selectedNeighborhoods: string[];
     isFavouritesSelected: boolean;
-    stayType: keyof typeof StayEnum;
+    stayType: StayEnum;
 }
 
 export const useFilters = ({
@@ -97,7 +97,7 @@ export const useFilters = ({
             isFavouritesSelected: false,
             stayType: getStayTypeFromLocalStorage({
                 city,
-            }) as keyof typeof StayEnum,
+            }),
         })
     );
 
@@ -169,17 +169,16 @@ export const useFilters = ({
         setFilterState((oldFilterState) => {
             const filterState = Object.assign({}, oldFilterState);
             if (oldFilterState.stayType === StayEnum.TOURIST) {
-                filterState.stayType = StayEnum.LOCAL as keyof typeof StayEnum;
+                filterState.stayType = StayEnum.LOCAL;
                 setStayTypeInLocalStorage({
                     city,
-                    stayType: StayEnum.LOCAL as keyof typeof StayEnum,
+                    stayType: StayEnum.LOCAL,
                 });
             } else {
-                filterState.stayType =
-                    StayEnum.TOURIST as keyof typeof StayEnum;
+                filterState.stayType = StayEnum.TOURIST;
                 setStayTypeInLocalStorage({
                     city,
-                    stayType: StayEnum.TOURIST as keyof typeof StayEnum,
+                    stayType: StayEnum.TOURIST,
                 });
             }
             return computeFilterState(filterState);

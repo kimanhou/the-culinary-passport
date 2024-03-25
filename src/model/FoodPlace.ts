@@ -16,7 +16,7 @@ export default class FoodPlace {
     instagram?: string;
     website?: string;
     coordinates?: LatLngExpression;
-    stayType?: keyof typeof StayEnum;
+    stayType?: StayEnum;
 
     constructor(
         id: number,
@@ -31,7 +31,7 @@ export default class FoodPlace {
         instagram?: string,
         website?: string,
         coordinates?: LatLngExpression,
-        stayType?: keyof typeof StayEnum
+        stayType?: StayEnum
     ) {
         this.id = id;
         this.name = name;
@@ -118,7 +118,7 @@ export default class FoodPlace {
             "stayType",
             FieldType.STRING,
             undefined
-        ) as keyof typeof StayEnum | undefined;
+        ) as StayEnum | undefined;
 
         return new FoodPlace(
             id,

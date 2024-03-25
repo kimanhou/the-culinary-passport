@@ -40,7 +40,7 @@ export const filterByStayType = ({
     stayType,
 }: {
     foodPlaces: FoodPlace[];
-    stayType: keyof typeof StayEnum;
+    stayType: StayEnum;
 }) => {
     return foodPlaces.filter(
         (t) => t.stayType === undefined || t.stayType === stayType

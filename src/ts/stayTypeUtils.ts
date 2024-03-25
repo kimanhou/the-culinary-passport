@@ -27,7 +27,7 @@ export const setStayTypeInLocalStorage = ({
     stayType,
 }: {
     city: CityEnum;
-    stayType: keyof typeof StayEnum;
+    stayType: StayEnum;
 }) => {
     const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (stored) {
