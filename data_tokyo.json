@@ -35,7 +35,8 @@
             "https://tokyo-tabearuki.com/wp-content/uploads/Pizza17-11.jpg",
             "https://media-cdn.tripadvisor.com/media/photo-s/13/90/5b/86/photo0jpg.jpg"
         ],
-        "coordinates": [35.607210699999996, 139.6666717]
+        "coordinates": [35.607210699999996, 139.6666717],
+        "stayType": "LOCAL"
     },
     {
         "id": 3,
@@ -51,7 +52,8 @@
             "https://imgfp.hotp.jp/IMGH/75/85/P013187585/P013187585_238.jpg",
             "https://tblg.k-img.com/restaurant/images/Rvw/218454/640x640_rect_240183166b6cd4246e61dfbad4c7cc0a.jpg"
         ],
-        "coordinates": [35.60868620000001, 139.6689812]
+        "coordinates": [35.60868620000001, 139.6689812],
+        "stayType": "LOCAL"
     },
     {
         "id": 4,
@@ -66,7 +68,8 @@
             "https://tblg.k-img.com/restaurant/images/Rvw/188066/640x640_rect_88849c5ab6f27a8f75b8972bb34a793c.jpg",
             "https://stat.ameba.jp/user_images/20230214/09/fallergy/f2/05/j/o1080081015242936233.jpg"
         ],
-        "coordinates": [35.604473, 139.652384]
+        "coordinates": [35.604473, 139.652384],
+        "stayType": "LOCAL"
     },
     {
         "id": 5,
@@ -84,7 +87,8 @@
             "https://p16-va.lemon8cdn.com/tos-maliva-v-ac5634-us/0a9f347b7dcc4beeb82cf8a3dce1c4e1~tplv-tej9nj120t-origin.webp",
             "https://media-cdn.tripadvisor.com/media/photo-s/28/ec/e6/0d/caption.jpg"
         ],
-        "coordinates": [35.6579009, 139.6967827]
+        "coordinates": [35.6579009, 139.6967827],
+        "stayType": "TOURIST"
     },
     {
         "id": 6,
@@ -101,7 +105,8 @@
             "https://imageproxy.wolt.com/venue/602c9953ac9f51f1d94cbb24/9c1fd1c6-7648-11eb-8831-5613106b6eef_________top__.jpg",
             "https://delaymania.com/wp/wp-content/uploads/2018/06/meguro-midorishushi-katsu-gaikan.jpg"
         ],
-        "coordinates": [35.6329208, 139.7159799]
+        "coordinates": [35.6329208, 139.7159799],
+        "stayType": "LOCAL"
     },
     {
         "id": 7,
@@ -118,7 +123,8 @@
             "https://yuyu-shokudo.jp/wp-content/uploads/2022/01/F06D96FB-1EA3-4DB8-9707-045D218C7FE5.jpg",
             "https://yuyu-shokudo.jp/wp-content/uploads/2022/01/S__64225308.jpg"
         ],
-        "coordinates": [35.6103133, 139.6475357]
+        "coordinates": [35.6103133, 139.6475357],
+        "stayType": "LOCAL"
     },
     {
         "id": 8,
@@ -135,7 +141,8 @@
             "https://www.todoroki.net/yakitori_todorokiten/img/pic2.jpg",
             "https://pic1.homemate-research.com/pubuser1/pubuser_facility_img/1/0/2/60000000000000013201/0000024185/60000000000000013201_0000024185_3.jpg"
         ],
-        "coordinates": [35.6103405, 139.6475008]
+        "coordinates": [35.6103405, 139.6475008],
+        "stayType": "LOCAL"
     },
     {
         "id": 9,
@@ -152,7 +159,7 @@
             "https://lh3.googleusercontent.com/p/AF1QipPhASfYn11SdTZqFj4ziEYLEAMRnZ_EoWka6Db9=w1080-h608-p-no-v0"
         ],
         "coordinates": [35.648825599999995, 139.707921],
-        "isLocal": true
+        "stayType": "LOCAL"
     },
     {
         "id": 10,
@@ -207,7 +214,8 @@
             "https://www.tenpurakanno.com/wp-content/uploads/2019/03/topimg_resize.jpg",
             "https://www.tenpurakanno.com/wp-content/uploads/2019/02/04-02.jpg"
         ],
-        "coordinates": [35.655337599999996, 139.6544666]
+        "coordinates": [35.655337599999996, 139.6544666],
+        "stayType": "LOCAL"
     },
     {
         "id": 13,
@@ -277,7 +285,8 @@
             "https://www.opefac.com/wp-content/uploads/2022/04/241A8146_a.jpg",
             "https://www.opefac.com/wp-content/uploads/2022/04/241A7343.jpg"
         ],
-        "coordinates": [35.667037799999996, 139.7057068]
+        "coordinates": [35.667037799999996, 139.7057068],
+        "stayType": "TOURIST"
     },
     {
         "id": 17,
@@ -294,7 +303,8 @@
             "https://cdn.macaro-ni.jp/image/summary/128/128403/oigEgtu2uK9T0bv0gGjBduOZqpUw6cEjSHCLXt3P.jpg",
             "https://cdn.macaro-ni.jp/image/summary/128/128403/SCGVgiRvzXefRstqU6yQzluQtI6lYUm9ofJW839a.jpg"
         ],
-        "coordinates": [35.6674513, 139.7054878]
+        "coordinates": [35.6674513, 139.7054878],
+        "stayType": "TOURIST"
     },
     {
         "id": 18,
@@ -311,7 +321,8 @@
             "https://media-cdn.tripadvisor.com/media/photo-s/16/33/4c/e8/caption.jpg",
             "https://media-cdn.tripadvisor.com/media/photo-s/16/33/4d/4f/caption.jpg"
         ],
-        "coordinates": [35.669107, 139.70343929999999]
+        "coordinates": [35.669107, 139.70343929999999],
+        "stayType": "TOURIST"
     },
     {
         "id": 19,
@@ -399,7 +410,8 @@
             "https://media-cdn.tripadvisor.com/media/photo-s/18/96/d0/3c/photo0jpg.jpg",
             "https://media-cdn.tripadvisor.com/media/photo-s/0c/93/67/eb/caption.jpg"
         ],
-        "coordinates": [35.668746, 139.7123]
+        "coordinates": [35.668746, 139.7123],
+        "stayType": "LOCAL"
     },
     {
         "id": 24,
@@ -439,5 +451,84 @@
             "https://images.keizai.biz/shibukei/headline/1620403949_photo.jpg"
         ],
         "coordinates": [35.66641260000001, 139.70505359999999]
+    },
+    {
+        "id": 26,
+        "name": "Men-Urata - 麺うらた",
+        "description": "Clean place serving high quality ramen. You have the choice between classic salt soup and yuzu soup. This is not the basic usual ramen place: the service feels more like an actual restaurant, the meat is almost raw, there is some truffle in your bowl and jazz music playing in the background. The good news is: it's the same price as a regular ramen.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Ramen"],
+        "neighborhood": "Jiyugaoka",
+        "googleMaps": "https://maps.app.goo.gl/fTrYLTdKjsWWmqdF8",
+        "images": [
+            "https://magazine.vacan.com/wp-content/uploads/2021/10/VZ8A0411-1024x688.webp",
+            "https://tblg.k-img.com/restaurant/images/Rvw/235575/640x640_rect_0f0107ee5a2f1880c3b15c49f282bd47.jpg",
+            "https://anime-and-otherthings.com/wp-content/uploads/2023/03/DSC_5135-2048x1152.jpg",
+            "https://stat.ameba.jp/user_images/20210630/02/jiyugaoka-net/07/62/j/o0960072014965019832.jpg"
+        ],
+        "coordinates": [35.6079096, 139.6696441],
+        "stayType": "LOCAL"
+    },
+    {
+        "id": 27,
+        "name": "Nishi-Azabu Shūichi",
+        "description": "Curry ramen place with good Japanese pop music playlist. It's a bit hidden, located on 2F, in between Sukiya and Saint-Germain. The noodles are thick and curly. They have apron !",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Ramen"],
+        "neighborhood": "Todoroki",
+        "googleMaps": "https://maps.app.goo.gl/5LY4ZKiYZ6LK1z227",
+        "website": "http://birth-corporation.com/tenpo_shuuichi_todoroki.html",
+        "images": [
+            "https://cdn.sarah30.com/reviews/photos/000/919/090/medium/6c2ff4ba2adbb7e23a35560c427dd67491217831.jpg",
+            "https://obs.line-scdn.net/0hxrLLk71BJ11xNQ5InJ5YCk9nJzICWTgVFQ84bQArAREqa2UOT1t3QDVDeWVfDWcPRVQtOgZlLmxaUTI/a750_60_sharpen",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMHsWBSrkS-beJqec7ZLngSY_Rv8iMVT9-cA&s"
+        ],
+        "coordinates": [35.6089153, 139.6474915],
+        "stayType": "LOCAL"
+    },
+    {
+        "id": 28,
+        "name": "Ippudo",
+        "description": "Chain of ramen restaurants from Hokkaido. The branch listed here is located on 8F of Lumine Est in Shinjuku station and has a vegan option. The whole floor is filled with restaurants and dessert places, it's a good option when in Shinjuku with no plan.",
+        "tags": [],
+        "price": "¥",
+        "typeOfCuisine": ["Ramen"],
+        "neighborhood": "Shinjuku",
+        "googleMaps": "https://maps.app.goo.gl/QFqkzN4X1fwuvPdN8",
+        "website": "https://stores.ippudo.com/1127?utm_source=Yext&utm_medium=Yext&utm_campaign=Listings",
+        "instagram": "https://www.instagram.com/ippudo_jp/",
+        "images": [
+            "https://s3-ap-northeast-1.amazonaws.com/chikara-htdocs/ippudo.com/wp/wp-content/uploads/2023/07/05133905/5a26707dcff7c14847b979ff845d9a48.jpg",
+            "https://www.lumine.ne.jp/shop/pict/20231125_1700875984_photo2.jpg",
+            "https://tblg.k-img.com/restaurant/images/Rvw/194387/640x640_rect_0eef8450836eb926e4773286f1fb5879.jpg",
+            "https://ascii.jp/img/2022/07/08/3388056/l/67b407d463735c55.jpg",
+            "https://dynl.mktgcdn.com/p/7dk1Ymt0YLsCw2klY_JJIdfmwEnDx6aXhZRlTbrwgwU/760x570.jpg"
+        ],
+        "coordinates": [35.691365399999995, 139.70107959999999],
+        "stayType": "TOURIST"
+    },
+    {
+        "id": 29,
+        "name": "goma to",
+        "description": "Hipster cafe specialized in sesame in a stylish interior (think concrete, wood, terrazzo and leather with organic shapes). You can come for a coffe, a very instagrammable drink, a dessert or even for a meal. Three options are available as main dishes: curry, tantan men and spaghetti carbonara. You can also take an assortment. The food is absolutely amazing, but you need to be a sesame lover !",
+        "tags": [],
+        "price": "¥¥",
+        "typeOfCuisine": ["Cafe"],
+        "neighborhood": "Jiyugaoka",
+        "googleMaps": "https://maps.app.goo.gl/H43L5ag7D6oyU3FP9",
+        "website": "https://www.kadoya.com/gomato/",
+        "instagram": "https://www.instagram.com/gomatocafe/",
+        "images": [
+            "https://goma-lab.kadoya.com/_var/images/article/135/62b14e920d086.png?resize=1200x630",
+            "https://img.rurubu.jp/img_srw/andmore/images/0000443970/22AzCram2OgYbn9hVINjrMORM1MhzlIhICF0nemx.jpg",
+            "https://tblg.k-img.com/resize/640x360c/restaurant/images/Rvw/236954/dcad47f00c76f1541dfac777a46083ab.jpg?token=9c4ec79&api=v2",
+            "https://images.keizai.biz/jiyugaoka_keizai/headline/1685609339_photo.jpg",
+            "https://tabizine.jp/wp-content/uploads/2022/07/484882-09.jpeg",
+            "https://tblg.k-img.com/resize/640x360c/restaurant/images/Rvw/190165/8e77017c941bf3d6200251fed26392c8.jpg?token=d236f49&api=v2",
+            "https://dowellbydoinggood.jp/wp-content/uploads/2022/07/07.jpg"
+        ],
+        "coordinates": [35.608482599999995, 139.67178149999998]
     }
 ]
