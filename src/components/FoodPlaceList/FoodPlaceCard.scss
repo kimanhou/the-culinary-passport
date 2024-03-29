@@ -4,10 +4,12 @@
     border-radius: 12px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     overflow: hidden;
+    transition: all 0.8s;
     > .food-place-card-content {
         padding: 1rem;
         text-align: left;
         min-height: 300px;
+        background: var(--bg);
         > h5 {
             color: var(--color-primary-5);
             margin-block: 0;
@@ -51,5 +53,15 @@
                 }
             }
         }
+    }
+
+    &.full-screen {
+        display: flex;
+        width: 60vw;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 1;
     }
 }
