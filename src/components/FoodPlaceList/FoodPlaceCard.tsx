@@ -3,9 +3,10 @@ import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./FoodPlaceIcons";
 import FoodPlaceImages from "./FoodPlaceImages";
-import { getFoodPlaceId } from "ts/utils";
 import { CityEnum } from "ts/enum";
+import { getFoodPlaceId } from "ts/utils";
 import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
+import CloseIcon from "assets/CloseIcon";
 import "./FoodPlaceCard.scss";
 
 interface IFoodPlaceCardProps {
@@ -20,6 +21,9 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     const [maxHeight, setMaxHeight] = useState<number | undefined>(300);
     const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
     const [isReadLessVisible, setIsReadLessVisible] = useState(false);
+    const [isFullScreen, setIsFullScreen] = useState(false);
+
+    const isFullScreenClassName = isFullScreen ? "full-screen" : "";
     const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
     const localStoragePlaceId = getLocalStoragePlaceId({
         city: props.city,
@@ -45,6 +49,18 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         setIsReadMoreVisible((t) => !t);
     };
 
+    const displayCardInFullScreen = () => {
+        setIsFullScreen((t) => !t);
+        setLineClamp(undefined);
+        setMaxHeight(undefined);
+    };
+
+    const closeFullScreen = () => {
+        setIsFullScreen((t) => !t);
+        setLineClamp(4);
+        setMaxHeight(300);
+    };
+
     useEffect(() => {
         if (
             descriptionRef?.current &&
@@ -56,7 +72,10 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     }, []);
 
     return (
-        <div className="food-place-card" id={`food-place-${foodPlaceId}`}>
+        <div
+            className={`food-place-card ${isFullScreenClassName}`}
+            id={`food-place-${foodPlaceId}`}
+        >
             {props.foodPlace.images && (
                 <FoodPlaceImages
                     images={props.foodPlace.images}
@@ -64,6 +83,8 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                     foodPlaceId={foodPlaceId}
                     isLiked={isLiked({ localStoragePlaceId })}
                     onLike={() => props.onLike(props.foodPlace.id)}
+                    isFullScreen={isFullScreen}
+                    displayCardInFullScreen={displayCardInFullScreen}
                 />
             )}
 
@@ -71,6 +92,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                 className="food-place-card-content flex-column"
                 style={{ maxHeight }}
             >
+                {isFullScreen && <CloseIcon onClick={closeFullScreen} />}
                 <h5>{props.foodPlace.neighborhood}</h5>
                 <h3>{props.foodPlace.name}</h3>
                 <FoodPlaceTags
@@ -87,10 +109,10 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                     >
                         {props.foodPlace.description}
                     </p>
-                    {isReadMoreVisible && (
+                    {isReadMoreVisible && !isFullScreen && (
                         <button onClick={onClickReadButton}>Read more</button>
                     )}
-                    {isReadLessVisible && (
+                    {isReadLessVisible && !isFullScreen && (
                         <button onClick={onClickReadButton}>Read less</button>
                     )}
                 </div>
