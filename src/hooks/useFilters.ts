@@ -35,37 +35,35 @@ export const useFilters = ({
     foodPlaces: FoodPlace[];
 }) => {
     const computeFilterState = (filterState: IFilterState): IFilterState => {
-        const baseFoodPlaces = filterByStayType({
-            foodPlaces,
-            stayType: filterState.stayType,
-        });
+        const baseFoodPlaces = filterState.isFavouritesSelected
+            ? filteredFavouriteFoodPlaces({
+                  city,
+                  foodPlaces,
+                  isFavouritesSelected: filterState.isFavouritesSelected,
+              })
+            : filterByStayType({
+                  foodPlaces,
+                  stayType: filterState.stayType,
+              });
 
-        const favouriteFoodPlaces = filteredFavouriteFoodPlaces({
-            city,
-            foodPlaces: baseFoodPlaces,
-            isFavouritesSelected: filterState.isFavouritesSelected,
-        });
-
-        const typeOfCuisineOptions =
-            getTypeOfCuisineOptions(favouriteFoodPlaces);
+        const typeOfCuisineOptions = getTypeOfCuisineOptions(baseFoodPlaces);
         const selectedCuisines = filterState.selectedCuisines.filter((t) =>
             typeOfCuisineOptions.includes(t)
         );
 
-        const priceOptions = getPriceOptions(favouriteFoodPlaces);
+        const priceOptions = getPriceOptions(baseFoodPlaces);
         const selectedPrices = filterState.selectedPrices.filter((t) =>
             priceOptions.includes(t)
         );
 
-        const neighborhoodOptions =
-            getNeighborhoodsOptions(favouriteFoodPlaces);
+        const neighborhoodOptions = getNeighborhoodsOptions(baseFoodPlaces);
         const selectedNeighborhoods = filterState.selectedNeighborhoods.filter(
             (t) => neighborhoodOptions.includes(t)
         );
 
         const displayedFoodPlaces = filterFoodPlaces({
             city,
-            foodPlaces: favouriteFoodPlaces,
+            foodPlaces: baseFoodPlaces,
             selectedCuisines,
             selectedNeighborhoods,
             selectedPrices,

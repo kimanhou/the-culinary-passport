@@ -51,6 +51,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                 <TouristToggle
                     stayType={stayType}
                     onStayTypeChange={onStayTypeChange}
+                    disabled={isFavouritesSelected}
                 />
             )}
             <div id="food-place-list-with-filter-filters" className="flex-row">

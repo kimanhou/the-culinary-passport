@@ -1,4 +1,5 @@
 $mainColor: var(--color-primary-5);
+$mainColorDisabled: var(--color-grey);
 
 :root {
     --displacement: -0.1rem;
@@ -77,6 +78,23 @@ $mainColor: var(--color-primary-5);
     input:checked + &__wrapper &__toggle {
         background: $mainColor;
         animation-name: checked__toggle--r;
+    }
+
+    &.disabled {
+        > .switch__wrapper {
+            &::after {
+                border-color: $mainColorDisabled;
+            }
+            > .switch__toggle {
+                box-shadow: inset 0 0 0 2px $mainColorDisabled;
+            }
+        }
+
+        input:checked + .switch__wrapper {
+            > .switch__toggle {
+                background: $mainColorDisabled;
+            }
+        }
     }
 }
 
