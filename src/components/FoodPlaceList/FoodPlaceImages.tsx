@@ -15,7 +15,6 @@ interface IFoodPlaceImagesProps {
     isLiked: boolean;
     onLike: () => void;
     isFullScreen: boolean;
-    displayCardInFullScreen: () => void;
 }
 
 const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
@@ -49,16 +48,9 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
         });
     };
 
-    const onClick = () => {
-        if (!props.isFullScreen) {
-            props.displayCardInFullScreen();
-        }
-    };
-
     return (
         <div
             className={`food-place-images-wrapper flex-column ${isFullScreenClassName}`}
-            onClick={onClick}
         >
             <div className="food-place-images-container">
                 <div id={imagesId} className={`food-place-images flex-row`}>

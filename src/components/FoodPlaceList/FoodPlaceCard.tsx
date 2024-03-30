@@ -61,6 +61,12 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         setMaxHeight(300);
     };
 
+    const onClickName = () => {
+        if (!isFullScreen) {
+            displayCardInFullScreen();
+        }
+    };
+
     useEffect(() => {
         if (
             descriptionRef?.current &&
@@ -86,7 +92,6 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                         isLiked={isLiked({ localStoragePlaceId })}
                         onLike={() => props.onLike(props.foodPlace.id)}
                         isFullScreen={isFullScreen}
-                        displayCardInFullScreen={displayCardInFullScreen}
                     />
                 )}
 
@@ -96,7 +101,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                 >
                     {isFullScreen && <CloseIcon onClick={closeFullScreen} />}
                     <h5>{props.foodPlace.neighborhood}</h5>
-                    <h3>{props.foodPlace.name}</h3>
+                    <h3 onClick={onClickName}>{props.foodPlace.name}</h3>
                     <FoodPlaceTags
                         tags={[
                             ...props.foodPlace.tags,
