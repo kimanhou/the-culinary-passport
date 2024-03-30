@@ -10,6 +10,7 @@
         height: calc(
             200px + 300px + 2rem
         ); // images' height + content's height + content's padding
+        pointer-events: none;
     }
     .food-place-card {
         scroll-margin: 2rem;
@@ -33,6 +34,11 @@
             > h3 {
                 margin-block: 0;
                 margin-bottom: 0.6rem;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 3px;
+                }
             }
             > .food-place-tags {
                 margin-bottom: 2rem;
@@ -76,6 +82,17 @@
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
             z-index: 1;
+            > .food-place-card-content {
+                > h5 {
+                    margin-top: 1rem;
+                }
+                > h3 {
+                    cursor: initial;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
         }
     }
 }
