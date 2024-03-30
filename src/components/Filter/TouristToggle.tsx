@@ -16,13 +16,13 @@ const TouristToggle: FC<ITouristToggle> = (props) => {
     const disabledClassName = props.disabled ? "disabled" : "";
 
     const onClickLocal = () => {
-        if (props.stayType !== StayEnum.LOCAL) {
+        if (props.stayType !== StayEnum.LOCAL && !props.disabled) {
             props.onStayTypeChange();
         }
     };
 
     const onClickTourist = () => {
-        if (props.stayType !== StayEnum.TOURIST) {
+        if (props.stayType !== StayEnum.TOURIST && !props.disabled) {
             props.onStayTypeChange();
         }
     };
