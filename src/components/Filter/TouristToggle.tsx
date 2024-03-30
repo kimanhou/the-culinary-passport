@@ -15,13 +15,26 @@ const TouristToggle: FC<ITouristToggle> = (props) => {
     const isTourist = props.stayType === StayEnum.TOURIST;
     const disabledClassName = props.disabled ? "disabled" : "";
 
+    const onClickLocal = () => {
+        if (props.stayType !== StayEnum.LOCAL) {
+            props.onStayTypeChange();
+        }
+    };
+
+    const onClickTourist = () => {
+        if (props.stayType !== StayEnum.TOURIST) {
+            props.onStayTypeChange();
+        }
+    };
+
     return (
         <div
             className={`tourist-toggle align-items-center ${disabledClassName}`}
         >
             <div
-                className="flex-column align-items-center"
+                className="flex-column align-items-center tourist-toggle-label-wrapper"
                 style={{ gap: "5px" }}
+                onClick={onClickLocal}
             >
                 <img src={local} alt="Local icon" />
                 <span className="toggle-label">I live here</span>
@@ -32,8 +45,9 @@ const TouristToggle: FC<ITouristToggle> = (props) => {
                 disabled={props.disabled}
             />
             <div
-                className="flex-column align-items-center"
+                className="flex-column align-items-center  tourist-toggle-label-wrapper"
                 style={{ gap: "5px" }}
+                onClick={onClickTourist}
             >
                 <img src={tourist} alt="Tourist icon" />
                 <span className="toggle-label">I'm visiting</span>
