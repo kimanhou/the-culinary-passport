@@ -1,96 +1,81 @@
-.food-place-card-wrapper {
-    position: relative;
+.food-place-card {
+    scroll-margin: 2rem;
     width: 300px;
-    height: calc(
-        200px + 300px + 2rem
-    ); // images' height + content's height + content's padding
-    .food-place-card-placeholder {
-        position: absolute;
-        width: 300px;
-        height: calc(
-            200px + 300px + 2rem
-        ); // images' height + content's height + content's padding
-        pointer-events: none;
-    }
-    .food-place-card {
-        scroll-margin: 2rem;
-        width: 300px;
-        border-radius: 12px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        overflow: hidden;
-        transition: all 0.8s;
-        > .food-place-card-content {
-            padding: 1rem;
-            text-align: left;
-            min-height: 300px;
-            background: var(--bg);
-            > h5 {
-                color: var(--color-primary-5);
+    border-radius: 12px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
+    transition: all 0.8s;
+    > .food-place-card-content {
+        padding: 1rem;
+        text-align: left;
+        min-height: 300px;
+        background: var(--bg);
+        > h5 {
+            color: var(--color-primary-5);
+            margin-block: 0;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        > h3 {
+            margin-block: 0;
+            margin-bottom: 0.6rem;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+        }
+        > .food-place-tags {
+            margin-bottom: 2rem;
+        }
+        .food-place-card-description-wrapper {
+            margin-bottom: 2rem;
+            > p {
                 margin-block: 0;
-                margin-bottom: 1.2rem;
-                text-transform: uppercase;
-                letter-spacing: 2px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            > button {
+                color: var(--color-primary-2);
+                border: none;
+                cursor: pointer;
+                background-color: transparent;
+                padding: 0;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    &:hover {
+        > .food-place-images-wrapper {
+            > .food-place-images-container {
+                > .carousel-button {
+                    opacity: 0.8;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.full-screen {
+        display: flex;
+        width: 60vw;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 4;
+        > .food-place-card-content {
+            > h5 {
+                margin-top: 1rem;
             }
             > h3 {
-                margin-block: 0;
-                margin-bottom: 0.6rem;
-                cursor: pointer;
+                cursor: initial;
                 &:hover {
-                    text-decoration: underline;
-                    text-underline-offset: 3px;
-                }
-            }
-            > .food-place-tags {
-                margin-bottom: 2rem;
-            }
-            .food-place-card-description-wrapper {
-                margin-bottom: 2rem;
-                > p {
-                    margin-block: 0;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                }
-                > button {
-                    color: var(--color-primary-2);
-                    border: none;
-                    cursor: pointer;
-                    background-color: transparent;
-                    padding: 0;
-                    font-size: 0.8rem;
-                }
-            }
-        }
-        &:hover {
-            > .food-place-images-wrapper {
-                > .food-place-images-container {
-                    > .carousel-button {
-                        opacity: 0.8;
-                        &:hover {
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.full-screen {
-            display: flex;
-            width: 60vw;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            z-index: 1;
-            > .food-place-card-content {
-                > h5 {
-                    margin-top: 1rem;
-                }
-                > h3 {
-                    cursor: initial;
-                    &:hover {
-                        text-decoration: none;
-                    }
+                    text-decoration: none;
                 }
             }
         }

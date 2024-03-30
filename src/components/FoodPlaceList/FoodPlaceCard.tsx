@@ -1,4 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, {
+    useState,
+    useRef,
+    useEffect,
+    Dispatch,
+    SetStateAction,
+} from "react";
+import { useIsMobile } from "hooks/useIsMobile";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./FoodPlaceIcons";
@@ -13,17 +20,20 @@ interface IFoodPlaceCardProps {
     city: CityEnum;
     foodPlace: FoodPlaceModel;
     onLike: (foodPlaceId: number) => void;
+    isFullScreen: boolean;
+    setIsFullScreen: Dispatch<SetStateAction<boolean>>;
 }
 
 const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
+    const isMobile = useIsMobile();
+
     const descriptionRef = useRef<HTMLParagraphElement>(null);
     const [lineClamp, setLineClamp] = useState<number | undefined>(4);
     const [maxHeight, setMaxHeight] = useState<number | undefined>(300);
     const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
     const [isReadLessVisible, setIsReadLessVisible] = useState(false);
-    const [isFullScreen, setIsFullScreen] = useState(false);
 
-    const isFullScreenClassName = isFullScreen ? "full-screen" : "";
+    const isFullScreenClassName = props.isFullScreen ? "full-screen" : "";
     const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
     const localStoragePlaceId = getLocalStoragePlaceId({
         city: props.city,
@@ -50,7 +60,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     };
 
     const onFullScreenChange = () => {
-        setIsFullScreen((t) => !t);
+        props.setIsFullScreen((t) => !t);
         setLineClamp((t) => {
             if (t) {
                 return undefined;
@@ -67,7 +77,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     };
 
     const onClickName = () => {
-        if (!isFullScreen) {
+        if (!props.isFullScreen && !isMobile) {
             onFullScreenChange();
         }
     };
@@ -83,61 +93,53 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     }, []);
 
     return (
-        <div
-            className={`food-place-card-wrapper`}
-            id={`food-place-${foodPlaceId}`}
-        >
-            <div className="food-place-card-placeholder"></div>
-            <div className={`food-place-card ${isFullScreenClassName}`}>
-                {props.foodPlace.images && (
-                    <FoodPlaceImages
-                        images={props.foodPlace.images}
-                        foodPlaceName={props.foodPlace.name}
-                        foodPlaceId={foodPlaceId}
-                        isLiked={isLiked({ localStoragePlaceId })}
-                        onLike={() => props.onLike(props.foodPlace.id)}
-                        isFullScreen={isFullScreen}
-                    />
-                )}
+        <div className={`food-place-card ${isFullScreenClassName}`}>
+            {props.foodPlace.images && (
+                <FoodPlaceImages
+                    images={props.foodPlace.images}
+                    foodPlaceName={props.foodPlace.name}
+                    foodPlaceId={foodPlaceId}
+                    isLiked={isLiked({ localStoragePlaceId })}
+                    onLike={() => props.onLike(props.foodPlace.id)}
+                    isFullScreen={props.isFullScreen}
+                />
+            )}
 
-                <div
-                    className="food-place-card-content flex-column"
-                    style={{ maxHeight }}
-                >
-                    {isFullScreen && <CloseIcon onClick={onFullScreenChange} />}
-                    <h5>{props.foodPlace.neighborhood}</h5>
-                    <h3 onClick={onClickName}>{props.foodPlace.name}</h3>
-                    <FoodPlaceTags
-                        tags={[
-                            ...props.foodPlace.tags,
-                            ...props.foodPlace.typeOfCuisine,
-                            props.foodPlace.price,
-                        ].filter((t) => t !== "")}
-                    />
-                    <div className="food-place-card-description-wrapper flex-1">
-                        <p
-                            style={{ WebkitLineClamp: lineClamp }}
-                            ref={descriptionRef}
-                        >
-                            {props.foodPlace.description}
-                        </p>
-                        {isReadMoreVisible && !isFullScreen && (
-                            <button onClick={onClickReadButton}>
-                                Read more
-                            </button>
-                        )}
-                        {isReadLessVisible && !isFullScreen && (
-                            <button onClick={onClickReadButton}>
-                                Read less
-                            </button>
-                        )}
-                    </div>
-                    <FoodPlaceIcons
-                        googleMaps={props.foodPlace.googleMaps}
-                        instagram={props.foodPlace.instagram}
-                        website={props.foodPlace.website}
-                    />
+            <div
+                className="food-place-card-content flex-column"
+                style={{ maxHeight }}
+            >
+                {props.isFullScreen && (
+                    <CloseIcon onClick={onFullScreenChange} />
+                )}
+                <h5>{props.foodPlace.neighborhood}</h5>
+                <h3 onClick={onClickName}>{props.foodPlace.name}</h3>
+                <FoodPlaceTags
+                    tags={[
+                        ...props.foodPlace.tags,
+                        ...props.foodPlace.typeOfCuisine,
+                        props.foodPlace.price,
+                    ].filter((t) => t !== "")}
+                />
+                <div className="food-place-card-description-wrapper flex-1">
+                    <p
+                        style={{ WebkitLineClamp: lineClamp }}
+                        ref={descriptionRef}
+                    >
+                        {props.foodPlace.description}
+                    </p>
+                    {isReadMoreVisible && !props.isFullScreen && (
+                        <button onClick={onClickReadButton}>Read more</button>
+                    )}
+                    {isReadLessVisible && !props.isFullScreen && (
+                        <button onClick={onClickReadButton}>Read less</button>
+                    )}
                 </div>
+                <FoodPlaceIcons
+                    googleMaps={props.foodPlace.googleMaps}
+                    instagram={props.foodPlace.instagram}
+                    website={props.foodPlace.website}
+                />
             </div>
         </div>
     );

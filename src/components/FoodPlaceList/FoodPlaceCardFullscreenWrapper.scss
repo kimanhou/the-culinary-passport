@@ -1,0 +1,29 @@
+.food-place-card-wrapper {
+    position: relative;
+    width: 300px;
+    height: calc(
+        200px + 300px + 2rem
+    ); // images' height + content's height + content's padding
+    .food-place-card-placeholder {
+        position: absolute;
+        width: 300px;
+        height: calc(
+            200px + 300px + 2rem
+        ); // images' height + content's height + content's padding
+        pointer-events: none;
+    }
+    > .full-screen-background {
+        background-color: rgba(26, 24, 24, 0.7);
+        z-index: 3;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        visibility: hidden;
+        &.full-screen {
+            visibility: visible;
+        }
+    }
+}

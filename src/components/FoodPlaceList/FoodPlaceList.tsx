@@ -1,6 +1,6 @@
 import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
-import FoodPlaceCard from "./FoodPlaceCard";
+import FoodPlaceCardFullscreenWrapper from "./FoodPlaceCardFullscreenWrapper";
 import { CityEnum } from "ts/enum";
 import "./FoodPlaceList.scss";
 
@@ -25,7 +25,7 @@ const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
                 })
                 .map((t) => (
                     <li key={t.name}>
-                        <FoodPlaceCard
+                        <FoodPlaceCardFullscreenWrapper
                             city={props.city}
                             foodPlace={t}
                             onLike={props.onLike}
