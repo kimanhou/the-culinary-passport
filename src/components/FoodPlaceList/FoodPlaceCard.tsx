@@ -49,21 +49,26 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         setIsReadMoreVisible((t) => !t);
     };
 
-    const displayCardInFullScreen = () => {
+    const onFullScreenChange = () => {
         setIsFullScreen((t) => !t);
-        setLineClamp(undefined);
-        setMaxHeight(undefined);
-    };
+        setLineClamp((t) => {
+            if (t) {
+                return undefined;
+            }
+            return 4;
+        });
 
-    const closeFullScreen = () => {
-        setIsFullScreen((t) => !t);
-        setLineClamp(4);
-        setMaxHeight(300);
+        setMaxHeight((t) => {
+            if (t) {
+                return undefined;
+            }
+            return 300;
+        });
     };
 
     const onClickName = () => {
         if (!isFullScreen) {
-            displayCardInFullScreen();
+            onFullScreenChange();
         }
     };
 
@@ -99,7 +104,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                     className="food-place-card-content flex-column"
                     style={{ maxHeight }}
                 >
-                    {isFullScreen && <CloseIcon onClick={closeFullScreen} />}
+                    {isFullScreen && <CloseIcon onClick={onFullScreenChange} />}
                     <h5>{props.foodPlace.neighborhood}</h5>
                     <h3 onClick={onClickName}>{props.foodPlace.name}</h3>
                     <FoodPlaceTags
