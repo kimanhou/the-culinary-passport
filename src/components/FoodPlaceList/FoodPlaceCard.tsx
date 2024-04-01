@@ -76,9 +76,26 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         });
     };
 
+    const closeFullScreen = () => {
+        onFullScreenChange();
+
+        document.body.style.overflow = "unset";
+        const url = `#/${props.city.toLocaleLowerCase()}`;
+        window.history.pushState(null, "", url);
+    };
+
+    const openFullScreen = () => {
+        onFullScreenChange();
+
+        document.body.style.overflow = "hidden";
+        const url = `#/${props.city.toLocaleLowerCase()}/${foodPlaceId}`;
+        window.history.pushState(foodPlaceId, "", url);
+    };
+
     const onClickName = () => {
+        // Do not open full screen when it's already opened, and on mobile
         if (!props.isFullScreen && !isMobile) {
-            onFullScreenChange();
+            openFullScreen();
         }
     };
 
@@ -109,9 +126,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                 className="food-place-card-content flex-column"
                 style={{ maxHeight }}
             >
-                {props.isFullScreen && (
-                    <CloseIcon onClick={onFullScreenChange} />
-                )}
+                {props.isFullScreen && <CloseIcon onClick={closeFullScreen} />}
                 <h5>{props.foodPlace.neighborhood}</h5>
                 <h3 onClick={onClickName}>{props.foodPlace.name}</h3>
                 <FoodPlaceTags
