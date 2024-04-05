@@ -1,12 +1,14 @@
 import React from "react";
 import { useFilters } from "hooks/useFilters";
 import { hasFavourites as hasFavouritesFunc } from "ts/favouriteUtils";
+import { hasStayType as hasStayTypeFunc } from "ts/filterUtils";
 import { CityEnum } from "ts/enum";
 import { LatLngExpression } from "leaflet";
 import FoodPlace from "model/FoodPlace";
 import Filter from "components/Filter/Filter";
 import FavouritesFilter from "components/Filter/FavouritesFilter";
 import FoodPlaceList from "components/FoodPlaceList/FoodPlaceList";
+import TouristToggle from "components/Filter/TouristToggle";
 import ramen from "assets/ramen.png";
 import coin from "assets/coin.png";
 import map from "assets/map.png";
@@ -22,8 +24,6 @@ interface IFoodPlaceListWithFilterProps {
 const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
     props
 ) => {
-    const touristFoodPlaces = props.foodPlaces.filter((t) => !t.isLocal);
-
     const {
         displayedFoodPlaces,
         typeOfCuisineOptions,
@@ -33,36 +33,28 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
         neighborhoodOptions,
         selectedNeighborhoods,
         isFavouritesSelected,
+        stayType,
         toggleTypeOfCuisineOptions,
         togglePriceOptions,
         toggleNeighbourhoodOptions,
         toggleFavourite,
         onLike,
-    } = useFilters({ city: props.city, foodPlaces: touristFoodPlaces });
+        onStayTypeChange,
+    } = useFilters({ city: props.city, foodPlaces: props.foodPlaces });
 
     const hasFavourites = hasFavouritesFunc(props.city);
+    const hasStayType = hasStayTypeFunc(props.foodPlaces);
 
     return (
         <section id="food-place-list-with-filter">
+            {hasStayType && (
+                <TouristToggle
+                    stayType={stayType}
+                    onStayTypeChange={onStayTypeChange}
+                    disabled={isFavouritesSelected}
+                />
+            )}
             <div id="food-place-list-with-filter-filters" className="flex-row">
-                {typeOfCuisineOptions.length > 0 && (
-                    <Filter
-                        filterName="Cuisine"
-                        icon={<img src={ramen} alt={"Cuisine filter icon"} />}
-                        options={typeOfCuisineOptions}
-                        selectedOptions={selectedCuisines}
-                        setSelectedOptions={toggleTypeOfCuisineOptions}
-                    />
-                )}
-                {priceOptions.length > 0 && (
-                    <Filter
-                        filterName="Price"
-                        icon={<img src={coin} alt={"Price filter icon"} />}
-                        options={priceOptions}
-                        selectedOptions={selectedPrices}
-                        setSelectedOptions={togglePriceOptions}
-                    />
-                )}
                 {neighborhoodOptions.length > 0 && (
                     <Filter
                         filterName="Neighborhood"
@@ -74,6 +66,25 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                         setSelectedOptions={toggleNeighbourhoodOptions}
                     />
                 )}
+                {priceOptions.length > 0 && (
+                    <Filter
+                        filterName="Price"
+                        icon={<img src={coin} alt={"Price filter icon"} />}
+                        options={priceOptions}
+                        selectedOptions={selectedPrices}
+                        setSelectedOptions={togglePriceOptions}
+                    />
+                )}
+                {typeOfCuisineOptions.length > 0 && (
+                    <Filter
+                        filterName="Cuisine"
+                        icon={<img src={ramen} alt={"Cuisine filter icon"} />}
+                        options={typeOfCuisineOptions}
+                        selectedOptions={selectedCuisines}
+                        setSelectedOptions={toggleTypeOfCuisineOptions}
+                    />
+                )}
+
                 {hasFavourites && (
                     <FavouritesFilter
                         isSelected={isFavouritesSelected}

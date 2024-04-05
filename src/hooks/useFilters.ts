@@ -5,10 +5,15 @@ import {
     getNeighborhoodsOptions,
     filterFoodPlaces,
     filteredFavouriteFoodPlaces,
+    filterByStayType,
 } from "ts/filterUtils";
 import FoodPlace from "model/FoodPlace";
 import { getLocalStoragePlaceId, setInLocalStorage } from "ts/favouriteUtils";
-import { CityEnum } from "ts/enum";
+import { CityEnum, StayEnum } from "ts/enum";
+import {
+    getStayTypeFromLocalStorage,
+    setStayTypeInLocalStorage,
+} from "ts/stayTypeUtils";
 
 interface IFilterState {
     displayedFoodPlaces: FoodPlace[];
@@ -19,6 +24,7 @@ interface IFilterState {
     neighborhoodOptions: string[];
     selectedNeighborhoods: string[];
     isFavouritesSelected: boolean;
+    stayType: StayEnum;
 }
 
 export const useFilters = ({
@@ -29,32 +35,35 @@ export const useFilters = ({
     foodPlaces: FoodPlace[];
 }) => {
     const computeFilterState = (filterState: IFilterState): IFilterState => {
-        const favouriteFoodPlaces = filteredFavouriteFoodPlaces({
-            city,
-            foodPlaces,
-            isFavouritesSelected: filterState.isFavouritesSelected,
-        });
+        const baseFoodPlaces = filterState.isFavouritesSelected
+            ? filteredFavouriteFoodPlaces({
+                  city,
+                  foodPlaces,
+                  isFavouritesSelected: filterState.isFavouritesSelected,
+              })
+            : filterByStayType({
+                  foodPlaces,
+                  stayType: filterState.stayType,
+              });
 
-        const typeOfCuisineOptions =
-            getTypeOfCuisineOptions(favouriteFoodPlaces);
+        const typeOfCuisineOptions = getTypeOfCuisineOptions(baseFoodPlaces);
         const selectedCuisines = filterState.selectedCuisines.filter((t) =>
             typeOfCuisineOptions.includes(t)
         );
 
-        const priceOptions = getPriceOptions(favouriteFoodPlaces);
+        const priceOptions = getPriceOptions(baseFoodPlaces);
         const selectedPrices = filterState.selectedPrices.filter((t) =>
             priceOptions.includes(t)
         );
 
-        const neighborhoodOptions =
-            getNeighborhoodsOptions(favouriteFoodPlaces);
+        const neighborhoodOptions = getNeighborhoodsOptions(baseFoodPlaces);
         const selectedNeighborhoods = filterState.selectedNeighborhoods.filter(
             (t) => neighborhoodOptions.includes(t)
         );
 
         const displayedFoodPlaces = filterFoodPlaces({
             city,
-            foodPlaces: favouriteFoodPlaces,
+            foodPlaces: baseFoodPlaces,
             selectedCuisines,
             selectedNeighborhoods,
             selectedPrices,
@@ -70,6 +79,7 @@ export const useFilters = ({
             neighborhoodOptions,
             selectedNeighborhoods,
             isFavouritesSelected: filterState.isFavouritesSelected,
+            stayType: filterState.stayType,
         };
     };
 
@@ -83,6 +93,9 @@ export const useFilters = ({
             neighborhoodOptions: getNeighborhoodsOptions(foodPlaces),
             selectedNeighborhoods: [],
             isFavouritesSelected: false,
+            stayType: getStayTypeFromLocalStorage({
+                city,
+            }),
         })
     );
 
@@ -140,12 +153,32 @@ export const useFilters = ({
         setInLocalStorage({
             localStoragePlaceId: getLocalStoragePlaceId({
                 city,
-                foodPlaceId: foodPlaceId,
+                foodPlaceId,
             }),
         });
 
         setFilterState((oldFilterState) => {
             const filterState = Object.assign({}, oldFilterState);
+            return computeFilterState(filterState);
+        });
+    };
+
+    const onStayTypeChange = () => {
+        setFilterState((oldFilterState) => {
+            const filterState = Object.assign({}, oldFilterState);
+            if (oldFilterState.stayType === StayEnum.TOURIST) {
+                filterState.stayType = StayEnum.LOCAL;
+                setStayTypeInLocalStorage({
+                    city,
+                    stayType: StayEnum.LOCAL,
+                });
+            } else {
+                filterState.stayType = StayEnum.TOURIST;
+                setStayTypeInLocalStorage({
+                    city,
+                    stayType: StayEnum.TOURIST,
+                });
+            }
             return computeFilterState(filterState);
         });
     };
@@ -157,5 +190,6 @@ export const useFilters = ({
         toggleNeighbourhoodOptions,
         toggleFavourite,
         onLike,
+        onStayTypeChange,
     };
 };

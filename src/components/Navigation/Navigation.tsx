@@ -11,7 +11,10 @@ const Navigation: React.FC<INavigationProps> = (props) => {
     return (
         <div id="navigation" className={`flex-row`}>
             {props.cities.map((t) => (
-                <NavigationLink to={`/${t.name}`} key={t.name}>
+                <NavigationLink
+                    to={`/${t.name.toLocaleLowerCase()}`}
+                    key={t.name}
+                >
                     {t.name.toLocaleUpperCase()}
                 </NavigationLink>
             ))}

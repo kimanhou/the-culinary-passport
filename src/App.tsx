@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import "./App.scss";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import City from "./components/City/City";
 import CityModel from "./model/City";
+import "./App.scss";
 
 function App() {
-    const [cities, setCities] = useState<any[]>([]);
+    const [cities, setCities] = useState<CityModel[]>([]);
 
     useEffect(() => {
         fetch("./cities.json")
@@ -24,7 +24,7 @@ function App() {
                 <Routes>
                     {cities.map((t) => (
                         <Route
-                            path={`/${t.name}`}
+                            path={`/${t.name.toLocaleLowerCase()}`}
                             element={<City city={t} />}
                             key={t.name}
                         ></Route>

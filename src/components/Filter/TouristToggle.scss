@@ -1,0 +1,28 @@
+.tourist-toggle {
+    display: inline-flex;
+    gap: 1rem;
+    background: var(--color-primary-1);
+    padding: 1.4rem 2rem;
+    border-radius: 40px;
+    img {
+        width: 40px;
+        height: 40px;
+    }
+
+    span.toggle-label {
+        color: var(--color-primary-5);
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    &.disabled {
+        background: var(--color-light-grey);
+        img {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+        span.toggle-label {
+            color: var(--color-grey);
+        }
+    }
+}

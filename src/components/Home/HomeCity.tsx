@@ -8,7 +8,10 @@ interface IHomeCityProps {
 
 const HomeCity: React.FC<IHomeCityProps> = (props) => {
     return (
-        <Link className="home-city flex-row" to={props.city}>
+        <Link
+            className="home-city flex-row"
+            to={props.city.toLocaleLowerCase()}
+        >
             {props.city}
         </Link>
     );
