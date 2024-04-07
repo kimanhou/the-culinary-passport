@@ -290,21 +290,23 @@
     },
     {
         "id": 17,
-        "name": "Cold Stone Creamery Tokyo",
-        "description": "Ice cream in a cone shaped like a bowl with many toppings. The staff will sing a song while making your ice cream. There is a beautiful wall for pictures. To go only.",
+        "name": "I'm donut",
+        "description": "Not your ordinary donut ! These deep fried balls of dough are extremely popular among the Japanese and for very good reason. The texture is mochi like and airy, those with cream filling are divine. There are several locations around Tokyo, with different menus. The branch in Aoyama for example has a very extensive list compared to the others. Be prepared for a long queue !",
         "tags": [],
         "price": "¥",
         "typeOfCuisine": ["Dessert"],
         "neighborhood": "Harajuku",
-        "googleMaps": "https://maps.app.goo.gl/8e8KA37GXbac2NwD9",
-        "website": "https://www.coldstonecreamery.co.jp/",
-        "instagram": "https://www.instagram.com/coldstonejapan/",
+        "googleMaps": "https://maps.app.goo.gl/SnjYjkYRwguT2BmF9",
+        "website": "https://amamdacotan.com/",
+        "instagram": "https://www.instagram.com/i.m.donut/",
         "images": [
-            "https://cdn.macaro-ni.jp/image/summary/128/128403/oigEgtu2uK9T0bv0gGjBduOZqpUw6cEjSHCLXt3P.jpg",
-            "https://cdn.macaro-ni.jp/image/summary/128/128403/SCGVgiRvzXefRstqU6yQzluQtI6lYUm9ofJW839a.jpg"
+            "https://metropolisjapan.com/wp-content/uploads/2023/12/Im-Donut-e1678762644649.jpeg",
+            "https://arne.media/uploads/2022/11/donut1.jpg",
+            "https://magazine.tabelog.com/uploads/2022/06/DSC02998_1.jpg",
+            "https://newsatcl-pctr.c.yimg.jp/t/iwiz-yn/rpr/shimizumihoko/00286863/title-1647420000147.jpeg?exp=10800&fmt=webp",
+            "https://store.tsite.jp/article_img/nakameguro/2022/1647559520941/slider/%E3%82%A2%E3%82%A4%E3%83%A0%E3%83%89%E3%83%BC%E3%83%8A%E3%83%83%E3%83%84%E5%A4%96%E8%A6%B3%E5%86%99%E7%9C%9F.jpg"
         ],
-        "coordinates": [35.6674513, 139.7054878],
-        "stayType": "TOURIST"
+        "coordinates": [35.669827, 139.7032334]
     },
     {
         "id": 18,
