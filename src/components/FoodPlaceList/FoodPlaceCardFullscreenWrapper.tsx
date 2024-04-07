@@ -15,6 +15,7 @@ const FoodPlaceCardFullscreenWrapper: FC<
     IFoodPlaceCardFullscreenWrapperProps
 > = (props) => {
     const [isFullScreen, setIsFullScreen] = useState(false);
+    const [height, setHeight] = useState("calc(200px + 300px + 2rem)");
 
     const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
     const isFullScreenClassName = isFullScreen ? "full-screen" : "";
@@ -24,13 +25,17 @@ const FoodPlaceCardFullscreenWrapper: FC<
             className={`food-place-card-wrapper`}
             id={`food-place-${foodPlaceId}`}
         >
-            <div className="food-place-card-placeholder"></div>
+            <div
+                className="food-place-card-placeholder"
+                style={{ height }}
+            ></div>
             <FoodPlaceCard
                 city={props.city}
                 foodPlace={props.foodPlace}
                 onLike={props.onLike}
                 isFullScreen={isFullScreen}
                 setIsFullScreen={setIsFullScreen}
+                setHeight={setHeight}
             />
             <div
                 className={`full-screen-background ${isFullScreenClassName}`}

@@ -22,11 +22,13 @@ interface IFoodPlaceCardProps {
     onLike: (foodPlaceId: number) => void;
     isFullScreen: boolean;
     setIsFullScreen: Dispatch<SetStateAction<boolean>>;
+    setHeight?: (height: string) => void;
 }
 
 const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     const isMobile = useIsMobile();
 
+    const cardRef = useRef<HTMLDivElement>(null);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
     const [lineClamp, setLineClamp] = useState<number | undefined>(4);
     const [maxHeight, setMaxHeight] = useState<number | undefined>(300);
@@ -58,6 +60,18 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         setIsReadLessVisible((t) => !t);
         setIsReadMoreVisible((t) => !t);
     };
+
+    useEffect(() => {
+        if (cardRef.current == null) return;
+        const setHeight = props.setHeight;
+        const resizeObserver = new ResizeObserver(() => {
+            if (setHeight != null) {
+                setHeight(`${cardRef.current?.clientHeight}px`);
+            }
+        });
+        resizeObserver.observe(cardRef.current);
+        return () => resizeObserver.disconnect();
+    }, [props.setHeight]);
 
     const onFullScreenChange = () => {
         props.setIsFullScreen((t) => !t);
@@ -110,7 +124,10 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     }, []);
 
     return (
-        <div className={`food-place-card ${isFullScreenClassName}`}>
+        <div
+            className={`food-place-card ${isFullScreenClassName}`}
+            ref={cardRef}
+        >
             {props.foodPlace.images && (
                 <FoodPlaceImages
                     images={props.foodPlace.images}
