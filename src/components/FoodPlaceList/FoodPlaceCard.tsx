@@ -30,9 +30,15 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
 
     const cardRef = useRef<HTMLDivElement>(null);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
-    const [lineClamp, setLineClamp] = useState<number | undefined>(4);
-    const [maxHeight, setMaxHeight] = useState<number | undefined>(300);
-    const [isReadMoreVisible, setIsReadMoreVisible] = useState(false);
+    const [lineClamp, setLineClamp] = useState<number | undefined>(
+        props.isFullScreen ? undefined : 4
+    );
+    const [maxHeight, setMaxHeight] = useState<number | undefined>(
+        props.isFullScreen ? undefined : 300
+    );
+    const [isReadMoreVisible, setIsReadMoreVisible] = useState(
+        !props.isFullScreen
+    );
     const [isReadLessVisible, setIsReadLessVisible] = useState(false);
 
     const isFullScreenClassName = props.isFullScreen ? "full-screen" : "";
@@ -73,25 +79,12 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         return () => resizeObserver.disconnect();
     }, [props.setHeight]);
 
-    const onFullScreenChange = () => {
-        props.setIsFullScreen((t) => !t);
-        setLineClamp((t) => {
-            if (t) {
-                return undefined;
-            }
-            return 4;
-        });
-
-        setMaxHeight((t) => {
-            if (t) {
-                return undefined;
-            }
-            return 300;
-        });
-    };
-
     const closeFullScreen = () => {
-        onFullScreenChange();
+        props.setIsFullScreen(false);
+        setLineClamp(4);
+        setMaxHeight(300);
+        setIsReadLessVisible(false);
+        setIsReadMoreVisible(true);
 
         document.body.style.overflow = "unset";
         const url = `#/${props.city.toLocaleLowerCase()}`;
@@ -99,7 +92,11 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     };
 
     const openFullScreen = () => {
-        onFullScreenChange();
+        props.setIsFullScreen(true);
+        setLineClamp(undefined);
+        setMaxHeight(undefined);
+        setIsReadLessVisible(true);
+        setIsReadMoreVisible(false);
 
         document.body.style.overflow = "hidden";
         const url = `#/${props.city.toLocaleLowerCase()}/${foodPlaceId}`;
