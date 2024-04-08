@@ -1,6 +1,6 @@
 import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
-import FoodPlaceCardFullscreenWrapper from "./FoodPlaceCardFullscreenWrapper";
+import FoodPlaceCardFullscreenWrapper from "./Card/FoodPlaceCardFullscreenWrapper";
 import { CityEnum } from "ts/enum";
 import { getFoodPlaceId } from "ts/utils";
 import "./FoodPlaceList.scss";

@@ -8,10 +8,10 @@ import React, {
 import { useIsMobile } from "hooks/useIsMobile";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
-import FoodPlaceIcons from "./FoodPlaceIcons";
-import FoodPlaceImages from "./FoodPlaceImages";
+import FoodPlaceIcons from "./Icons/FoodPlaceIcons";
+import FoodPlaceImages from "./Images/FoodPlaceImages";
 import { CityEnum } from "ts/enum";
-import { getFoodPlaceId } from "ts/utils";
+import { getFoodPlaceId, getFullScreenLink } from "ts/utils";
 import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
 import CloseIcon from "assets/CloseIcon";
 import "./FoodPlaceCard.scss";
@@ -47,6 +47,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         city: props.city,
         foodPlaceId: props.foodPlace.id,
     });
+    const fullScreenLink = getFullScreenLink({ city: props.city, foodPlaceId });
 
     const onClickReadButton = () => {
         setLineClamp((t) => {
@@ -168,6 +169,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                     googleMaps={props.foodPlace.googleMaps}
                     instagram={props.foodPlace.instagram}
                     website={props.foodPlace.website}
+                    fullScreenLink={fullScreenLink}
                 />
             </div>
         </div>
