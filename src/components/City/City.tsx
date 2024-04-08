@@ -9,12 +9,15 @@ import ShowMapButton from "components/Map/ShowMapButton";
 import SideSheet from "components/common/SideSheet/SideSheet";
 import Map from "components/Map/Map";
 import "./City.scss";
+import { useParams } from "react-router-dom";
 
 interface ICityProps {
     city: CityModel;
 }
 
 const City: React.FC<ICityProps> = (props) => {
+    let params = useParams();
+
     const [promise, setPromise] = useState(new Promise<FoodPlace[]>(() => {}));
     const [isMapShown, setIsMapShown] = useState(false);
     const [isMapReady, setIsMapReady] = useState(false);
@@ -39,6 +42,7 @@ const City: React.FC<ICityProps> = (props) => {
                             mapCenter={props.city.mapCenter}
                             mapZoom={props.city.mapZoom}
                             city={props.city.name}
+                            foodPlaceId={params.foodPlaceId}
                         />
                         <ShowMapButton
                             isMapShown={isMapShown}

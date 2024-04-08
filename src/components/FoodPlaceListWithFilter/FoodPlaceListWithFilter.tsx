@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { scrollTo } from "ts/utils";
 import { useFilters } from "hooks/useFilters";
 import { hasFavourites as hasFavouritesFunc } from "ts/favouriteUtils";
 import { hasStayType as hasStayTypeFunc } from "ts/filterUtils";
@@ -19,6 +20,7 @@ interface IFoodPlaceListWithFilterProps {
     mapCenter: LatLngExpression;
     mapZoom: number;
     city: CityEnum;
+    foodPlaceId?: string;
 }
 
 const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
@@ -44,6 +46,14 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
 
     const hasFavourites = hasFavouritesFunc(props.city);
     const hasStayType = hasStayTypeFunc(props.foodPlaces);
+
+    useEffect(() => {
+        if (props.foodPlaceId) {
+            scrollTo({
+                elementId: `food-place-${props.foodPlaceId}`,
+            });
+        }
+    }, [props.foodPlaceId]);
 
     return (
         <section id="food-place-list-with-filter">
@@ -98,6 +108,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                     city={props.city}
                     foodPlaceList={displayedFoodPlaces}
                     onLike={onLike}
+                    foodPlaceId={props.foodPlaceId}
                 />
             )}
             {displayedFoodPlaces.length === 0 && (

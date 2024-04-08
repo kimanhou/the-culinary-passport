@@ -30,6 +30,14 @@ function App() {
                         ></Route>
                     ))}
 
+                    {cities.map((t) => (
+                        <Route
+                            path={`/${t.name.toLocaleLowerCase()}/:foodPlaceId`}
+                            element={<City city={t} />}
+                            key={t.name}
+                        ></Route>
+                    ))}
+
                     <Route
                         path={"/"}
                         element={<Home cities={cities} />}

@@ -2,12 +2,14 @@ import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceCardFullscreenWrapper from "./FoodPlaceCardFullscreenWrapper";
 import { CityEnum } from "ts/enum";
+import { getFoodPlaceId } from "ts/utils";
 import "./FoodPlaceList.scss";
 
 interface IFoodPlaceListProps {
     foodPlaceList: FoodPlaceModel[];
     city: CityEnum;
     onLike: (foodPlaceId: number) => void;
+    foodPlaceId?: string;
 }
 
 const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
@@ -19,6 +21,9 @@ const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
                         city={props.city}
                         foodPlace={t}
                         onLike={props.onLike}
+                        isFullScreen={
+                            props.foodPlaceId === getFoodPlaceId(t.name)
+                        }
                     />
                 </li>
             ))}
