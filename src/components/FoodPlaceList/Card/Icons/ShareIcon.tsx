@@ -7,8 +7,8 @@ interface IShareIconProps {
 }
 
 const ShareIcon: React.FC<IShareIconProps> = (props) => {
-    const onClick = () => {
-        navigator.clipboard.writeText(props.link);
+    const onClick = async () => {
+        await navigator.clipboard.writeText(props.link);
         alert("Link copied to your clipboard !");
     };
     return (
