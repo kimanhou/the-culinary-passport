@@ -1,5 +1,6 @@
 import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
+import { useIsMobile } from "hooks/useIsMobile";
 import FoodPlaceCardFullscreenWrapper from "./Card/FoodPlaceCardFullscreenWrapper";
 import { CityEnum } from "ts/enum";
 import { getFoodPlaceId } from "ts/utils";
@@ -13,6 +14,8 @@ interface IFoodPlaceListProps {
 }
 
 const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
+    const isMobile = useIsMobile();
+
     return (
         <ul className="food-place-list flex-row justify-content-center">
             {props.foodPlaceList.map((t) => (
@@ -22,6 +25,7 @@ const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
                         foodPlace={t}
                         onLike={props.onLike}
                         isFullScreen={
+                            !isMobile &&
                             props.foodPlaceId === getFoodPlaceId(t.name)
                         }
                     />
