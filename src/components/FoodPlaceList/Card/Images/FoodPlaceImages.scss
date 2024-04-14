@@ -1,21 +1,27 @@
+$imageWidth: 300px;
+$fullScreenImageWidth: 30vw;
+
+$imageHeight: 200px;
+$fullScreenImageHeight: 100%;
+
 .food-place-images-wrapper {
     align-items: center;
     > .food-place-images-container {
-        height: 200px;
-        width: 300px;
+        height: $imageHeight;
+        width: $imageWidth;
         position: relative;
         > .food-place-images {
-            height: 200px;
-            width: 300px;
+            height: $imageHeight;
+            width: $imageWidth;
             overflow: hidden;
             > .food-place-image-container {
-                height: 200px;
-                width: 300px;
+                height: $imageHeight;
+                width: $imageWidth;
                 background-color: transparent;
                 > img {
                     object-fit: cover;
-                    height: 200px;
-                    width: 300px;
+                    height: $imageHeight;
+                    width: $imageWidth;
                     border-radius: 12px 12px 0 0;
                 }
             }
@@ -55,14 +61,19 @@
         display: none;
     }
     &.full-screen {
+        width: $fullScreenImageWidth;
         > .food-place-images-container {
-            height: 100%;
+            width: $fullScreenImageWidth;
+            height: $fullScreenImageHeight;
             > .food-place-images {
-                height: 100%;
+                width: $fullScreenImageWidth;
+                height: $fullScreenImageHeight;
                 > .food-place-image-container {
-                    height: 100%;
+                    width: $fullScreenImageWidth;
+                    height: $fullScreenImageHeight;
                     > img {
-                        height: 100%;
+                        width: $fullScreenImageWidth;
+                        height: $fullScreenImageHeight;
                         border-radius: 12px 0 0 12px;
                     }
                 }

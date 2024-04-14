@@ -5,9 +5,11 @@ import { Header } from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import City from "./components/City/City";
 import CityModel from "./model/City";
+import { useIsMobile } from "hooks/useIsMobile";
 import "./App.scss";
 
 function App() {
+    const isMobile = useIsMobile();
     const [cities, setCities] = useState<CityModel[]>([]);
 
     useEffect(() => {
@@ -33,7 +35,7 @@ function App() {
                     {cities.map((t) => (
                         <Route
                             path={`/${t.name.toLocaleLowerCase()}/:foodPlaceId`}
-                            element={<City city={t} />}
+                            element={<City city={t} isFullScreen={!isMobile} />}
                             key={t.name}
                         ></Route>
                     ))}

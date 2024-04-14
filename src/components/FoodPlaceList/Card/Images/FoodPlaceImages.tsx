@@ -20,6 +20,9 @@ interface IFoodPlaceImagesProps {
 const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
     const isFullScreenClassName = props.isFullScreen ? "full-screen" : "";
+    const imageWidth = props.isFullScreen
+        ? (window.innerWidth * 30) / 100 // 30vw
+        : 300; // 300px
 
     const canPrevious = props.images.length > 1 && selectedIndex > 0;
     const canNext =
@@ -41,7 +44,7 @@ const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
 
     const scrollToImage = (selectedIndex: number) => {
         const scrollValue =
-            window.innerWidth < 600 ? window.innerWidth - 16 : 300;
+            window.innerWidth < 600 ? window.innerWidth - 16 : imageWidth;
         document.querySelector(`#${imagesId}`)?.scrollTo({
             left: selectedIndex * scrollValue,
             behavior: "smooth",

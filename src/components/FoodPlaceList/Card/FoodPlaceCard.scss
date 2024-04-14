@@ -63,12 +63,15 @@
     &.full-screen {
         display: flex;
         width: 60vw;
+        min-height: 60vh;
+        max-height: 60vh;
         position: fixed;
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
         z-index: 4;
         > .food-place-card-content {
+            overflow: auto;
             > h5 {
                 margin-top: 1rem;
             }

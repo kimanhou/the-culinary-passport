@@ -13,6 +13,7 @@ import { useParams } from "react-router-dom";
 
 interface ICityProps {
     city: CityModel;
+    isFullScreen?: boolean;
 }
 
 const City: React.FC<ICityProps> = (props) => {
@@ -30,6 +31,14 @@ const City: React.FC<ICityProps> = (props) => {
         const controller = new FoodPlaceController(props.city);
         setPromise(() => controller.get());
     }, [props.city]);
+
+    useEffect(() => {
+        if (props.isFullScreen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+    }, [props.isFullScreen]);
 
     return (
         <section id="city">
