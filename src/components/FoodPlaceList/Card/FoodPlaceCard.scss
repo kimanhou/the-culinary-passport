@@ -21,10 +21,8 @@
             margin-block: 0;
             margin-bottom: 0.6rem;
             cursor: pointer;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             &:hover {
                 text-decoration: underline;
                 text-underline-offset: 3px;
