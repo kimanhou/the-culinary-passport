@@ -10,7 +10,7 @@ import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./Icons/FoodPlaceIcons";
 import FoodPlaceImages from "./Images/FoodPlaceImages";
-import { CityEnum } from "ts/enum";
+import { CityEnum, ToastNotificationEnum } from "ts/enum";
 import { getFoodPlaceId, getFullScreenLink } from "ts/utils";
 import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
 import CloseIcon from "assets/CloseIcon";
@@ -22,6 +22,7 @@ interface IFoodPlaceCardProps {
     onLike: (foodPlaceId: number) => void;
     isFullScreen: boolean;
     setIsFullScreen: Dispatch<SetStateAction<boolean>>;
+    showToast: (message: string, type: ToastNotificationEnum) => void;
     setHeight?: (height: string) => void;
 }
 
@@ -170,6 +171,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                     instagram={props.foodPlace.instagram}
                     website={props.foodPlace.website}
                     fullScreenLink={fullScreenLink}
+                    showToast={props.showToast}
                 />
             </div>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
 import { useIsMobile } from "hooks/useIsMobile";
 import FoodPlaceCardFullscreenWrapper from "./Card/FoodPlaceCardFullscreenWrapper";
-import { CityEnum } from "ts/enum";
+import { CityEnum, ToastNotificationEnum } from "ts/enum";
 import { getFoodPlaceId } from "ts/utils";
 import "./FoodPlaceList.scss";
 
@@ -10,6 +10,7 @@ interface IFoodPlaceListProps {
     foodPlaceList: FoodPlaceModel[];
     city: CityEnum;
     onLike: (foodPlaceId: number) => void;
+    showToast: (message: string, type: ToastNotificationEnum) => void;
     foodPlaceId?: string;
 }
 
@@ -28,6 +29,7 @@ const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
                             !isMobile &&
                             props.foodPlaceId === getFoodPlaceId(t.name)
                         }
+                        showToast={props.showToast}
                     />
                 </li>
             ))}

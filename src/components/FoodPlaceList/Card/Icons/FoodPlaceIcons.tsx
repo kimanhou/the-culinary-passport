@@ -4,8 +4,10 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import RoundIcon from "components/common/RoundIcon/RoundIcon";
 import "./FoodPlaceIcons.scss";
 import ShareIcon from "./ShareIcon";
+import { ToastNotificationEnum } from "ts/enum";
 
 interface IFoodPlaceIconsProps {
+    showToast: (message: string, type: ToastNotificationEnum) => void;
     fullScreenLink: string;
     googleMaps?: string;
     instagram?: string;
@@ -22,7 +24,10 @@ const FoodPlaceIcons: React.FC<IFoodPlaceIconsProps> = (props) => {
                 <RoundIcon icon={faInstagram} href={props.instagram} />
             )}
             {props.website && <RoundIcon icon={faLink} href={props.website} />}
-            <ShareIcon link={props.fullScreenLink} />
+            <ShareIcon
+                link={props.fullScreenLink}
+                showToast={props.showToast}
+            />
         </div>
     );
 };

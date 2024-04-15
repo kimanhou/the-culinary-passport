@@ -10,6 +10,8 @@ import SideSheet from "components/common/SideSheet/SideSheet";
 import Map from "components/Map/Map";
 import "./City.scss";
 import { useParams } from "react-router-dom";
+import ToastList from "components/ToastNotification/List/ToastList";
+import { useToastNotifications } from "hooks/useToastNotifications";
 
 interface ICityProps {
     city: CityModel;
@@ -40,6 +42,9 @@ const City: React.FC<ICityProps> = (props) => {
         }
     }, [props.isFullScreen]);
 
+    const { toasts, position, removeToast, showToast } =
+        useToastNotifications();
+
     return (
         <section id="city">
             <h1>{props.city.name.toLocaleUpperCase()}</h1>
@@ -52,6 +57,7 @@ const City: React.FC<ICityProps> = (props) => {
                             mapZoom={props.city.mapZoom}
                             city={props.city.name}
                             foodPlaceId={params.foodPlaceId}
+                            showToast={showToast}
                         />
                         <ShowMapButton
                             isMapShown={isMapShown}
@@ -83,6 +89,11 @@ const City: React.FC<ICityProps> = (props) => {
                     </>
                 )}
             </LoadData>
+            <ToastList
+                data={toasts}
+                position={position}
+                removeToast={removeToast}
+            />
         </section>
     );
 };

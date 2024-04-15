@@ -3,7 +3,7 @@ import { scrollTo } from "ts/utils";
 import { useFilters } from "hooks/useFilters";
 import { hasFavourites as hasFavouritesFunc } from "ts/favouriteUtils";
 import { hasStayType as hasStayTypeFunc } from "ts/filterUtils";
-import { CityEnum } from "ts/enum";
+import { CityEnum, ToastNotificationEnum } from "ts/enum";
 import { LatLngExpression } from "leaflet";
 import FoodPlace from "model/FoodPlace";
 import Filter from "components/Filter/Filter";
@@ -20,6 +20,7 @@ interface IFoodPlaceListWithFilterProps {
     mapCenter: LatLngExpression;
     mapZoom: number;
     city: CityEnum;
+    showToast: (message: string, type: ToastNotificationEnum) => void;
     foodPlaceId?: string;
 }
 
@@ -109,6 +110,7 @@ const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
                     foodPlaceList={displayedFoodPlaces}
                     onLike={onLike}
                     foodPlaceId={props.foodPlaceId}
+                    showToast={props.showToast}
                 />
             )}
             {displayedFoodPlaces.length === 0 && (
