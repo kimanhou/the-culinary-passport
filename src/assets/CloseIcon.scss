@@ -1,0 +1,10 @@
+svg.close-icon {
+    width: 1.2rem;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    transition: fill 0.1s;
+    &:hover {
+        fill: var(--color-primary-5);
+    }
+}

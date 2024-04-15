@@ -1,3 +1,5 @@
+import { CityEnum } from "./enum";
+
 export const getValueOrDefault = (s: string | null | undefined) => {
     if (!s) {
         return "";
@@ -14,9 +16,25 @@ export const scrollTo = ({ elementId }: { elementId: string }) => {
 };
 
 export const getFoodPlaceId = (foodPlaceName: string) => {
-    return foodPlaceName
-        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
-        .replace(/'/g, "")
-        .replace(/\s+/g, "-")
-        .toLocaleLowerCase();
+    return (
+        foodPlaceName
+            // eslint-disable-next-line
+            .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
+            // eslint-disable-next-line
+            .replace(/'/g, "")
+            // eslint-disable-next-line
+            .replace(/\s+/g, "-")
+            .toLocaleLowerCase()
+    );
+};
+
+export const getFullScreenLink = ({
+    city,
+    foodPlaceId,
+}: {
+    city: CityEnum;
+    foodPlaceId: string;
+}) => {
+    const baseUrl = "https://kimanhou.github.io/the-culinary-passport/#";
+    return `${baseUrl}/${city.toLocaleLowerCase()}/${foodPlaceId}`;
 };

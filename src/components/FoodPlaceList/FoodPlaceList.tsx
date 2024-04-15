@@ -1,37 +1,36 @@
 import React from "react";
 import FoodPlaceModel from "model/FoodPlace";
-import FoodPlaceCard from "./FoodPlaceCard";
+import { useIsMobile } from "hooks/useIsMobile";
+import FoodPlaceCardFullscreenWrapper from "./Card/FoodPlaceCardFullscreenWrapper";
 import { CityEnum } from "ts/enum";
+import { getFoodPlaceId } from "ts/utils";
 import "./FoodPlaceList.scss";
 
 interface IFoodPlaceListProps {
     foodPlaceList: FoodPlaceModel[];
     city: CityEnum;
     onLike: (foodPlaceId: number) => void;
+    foodPlaceId?: string;
 }
 
 const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
+    const isMobile = useIsMobile();
+
     return (
         <ul className="food-place-list flex-row justify-content-center">
-            {props.foodPlaceList
-                .sort(function (a, b) {
-                    if (a.name < b.name) {
-                        return -1;
-                    }
-                    if (a.name > b.name) {
-                        return 1;
-                    }
-                    return 0;
-                })
-                .map((t) => (
-                    <li key={t.name}>
-                        <FoodPlaceCard
-                            city={props.city}
-                            foodPlace={t}
-                            onLike={props.onLike}
-                        />
-                    </li>
-                ))}
+            {props.foodPlaceList.map((t) => (
+                <li key={t.name}>
+                    <FoodPlaceCardFullscreenWrapper
+                        city={props.city}
+                        foodPlace={t}
+                        onLike={props.onLike}
+                        isFullScreen={
+                            !isMobile &&
+                            props.foodPlaceId === getFoodPlaceId(t.name)
+                        }
+                    />
+                </li>
+            ))}
         </ul>
     );
 };
