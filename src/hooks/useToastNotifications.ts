@@ -23,7 +23,7 @@ export const useToastNotifications = () => {
 
         setTimeout(() => {
             removeToast(toast.id);
-        }, AUTO_CLOSE_DURATION * 1000);
+        }, AUTO_CLOSE_DURATION * 1000 + 100);
     };
 
     return { toasts, removeToast, showToast };

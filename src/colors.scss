@@ -8,16 +8,5 @@
     --color-primary-3: #f4845f;
     --color-primary-4: #f27059;
     --color-primary-5: #f25c54;
-
-    // Toast notification
-    --toast-success-hue: 150;
-    --toast-failure-hue: 20;
-    --toast-warning-hue: 205;
-    --toast-padding: 1.5em;
-    --toast-margin: 0.5em;
-    --toast-bg-color-fallback: #{"hsl(var(--secondary-hue) 15% 100%)"};
-    --toast-text-color-fallback: #{"hsl(var(--secondary-hue) 10% 25%)"};
-    --toast-opacity: 0.99;
-    --toast-content-gap: 1em;
-    --toast-success: #5da271;
+    --color-toast-success: #5da271; // not used in CSS but keep as reference
 }
