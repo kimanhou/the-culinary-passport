@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.607699de.css",
-    "main.js": "./static/js/main.47b1deb8.js",
+    "main.css": "./static/css/main.2a6ecf23.css",
+    "main.js": "./static/js/main.38b8a67e.js",
     "static/js/787.bff22d74.chunk.js": "./static/js/787.bff22d74.chunk.js",
     "static/media/Kalnia-VariableFont_wdth,wght.ttf": "./static/media/Kalnia-VariableFont_wdth,wght.ea93935ecef30006ea44.ttf",
     "static/media/map.png": "./static/media/map.73948584a92a3fc87a6f.png",
@@ -12,12 +12,12 @@
     "static/media/heart.png": "./static/media/heart.f87f9616cbe62cc4b80d.png",
     "static/media/tourist.png": "./static/media/tourist.da4be6bad3a4e5fdb7d4.png",
     "index.html": "./index.html",
-    "main.607699de.css.map": "./static/css/main.607699de.css.map",
-    "main.47b1deb8.js.map": "./static/js/main.47b1deb8.js.map",
+    "main.2a6ecf23.css.map": "./static/css/main.2a6ecf23.css.map",
+    "main.38b8a67e.js.map": "./static/js/main.38b8a67e.js.map",
     "787.bff22d74.chunk.js.map": "./static/js/787.bff22d74.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.607699de.css",
-    "static/js/main.47b1deb8.js"
+    "static/css/main.2a6ecf23.css",
+    "static/js/main.38b8a67e.js"
   ]
 }
