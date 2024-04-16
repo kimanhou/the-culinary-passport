@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Toast, { ToastType } from "../Toast/Toast";
-import "./ToastList.scss";
+import styles from "./ToastList.module.scss";
 
 interface IToastListProps {
     data: ToastType[];
@@ -32,7 +32,9 @@ const ToastList = ({ data, position, removeToast }: IToastListProps) => {
         <>
             {sortedData.length > 0 && (
                 <div
-                    className={`toast-list toast-list--${position}`}
+                    className={`${styles["toast-list"]} ${
+                        styles[`toast-list--${position}`]
+                    }`}
                     aria-live="assertive"
                     ref={listRef}
                 >

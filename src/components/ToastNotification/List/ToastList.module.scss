@@ -16,26 +16,22 @@
     flex-direction: column;
     gap: 0.4rem;
     z-index: 1;
-}
-
-.toast-list--top-left {
-    top: 0;
-    left: 0;
-}
-
-.toast-list--top-right {
-    top: 0;
-    right: 0;
-}
-
-.toast-list--bottom-left {
-    bottom: 0;
-    left: 0;
-}
-
-.toast-list--bottom-right {
-    bottom: 0;
-    right: 0;
+    &.toast-list--top-left {
+        top: 0;
+        left: 0;
+    }
+    &.toast-list--top-right {
+        top: 0;
+        right: 0;
+    }
+    &.toast-list--bottom-left {
+        bottom: 0;
+        left: 0;
+    }
+    &.toast-list--bottom-right {
+        bottom: 0;
+        right: 0;
+    }
 }
 
 .toast-list--top-left .toast,
