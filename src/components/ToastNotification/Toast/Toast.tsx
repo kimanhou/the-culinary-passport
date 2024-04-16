@@ -1,5 +1,7 @@
 import React from "react";
-import { SuccessIcon, FailureIcon, WarningIcon } from "../Icons/Icons";
+import SuccessIcon from "assets/SuccessIcon";
+import WarningIcon from "assets/WarningIcon";
+import FailureIcon from "assets/FailureIcon";
 import { ToastNotificationEnum } from "ts/enum";
 import styles from "./Toast.module.scss";
 
@@ -18,13 +20,15 @@ interface IToastProps {
 export const TOAST_NOTIF_CONSTANTS = {
     SUCCESS: {
         icon: <SuccessIcon />,
-        color: "green",
+        color: "#5DA271",
     },
     FAILURE: {
         icon: <FailureIcon />,
+        color: "#f25c54",
     },
     WARNING: {
         icon: <WarningIcon />,
+        color: "#f79d65",
     },
 };
 
@@ -34,10 +38,12 @@ const Toast = ({ message, type, onClose }: IToastProps) => {
 
     return (
         <div
-            className={`${styles.toast} ${styles[`toast--${type}`]}`}
+            className={styles.toast}
             role="alert"
             onClick={onClose}
-            style={{ borderRight: "solid 6px green" }}
+            style={{
+                borderRight: `solid 6px ${TOAST_NOTIF_CONSTANTS[type].color}`,
+            }}
         >
             <div className={styles["toast-message"]}>
                 {toastIcon && (

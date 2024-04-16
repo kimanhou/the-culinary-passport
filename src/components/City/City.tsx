@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { FoodPlaceController } from "api/FoodPlaceController";
 import CityModel from "model/City";
 import FoodPlace from "model/FoodPlace";
@@ -8,10 +8,10 @@ import FoodPlaceListWithFilter from "components/FoodPlaceListWithFilter/FoodPlac
 import ShowMapButton from "components/Map/ShowMapButton";
 import SideSheet from "components/common/SideSheet/SideSheet";
 import Map from "components/Map/Map";
-import "./City.scss";
-import { useParams } from "react-router-dom";
 import ToastList from "components/ToastNotification/List/ToastList";
 import { useToastNotifications } from "hooks/useToastNotifications";
+import { POSITION } from "components/ToastNotification/constants";
+import "./City.scss";
 
 interface ICityProps {
     city: CityModel;
@@ -42,8 +42,7 @@ const City: React.FC<ICityProps> = (props) => {
         }
     }, [props.isFullScreen]);
 
-    const { toasts, position, removeToast, showToast } =
-        useToastNotifications();
+    const { toasts, removeToast, showToast } = useToastNotifications();
 
     return (
         <section id="city">
@@ -91,7 +90,7 @@ const City: React.FC<ICityProps> = (props) => {
             </LoadData>
             <ToastList
                 data={toasts}
-                position={position}
+                position={POSITION}
                 removeToast={removeToast}
             />
         </section>

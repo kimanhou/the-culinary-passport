@@ -26,30 +26,3 @@ div.toast {
         }
     }
 }
-
-.toast--success {
-    color: #{"hsl(var(--toast-success-hue) 97% 3%)"};
-    background-color: #{"hsl(var(--toast-success-hue) 98% 99%)"};
-}
-
-.toast--success .icon--thumb {
-    color: #{"hsl(var(--toast-success-hue) 90% 40%)"};
-}
-
-.toast--failure {
-    color: #{"hsl(var(--toast-failure-hue) 97% 3%)"};
-    background-color: #{"hsl(var(--toast-failure-hue) 98% 99%)"};
-}
-
-.toast--failure .icon--thumb {
-    color: #{"hsl(var(--toast-failure-hue) 90% 40%)"};
-}
-
-.toast--warning {
-    color: #{"hsl(var(--toast-warning-hue) 97% 3%)"};
-    background-color: #{"hsl(var(--toast-warning-hue) 98% 99%)"};
-}
-
-.toast--warning .icon--thumb {
-    color: #{"hsl(var(--toast-warning-hue) 90% 40%)"};
-}

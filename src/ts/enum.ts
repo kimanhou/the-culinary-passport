@@ -1,9 +1,3 @@
-import {
-    SuccessIcon,
-    FailureIcon,
-    WarningIcon,
-} from "components/ToastNotification/Icons/Icons";
-
 export enum CityEnum {
     PARIS = "PARIS",
     MONTREAL = "MONTREAL",
