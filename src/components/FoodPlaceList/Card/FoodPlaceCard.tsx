@@ -37,8 +37,13 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     const [maxHeight, setMaxHeight] = useState<number | undefined>(
         props.isFullScreen ? undefined : 300
     );
+
+    const isDescriptionClamped =
+        descriptionRef.current?.scrollHeight &&
+        descriptionRef.current?.scrollHeight >
+            descriptionRef.current?.clientHeight;
     const [isReadMoreVisible, setIsReadMoreVisible] = useState(
-        !props.isFullScreen
+        !props.isFullScreen && isDescriptionClamped
     );
     const [isReadLessVisible, setIsReadLessVisible] = useState(false);
 
@@ -86,7 +91,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         setLineClamp(4);
         setMaxHeight(300);
         setIsReadLessVisible(false);
-        setIsReadMoreVisible(true);
+        setIsReadMoreVisible(isDescriptionClamped);
 
         document.body.style.overflow = "unset";
         const url = `#/${props.city.toLocaleLowerCase()}`;
@@ -97,7 +102,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         props.setIsFullScreen(true);
         setLineClamp(undefined);
         setMaxHeight(undefined);
-        setIsReadLessVisible(true);
+        setIsReadLessVisible(false);
         setIsReadMoreVisible(false);
 
         document.body.style.overflow = "hidden";
