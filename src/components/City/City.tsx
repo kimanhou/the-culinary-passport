@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { FoodPlaceController } from "api/FoodPlaceController";
 import CityModel from "model/City";
 import FoodPlace from "model/FoodPlace";
@@ -8,8 +8,10 @@ import FoodPlaceListWithFilter from "components/FoodPlaceListWithFilter/FoodPlac
 import ShowMapButton from "components/Map/ShowMapButton";
 import SideSheet from "components/common/SideSheet/SideSheet";
 import Map from "components/Map/Map";
+import ToastList from "components/ToastNotification/List/ToastList";
+import { useToastNotifications } from "hooks/useToastNotifications";
+import { POSITION } from "components/ToastNotification/constants";
 import "./City.scss";
-import { useParams } from "react-router-dom";
 
 interface ICityProps {
     city: CityModel;
@@ -40,6 +42,8 @@ const City: React.FC<ICityProps> = (props) => {
         }
     }, [props.isFullScreen]);
 
+    const { toasts, removeToast, showToast } = useToastNotifications();
+
     return (
         <section id="city">
             <h1>{props.city.name.toLocaleUpperCase()}</h1>
@@ -52,6 +56,7 @@ const City: React.FC<ICityProps> = (props) => {
                             mapZoom={props.city.mapZoom}
                             city={props.city.name}
                             foodPlaceId={params.foodPlaceId}
+                            showToast={showToast}
                         />
                         <ShowMapButton
                             isMapShown={isMapShown}
@@ -83,6 +88,11 @@ const City: React.FC<ICityProps> = (props) => {
                     </>
                 )}
             </LoadData>
+            <ToastList
+                data={toasts}
+                position={POSITION}
+                removeToast={removeToast}
+            />
         </section>
     );
 };

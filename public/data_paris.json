@@ -19,7 +19,7 @@
     {
         "id": 2,
         "name": "Le Plomb du Cantal",
-        "description": "Typical Auvergnat. Must try if you want to taste no classic French dishes. To try: aligot or truffade. Mashed potatoes with cream and cheese. Very tasty",
+        "description": "Typical Auvergnat. Must try if you want to taste non classic French dishes. To try: aligot or truffade. Mashed potatoes with cream and cheese. Very tasty",
         "tags": [],
         "price": "€€",
         "typeOfCuisine": ["French"],
@@ -36,7 +36,7 @@
     {
         "id": 3,
         "name": "Chez Janou",
-        "description": "A corner of garrigue in the heart of Paris... In the dining room with southern accents or on the terrace in the shade of olive trees, you can discover the flavors of sunny Provencal cuisine and be dazzled by our pastis menu.",
+        "description": "A corner of garrigue in the heart of Paris... In the dining room with southern accents or on the terrace in the shade of olive trees, you can discover the flavors of sunny Provencal cuisine and be dazzled by the pastis menu.",
         "tags": [],
         "price": "€€",
         "typeOfCuisine": ["French"],
@@ -104,7 +104,7 @@
     {
         "id": 8,
         "name": "Crêperie le Petit Josselin",
-        "description": "In the Montparnasse district, it's the Breton neighborhood. Where you have to eat a crêpe. Crêperie Josselin makes a delicious buckwheat crêpe. If it's too crowded, try Crêperie Plougastel in the same street",
+        "description": "In the Montparnasse district, it's the Breton neighborhood and this is where you have to eat a crêpe. Crêperie Josselin makes a delicious buckwheat crêpe. If it's too crowded, try Crêperie Plougastel in the same street",
         "tags": [],
         "price": "€",
         "typeOfCuisine": ["French"],
@@ -121,7 +121,7 @@
     {
         "id": 9,
         "name": "Privé de Dessert",
-        "description": "Trompe-l'oeil restaurant. Starters and main courses look like desserts and desserts look like main courses! Visually surprising but the food is not amazing. Worth trying for the curious. There are several Privé de Dessert in Paris",
+        "description": "Trompe-l'oeil restaurant. Starters and main courses look like desserts and desserts look like main courses! Visually surprising but the food is not amazing. Worth trying for the curious. There are several locations in Paris",
         "tags": [],
         "price": "€€",
         "typeOfCuisine": ["French"],
@@ -138,7 +138,7 @@
     {
         "id": 10,
         "name": "Godaille",
-        "description": "New restaurant opened by my friends Étienne and Derrick. They have a wine bar Purvin right next door. Great quality-price ratio, a bistronomic place. Great places!!",
+        "description": "New restaurant opened by my friends Étienne and Derrick. They have a wine bar Purvin right next door. Great quality-price ratio, a bistronomic place. Both the wine bar and restaurant are great places!!",
         "tags": [],
         "price": "€€",
         "typeOfCuisine": ["French"],
@@ -156,7 +156,7 @@
     {
         "id": 11,
         "name": "Bao family",
-        "description": "Big bao, small bao, blue bao. Street food favorite. From Hong Kong. Eggplants to die for",
+        "description": "The group has several locations called Big bao, Small bao and Blue bao. Street food favorite. From Hong Kong. Eggplants to die for",
         "tags": [],
         "price": "€€",
         "typeOfCuisine": ["Asian"],
@@ -173,7 +173,7 @@
     {
         "id": 12,
         "name": "Big mamma",
-        "description": "Félicita, popular pizza, etc. A sure value of Italian food in a very nice setting",
+        "description": "Félicita, popular pizza, pasta etc. A sure value of Italian food in a very nice setting. Several locations in Paris",
         "tags": [],
         "price": "€€",
         "typeOfCuisine": ["Italian"],
@@ -190,7 +190,7 @@
     {
         "id": 13,
         "name": "Happatei",
-        "description": "Rue Sainte Anne, Japanese restaurant district. Very good takoyakis and okonomiyakis. Very cosy and good place to try Japanese street food.",
+        "description": "Rue Sainte Anne, Japanese restaurant district. Very good takoyaki and okonomiyaki. Very cosy and good place to try Japanese street food.",
         "tags": [],
         "price": "€",
         "typeOfCuisine": ["Japanese"],

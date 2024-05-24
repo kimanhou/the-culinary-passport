@@ -10,7 +10,7 @@ import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
 import FoodPlaceIcons from "./Icons/FoodPlaceIcons";
 import FoodPlaceImages from "./Images/FoodPlaceImages";
-import { CityEnum } from "ts/enum";
+import { CityEnum, ToastNotificationEnum } from "ts/enum";
 import { getFoodPlaceId, getFullScreenLink } from "ts/utils";
 import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
 import CloseIcon from "assets/CloseIcon";
@@ -22,6 +22,7 @@ interface IFoodPlaceCardProps {
     onLike: (foodPlaceId: number) => void;
     isFullScreen: boolean;
     setIsFullScreen: Dispatch<SetStateAction<boolean>>;
+    showToast: (message: string, type: ToastNotificationEnum) => void;
     setHeight?: (height: string) => void;
 }
 
@@ -36,8 +37,13 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
     const [maxHeight, setMaxHeight] = useState<number | undefined>(
         props.isFullScreen ? undefined : 300
     );
+
+    const isDescriptionClamped =
+        descriptionRef.current?.scrollHeight &&
+        descriptionRef.current?.scrollHeight >
+            descriptionRef.current?.clientHeight;
     const [isReadMoreVisible, setIsReadMoreVisible] = useState(
-        !props.isFullScreen
+        !props.isFullScreen && isDescriptionClamped
     );
     const [isReadLessVisible, setIsReadLessVisible] = useState(false);
 
@@ -85,7 +91,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         setLineClamp(4);
         setMaxHeight(300);
         setIsReadLessVisible(false);
-        setIsReadMoreVisible(true);
+        setIsReadMoreVisible(isDescriptionClamped);
 
         document.body.style.overflow = "unset";
         const url = `#/${props.city.toLocaleLowerCase()}`;
@@ -96,7 +102,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
         props.setIsFullScreen(true);
         setLineClamp(undefined);
         setMaxHeight(undefined);
-        setIsReadLessVisible(true);
+        setIsReadLessVisible(false);
         setIsReadMoreVisible(false);
 
         document.body.style.overflow = "hidden";
@@ -170,6 +176,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                     instagram={props.foodPlace.instagram}
                     website={props.foodPlace.website}
                     fullScreenLink={fullScreenLink}
+                    showToast={props.showToast}
                 />
             </div>
         </div>

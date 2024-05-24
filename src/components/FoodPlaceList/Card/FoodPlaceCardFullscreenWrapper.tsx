@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceCard from "./FoodPlaceCard";
 import { getFoodPlaceId } from "ts/utils";
-import { CityEnum } from "ts/enum";
+import { CityEnum, ToastNotificationEnum } from "ts/enum";
 import "./FoodPlaceCardFullscreenWrapper.scss";
 
 interface IFoodPlaceCardFullscreenWrapperProps {
@@ -10,6 +10,7 @@ interface IFoodPlaceCardFullscreenWrapperProps {
     foodPlace: FoodPlaceModel;
     onLike: (foodPlaceId: number) => void;
     isFullScreen: boolean;
+    showToast: (message: string, type: ToastNotificationEnum) => void;
 }
 
 const FoodPlaceCardFullscreenWrapper: FC<
@@ -37,6 +38,7 @@ const FoodPlaceCardFullscreenWrapper: FC<
                 isFullScreen={isFullScreen}
                 setIsFullScreen={setIsFullScreen}
                 setHeight={setHeight}
+                showToast={props.showToast}
             />
             <div
                 className={`full-screen-background ${isFullScreenClassName}`}
