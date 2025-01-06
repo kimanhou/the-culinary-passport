@@ -258,7 +258,7 @@
     {
         "id": 17,
         "name": "Bouillon Pigalle",
-        "description": "Parisian. To try: oeufs mayo and confit de canard. Typical Parisian bistro",
+        "description": "Located at Pigalle metro station, the restaurant is a typical Parisian bistro with a beautiful decor. You can book online or queue in front, they can accomodate large groups. Dogs are accepted upstairs in the veranda. They also sell to go dishes and sandwiches next door. To try: oeufs mayo and confit de canard.",
         "tags": [],
         "price": "€",
         "typeOfCuisine": ["French"],
@@ -267,8 +267,11 @@
         "instagram": "https://www.instagram.com/bouillonlinsta/",
         "website": "https://bouillonlesite.com/",
         "images": [
-            "https://tse4.mm.bing.net/th?id=OIP.dizFvFUX36xhlFbqg0bwrQHaFm&pid=Api",
-            "https://tse2.mm.bing.net/th?id=OIP.aijbwa6FOSMyw9urJ79vggHaJI&pid=Api"
+            "https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2020/11/03051244/bouillon-restaurant-pigalle-1024x456.jpg",
+            "https://tse2.mm.bing.net/th?id=OIP.aijbwa6FOSMyw9urJ79vggHaJI&pid=Api",
+            "https://bouillonlesite.com/wp-content/uploads/2023/04/A2AD6660-B42C-47AA-84AF-01DA771C2EA7_1_105_c@2x.png",
+            "https://bouillonlesite.com/wp-content/uploads/2023/04/Photos-Bouillon-Site-08-1-e1680251009435-835x1024.png",
+            "https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/elle-a-table/les-dossiers-de-la-redaction/dossier-de-la-redac/3-recettes-cultes-du-bouillon-pigalle-a-la-maison/88735479-1-fre-FR/3-recettes-cultes-du-Bouillon-Pigalle-a-la-maison.jpg"
         ],
         "coordinates": [48.8826517, 2.3348832]
     },
