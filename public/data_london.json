@@ -320,10 +320,11 @@
         "website": "https://www.porterhouse.london/",
         "instagram": "https://www.instagram.com/porterhouselondon",
         "images": [
-            "https://www.porterhouse.london/wp-content/uploads/2019/10/Porterhouse-Pint-Porter2.jpg",
-            "https://www.porterhouse.london/wp-content/uploads/2019/10/Porterhouse-Covent-Garden-Interior-1.jpg",
+            "https://cdn.squaremeal.co.uk/restaurants/1547/the-porterhouse-2016-web.jpg?w=928&h=522&fit=crop&auto=format%2Ccompress",
+            "https://media-cdn.tripadvisor.com/media/photo-s/15/af/51/66/choose-one-of-our-fantastic.jpg",
             "https://whatpub-new.s3.eu-west-1.amazonaws.com/images/pubs/800x600%402x/WLD-16686-94032-porterhouse-london.jpg",
-            "https://www.porterhouse.london/wp-content/gallery/main-gallery/Porterhouse-London-Bar-Images-2.jpg"
+            "https://porterhouse.london/wp-content/uploads/2024/09/Clock-scaled.jpg",
+            "https://porterhouse.london/wp-content/uploads/2024/09/Fish-and-Chips-1-1-scaled.jpg"
         ],
         "coordinates": [51.510433000000006, -0.1236331]
     },
@@ -355,9 +356,10 @@
         "website": "https://www.thescolthead.co.uk/",
         "instagram": "https://www.instagram.com/thescolthead",
         "images": [
-            "https://pubs.sawdays.co.uk/var/self_catering_site/storage/images/special-places/britain/england/london/the-scolt-head/the-scolt-head-gallery/external1/182960763-2-eng-GB@pubs/external1_gallery_preview.jpg",
+            "https://thescolthead.co.uk/scolt-head/wp-content/uploads/2018/06/SCOLT_HEAD_backroom2018.png",
             "https://www.thescolthead.co.uk/scolt-head/wp-content/uploads/2018/05/SCOLT_HEAD_PubDog_Monkey.png",
-            "https://whatpub-new.s3.eu-west-1.amazonaws.com/images/pubs/800x600%402x/NLD-5470-95216-scolt-head-london.jpg"
+            "https://whatpub-new.s3.eu-west-1.amazonaws.com/images/pubs/800x600%402x/NLD-5470-95216-scolt-head-london.jpg",
+            "https://hb-strapi-media.imgix.net//Scolt_Head_5aca374cc9.jpeg?auto=format&sharp=20&con=15&fit=crop&w=776&h=552"
         ],
         "coordinates": [51.543340799999996, -0.0816201]
     },
@@ -373,10 +375,11 @@
         "website": "https://thevirginqueenpub.co.uk/",
         "instagram": "https://www.instagram.com/virginqueenpub/",
         "images": [
-            "https://thevirginqueenpub.co.uk/wp-content/uploads/2020/06/VQ-exterior.jpg",
+            "https://thevirginqueenpub.co.uk/wp-content/uploads/sites/16/2024/12/VQ-exterior.jpg",
             "https://media.timeout.com/images/105157301/750/422/image.jpg",
             "https://media.timeout.com/images/105157304/750/422/image.jpg",
-            "https://thevirginqueenpub.co.uk/wp-content/uploads/2020/06/wide.jpg"
+            "https://media.timeout.com/images/105157300/image.jpg",
+            "https://fastly.4sqi.net/img/general/600x600/377497460_4cred4gdTJmMq2v1n-tRzsZiwwxZKQ2EIctOKKgPTzk.jpg"
         ],
         "coordinates": [51.533696199999994, -0.06443929999999999]
     },
