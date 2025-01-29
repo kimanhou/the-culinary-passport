@@ -130,8 +130,11 @@
         "instagram": "https://www.instagram.com/prive_de_dessert/",
         "website": "https://www.privededessert.com/cartes-et-menus",
         "images": [
-            "https://tse4.mm.bing.net/th?id=OIP.U0AIRDV6gtapzPEar66q3gHaE7&pid=Api",
-            "https://tse1.mm.bing.net/th?id=OIP.XvrVAF0TOUyEBfdf88W0tAHaEe&pid=Api"
+            "https://static.wixstatic.com/media/ce442c_8a911ba83ea54c3c80d1404fa8998efa~mv2.jpg/v1/crop/x_0,y_221,w_1715,h_2143/fill/w_488,h_608,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/094-38ba6b645f3ca682739377e0396f0cfb_edi.jpg",
+            "https://tse1.mm.bing.net/th?id=OIP.XvrVAF0TOUyEBfdf88W0tAHaEe&pid=Api",
+            "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/19/c7/e1/saint-honore.jpg?w=900&h=500&s=1",
+            "https://www.finedininglovers.fr/sites/g/files/xknfdk1291/files/styles/im_landscape_100/public/fdl_content_import_scripts/Original_1072_PRIVE-DE-DESSERT-PARIS_0.jpg.webp?itok=IeU-4JXK",
+            "https://image.over-blog.com/6lEcMFv_uR64Z6rjD7Cf1CwRzr4=/filters:no_upscale()/image%2F1492517%2F20210902%2Fob_41b4d0_ff.JPG"
         ],
         "coordinates": [48.88877658672161, 2.3227386248496784]
     },
@@ -258,7 +261,7 @@
     {
         "id": 17,
         "name": "Bouillon Pigalle",
-        "description": "Parisian. To try: oeufs mayo and confit de canard. Typical Parisian bistro",
+        "description": "Located at Pigalle metro station, the restaurant is a typical Parisian bistro with a beautiful decor. You can book online or queue in front, they can accomodate large groups. Dogs are accepted upstairs in the veranda. They also sell to go dishes and sandwiches next door. To try: oeufs mayo and confit de canard.",
         "tags": [],
         "price": "€",
         "typeOfCuisine": ["French"],
@@ -267,8 +270,11 @@
         "instagram": "https://www.instagram.com/bouillonlinsta/",
         "website": "https://bouillonlesite.com/",
         "images": [
-            "https://tse4.mm.bing.net/th?id=OIP.dizFvFUX36xhlFbqg0bwrQHaFm&pid=Api",
-            "https://tse2.mm.bing.net/th?id=OIP.aijbwa6FOSMyw9urJ79vggHaJI&pid=Api"
+            "https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2020/11/03051244/bouillon-restaurant-pigalle-1024x456.jpg",
+            "https://tse2.mm.bing.net/th?id=OIP.aijbwa6FOSMyw9urJ79vggHaJI&pid=Api",
+            "https://bouillonlesite.com/wp-content/uploads/2023/04/A2AD6660-B42C-47AA-84AF-01DA771C2EA7_1_105_c@2x.png",
+            "https://bouillonlesite.com/wp-content/uploads/2023/04/Photos-Bouillon-Site-08-1-e1680251009435-835x1024.png",
+            "https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/elle-a-table/les-dossiers-de-la-redaction/dossier-de-la-redac/3-recettes-cultes-du-bouillon-pigalle-a-la-maison/88735479-1-fre-FR/3-recettes-cultes-du-Bouillon-Pigalle-a-la-maison.jpg"
         ],
         "coordinates": [48.8826517, 2.3348832]
     },
@@ -353,7 +359,7 @@
         "website": "https://phomui.business.site/",
         "images": [
             "https://tse4.mm.bing.net/th?id=OIP.I24u-4pJHIv34z0ETmsF5QHaEK&pid=Api",
-            "https://tse4.mm.bing.net/th?id=OIP.c2AyzV2NlNr5RL6PQNc5fQHaFj&pid=Api"
+            "https://lh5.googleusercontent.com/p/AF1QipN0QKUb08uBJq0E6Yo3DTnbWGUyjt2Tr50gAZe1"
         ],
         "coordinates": [48.82515384972076, 2.3622147735700647]
     },
