@@ -2,23 +2,27 @@
     {
         "name": "paris",
         "dataFile": "data_paris.json",
-        "mapCenter": [48.858148, 2.340852]
+        "mapCenter": [48.858148, 2.340852],
+        "imageUrl": "paris.png"
     },
     {
         "name": "montreal",
         "dataFile": "data_montreal.json",
         "mapCenter": [45.509282, -73.634297],
-        "mapZoom": 12
+        "mapZoom": 12,
+        "imageUrl": "montreal.png"
     },
     {
         "name": "tokyo",
         "dataFile": "data_tokyo.json",
         "mapCenter": [35.641429, 139.662924],
-        "mapZoom": 12
+        "mapZoom": 12,
+        "imageUrl": "tokyo.png"
     },
     {
         "name": "london",
         "dataFile": "data_london.json",
-        "mapCenter": [51.511767, -0.107933]
+        "mapCenter": [51.511767, -0.107933],
+        "imageUrl": "london.png"
     }
 ]
