@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { ToastType } from "components/ToastNotification/Toast/Toast";
-import { AUTO_CLOSE_DURATION } from "components/ToastNotification/constants";
-import { ToastNotificationEnum } from "ts/enum";
+import { ToastType } from "@/components/ToastNotification/Toast/Toast";
+import { AUTO_CLOSE_DURATION } from "@/components/ToastNotification/constants";
+import { ToastNotificationEnum } from "@/ts/enum";
 
 export const useToastNotifications = () => {
     const [toasts, setToasts] = useState<ToastType[]>([]);

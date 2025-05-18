@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
 import { useParams } from "react-router-dom";
-import { FoodPlaceController } from "api/FoodPlaceController";
-import CityModel from "model/City";
-import FoodPlace from "model/FoodPlace";
-import LoadData from "components/LoadData";
-import FoodPlaceListWithFilter from "components/FoodPlaceListWithFilter/FoodPlaceListWithFilter";
-import ShowMapButton from "components/Map/ShowMapButton";
-import SideSheet from "components/common/SideSheet/SideSheet";
-import Map from "components/Map/Map";
-import ToastList from "components/ToastNotification/List/ToastList";
-import { useToastNotifications } from "hooks/useToastNotifications";
-import { POSITION } from "components/ToastNotification/constants";
+import { FoodPlaceController } from "@/api/FoodPlaceController";
+import CityModel from "@/model/City";
+import FoodPlace from "@/model/FoodPlace";
+import LoadData from "@/components/LoadData";
+import FoodPlaceListWithFilter from "@/components/FoodPlaceListWithFilter/FoodPlaceListWithFilter";
+import ShowMapButton from "@/components/Map/ShowMapButton";
+import SideSheet from "@/components/common/SideSheet/SideSheet";
+import Map from "@/components/Map/Map";
+import ToastList from "@/components/ToastNotification/List/ToastList";
+import { useToastNotifications } from "@/hooks/useToastNotifications";
+import { POSITION } from "@/components/ToastNotification/constants";
 import "./City.scss";
 
 interface ICityProps {
@@ -18,7 +18,7 @@ interface ICityProps {
     isFullScreen?: boolean;
 }
 
-const City: React.FC<ICityProps> = (props) => {
+const City: FC<ICityProps> = (props) => {
     let params = useParams();
 
     const [promise, setPromise] = useState(new Promise<FoodPlace[]>(() => {}));

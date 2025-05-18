@@ -1,8 +1,8 @@
-import React, { FC, useState } from "react";
-import FoodPlaceModel from "model/FoodPlace";
-import FoodPlaceCard from "./FoodPlaceCard";
-import { getFoodPlaceId } from "ts/utils";
-import { CityEnum, ToastNotificationEnum } from "ts/enum";
+import { FC, useState } from "react";
+import FoodPlaceModel from "@/model/FoodPlace";
+import FoodPlaceCard from "@/components/FoodPlaceList/Card/FoodPlaceCard";
+import { getFoodPlaceId } from "@/ts/utils";
+import { CityEnum, ToastNotificationEnum } from "@/ts/enum";
 import "./FoodPlaceCardFullscreenWrapper.scss";
 
 interface IFoodPlaceCardFullscreenWrapperProps {

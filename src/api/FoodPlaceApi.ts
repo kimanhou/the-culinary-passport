@@ -1,6 +1,6 @@
-import { arrayHandler } from "../model/deserialization/DeserializationUtils";
-import FoodPlace from "../model/FoodPlace";
-import { get } from "./JsonApiEndpoint";
+import { arrayHandler } from "@/model/deserialization/DeserializationUtils";
+import FoodPlace from "@/model/FoodPlace";
+import { get } from "@/api/JsonApiEndpoint";
 
 // Create a reusable function to generate API objects
 export const createFoodPlaceApi = (endpoint: string) => {

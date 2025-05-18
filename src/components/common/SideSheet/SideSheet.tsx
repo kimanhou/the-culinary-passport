@@ -1,4 +1,4 @@
-import React, {
+import {
     Dispatch,
     FC,
     MouseEvent,
@@ -8,7 +8,7 @@ import React, {
     useRef,
     useState,
 } from "react";
-import useEffectSkipFirstRender from "hooks/useEffectSkipFirstRender";
+import useEffectSkipFirstRender from "@/hooks/useEffectSkipFirstRender";
 import "./SideSheet.scss";
 
 interface ISideSheetProps {

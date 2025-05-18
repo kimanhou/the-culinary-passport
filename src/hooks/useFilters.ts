@@ -6,14 +6,14 @@ import {
     filterFoodPlaces,
     filteredFavouriteFoodPlaces,
     filterByStayType,
-} from "ts/filterUtils";
-import FoodPlace from "model/FoodPlace";
-import { getLocalStoragePlaceId, setInLocalStorage } from "ts/favouriteUtils";
-import { CityEnum, StayEnum } from "ts/enum";
+} from "@/ts/filterUtils";
+import FoodPlace from "@/model/FoodPlace";
+import { getLocalStoragePlaceId, setInLocalStorage } from "@/ts/favouriteUtils";
+import { CityEnum, StayEnum } from "@/ts/enum";
 import {
     getStayTypeFromLocalStorage,
     setStayTypeInLocalStorage,
-} from "ts/stayTypeUtils";
+} from "@/ts/stayTypeUtils";
 
 interface IFilterState {
     displayedFoodPlaces: FoodPlace[];

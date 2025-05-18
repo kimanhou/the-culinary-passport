@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import Toast, { ToastType } from "../Toast/Toast";
+import { useEffect, useRef } from "react";
+import Toast, { ToastType } from "@/components/ToastNotification/Toast/Toast";
 import styles from "./ToastList.module.scss";
 
 interface IToastListProps {

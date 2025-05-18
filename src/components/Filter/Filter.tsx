@@ -1,6 +1,6 @@
-import React, { FC, ReactNode, useState } from "react";
+import { FC, ReactNode, useState } from "react";
+import FilterOption from "@/components/Filter/FilterOption";
 import "./Filter.scss";
-import FilterOption from "./FilterOption";
 
 interface IFilterProps {
     filterName: string;

@@ -1,4 +1,4 @@
-import { CityEnum } from "ts/enum";
+import { CityEnum } from "@/ts/enum";
 
 const LOCAL_STORAGE_KEY = "culinary_passport_favorites";
 

@@ -1,9 +1,9 @@
-import React from "react";
+import { FC } from "react";
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
 import { LatLngExpression } from "leaflet";
-import MapMarker from "model/MapMarker";
-import { icon } from "./Icon";
-import { scrollTo, getFoodPlaceId } from "ts/utils";
+import MapMarker from "@/model/MapMarker";
+import { icon } from "@/components/Map/Icon";
+import { scrollTo, getFoodPlaceId } from "@/ts/utils";
 import "./Map.scss";
 
 interface IMapProps {
@@ -12,7 +12,7 @@ interface IMapProps {
     markers: MapMarker[];
 }
 
-const Map: React.FC<IMapProps> = (props) => {
+const Map: FC<IMapProps> = (props) => {
     const onIconClick = (foodPlaceName: string) => {
         scrollTo({
             elementId: `food-place-${getFoodPlaceId(foodPlaceName)}`,

@@ -1,15 +1,15 @@
-import React from "react";
-import City from "../../model/City";
-import "./Navigation.scss";
-import NavigationLink from "./NavigationLink";
+import { FC } from "react";
+import City from "@/model/City";
+import NavigationLink from "@/components/Navigation/NavigationLink";
+import styles from "./Navigation.module.scss";
 
 interface INavigationProps {
     cities: City[];
 }
 
-const Navigation: React.FC<INavigationProps> = (props) => {
+const Navigation: FC<INavigationProps> = (props) => {
     return (
-        <div id="navigation" className={`flex-row`}>
+        <div className={styles.navigation}>
             {props.cities.map((t) => (
                 <NavigationLink
                     to={`/${t.name.toLocaleLowerCase()}`}

@@ -1,5 +1,5 @@
-import City from "../model/City";
-import { createFoodPlaceApi } from "./FoodPlaceApi";
+import City from "@/model/City";
+import { createFoodPlaceApi } from "@/api/FoodPlaceApi";
 
 export class FoodPlaceController {
     constructor(private city: City) {}

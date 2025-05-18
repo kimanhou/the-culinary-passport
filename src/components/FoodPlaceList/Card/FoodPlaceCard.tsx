@@ -1,19 +1,20 @@
-import React, {
+import {
     useState,
     useRef,
     useEffect,
     Dispatch,
     SetStateAction,
+    FC,
 } from "react";
-import { useIsMobile } from "hooks/useIsMobile";
-import FoodPlaceModel from "model/FoodPlace";
-import FoodPlaceTags from "./FoodPlaceTags";
-import FoodPlaceIcons from "./Icons/FoodPlaceIcons";
-import FoodPlaceImages from "./Images/FoodPlaceImages";
-import { CityEnum, ToastNotificationEnum } from "ts/enum";
-import { getFoodPlaceId, getFullScreenLink } from "ts/utils";
-import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
-import CloseIcon from "assets/CloseIcon";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import FoodPlaceModel from "@/model/FoodPlace";
+import FoodPlaceTags from "@/components/FoodPlaceList/Card/FoodPlaceTags";
+import FoodPlaceIcons from "@/components/FoodPlaceList/Card/Icons/FoodPlaceIcons";
+import FoodPlaceImages from "@/components/FoodPlaceList/Card/Images/FoodPlaceImages";
+import { CityEnum, ToastNotificationEnum } from "@/ts/enum";
+import { getFoodPlaceId, getFullScreenLink } from "@/ts/utils";
+import { getLocalStoragePlaceId, isLiked } from "@/ts/favouriteUtils";
+import CloseIcon from "@/assets/CloseIcon";
 import "./FoodPlaceCard.scss";
 
 interface IFoodPlaceCardProps {
@@ -26,7 +27,7 @@ interface IFoodPlaceCardProps {
     setHeight?: (height: string) => void;
 }
 
-const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
+const FoodPlaceCard: FC<IFoodPlaceCardProps> = (props) => {
     const isMobile = useIsMobile();
 
     const cardRef = useRef<HTMLDivElement>(null);

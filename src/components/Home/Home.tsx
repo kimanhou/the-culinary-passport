@@ -1,13 +1,13 @@
-import React from "react";
-import City from "model/City";
-import HomeCity from "./HomeCity";
+import { FC } from "react";
+import City from "@/model/City";
+import HomeCity from "@/components/Home/HomeCity";
 import "./Home.scss";
 
 interface IHomeProps {
     cities: City[];
 }
 
-const Home: React.FC<IHomeProps> = (props) => {
+const Home: FC<IHomeProps> = (props) => {
     return (
         <div id="home">
             <h2>Choose your destination</h2>

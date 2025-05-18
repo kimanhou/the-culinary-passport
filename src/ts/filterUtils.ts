@@ -1,7 +1,7 @@
-import FoodPlace from "model/FoodPlace";
-import { getLocalStoragePlaceId, isLiked } from "ts/favouriteUtils";
-import { getValueOrDefault } from "ts/utils";
-import { CityEnum, StayEnum } from "ts/enum";
+import FoodPlace from "@/model/FoodPlace";
+import { getLocalStoragePlaceId, isLiked } from "@/ts/favouriteUtils";
+import { getValueOrDefault } from "@/ts/utils";
+import { CityEnum, StayEnum } from "@/ts/enum";
 
 export const getNeighborhoodsOptions = (foodPlaces: FoodPlace[]) => {
     return Array.from(

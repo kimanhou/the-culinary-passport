@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import { scrollTo } from "ts/utils";
-import { useFilters } from "hooks/useFilters";
-import { hasFavourites as hasFavouritesFunc } from "ts/favouriteUtils";
-import { hasStayType as hasStayTypeFunc } from "ts/filterUtils";
-import { CityEnum, ToastNotificationEnum } from "ts/enum";
+import { FC, useEffect } from "react";
+import { scrollTo } from "@/ts/utils";
+import { useFilters } from "@/hooks/useFilters";
+import { hasFavourites as hasFavouritesFunc } from "@/ts/favouriteUtils";
+import { hasStayType as hasStayTypeFunc } from "@/ts/filterUtils";
+import { CityEnum, ToastNotificationEnum } from "@/ts/enum";
 import { LatLngExpression } from "leaflet";
-import FoodPlace from "model/FoodPlace";
-import Filter from "components/Filter/Filter";
-import FavouritesFilter from "components/Filter/FavouritesFilter";
-import FoodPlaceList from "components/FoodPlaceList/FoodPlaceList";
-import TouristToggle from "components/Filter/TouristToggle";
-import ramen from "assets/ramen.png";
-import coin from "assets/coin.png";
-import map from "assets/map.png";
+import FoodPlace from "@/model/FoodPlace";
+import Filter from "@/components/Filter/Filter";
+import FavouritesFilter from "@/components/Filter/FavouritesFilter";
+import FoodPlaceList from "@/components/FoodPlaceList/FoodPlaceList";
+import TouristToggle from "@/components/Filter/TouristToggle";
+import ramen from "@/assets/ramen.png";
+import coin from "@/assets/coin.png";
+import map from "@/assets/map.png";
 import "./FoodPlaceListWithFilter.scss";
 
 interface IFoodPlaceListWithFilterProps {
@@ -24,9 +24,7 @@ interface IFoodPlaceListWithFilterProps {
     foodPlaceId?: string;
 }
 
-const FoodPlaceListWithFilter: React.FC<IFoodPlaceListWithFilterProps> = (
-    props
-) => {
+const FoodPlaceListWithFilter: FC<IFoodPlaceListWithFilterProps> = (props) => {
     const {
         displayedFoodPlaces,
         typeOfCuisineOptions,

@@ -1,7 +1,7 @@
-import React from "react";
+import { FC } from "react";
 import "./Divider.scss";
 
-const Divider: React.FC = (props) => {
+const Divider: FC = (props) => {
     return <div className="divider"></div>;
 };
 

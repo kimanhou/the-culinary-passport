@@ -1,11 +1,11 @@
-import React from "react";
+import { FC } from "react";
 import "./Tag.scss";
 
 interface ITagProps {
     text: string;
 }
 
-const Tag: React.FC<ITagProps> = (props) => {
+const Tag: FC<ITagProps> = (props) => {
     return <li className="tag">{props.text}</li>;
 };
 

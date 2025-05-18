@@ -1,0 +1,10 @@
+.navigation {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        text-align: left;
+    }
+}

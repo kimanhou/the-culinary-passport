@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import FoodPlaceImage from "./FoodPlaceImage";
-import Heart from "components/common/Heart/Heart";
+import { FC, useState } from "react";
+import FoodPlaceImage from "@/components/FoodPlaceList/Card/Images/FoodPlaceImage";
+import Heart from "@/components/common/Heart/Heart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faChevronRight,
@@ -17,7 +17,7 @@ interface IFoodPlaceImagesProps {
     isFullScreen: boolean;
 }
 
-const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
+const FoodPlaceImages: FC<IFoodPlaceImagesProps> = (props) => {
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
     const isFullScreenClassName = props.isFullScreen ? "full-screen" : "";
     const imageWidth = props.isFullScreen

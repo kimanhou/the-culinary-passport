@@ -1,7 +1,6 @@
-import React from "react";
-import SuccessIcon from "assets/SuccessIcon";
-import WarningIcon from "assets/WarningIcon";
-import FailureIcon from "assets/FailureIcon";
+import SuccessIcon from "@/assets/SuccessIcon";
+import WarningIcon from "@/assets/WarningIcon";
+import FailureIcon from "@/assets/FailureIcon";
 
 export const AUTO_CLOSE_DURATION = 5; // in seconds
 export const POSITION = "top-right";

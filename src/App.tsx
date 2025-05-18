@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import { Footer } from "./components/Footer/Footer";
-import { Header } from "./components/Header/Header";
-import Home from "./components/Home/Home";
-import City from "./components/City/City";
-import CityModel from "./model/City";
-import { useIsMobile } from "hooks/useIsMobile";
+import { Footer } from "@/components/Footer/Footer";
+import { Header } from "@/components/Header/Header";
+import Home from "@/components/Home/Home";
+import City from "@/components/City/City";
+import CityModel from "@/model/City";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import "./App.scss";
 
 function App() {

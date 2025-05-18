@@ -1,7 +1,7 @@
-import React from "react";
+import { FC } from "react";
 import "./Footer.scss";
 
-export const Footer: React.FC = () => {
+export const Footer: FC = () => {
     const currentYear = new Date().getFullYear();
     return <footer className="flex-row">&copy; {currentYear}</footer>;
 };

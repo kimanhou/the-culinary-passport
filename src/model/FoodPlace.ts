@@ -1,7 +1,7 @@
 import { LatLngExpression } from "leaflet";
-import { FieldType } from "./deserialization/FieldType";
-import JsonDeserializationHelper from "./deserialization/JsonDeserializationHelper";
-import { StayEnum } from "ts/enum";
+import { FieldType } from "@/model/deserialization/FieldType";
+import JsonDeserializationHelper from "@/model/deserialization/JsonDeserializationHelper";
+import { StayEnum } from "@/ts/enum";
 
 export default class FoodPlace {
     id: number;

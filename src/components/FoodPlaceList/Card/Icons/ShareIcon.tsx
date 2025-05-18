@@ -1,14 +1,14 @@
-import React from "react";
+import { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
-import { ToastNotificationEnum } from "ts/enum";
+import { ToastNotificationEnum } from "@/ts/enum";
 
 interface IShareIconProps {
     link: string;
     showToast: (message: string, type: ToastNotificationEnum) => void;
 }
 
-const ShareIcon: React.FC<IShareIconProps> = (props) => {
+const ShareIcon: FC<IShareIconProps> = (props) => {
     const onClick = async () => {
         await navigator.clipboard.writeText(props.link);
         props.showToast(

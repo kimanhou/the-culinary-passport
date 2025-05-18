@@ -1,13 +1,13 @@
-import React from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
-import City from "model/City";
+import City from "@/model/City";
 import "./HomeCity.scss";
 
 interface IHomeCityProps {
     city: City;
 }
 
-const HomeCity: React.FC<IHomeCityProps> = (props) => {
+const HomeCity: FC<IHomeCityProps> = (props) => {
     return (
         <Link
             className="home-city"

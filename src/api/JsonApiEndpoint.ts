@@ -1,4 +1,4 @@
-import { Klass } from "../model/Types";
+import { Klass } from "@/model/Types";
 
 const handleJsonResponse = (response: Response) => {
     if (response.ok) {

@@ -1,15 +1,15 @@
-import React from "react";
-import Navigation from "components/Navigation/Navigation";
-import City from "model/City";
-import Divider from "components/common/Divider/Divider";
-import { useIsMobile } from "hooks/useIsMobile";
+import { FC } from "react";
+import City from "@/model/City";
+import Navigation from "@/components/Navigation/Navigation";
+import Divider from "@/components/common/Divider/Divider";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import "./Header.scss";
 
 interface IHeaderProps {
     cities: City[];
 }
 
-export const Header: React.FC<IHeaderProps> = (props) => {
+export const Header: FC<IHeaderProps> = (props) => {
     const isMobile = useIsMobile();
 
     return (

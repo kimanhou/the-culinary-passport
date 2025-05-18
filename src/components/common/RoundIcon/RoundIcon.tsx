@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import "./RoundIcon.scss";
@@ -8,7 +8,7 @@ interface IRoundIconProps {
     href: string;
 }
 
-const RoundIcon: React.FC<IRoundIconProps> = (props) => {
+const RoundIcon: FC<IRoundIconProps> = (props) => {
     return (
         <a
             className="round-icon"

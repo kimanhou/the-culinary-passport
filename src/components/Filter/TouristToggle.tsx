@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import { StayEnum } from "ts/enum";
-import tourist from "assets/tourist.png";
-import local from "assets/local.png";
+import { FC } from "react";
+import { StayEnum } from "@/ts/enum";
+import tourist from "@/assets/tourist.png";
+import local from "@/assets/local.png";
 import "./TouristToggle.scss";
-import Toggle from "components/common/Toggle/Toggle";
+import Toggle from "@/components/common/Toggle/Toggle";
 
 interface ITouristToggle {
     stayType: string;

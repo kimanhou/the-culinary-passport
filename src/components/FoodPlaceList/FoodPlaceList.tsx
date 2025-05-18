@@ -1,9 +1,9 @@
-import React from "react";
-import FoodPlaceModel from "model/FoodPlace";
-import { useIsMobile } from "hooks/useIsMobile";
-import FoodPlaceCardFullscreenWrapper from "./Card/FoodPlaceCardFullscreenWrapper";
-import { CityEnum, ToastNotificationEnum } from "ts/enum";
-import { getFoodPlaceId } from "ts/utils";
+import { FC } from "react";
+import FoodPlaceModel from "@/model/FoodPlace";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import FoodPlaceCardFullscreenWrapper from "@/components/FoodPlaceList/Card/FoodPlaceCardFullscreenWrapper";
+import { CityEnum, ToastNotificationEnum } from "@/ts/enum";
+import { getFoodPlaceId } from "@/ts/utils";
 import "./FoodPlaceList.scss";
 
 interface IFoodPlaceListProps {
@@ -14,7 +14,7 @@ interface IFoodPlaceListProps {
     foodPlaceId?: string;
 }
 
-const FoodPlaceList: React.FC<IFoodPlaceListProps> = (props) => {
+const FoodPlaceList: FC<IFoodPlaceListProps> = (props) => {
     const isMobile = useIsMobile();
 
     return (

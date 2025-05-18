@@ -1,4 +1,4 @@
-import { CityEnum } from "./enum";
+import { CityEnum } from "@/ts/enum";
 
 export const getValueOrDefault = (s: string | null | undefined) => {
     if (!s) {

@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import heart from "assets/heart.png";
+import { FC } from "react";
+import heart from "@/assets/heart.png";
 
 interface IFavouritesFilterProps {
     isSelected: boolean;

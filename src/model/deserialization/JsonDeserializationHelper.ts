@@ -1,5 +1,5 @@
 import { LatLngExpression } from "leaflet";
-import { FieldType } from "./FieldType";
+import { FieldType } from "@/model/deserialization/FieldType";
 
 class JsonDeserializationHelper {
     assertFieldExists = (json: any, field: string) => {

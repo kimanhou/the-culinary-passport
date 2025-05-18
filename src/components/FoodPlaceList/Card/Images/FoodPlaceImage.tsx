@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, FC } from "react";
 
 interface IFoodPlaceImageProps {
     src: string;
@@ -7,7 +7,7 @@ interface IFoodPlaceImageProps {
     setSelectedIndex: (selectedIndex: number) => void;
 }
 
-const FoodPlaceImage: React.FC<IFoodPlaceImageProps> = (props) => {
+const FoodPlaceImage: FC<IFoodPlaceImageProps> = (props) => {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
