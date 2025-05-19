@@ -1,6 +1,6 @@
 import { FC, ReactNode, useState } from "react";
 import FilterOption from "@/components/Filter/FilterOption";
-import "./Filter.scss";
+import styles from "./Filter.module.scss";
 
 interface IFilterProps {
     filterName: string;
@@ -12,23 +12,25 @@ interface IFilterProps {
 
 const Filter: FC<IFilterProps> = (props) => {
     const [areOptionsVisible, setAreOptionsVisible] = useState(false);
-    const underlineVisibleClassName = areOptionsVisible ? "visible" : "";
-    const optionsVisibleClassName = areOptionsVisible ? "visible" : "";
+    const underlineVisibleClassName = areOptionsVisible ? styles.visible : "";
+    const optionsVisibleClassName = areOptionsVisible ? styles.visible : "";
 
     return (
-        <div className={`filter`}>
+        <div className={styles.filter}>
             <div
-                className="filter-header flex-column align-items-center"
+                className={styles.filterHeader}
                 onClick={() => setAreOptionsVisible((t) => !t)}
             >
                 {props.icon}
-                <label className={`filter-label`}>{props.filterName}</label>
+                <label className={styles.filterLabel}>{props.filterName}</label>
             </div>
 
-            <div className={`filter-underline ${underlineVisibleClassName}`} />
+            <div
+                className={`${styles.filterUnderline} ${underlineVisibleClassName}`}
+            />
 
             <div
-                className={`filter-options-container flex-row ${optionsVisibleClassName}`}
+                className={`${styles.filterOptionsContainer} ${optionsVisibleClassName}`}
             >
                 {props.options.sort().map((t) => (
                     <FilterOption

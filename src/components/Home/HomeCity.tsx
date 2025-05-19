@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import City from "@/model/City";
-import "./HomeCity.scss";
+import styles from "./HomeCity.module.scss";
 
 interface IHomeCityProps {
     city: City;
@@ -10,7 +10,7 @@ interface IHomeCityProps {
 const HomeCity: FC<IHomeCityProps> = (props) => {
     return (
         <Link
-            className="home-city"
+            className={styles.homeCity}
             to={props.city.name.toLocaleLowerCase()}
             style={{ backgroundImage: `url(${props.city.imageUrl})` }}
         >

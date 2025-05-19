@@ -1,5 +1,6 @@
 import { FC } from "react";
 import heart from "@/assets/heart.png";
+import styles from "./Filter.module.scss";
 
 interface IFavouritesFilterProps {
     isSelected: boolean;
@@ -8,23 +9,18 @@ interface IFavouritesFilterProps {
 
 const FavouritesFilter: FC<IFavouritesFilterProps> = (props) => {
     return (
-        <div className={`filter`}>
+        <div className={styles.filter}>
             <div
-                className="filter-header flex-column align-items-center"
+                className={styles.filterHeader}
                 onClick={() => props.onChange()}
             >
                 <img src={heart} alt={"Favourites filter icon"} />
-                <label
-                    className={`filter-label`}
-                    style={{ whiteSpace: "nowrap" }}
-                >
-                    My favorites
-                </label>
+                <label className={styles.filterLabel}>My favorites</label>
             </div>
 
             <div
-                className={`filter-underline ${
-                    props.isSelected ? "visible" : ""
+                className={`${styles.filterUnderline} ${
+                    props.isSelected ? styles.visible : ""
                 }`}
             />
         </div>

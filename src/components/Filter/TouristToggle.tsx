@@ -2,8 +2,8 @@ import { FC } from "react";
 import { StayEnum } from "@/ts/enum";
 import tourist from "@/assets/tourist.png";
 import local from "@/assets/local.png";
-import "./TouristToggle.scss";
 import Toggle from "@/components/common/Toggle/Toggle";
+import styles from "./TouristToggle.module.scss";
 
 interface ITouristToggle {
     stayType: string;
@@ -13,7 +13,7 @@ interface ITouristToggle {
 
 const TouristToggle: FC<ITouristToggle> = (props) => {
     const isTourist = props.stayType === StayEnum.TOURIST;
-    const disabledClassName = props.disabled ? "disabled" : "";
+    const disabledClassName = props.disabled ? styles.disabled : "";
 
     const onClickLocal = () => {
         if (props.stayType !== StayEnum.LOCAL && !props.disabled) {
@@ -28,16 +28,13 @@ const TouristToggle: FC<ITouristToggle> = (props) => {
     };
 
     return (
-        <div
-            className={`tourist-toggle align-items-center ${disabledClassName}`}
-        >
+        <div className={`${styles.touristToggle} ${disabledClassName}`}>
             <div
-                className="flex-column align-items-center tourist-toggle-label-wrapper"
-                style={{ gap: "5px" }}
+                className={styles.touristToggleLabelWrapper}
                 onClick={onClickLocal}
             >
                 <img src={local} alt="Local icon" />
-                <span className="toggle-label">I live here</span>
+                <span className={styles.toggleLabel}>I live here</span>
             </div>
             <Toggle
                 checked={isTourist}
@@ -45,12 +42,11 @@ const TouristToggle: FC<ITouristToggle> = (props) => {
                 disabled={props.disabled}
             />
             <div
-                className="flex-column align-items-center  tourist-toggle-label-wrapper"
-                style={{ gap: "5px" }}
+                className={styles.touristToggleLabelWrapper}
                 onClick={onClickTourist}
             >
                 <img src={tourist} alt="Tourist icon" />
-                <span className="toggle-label">I'm visiting</span>
+                <span className={styles.toggleLabel}>I'm visiting</span>
             </div>
         </div>
     );

@@ -1,6 +1,9 @@
 .filter {
     position: relative;
     > .filter-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         cursor: pointer;
         gap: 0.4rem;
         text-transform: uppercase;
@@ -8,6 +11,9 @@
         > img {
             height: 40px;
             width: 40px;
+        }
+        > label.filter-label {
+            white-space: nowrap;
         }
     }
 
@@ -22,6 +28,7 @@
     }
 
     > .filter-options-container {
+        display: flex;
         gap: 0.4rem;
         max-width: 300px;
         flex-wrap: wrap;

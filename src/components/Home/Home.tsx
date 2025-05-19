@@ -1,7 +1,7 @@
 import { FC } from "react";
 import City from "@/model/City";
 import HomeCity from "@/components/Home/HomeCity";
-import "./Home.scss";
+import styles from "./Home.module.scss";
 
 interface IHomeProps {
     cities: City[];
@@ -9,9 +9,9 @@ interface IHomeProps {
 
 const Home: FC<IHomeProps> = (props) => {
     return (
-        <div id="home">
+        <div className={styles.home}>
             <h2>Choose your destination</h2>
-            <div className="home-cities flex-row">
+            <div className={styles.homeCities}>
                 {props.cities.map((t) => (
                     <HomeCity city={t} key={t.name} />
                 ))}

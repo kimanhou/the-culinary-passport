@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link, useLocation, matchPath } from "react-router-dom";
-import "./NavigationLink.scss";
+import styles from "./NavigationLink.module.scss";
 
 interface INavigationLinkProps {
     to: string;
@@ -9,12 +9,19 @@ interface INavigationLinkProps {
 
 const NavigationLink: FC<INavigationLinkProps> = (props) => {
     const { pathname } = useLocation();
-    const selectedClassName = matchPath(pathname, props.to) ? "selected" : "";
+    const selectedClassName = matchPath(pathname, props.to)
+        ? styles.selected
+        : "";
 
     return (
-        <Link className={`navigation-link ${selectedClassName}`} to={props.to}>
-            <div className="text grey">{props.children}</div>
-            <div className="text">{props.children}</div>
+        <Link
+            className={`${styles.navigationLink} ${selectedClassName}`}
+            to={props.to}
+        >
+            <div className={`${styles.text} ${styles.grey}`}>
+                {props.children}
+            </div>
+            <div className={styles.text}>{props.children}</div>
         </Link>
     );
 };

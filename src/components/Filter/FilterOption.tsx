@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./FilterOption.scss";
+import styles from "./FilterOption.module.scss";
 
 interface IFilterOptionProps {
     option: string;
@@ -8,11 +8,11 @@ interface IFilterOptionProps {
 }
 
 const FilterOption: FC<IFilterOptionProps> = (props) => {
-    const isSelectedClassName = props.isSelected ? "selected" : "";
+    const isSelectedClassName = props.isSelected ? styles.selected : "";
 
     return (
         <button
-            className={`filter-option ${isSelectedClassName}`}
+            className={`${styles.filterOption} ${isSelectedClassName}`}
             onClick={() => props.setSelectedOptions(props.option)}
         >
             <span>{props.option}</span>

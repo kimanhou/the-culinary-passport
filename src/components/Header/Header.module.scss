@@ -1,9 +1,15 @@
-header {
+header.header {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
+
+    > h1 {
+        font-family: Kalnia;
+    }
 
     > a {
         > .logo-image {
@@ -11,6 +17,8 @@ header {
         }
     }
     > .tag-line {
+        display: flex;
+        align-items: center;
         color: var(--color-primary-5);
         > h4 {
             font-size: 1.2rem;

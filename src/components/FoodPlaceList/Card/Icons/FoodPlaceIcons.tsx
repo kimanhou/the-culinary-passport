@@ -4,7 +4,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import RoundIcon from "@/components/common/RoundIcon/RoundIcon";
 import ShareIcon from "@/components/FoodPlaceList/Card/Icons/ShareIcon";
 import { ToastNotificationEnum } from "@/ts/enum";
-import "./FoodPlaceIcons.scss";
+import styles from "./FoodPlaceIcons.module.scss";
 
 interface IFoodPlaceIconsProps {
     showToast: (message: string, type: ToastNotificationEnum) => void;
@@ -16,7 +16,7 @@ interface IFoodPlaceIconsProps {
 
 const FoodPlaceIcons: FC<IFoodPlaceIconsProps> = (props) => {
     return (
-        <div className="food-place-icons flex-row justify-content-center">
+        <div className={styles.foodPlaceIcons}>
             {props.googleMaps && (
                 <RoundIcon icon={faLocationDot} href={props.googleMaps} />
             )}

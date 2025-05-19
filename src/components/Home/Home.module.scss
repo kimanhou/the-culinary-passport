@@ -1,9 +1,10 @@
-#home {
+.home {
     flex: 1;
     > h2 {
         font-weight: normal;
     }
     > .home-cities {
+        display: flex;
         justify-content: center;
         gap: 2rem;
         flex-wrap: wrap;
