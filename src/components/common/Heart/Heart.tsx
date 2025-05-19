@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import "./Heart.scss";
+import styles from "./Heart.module.scss";
 
 interface IHeartPropsType {
     isFilled: boolean;
@@ -16,7 +16,7 @@ const Heart: FC<IHeartPropsType> = (props: IHeartPropsType) => {
 
     return (
         <button
-            className="heart"
+            className={styles.heart}
             style={{
                 backgroundColor: "transparent",
                 border: "none",

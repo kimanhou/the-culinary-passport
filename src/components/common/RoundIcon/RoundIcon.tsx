@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import "./RoundIcon.scss";
+import styles from "./RoundIcon.module.scss";
 
 interface IRoundIconProps {
     icon: IconDefinition;
@@ -11,12 +11,12 @@ interface IRoundIconProps {
 const RoundIcon: FC<IRoundIconProps> = (props) => {
     return (
         <a
-            className="round-icon"
+            className={styles.roundIcon}
             href={props.href}
             target="_blank"
             rel="noreferrer"
         >
-            <span className="round-icon-inner"></span>
+            <span className={styles.roundIconInner}></span>
             <FontAwesomeIcon icon={props.icon} />
         </a>
     );

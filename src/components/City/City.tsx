@@ -11,7 +11,7 @@ import Map from "@/components/Map/Map";
 import ToastList from "@/components/ToastNotification/List/ToastList";
 import { useToastNotifications } from "@/hooks/useToastNotifications";
 import { POSITION } from "@/components/ToastNotification/constants";
-import "./City.scss";
+import styles from "./City.module.scss";
 
 interface ICityProps {
     city: CityModel;
@@ -45,7 +45,7 @@ const City: FC<ICityProps> = (props) => {
     const { toasts, removeToast, showToast } = useToastNotifications();
 
     return (
-        <section id="city">
+        <section className={styles.city}>
             <h1>{props.city.name.toLocaleUpperCase()}</h1>
             <LoadData promise={promise}>
                 {(foodPlaceList) => (

@@ -17,7 +17,7 @@ $mainColorDisabled: var(--color-grey);
     margin: auto;
     cursor: pointer;
 
-    &__wrapper {
+    &-wrapper {
         position: relative;
         display: flex;
         align-items: center;
@@ -57,7 +57,7 @@ $mainColorDisabled: var(--color-grey);
         }
     }
 
-    &__toggle {
+    &-toggle {
         width: 1.5rem;
         height: 1.5rem;
         border-radius: 99rem;
@@ -66,32 +66,32 @@ $mainColorDisabled: var(--color-grey);
         animation: checked__toggle var(--time) ease-in forwards;
     }
 
-    input:active + &__wrapper &__toggle {
+    input:active + &-wrapper &-toggle {
         width: 1.6rem;
     }
 
-    input:checked + &__wrapper {
+    input:checked + &-wrapper {
         transform-origin: right center;
         animation-name: checked__wrapper--r;
     }
 
-    input:checked + &__wrapper &__toggle {
+    input:checked + &-wrapper &-toggle {
         background: $mainColor;
         animation-name: checked__toggle--r;
     }
 
     &.disabled {
-        > .switch__wrapper {
+        > .switch-wrapper {
             &::after {
                 border-color: $mainColorDisabled;
             }
-            > .switch__toggle {
+            > .switch-toggle {
                 box-shadow: inset 0 0 0 2px $mainColorDisabled;
             }
         }
 
-        input:checked + .switch__wrapper {
-            > .switch__toggle {
+        input:checked + .switch-wrapper {
+            > .switch-toggle {
                 background: $mainColorDisabled;
             }
         }

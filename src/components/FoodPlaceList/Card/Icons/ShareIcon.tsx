@@ -2,6 +2,7 @@ import { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
 import { ToastNotificationEnum } from "@/ts/enum";
+import styles from "./ShareIcon.module.scss";
 
 interface IShareIconProps {
     link: string;
@@ -18,8 +19,8 @@ const ShareIcon: FC<IShareIconProps> = (props) => {
     };
 
     return (
-        <button onClick={onClick} className="round-icon">
-            <span className="round-icon-inner"></span>
+        <button onClick={onClick} className={styles.roundIcon}>
+            <span className={styles.roundIconInner}></span>
             <FontAwesomeIcon icon={faShare} />
         </button>
     );

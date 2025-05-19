@@ -9,7 +9,7 @@ import {
     useState,
 } from "react";
 import useEffectSkipFirstRender from "@/hooks/useEffectSkipFirstRender";
-import "./SideSheet.scss";
+import styles from "./SideSheet.module.scss";
 
 interface ISideSheetProps {
     isVisible: boolean;
@@ -23,8 +23,10 @@ const SideSheet: FC<ISideSheetProps> = (props) => {
     const contentRef = useRef<HTMLDivElement | null>(null);
     const [isVisibleInternal, setIsVisibleInternal] = useState(props.isVisible);
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const visibleClassName = isVisibleInternal ? "visible" : "";
-    const isTransitioningClassName = isTransitioning ? "is-transitioning" : "";
+    const visibleClassName = isVisibleInternal ? styles.visible : "";
+    const isTransitioningClassName = isTransitioning
+        ? styles.isTransitioning
+        : "";
 
     const onOutsideClick = () => {
         props.setIsVisible((t) => !t);
@@ -83,11 +85,11 @@ const SideSheet: FC<ISideSheetProps> = (props) => {
 
     return (
         <div
-            className={`side-sheet ${visibleClassName} ${isTransitioningClassName}`}
+            className={`${styles.sideSheet} ${visibleClassName} ${isTransitioningClassName}`}
             onClick={onOutsideClick}
         >
             <div
-                className={`side-sheet-content-container`}
+                className={styles.sideSheetContentContainer}
                 onClick={onContentClick}
                 ref={contentRef}
             >

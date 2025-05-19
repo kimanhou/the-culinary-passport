@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./Toggle.scss";
+import styles from "./Toggle.module.scss";
 
 interface IToggleProps {
     checked: boolean;
@@ -8,10 +8,10 @@ interface IToggleProps {
 }
 
 const Toggle: FC<IToggleProps> = (props) => {
-    const disabledClassName = props.disabled ? "disabled" : "";
+    const disabledClassName = props.disabled ? styles.disabled : "";
 
     return (
-        <label className={`switch ${disabledClassName}`}>
+        <label className={`${styles.switch} ${disabledClassName}`}>
             <input
                 type="checkbox"
                 hidden
@@ -19,8 +19,8 @@ const Toggle: FC<IToggleProps> = (props) => {
                 onChange={props.onChange}
                 disabled={props.disabled}
             />
-            <div className="switch__wrapper">
-                <div className="switch__toggle"></div>
+            <div className={styles.switchWrapper}>
+                <div className={styles.switchToggle}></div>
             </div>
         </label>
     );

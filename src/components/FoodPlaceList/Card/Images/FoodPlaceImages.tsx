@@ -57,10 +57,12 @@ const FoodPlaceImages: FC<IFoodPlaceImagesProps> = (props) => {
         >
             <div className="food-place-images-container">
                 <div id={imagesId} className={`food-place-images flex-row`}>
-                    <Heart
-                        isFilled={props.isLiked}
-                        setInLocalStorage={props.onLike}
-                    />
+                    <span className="heart-wrapper">
+                        <Heart
+                            isFilled={props.isLiked}
+                            setInLocalStorage={props.onLike}
+                        />
+                    </span>
                     {props.images.map((image, i) => (
                         <div className="food-place-image-container" key={i}>
                             <FoodPlaceImage
