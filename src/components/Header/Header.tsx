@@ -1,12 +1,13 @@
-import { FC } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import City from "@/model/City";
 import Navigation from "@/components/Navigation/Navigation";
 import Divider from "@/components/common/Divider/Divider";
-import { useIsMobile } from "@/hooks/useIsMobile";
+import { useIsMobile } from "@/hooks/useMedia";
 import styles from "./Header.module.scss";
 
 interface IHeaderProps {
     cities: City[];
+    setIsChatVisible: Dispatch<SetStateAction<boolean>>;
 }
 
 export const Header: FC<IHeaderProps> = (props) => {
@@ -27,7 +28,12 @@ export const Header: FC<IHeaderProps> = (props) => {
             <h1>
                 <a href="./">Culinary passport</a>
             </h1>
-            {!isMobile && <Navigation cities={props.cities} />}
+            {!isMobile && (
+                <Navigation
+                    cities={props.cities}
+                    setIsChatVisible={props.setIsChatVisible}
+                />
+            )}
             <Divider />
         </header>
     );

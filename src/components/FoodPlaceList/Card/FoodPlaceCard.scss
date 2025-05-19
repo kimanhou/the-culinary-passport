@@ -10,6 +10,10 @@
         text-align: left;
         min-height: 300px;
         background: var(--bg);
+        > span.close-button-wrapper {
+            position: absolute;
+            right: 1rem;
+        }
         > h5 {
             color: var(--color-primary-5);
             margin-block: 0;

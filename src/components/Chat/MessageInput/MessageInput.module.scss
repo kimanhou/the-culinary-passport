@@ -1,0 +1,50 @@
+div.message-input {
+    display: flex;
+    align-items: center;
+    padding: 8px 8px 8px 16px;
+    gap: 8px;
+    background-color: var(--html-background);
+    border-radius: 8px;
+
+    > input.input {
+        flex: 1;
+        background: transparent;
+        height: 2rem;
+        border: none;
+        color: var(--fg);
+        &:focus {
+            outline: none;
+        }
+    }
+
+    > button.send-button {
+        border-radius: 50%;
+        background-color: var(--color-primary-1);
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s;
+        overflow: hidden;
+        border: none;
+        color: var(--color-primary-5);
+        cursor: pointer;
+        > div.send-icon-container {
+            transition: transform 0.2s ease-in;
+            &.send-icon-animation {
+                transform: rotate(45deg) translateX(100px);
+            }
+            > .send-icon {
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            background-color: var(--color-primary-2);
+            > .send-icon {
+                color: var(--color-off-white);
+            }
+        }
+    }
+}

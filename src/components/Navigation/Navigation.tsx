@@ -1,10 +1,12 @@
-import { FC } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import City from "@/model/City";
 import NavigationLink from "@/components/Navigation/NavigationLink";
+import ChatbotButton from "@/components/Navigation/ChatbotButton";
 import styles from "./Navigation.module.scss";
 
 interface INavigationProps {
     cities: City[];
+    setIsChatVisible: Dispatch<SetStateAction<boolean>>;
 }
 
 const Navigation: FC<INavigationProps> = (props) => {
@@ -18,6 +20,7 @@ const Navigation: FC<INavigationProps> = (props) => {
                     {t.name.toLocaleUpperCase()}
                 </NavigationLink>
             ))}
+            <ChatbotButton onClick={() => props.setIsChatVisible((t) => !t)} />
         </div>
     );
 };

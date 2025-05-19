@@ -1,4 +1,4 @@
-import { CityEnum } from "@/ts/enum";
+import { CityEnum, DeviceType } from "@/ts/enum";
 
 export const getValueOrDefault = (s: string | null | undefined) => {
     if (!s) {
@@ -37,4 +37,16 @@ export const getFullScreenLink = ({
 }) => {
     const baseUrl = "https://kimanhou.github.io/the-culinary-passport/#";
     return `${baseUrl}/${city.toLocaleLowerCase()}/${foodPlaceId}`;
+};
+
+export const isSafariNotMobile = (deviceType: DeviceType) => {
+    return (
+        (navigator.vendor &&
+            navigator.vendor.indexOf("Apple") > -1 &&
+            navigator.userAgent &&
+            navigator.userAgent.indexOf("CriOS") == -1 &&
+            navigator.userAgent.indexOf("FxiOS") == -1 &&
+            deviceType !== DeviceType.MOBILE) ||
+        false
+    );
 };

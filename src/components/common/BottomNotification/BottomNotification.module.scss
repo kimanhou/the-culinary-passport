@@ -1,0 +1,59 @@
+$leftMargin: 100px;
+
+.bottom-notification {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    visibility: hidden;
+    background-color: transparent;
+    &.with-backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    &.is-transitioning,
+    &.visible {
+        visibility: visible;
+    }
+    > .bottom-notification-content-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: var(--bg);
+        transition: top 0.2s ease-in;
+        padding: 24px;
+        border-radius: 24px 24px 0 0;
+        max-height: calc(
+            100dvh - 48px
+        ); // content cannot be higher than the screen - padding, at max height the notification is full screen
+        overflow-y: auto;
+
+        &.hidden {
+            visibility: hidden;
+            position: absolute;
+            top: -100vh;
+            bottom: unset;
+            left: unset;
+            right: unset;
+        }
+
+        > span.close-button-wrapper {
+            position: absolute;
+            right: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bottom-notification {
+        &.visible {
+            > .bottom-notification-content-container {
+                left: 0;
+            }
+        }
+    }
+}

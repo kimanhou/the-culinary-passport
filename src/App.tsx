@@ -4,13 +4,16 @@ import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import Home from "@/components/Home/Home";
 import City from "@/components/City/City";
+import Chat from "@/components/Chat/Chat";
+import BottomNotification from "@/components/common/BottomNotification/BottomNotification";
 import CityModel from "@/model/City";
-import { useIsMobile } from "@/hooks/useIsMobile";
+import { useIsMobile } from "@/hooks/useMedia";
 import "./App.scss";
 
 function App() {
     const isMobile = useIsMobile();
     const [cities, setCities] = useState<CityModel[]>([]);
+    const [isChatVisible, setIsChatVisible] = useState(false);
 
     useEffect(() => {
         fetch("./cities.json")
@@ -22,7 +25,7 @@ function App() {
     return (
         <div className={`app-container`}>
             <HashRouter>
-                <Header cities={cities} />
+                <Header cities={cities} setIsChatVisible={setIsChatVisible} />
                 <Routes>
                     {cities.map((t) => (
                         <Route
@@ -46,6 +49,14 @@ function App() {
                     ></Route>
                 </Routes>
                 <Footer />
+
+                <BottomNotification
+                    isVisible={isChatVisible}
+                    setIsVisible={setIsChatVisible}
+                    withBackdrop
+                >
+                    <Chat close={() => setIsChatVisible(false)} />
+                </BottomNotification>
             </HashRouter>
         </div>
     );

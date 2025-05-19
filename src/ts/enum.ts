@@ -15,3 +15,10 @@ export enum ToastNotificationEnum {
     FAILURE = "FAILURE",
     WARNING = "WARNING",
 }
+
+export enum DeviceType {
+    MOBILE = "mobile",
+    SMALL_DESKTOP = "smallDesktop",
+    DESKTOP = "desktop",
+    LARGE_DESKTOP = "largeDesktop",
+}

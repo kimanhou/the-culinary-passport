@@ -1,6 +1,6 @@
 import { FC } from "react";
 import FoodPlaceModel from "@/model/FoodPlace";
-import { useIsMobile } from "@/hooks/useIsMobile";
+import { useIsMobile } from "@/hooks/useMedia";
 import FoodPlaceCardFullscreenWrapper from "@/components/FoodPlaceList/Card/FoodPlaceCardFullscreenWrapper";
 import { CityEnum, ToastNotificationEnum } from "@/ts/enum";
 import { getFoodPlaceId } from "@/ts/utils";

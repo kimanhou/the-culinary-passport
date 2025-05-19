@@ -6,7 +6,7 @@ import {
     SetStateAction,
     FC,
 } from "react";
-import { useIsMobile } from "@/hooks/useIsMobile";
+import { useIsMobile } from "@/hooks/useMedia";
 import FoodPlaceModel from "@/model/FoodPlace";
 import FoodPlaceTags from "@/components/FoodPlaceList/Card/FoodPlaceTags";
 import FoodPlaceIcons from "@/components/FoodPlaceList/Card/Icons/FoodPlaceIcons";
@@ -148,7 +148,11 @@ const FoodPlaceCard: FC<IFoodPlaceCardProps> = (props) => {
                 className="food-place-card-content flex-column"
                 style={{ maxHeight }}
             >
-                {props.isFullScreen && <CloseIcon onClick={closeFullScreen} />}
+                {props.isFullScreen && (
+                    <span className={"close-button-wrapper"}>
+                        <CloseIcon onClick={closeFullScreen} />
+                    </span>
+                )}
                 <h5>{props.foodPlace.neighborhood}</h5>
                 <h3 onClick={onClickName}>{props.foodPlace.name}</h3>
                 <FoodPlaceTags

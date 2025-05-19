@@ -1,0 +1,57 @@
+p.message {
+    margin-block: 0;
+    border-radius: 1.15rem;
+    line-height: 1.25;
+    max-width: 75%;
+    padding: 0.5rem 0.875rem;
+    position: relative;
+    word-wrap: break-word;
+    width: fit-content;
+    color: var(--color-dark-grey);
+    text-align: left;
+    &::before,
+    &::after {
+        bottom: -0.1rem;
+        content: "";
+        height: 1rem;
+        position: absolute;
+    }
+    &.from-user {
+        background-color: var(--color-primary-1);
+        align-self: flex-end;
+        &::before {
+            border-bottom-left-radius: 0.8rem 0.7rem;
+            border-right: 1rem solid var(--color-primary-1);
+            right: -0.35rem;
+            transform: translate(0, -0.1rem);
+        }
+
+        &::after {
+            content: "";
+            background-color: var(--bg);
+            border-bottom-left-radius: 0.5rem;
+            right: -40px;
+            transform: translate(-30px, -2px);
+            width: 10px;
+        }
+    }
+    &.from-api {
+        align-items: flex-start;
+        background-color: var(--color-light-grey);
+        color: var(--color-dark-grey);
+        &::before {
+            border-bottom-right-radius: 0.8rem 0.7rem;
+            border-left: 1rem solid var(--color-light-grey);
+            left: -0.35rem;
+            transform: translate(0, -0.1rem);
+        }
+
+        &::after {
+            background-color: var(--bg);
+            border-bottom-right-radius: 0.5rem;
+            left: 20px;
+            transform: translate(-30px, -2px);
+            width: 10px;
+        }
+    }
+}

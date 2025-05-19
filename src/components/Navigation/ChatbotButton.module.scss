@@ -1,0 +1,35 @@
+button.chatbot-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    > div.chatbot-hover-background-container {
+        height: 2.8rem;
+        width: 2.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > div.chatbot-hover-background {
+            height: 0;
+            width: 0;
+            border-radius: 50%;
+            background-color: var(--color-primary-1);
+            transition: width 0.1s, height 0.1s;
+        }
+    }
+    > img {
+        position: absolute;
+        top: 0.4rem;
+        left: 0.4rem;
+        height: 2rem;
+    }
+    &:hover {
+        > div.chatbot-hover-background-container {
+            > div.chatbot-hover-background {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
