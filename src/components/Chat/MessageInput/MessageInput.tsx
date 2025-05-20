@@ -13,8 +13,11 @@ const MessageInput: FC<IMessageInputProps> = ({
 }: IMessageInputProps) => {
     const [sendIconClassName, setSendIconClassName] = useState("");
     const [messageValue, setMessageValue] = useState("");
+    const isSendDisabledClassName = messageValue === "" ? styles.disabled : "";
 
     const onClickSend = () => {
+        if (messageValue === "") return;
+
         setSendIconClassName(styles.sendIconAnimation);
         setTimeout(() => {
             setSendIconClassName("");
@@ -38,14 +41,16 @@ const MessageInput: FC<IMessageInputProps> = ({
                     }
                 }}
             />
-            <button className={styles.sendButton} onClick={onClickSend}>
+            <button
+                className={`${styles.sendButton} ${isSendDisabledClassName}`}
+                onClick={onClickSend}
+            >
                 <div
                     className={`${styles.sendIconContainer} ${sendIconClassName}`}
                 >
                     <FontAwesomeIcon
                         icon={faPaperPlane}
                         className={styles.sendIcon}
-                        color="var(--color-dark-grey)"
                     />
                 </div>
             </button>

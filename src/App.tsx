@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import Home from "@/components/Home/Home";
 import City from "@/components/City/City";
-import Chat from "@/components/Chat/Chat";
+import Chat, { ChatMessageType } from "@/components/Chat/Chat";
 import BottomNotification from "@/components/common/BottomNotification/BottomNotification";
 import CityModel from "@/model/City";
 import { useIsMobile } from "@/hooks/useMedia";
@@ -14,6 +14,9 @@ function App() {
     const isMobile = useIsMobile();
     const [cities, setCities] = useState<CityModel[]>([]);
     const [isChatVisible, setIsChatVisible] = useState(false);
+    const [chatMessages, setChatMessages] = useState<ChatMessageType[]>([
+        { isUser: false, text: "Hello! How can I help you today?" },
+    ]);
 
     useEffect(() => {
         fetch("./cities.json")
@@ -55,7 +58,11 @@ function App() {
                     setIsVisible={setIsChatVisible}
                     withBackdrop
                 >
-                    <Chat close={() => setIsChatVisible(false)} />
+                    <Chat
+                        close={() => setIsChatVisible(false)}
+                        messages={chatMessages}
+                        setMessages={setChatMessages}
+                    />
                 </BottomNotification>
             </HashRouter>
         </div>

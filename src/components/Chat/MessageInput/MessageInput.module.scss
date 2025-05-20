@@ -3,7 +3,7 @@ div.message-input {
     align-items: center;
     padding: 8px 8px 8px 16px;
     gap: 8px;
-    background-color: var(--html-background);
+    background-color: var(--color-primary-1);
     border-radius: 8px;
 
     > input.input {
@@ -19,7 +19,8 @@ div.message-input {
 
     > button.send-button {
         border-radius: 50%;
-        background-color: var(--color-primary-1);
+        background-color: var(--color-primary-4);
+        color: var(--bg);
         height: 2rem;
         width: 2rem;
         display: flex;
@@ -28,8 +29,15 @@ div.message-input {
         transition: background-color 0.2s;
         overflow: hidden;
         border: none;
-        color: var(--color-primary-5);
         cursor: pointer;
+        &.disabled {
+            cursor: initial;
+            background-color: var(--color-primary-2);
+            &:hover {
+                background-color: var(--color-primary-2);
+            }
+        }
+
         > div.send-icon-container {
             transition: transform 0.2s ease-in;
             &.send-icon-animation {
@@ -41,10 +49,7 @@ div.message-input {
         }
 
         &:hover {
-            background-color: var(--color-primary-2);
-            > .send-icon {
-                color: var(--color-off-white);
-            }
+            background-color: var(--color-primary-5);
         }
     }
 }

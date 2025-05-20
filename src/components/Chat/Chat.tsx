@@ -1,4 +1,11 @@
-import { FC, useState } from "react";
+import {
+    Dispatch,
+    FC,
+    SetStateAction,
+    useEffect,
+    useRef,
+    useState,
+} from "react";
 import MessageInput from "@/components/Chat/MessageInput/MessageInput";
 import Message from "@/components/Chat/Message/Message";
 import styles from "./Chat.module.scss";
@@ -10,21 +17,35 @@ export type ChatMessageType = {
 
 interface IChatProps {
     close: () => void;
+    messages: ChatMessageType[];
+    setMessages: Dispatch<SetStateAction<ChatMessageType[]>>;
 }
 
-const Chat: FC<IChatProps> = () => {
-    const [messages, setMessages] = useState<ChatMessageType[]>([
-        { isUser: false, text: "Hello! How can I help you today?" },
-    ]);
+const Chat: FC<IChatProps> = (props) => {
+    const chatContentRef = useRef<HTMLDivElement>(null);
 
     const addMessage = (message: ChatMessageType) => {
-        setMessages([...messages, message]);
+        props.setMessages([...props.messages, message]);
     };
+
+    useEffect(() => {
+        if (chatContentRef.current) {
+            const isScrolledToBottom =
+                chatContentRef.current.scrollHeight -
+                    chatContentRef.current.clientHeight <=
+                chatContentRef.current.scrollTop + 1;
+            if (!isScrolledToBottom) {
+                chatContentRef.current.scrollTop =
+                    chatContentRef.current.scrollHeight -
+                    chatContentRef.current.clientHeight;
+            }
+        }
+    }, [props.messages]);
 
     return (
         <div className={styles.chat}>
-            <div className={styles.chatContent}>
-                {messages.map((message, index) => (
+            <div className={styles.chatContent} ref={chatContentRef}>
+                {props.messages.map((message, index) => (
                     <Message key={index} message={message} />
                 ))}
             </div>
