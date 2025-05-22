@@ -1,0 +1,31 @@
+a.home-city {
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: var(--bg);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-family: "Kalnia";
+    &:not(:disabled):hover {
+        box-shadow: 0 0 0 1px var(--bg), 0 0 0 3px var(--color-primary-5);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    a.home-city {
+        width: 9rem;
+        height: 9rem;
+        letter-spacing: 2px;
+    }
+}

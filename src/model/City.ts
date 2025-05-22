@@ -8,17 +8,20 @@ export default class City {
     dataFile: string;
     mapCenter: LatLngExpression;
     mapZoom: number;
+    imageUrl: string;
 
     constructor(
         name: CityEnum,
         dataFile: string,
         mapCenter: LatLngExpression,
-        mapZoom: number
+        mapZoom: number,
+        imageUrl: string
     ) {
         this.name = name;
         this.dataFile = dataFile;
         this.mapCenter = mapCenter;
         this.mapZoom = mapZoom;
+        this.imageUrl = imageUrl;
     }
 
     static deserialize = (data: any) => {
@@ -45,6 +48,13 @@ export default class City {
             13
         );
 
-        return new City(name, dataFile, mapCenter, mapZoom);
+        const imageUrl = JsonDeserializationHelper.assertFieldOrDefault(
+            data,
+            "imageUrl",
+            FieldType.STRING,
+            ""
+        );
+
+        return new City(name, dataFile, mapCenter, mapZoom, imageUrl);
     };
 }
