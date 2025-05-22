@@ -4,7 +4,7 @@ import { LatLngExpression } from "leaflet";
 import MapMarker from "@/model/MapMarker";
 import { icon } from "@/components/Map/Icon";
 import { scrollTo, getFoodPlaceId } from "@/ts/utils";
-import "./Map.scss";
+import styles from "./Map.module.scss";
 
 interface IMapProps {
     center: LatLngExpression;
@@ -21,7 +21,7 @@ const Map: FC<IMapProps> = (props) => {
 
     return (
         <MapContainer
-            id="map"
+            className={styles.map}
             center={props.center}
             zoom={props.zoom}
             scrollWheelZoom={false}
@@ -36,7 +36,7 @@ const Map: FC<IMapProps> = (props) => {
                     <Popup>
                         {t.popUpText}{" "}
                         <span
-                            className="marker-popup-icon"
+                            className={styles.markerPopupIcon}
                             onClick={() => onIconClick(t.popUpText)}
                         >
                             🚀

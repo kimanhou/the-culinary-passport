@@ -1,0 +1,18 @@
+section.food-place-list-with-filter {
+    > div.food-place-list-with-filter-filters {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.food-place-list-with-filter {
+        > div.food-place-list-with-filter-filters {
+            flex-direction: column;
+            margin-bottom: 4rem;
+        }
+    }
+}

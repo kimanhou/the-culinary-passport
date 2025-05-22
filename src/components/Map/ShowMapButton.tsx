@@ -1,7 +1,7 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMap, faList } from "@fortawesome/free-solid-svg-icons";
-import "./ShowMapButton.scss";
+import styles from "./ShowMapButton.module.scss";
 
 interface IShowMapButtonProps {
     isMapShown: boolean;
@@ -11,7 +11,7 @@ interface IShowMapButtonProps {
 const ShowMapButton: FC<IShowMapButtonProps> = (props) => {
     return (
         <button
-            id="show-map-button"
+            className={styles.showMapButton}
             onClick={() => props.setIsMapShown((t) => !t)}
         >
             {!props.isMapShown && (

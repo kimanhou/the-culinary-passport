@@ -13,7 +13,7 @@ import TouristToggle from "@/components/Filter/TouristToggle";
 import ramen from "@/assets/ramen.png";
 import coin from "@/assets/coin.png";
 import map from "@/assets/map.png";
-import "./FoodPlaceListWithFilter.scss";
+import styles from "./FoodPlaceListWithFilter.module.scss";
 
 interface IFoodPlaceListWithFilterProps {
     foodPlaces: FoodPlace[];
@@ -55,7 +55,7 @@ const FoodPlaceListWithFilter: FC<IFoodPlaceListWithFilterProps> = (props) => {
     }, [props.foodPlaceId]);
 
     return (
-        <section id="food-place-list-with-filter">
+        <section className={styles.foodPlaceListWithFilter}>
             {hasStayType && (
                 <TouristToggle
                     stayType={stayType}
@@ -63,7 +63,7 @@ const FoodPlaceListWithFilter: FC<IFoodPlaceListWithFilterProps> = (props) => {
                     disabled={isFavouritesSelected}
                 />
             )}
-            <div id="food-place-list-with-filter-filters" className="flex-row">
+            <div className={styles.foodPlaceListWithFilterFilters}>
                 {neighborhoodOptions.length > 0 && (
                     <Filter
                         filterName="Neighborhood"

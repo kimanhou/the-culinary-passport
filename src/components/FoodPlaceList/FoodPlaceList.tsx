@@ -4,7 +4,7 @@ import { useIsMobile } from "@/hooks/useMedia";
 import FoodPlaceCardFullscreenWrapper from "@/components/FoodPlaceList/Card/FoodPlaceCardFullscreenWrapper";
 import { CityEnum, ToastNotificationEnum } from "@/ts/enum";
 import { getFoodPlaceId } from "@/ts/utils";
-import "./FoodPlaceList.scss";
+import styles from "./FoodPlaceList.module.scss";
 
 interface IFoodPlaceListProps {
     foodPlaceList: FoodPlaceModel[];
@@ -18,7 +18,7 @@ const FoodPlaceList: FC<IFoodPlaceListProps> = (props) => {
     const isMobile = useIsMobile();
 
     return (
-        <ul className="food-place-list flex-row justify-content-center">
+        <ul className={styles.foodPlaceList}>
             {props.foodPlaceList.map((t) => (
                 <li key={t.name}>
                     <FoodPlaceCardFullscreenWrapper
