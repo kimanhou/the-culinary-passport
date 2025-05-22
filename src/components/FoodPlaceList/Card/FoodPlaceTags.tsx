@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Tag from "@/components/common/Tag/Tag";
+import styles from "./FoodPlaceTags.module.scss";
 
 interface IFoodPlaceTagsProps {
     tags: string[];
@@ -7,7 +8,7 @@ interface IFoodPlaceTagsProps {
 
 const FoodPlaceTags: FC<IFoodPlaceTagsProps> = (props) => {
     return (
-        <ul className="food-place-tags flex-row">
+        <ul className={styles.foodPlaceTags}>
             {props.tags.map((tag, i) => (
                 <Tag key={i.toString()} text={tag} />
             ))}
