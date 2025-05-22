@@ -8,21 +8,30 @@ import Chat, { ChatMessageType } from "@/components/Chat/Chat";
 import BottomNotification from "@/components/common/BottomNotification/BottomNotification";
 import CityModel from "@/model/City";
 import { useIsMobile } from "@/hooks/useMedia";
+import { getAllMessagesFromDb } from "@/ts/indexedDbUtils";
 import "./App.scss";
 
 function App() {
     const isMobile = useIsMobile();
     const [cities, setCities] = useState<CityModel[]>([]);
     const [isChatVisible, setIsChatVisible] = useState(false);
-    const [chatMessages, setChatMessages] = useState<ChatMessageType[]>([
-        { isUser: false, text: "Hello! How can I help you today?" },
-    ]);
+    const [chatMessages, setChatMessages] = useState<ChatMessageType[]>([]);
 
     useEffect(() => {
         fetch("./cities.json")
             .then((response) => response.json())
             .then((json) => json.map((x: any) => CityModel.deserialize(x)))
             .then((t) => setCities(t));
+    }, []);
+
+    useEffect(() => {
+        const myAsyncFunc = async () => {
+            const messagesFromDb = await getAllMessagesFromDb();
+            if (messagesFromDb !== undefined) {
+                setChatMessages(messagesFromDb);
+            }
+        };
+        myAsyncFunc();
     }, []);
 
     return (
