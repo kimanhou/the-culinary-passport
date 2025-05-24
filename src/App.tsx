@@ -8,7 +8,7 @@ import Chat, { ChatMessageType } from "@/components/Chat/Chat";
 import BottomNotification from "@/components/common/BottomNotification/BottomNotification";
 import CityModel from "@/model/City";
 import { useIsMobile } from "@/hooks/useMedia";
-import { getAllMessagesFromDb } from "@/ts/indexedDbUtils";
+import { getAllMessagesFromDb, initDb } from "@/ts/indexedDbUtils";
 import "./App.scss";
 
 function App() {
@@ -25,13 +25,14 @@ function App() {
     }, []);
 
     useEffect(() => {
-        const myAsyncFunc = async () => {
+        const initDbAsyncFunc = async () => {
+            await initDb();
             const messagesFromDb = await getAllMessagesFromDb();
             if (messagesFromDb !== undefined) {
                 setChatMessages(messagesFromDb);
             }
         };
-        myAsyncFunc();
+        initDbAsyncFunc();
     }, []);
 
     return (
