@@ -3,7 +3,7 @@ import FoodPlaceModel from "@/model/FoodPlace";
 import FoodPlaceCard from "@/components/FoodPlaceList/Card/FoodPlaceCard";
 import { getFoodPlaceId } from "@/ts/utils";
 import { CityEnum, ToastNotificationEnum } from "@/ts/enum";
-import "./FoodPlaceCardFullscreenWrapper.scss";
+import styles from "./FoodPlaceCardFullscreenWrapper.module.scss";
 
 interface IFoodPlaceCardFullscreenWrapperProps {
     city: CityEnum;
@@ -20,15 +20,15 @@ const FoodPlaceCardFullscreenWrapper: FC<
     const [height, setHeight] = useState("calc(200px + 300px + 2rem)");
 
     const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
-    const isFullScreenClassName = isFullScreen ? "full-screen" : "";
+    const isFullScreenClassName = isFullScreen ? styles.fullScreen : "";
 
     return (
         <div
-            className={`food-place-card-wrapper`}
+            className={styles.foodPlaceCardWrapper}
             id={`food-place-${foodPlaceId}`}
         >
             <div
-                className="food-place-card-placeholder"
+                className={styles.foodPlaceCardPlaceholder}
                 style={{ height }}
             ></div>
             <FoodPlaceCard
@@ -41,7 +41,7 @@ const FoodPlaceCardFullscreenWrapper: FC<
                 showToast={props.showToast}
             />
             <div
-                className={`full-screen-background ${isFullScreenClassName}`}
+                className={`${styles.fullScreenBackground} ${isFullScreenClassName}`}
             ></div>
         </div>
     );

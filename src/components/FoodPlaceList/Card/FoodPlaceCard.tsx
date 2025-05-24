@@ -15,7 +15,7 @@ import { CityEnum, ToastNotificationEnum } from "@/ts/enum";
 import { getFoodPlaceId, getFullScreenLink } from "@/ts/utils";
 import { getLocalStoragePlaceId, isLiked } from "@/ts/favouriteUtils";
 import CloseIcon from "@/assets/CloseIcon";
-import "./FoodPlaceCard.scss";
+import styles from "./FoodPlaceCard.module.scss";
 
 interface IFoodPlaceCardProps {
     city: CityEnum;
@@ -48,7 +48,7 @@ const FoodPlaceCard: FC<IFoodPlaceCardProps> = (props) => {
     );
     const [isReadLessVisible, setIsReadLessVisible] = useState(false);
 
-    const isFullScreenClassName = props.isFullScreen ? "full-screen" : "";
+    const isFullScreenClassName = props.isFullScreen ? styles.fullScreen : "";
     const foodPlaceId = getFoodPlaceId(props.foodPlace.name);
     const localStoragePlaceId = getLocalStoragePlaceId({
         city: props.city,
@@ -130,7 +130,7 @@ const FoodPlaceCard: FC<IFoodPlaceCardProps> = (props) => {
 
     return (
         <div
-            className={`food-place-card ${isFullScreenClassName}`}
+            className={`${styles.foodPlaceCard} ${isFullScreenClassName}`}
             ref={cardRef}
         >
             {props.foodPlace.images && (
@@ -144,12 +144,9 @@ const FoodPlaceCard: FC<IFoodPlaceCardProps> = (props) => {
                 />
             )}
 
-            <div
-                className="food-place-card-content flex-column"
-                style={{ maxHeight }}
-            >
+            <div className={styles.foodPlaceCardContent} style={{ maxHeight }}>
                 {props.isFullScreen && (
-                    <span className={"close-button-wrapper"}>
+                    <span className={styles.closeButtonWrapper}>
                         <CloseIcon onClick={closeFullScreen} />
                     </span>
                 )}
@@ -162,7 +159,7 @@ const FoodPlaceCard: FC<IFoodPlaceCardProps> = (props) => {
                         props.foodPlace.price,
                     ].filter((t) => t !== "")}
                 />
-                <div className="food-place-card-description-wrapper flex-1">
+                <div className={styles.foodPlaceCardDescriptionWrapper}>
                     <p
                         style={{ WebkitLineClamp: lineClamp }}
                         ref={descriptionRef}

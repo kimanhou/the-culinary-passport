@@ -6,7 +6,7 @@ import {
     faChevronRight,
     faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import "./FoodPlaceImages.scss";
+import styles from "./FoodPlaceImages.module.scss";
 
 interface IFoodPlaceImagesProps {
     images: string[];
@@ -19,7 +19,7 @@ interface IFoodPlaceImagesProps {
 
 const FoodPlaceImages: FC<IFoodPlaceImagesProps> = (props) => {
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
-    const isFullScreenClassName = props.isFullScreen ? "full-screen" : "";
+    const isFullScreenClassName = props.isFullScreen ? styles.fullScreen : "";
     const imageWidth = props.isFullScreen
         ? (window.innerWidth * 30) / 100 // 30vw
         : 300; // 300px
@@ -53,18 +53,18 @@ const FoodPlaceImages: FC<IFoodPlaceImagesProps> = (props) => {
 
     return (
         <div
-            className={`food-place-images-wrapper flex-column ${isFullScreenClassName}`}
+            className={`${styles.foodPlaceImagesWrapper} ${isFullScreenClassName}`}
         >
-            <div className="food-place-images-container">
-                <div id={imagesId} className={`food-place-images flex-row`}>
-                    <span className="heart-wrapper">
+            <div className={styles.foodPlaceImagesContainer}>
+                <div id={imagesId} className={styles.foodPlaceImages}>
+                    <span className={styles.heartWrapper}>
                         <Heart
                             isFilled={props.isLiked}
                             setInLocalStorage={props.onLike}
                         />
                     </span>
                     {props.images.map((image, i) => (
-                        <div className="food-place-image-container" key={i}>
+                        <div className={styles.foodPlaceImageContainer} key={i}>
                             <FoodPlaceImage
                                 src={image}
                                 index={i}
@@ -78,7 +78,7 @@ const FoodPlaceImages: FC<IFoodPlaceImagesProps> = (props) => {
                     <>
                         {canPrevious && (
                             <button
-                                className="carousel-button carousel-button-prev flex-row align-items-center justify-content-center"
+                                className={`${styles.carouselButton} ${styles.carouselButtonPrev}`}
                                 onClick={onClickPrevious}
                             >
                                 <FontAwesomeIcon icon={faChevronLeft} />
@@ -86,7 +86,7 @@ const FoodPlaceImages: FC<IFoodPlaceImagesProps> = (props) => {
                         )}
                         {canNext && (
                             <button
-                                className="carousel-button carousel-button-next flex-row align-items-center justify-content-center"
+                                className={`${styles.carouselButton} ${styles.carouselButtonNext}`}
                                 onClick={onClickNext}
                             >
                                 <FontAwesomeIcon icon={faChevronRight} />
@@ -96,11 +96,11 @@ const FoodPlaceImages: FC<IFoodPlaceImagesProps> = (props) => {
                 )}
             </div>
             {props.images.length > 1 && (
-                <div className="carousel-dots">
+                <div className={styles.carouselDots}>
                     {props.images.map((t, i) => (
                         <span
-                            className={`dot ${
-                                selectedIndex === i ? "selected" : ""
+                            className={`${styles.dot} ${
+                                selectedIndex === i ? styles.selected : ""
                             }`}
                             key={i}
                         ></span>

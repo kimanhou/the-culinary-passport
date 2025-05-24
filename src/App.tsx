@@ -9,7 +9,7 @@ import BottomNotification from "@/components/common/BottomNotification/BottomNot
 import CityModel from "@/model/City";
 import { useIsMobile } from "@/hooks/useMedia";
 import { getAllMessagesFromDb, initDb } from "@/ts/indexedDbUtils";
-import "./App.scss";
+import styles from "./App.module.scss";
 
 function App() {
     const isMobile = useIsMobile();
@@ -36,7 +36,7 @@ function App() {
     }, []);
 
     return (
-        <div className={`app-container`}>
+        <div className={styles.appContainer}>
             <HashRouter>
                 <Header cities={cities} setIsChatVisible={setIsChatVisible} />
                 <Routes>

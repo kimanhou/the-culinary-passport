@@ -5,12 +5,23 @@ $imageHeight: 200px;
 $fullScreenImageHeight: 100%;
 
 .food-place-images-wrapper {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+
+    &:hover {
+        > .food-place-images-container {
+            > .carousel-button {
+                opacity: 0.8;
+            }
+        }
+    }
     > .food-place-images-container {
         height: $imageHeight;
         width: $imageWidth;
         position: relative;
         > .food-place-images {
+            display: flex;
             height: $imageHeight;
             width: $imageWidth;
             overflow: hidden;
@@ -32,6 +43,9 @@ $fullScreenImageHeight: 100%;
             }
         }
         > .carousel-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -52,6 +66,7 @@ $fullScreenImageHeight: 100%;
             &.carousel-button-next {
                 right: 0.4rem;
             }
+
             &:hover {
                 opacity: 1;
             }

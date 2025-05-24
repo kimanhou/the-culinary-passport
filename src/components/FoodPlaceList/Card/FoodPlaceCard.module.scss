@@ -6,6 +6,8 @@
     overflow: hidden;
     transition: all 0.8s;
     > .food-place-card-content {
+        display: flex;
+        flex-direction: column;
         padding: 1rem;
         text-align: left;
         min-height: 300px;
@@ -34,6 +36,7 @@
         }
         .food-place-card-description-wrapper {
             margin-bottom: 2rem;
+            flex: 1;
             > p {
                 margin-block: 0;
                 display: -webkit-box;
