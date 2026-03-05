@@ -1,0 +1,50 @@
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--color-light-grey);
+}
+
+.chat-input-field {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--color-light-grey);
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+
+  &:focus {
+    border-color: var(--color-primary-4);
+  }
+
+  &:disabled {
+    background-color: var(--color-light-grey);
+    cursor: not-allowed;
+  }
+}
+
+.chat-send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-primary-4);
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 14px;
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-primary-5);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
