@@ -2,9 +2,13 @@ version: '2.4'
 
 services:
   the-culinary-passport:
-    image: the-culinary-passport
+    build: .
     ports:
       - "3000:3000"
     volumes:
-      - './public/data_paris.json:/app/public/data_paris.json'
-      - './public/data_montreal.json:/app/public/data_montreal.json'
+      - './src:/app/src'
+      - './public:/app/public'
+    env_file:
+      - .env
+    environment:
+      - CHOKIDAR_USEPOLLING=true
