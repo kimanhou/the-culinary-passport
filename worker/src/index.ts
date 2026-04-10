@@ -4,6 +4,24 @@ interface Env {
 }
 
 const MISTRAL_API_URL = "https://api.mistral.ai/v1/chat/completions";
+const RATE_LIMIT = 10; // max requests per IP per window
+const RATE_WINDOW_MS = 60_000; // 1 minute
+
+// In-memory rate limiter (resets on cold start, good enough for side project)
+const ipCounts = new Map<string, { count: number; resetAt: number }>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = ipCounts.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    ipCounts.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    return false;
+  }
+
+  entry.count++;
+  return entry.count > RATE_LIMIT;
+}
 
 function corsHeaders(origin: string, allowedOrigin: string): Record<string, string> {
   const isAllowed = origin === allowedOrigin || allowedOrigin === "*";
@@ -19,13 +37,21 @@ export default {
     const origin = request.headers.get("Origin") || "";
     const headers = corsHeaders(origin, env.ALLOWED_ORIGIN);
 
-    // Handle CORS preflight
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers });
     }
 
     if (request.method !== "POST") {
       return new Response("Method not allowed", { status: 405, headers });
+    }
+
+    // Rate limit by IP
+    const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+    if (isRateLimited(ip)) {
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please wait a moment." }),
+        { status: 429, headers: { ...headers, "Content-Type": "application/json" } }
+      );
     }
 
     try {
