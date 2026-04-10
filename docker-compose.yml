@@ -2,9 +2,23 @@ version: '2.4'
 
 services:
   the-culinary-passport:
-    image: the-culinary-passport
+    build: .
     ports:
       - "3000:3000"
     volumes:
-      - './public/data_paris.json:/app/public/data_paris.json'
-      - './public/data_montreal.json:/app/public/data_montreal.json'
+      - './src:/app/src'
+      - './public:/app/public'
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_CHAT_API_URL=http://localhost:8787
+    depends_on:
+      - worker
+
+  worker:
+    build: ./worker
+    command: ["node", "src/local-proxy.js"]
+    ports:
+      - "8787:8787"
+    volumes:
+      - './worker/src:/app/src'
+      - './worker/.dev.vars:/app/.dev.vars'

@@ -11,6 +11,7 @@ import Map from "components/Map/Map";
 import ToastList from "components/ToastNotification/List/ToastList";
 import { useToastNotifications } from "hooks/useToastNotifications";
 import { POSITION } from "components/ToastNotification/constants";
+import ChatWidget from "components/Chat/ChatWidget";
 import "./City.scss";
 
 interface ICityProps {
@@ -85,6 +86,7 @@ const City: React.FC<ICityProps> = (props) => {
                                 />
                             )}
                         </SideSheet>
+                        <ChatWidget cityName={props.city.name} foodPlaces={foodPlaceList} />
                     </>
                 )}
             </LoadData>
