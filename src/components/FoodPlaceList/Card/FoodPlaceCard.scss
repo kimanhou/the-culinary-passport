@@ -84,5 +84,14 @@
                 }
             }
         }
+
+        @media (max-width: 480px) {
+            width: 95vw;
+            min-height: auto;
+            max-height: 90vh;
+            border-radius: 8px;
+            flex-direction: column;
+            overflow-y: auto;
+        }
     }
 }
