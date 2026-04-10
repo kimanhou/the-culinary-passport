@@ -19,44 +19,44 @@ interface IFoodPlaceImagesProps {
 
 const FoodPlaceImages: React.FC<IFoodPlaceImagesProps> = (props) => {
     const [selectedIndex, setSelectedIndex] = useState<number>(0);
-    const isFullScreenClassName = props.isFullScreen ? "full-screen" : "";
-    const imageWidth = props.isFullScreen
-        ? (window.innerWidth * 30) / 100 // 30vw
-        : 300; // 300px
+    const imagesContainerRef = React.useRef<HTMLDivElement>(null);
 
     const canPrevious = props.images.length > 1 && selectedIndex > 0;
     const canNext =
         props.images.length > 1 && selectedIndex < props.images.length - 1;
 
+    const scrollToImage = (index: number) => {
+        const container = imagesContainerRef.current;
+        if (!container) return;
+        const scrollValue = container.clientWidth;
+        container.scrollTo({
+            left: index * scrollValue,
+            behavior: "smooth",
+        });
+    };
+
     const onClickPrevious = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation();
-        setSelectedIndex((t) => t - 1);
-        scrollToImage(selectedIndex - 1);
+        const newIndex = selectedIndex - 1;
+        setSelectedIndex(newIndex);
+        scrollToImage(newIndex);
     };
 
     const onClickNext = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation();
-        setSelectedIndex((t) => t + 1);
-        scrollToImage(selectedIndex + 1);
+        const newIndex = selectedIndex + 1;
+        setSelectedIndex(newIndex);
+        scrollToImage(newIndex);
     };
 
-    const imagesId = `food-place-images-${props.foodPlaceId}`;
-
-    const scrollToImage = (selectedIndex: number) => {
-        const scrollValue =
-            window.innerWidth < 600 ? window.innerWidth - 16 : imageWidth;
-        document.querySelector(`#${imagesId}`)?.scrollTo({
-            left: selectedIndex * scrollValue,
-            behavior: "smooth",
-        });
-    };
+    const isFullScreenClassName = props.isFullScreen ? "full-screen" : "";
 
     return (
         <div
             className={`food-place-images-wrapper flex-column ${isFullScreenClassName}`}
         >
             <div className="food-place-images-container">
-                <div id={imagesId} className={`food-place-images flex-row`}>
+                <div ref={imagesContainerRef} className={`food-place-images flex-row`}>
                     <Heart
                         isFilled={props.isLiked}
                         setInLocalStorage={props.onLike}
