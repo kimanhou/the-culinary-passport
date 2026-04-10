@@ -52,3 +52,29 @@ With Docker, you can run the app locally without installing npm.
 To build the Docker image, run `docker build . -t the-culinary-passport`
 
 To run the Docker image in detached mode, run `docker-compose up -d`
+
+## Deploying the Cloudflare Worker
+
+The worker Docker image is for local development only. To deploy to Cloudflare, run wrangler from the worker directory on the host:
+
+```bash
+cd worker
+npx wrangler login    # first time only
+npx wrangler deploy
+```
+
+Secrets (like `MISTRAL_API_KEY`) are managed via `npx wrangler secret put <NAME>` and are not stored in code.
+
+## Cloudflare Worker Security
+
+The Worker enforces geo-blocking at the application level. Only requests from allowed countries reach the Mistral API. All others get a 403.
+
+To add or remove allowed countries, edit the `ALLOWED_COUNTRIES` set in `worker/src/index.ts`:
+
+```typescript
+const ALLOWED_COUNTRIES = new Set(["CA", "FR"]);
+```
+
+Use ISO 3166-1 alpha-2 country codes. After editing, redeploy the Worker.
+
+Note: WAF-level geo-blocking is not available because the Worker runs on a `workers.dev` subdomain (no custom domain). This is why the check is done in code.

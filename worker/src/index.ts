@@ -7,6 +7,9 @@ const MISTRAL_API_URL = "https://api.mistral.ai/v1/chat/completions";
 const RATE_LIMIT = 10; // max requests per IP per window
 const RATE_WINDOW_MS = 60_000; // 1 minute
 
+// Allowed countries — add country codes here to expand access
+const ALLOWED_COUNTRIES = new Set(["CA", "FR"]);
+
 // In-memory rate limiter (resets on cold start, good enough for side project)
 const ipCounts = new Map<string, { count: number; resetAt: number }>();
 
@@ -43,6 +46,12 @@ export default {
 
     if (request.method !== "POST") {
       return new Response("Method not allowed", { status: 405, headers });
+    }
+
+    // Geo-block: reject requests from non-allowed countries
+    const country = (request as any).cf?.country as string | undefined;
+    if (country && !ALLOWED_COUNTRIES.has(country)) {
+      return new Response("Forbidden", { status: 403, headers });
     }
 
     // Rate limit by IP
