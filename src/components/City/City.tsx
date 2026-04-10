@@ -86,7 +86,7 @@ const City: React.FC<ICityProps> = (props) => {
                                 />
                             )}
                         </SideSheet>
-                        <ChatWidget cityName={props.city.name} foodPlaces={foodPlaceList} />
+                        <ChatWidget cityName={props.city.name} foodPlaces={foodPlaceList} showToast={showToast} />
                     </>
                 )}
             </LoadData>

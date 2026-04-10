@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { ChatMessage, buildWelcomeMessage } from "model/ChatMessage";
@@ -7,18 +7,40 @@ import { buildSystemPrompt } from "api/buildSystemPrompt";
 import ChatInput from "components/Chat/ChatInput";
 import { formatMessage } from "components/Chat/formatMessage";
 import FoodPlace from "model/FoodPlace";
+import { getFoodPlaceId } from "ts/utils";
+import { CityEnum, ToastNotificationEnum } from "ts/enum";
+import FoodPlaceCardFullscreenWrapper from "components/FoodPlaceList/Card/FoodPlaceCardFullscreenWrapper";
 import "./ChatPanel.scss";
 
 interface ChatPanelProps {
   cityName: string;
   foodPlaces: FoodPlace[];
   onClose: () => void;
+  onLike?: (foodPlaceId: number) => void;
+  showToast?: (message: string, type: ToastNotificationEnum) => void;
 }
 
-const ChatPanel: React.FC<ChatPanelProps> = ({ cityName, foodPlaces, onClose }) => {
+const ChatPanel: React.FC<ChatPanelProps> = ({
+  cityName,
+  foodPlaces,
+  onClose,
+  onLike = () => {},
+  showToast = () => {},
+}) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedFoodPlace, setSelectedFoodPlace] = useState<FoodPlace | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const slugMap = useMemo(() => {
+    const map = new Map<string, FoodPlace>();
+    foodPlaces.forEach((fp) => map.set(getFoodPlaceId(fp.name), fp));
+    return map;
+  }, [foodPlaces]);
+
+  const onOpenCard = useCallback((fp: FoodPlace) => {
+    setSelectedFoodPlace(fp);
+  }, []);
 
   const apiUrl = process.env.REACT_APP_CHAT_API_URL;
   const isAvailable = Boolean(apiUrl);
@@ -72,7 +94,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ cityName, foodPlaces, onClose }) 
         )}
         {messages.map((msg, index) => (
           <div key={index} className={`chat-message chat-message--${msg.role}`}>
-            {formatMessage(msg.content)}
+            {formatMessage(msg.content, slugMap, onOpenCard)}
           </div>
         ))}
         {isLoading && (
@@ -86,6 +108,25 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ cityName, foodPlaces, onClose }) 
       </div>
 
       <ChatInput onSend={handleSend} disabled={!isAvailable || isLoading} />
+
+      {selectedFoodPlace && (
+        <div
+          className="chat-card-overlay"
+          onClick={() => setSelectedFoodPlace(null)}
+          role="dialog"
+          aria-label="Restaurant card"
+        >
+          <div onClick={(e) => e.stopPropagation()}>
+            <FoodPlaceCardFullscreenWrapper
+              city={cityName as CityEnum}
+              foodPlace={selectedFoodPlace}
+              onLike={onLike}
+              isFullScreen={true}
+              showToast={showToast}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
