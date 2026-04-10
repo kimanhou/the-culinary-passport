@@ -31,6 +31,16 @@
         > .food-place-tags {
             margin-bottom: 2rem;
         }
+        > .places-loading-skeleton {
+            margin-bottom: 0.6rem;
+            .skeleton-line {
+                width: 120px;
+                height: 14px;
+                border-radius: 4px;
+                background: var(--color-grey-light, #e0e0e0);
+                animation: skeleton-pulse 1.2s ease-in-out infinite;
+            }
+        }
         .food-place-card-description-wrapper {
             margin-bottom: 2rem;
             > p {
@@ -94,4 +104,10 @@
             overflow-y: auto;
         }
     }
+}
+
+
+@keyframes skeleton-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
 }

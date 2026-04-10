@@ -18,6 +18,11 @@ export default class FoodPlace {
     coordinates?: LatLngExpression;
     stayType?: StayEnum;
 
+    // Runtime fields — populated from Google Places API, not from JSON data files
+    googleRating: number | null = null;
+    googleReviewCount: number | null = null;
+    suggestedDishes: string[] = [];
+
     constructor(
         id: number,
         name: string,

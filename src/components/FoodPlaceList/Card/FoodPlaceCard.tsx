@@ -6,8 +6,11 @@ import React, {
     SetStateAction,
 } from "react";
 import { useIsMobile } from "hooks/useIsMobile";
+import { useGooglePlacesData } from "hooks/useGooglePlacesData";
 import FoodPlaceModel from "model/FoodPlace";
 import FoodPlaceTags from "./FoodPlaceTags";
+import RatingDisplay from "./RatingDisplay";
+import DishesDisplay from "./DishesDisplay";
 import FoodPlaceIcons from "./Icons/FoodPlaceIcons";
 import FoodPlaceImages from "./Images/FoodPlaceImages";
 import { CityEnum, ToastNotificationEnum } from "ts/enum";
@@ -31,6 +34,33 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
 
     const cardRef = useRef<HTMLDivElement>(null);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    // IntersectionObserver to detect card visibility
+    useEffect(() => {
+        const node = cardRef.current;
+        if (!node) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.1 }
+        );
+        observer.observe(node);
+        return () => observer.disconnect();
+    }, []);
+
+    const placesEnabled = isVisible || props.isFullScreen;
+    const { data: placesData, isLoading: placesLoading } = useGooglePlacesData(
+        props.foodPlace.name,
+        props.city,
+        placesEnabled
+    );
+
     const [lineClamp, setLineClamp] = useState<number | undefined>(
         props.isFullScreen ? undefined : 4
     );
@@ -150,6 +180,17 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                 {props.isFullScreen && <CloseIcon onClick={closeFullScreen} />}
                 <h5>{props.foodPlace.neighborhood}</h5>
                 <h3 onClick={onClickName}>{props.foodPlace.name}</h3>
+                {placesLoading && (
+                    <div className="places-loading-skeleton">
+                        <div className="skeleton-line" />
+                    </div>
+                )}
+                {!placesLoading && placesData && (
+                    <RatingDisplay
+                        rating={placesData.rating}
+                        reviewCount={placesData.userRatingCount}
+                    />
+                )}
                 <FoodPlaceTags
                     tags={[
                         ...props.foodPlace.tags,
@@ -157,6 +198,12 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
                         props.foodPlace.price,
                     ].filter((t) => t !== "")}
                 />
+                {!placesLoading && placesData && props.isFullScreen && (
+                    <DishesDisplay
+                        dishes={placesData.dishes}
+                        maxItems={5}
+                    />
+                )}
                 <div className="food-place-card-description-wrapper flex-1">
                     <p
                         style={{ WebkitLineClamp: lineClamp }}

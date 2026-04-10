@@ -1,0 +1,21 @@
+.rating-display {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+
+    .rating-display-star {
+        color: var(--color-primary-2);
+        font-size: 0.85rem;
+    }
+
+    .rating-display-value {
+        font-weight: 600;
+    }
+
+    .rating-display-count {
+        color: var(--color-grey);
+        font-size: 0.8rem;
+    }
+}

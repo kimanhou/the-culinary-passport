@@ -1,5 +1,8 @@
-interface Env {
+import { placesHandler } from "./placesHandler";
+
+export interface Env {
   MISTRAL_API_KEY: string;
+  GOOGLE_PLACES_API_KEY: string;
   ALLOWED_ORIGIN: string;
 }
 
@@ -30,9 +33,54 @@ function corsHeaders(origin: string, allowedOrigin: string): Record<string, stri
   const isAllowed = origin === allowedOrigin || allowedOrigin === "*";
   return {
     "Access-Control-Allow-Origin": isAllowed ? origin : "",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
   };
+}
+
+/**
+ * Handles POST / — Mistral chat completions proxy (unchanged behavior).
+ */
+async function mistralChatHandler(
+  request: Request,
+  env: Env,
+  headers: Record<string, string>
+): Promise<Response> {
+  try {
+    const body = (await request.json()) as { messages: unknown[] };
+
+    if (!body.messages || !Array.isArray(body.messages)) {
+      return new Response(
+        JSON.stringify({ error: "messages array is required" }),
+        { status: 400, headers: { ...headers, "Content-Type": "application/json" } }
+      );
+    }
+
+    const mistralResponse = await fetch(MISTRAL_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${env.MISTRAL_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "mistral-small-latest",
+        messages: body.messages,
+      }),
+    });
+
+    const data = await mistralResponse.text();
+
+    return new Response(data, {
+      status: mistralResponse.status,
+      headers: { ...headers, "Content-Type": "application/json" },
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Unknown error";
+    return new Response(
+      JSON.stringify({ error: message }),
+      { status: 500, headers: { ...headers, "Content-Type": "application/json" } }
+    );
+  }
 }
 
 export default {
@@ -40,12 +88,14 @@ export default {
     const origin = request.headers.get("Origin") || "";
     const headers = corsHeaders(origin, env.ALLOWED_ORIGIN);
 
+    // CORS preflight — handle for any path
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers });
     }
 
-    if (request.method !== "POST") {
-      return new Response("Method not allowed", { status: 405, headers });
+    // Validate request origin against ALLOWED_ORIGIN
+    if (origin && origin !== env.ALLOWED_ORIGIN && env.ALLOWED_ORIGIN !== "*") {
+      return new Response("Forbidden", { status: 403, headers });
     }
 
     // Geo-block: reject requests from non-allowed countries
@@ -63,40 +113,18 @@ export default {
       );
     }
 
-    try {
-      const body = await request.json() as { messages: unknown[] };
+    // Route based on pathname and method
+    const url = new URL(request.url);
+    const { pathname } = url;
 
-      if (!body.messages || !Array.isArray(body.messages)) {
-        return new Response(
-          JSON.stringify({ error: "messages array is required" }),
-          { status: 400, headers: { ...headers, "Content-Type": "application/json" } }
-        );
-      }
-
-      const mistralResponse = await fetch(MISTRAL_API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${env.MISTRAL_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: "mistral-small-latest",
-          messages: body.messages,
-        }),
-      });
-
-      const data = await mistralResponse.text();
-
-      return new Response(data, {
-        status: mistralResponse.status,
-        headers: { ...headers, "Content-Type": "application/json" },
-      });
-    } catch (err) {
-      const message = err instanceof Error ? err.message : "Unknown error";
-      return new Response(
-        JSON.stringify({ error: message }),
-        { status: 500, headers: { ...headers, "Content-Type": "application/json" } }
-      );
+    if (pathname === "/" && request.method === "POST") {
+      return mistralChatHandler(request, env, headers);
     }
+
+    if (pathname === "/places" && request.method === "GET") {
+      return placesHandler(request, env, headers);
+    }
+
+    return new Response("Not Found", { status: 404, headers });
   },
 };
