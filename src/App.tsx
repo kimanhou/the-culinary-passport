@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import City from "./components/City/City";
 import CityModel from "./model/City";
 import { useIsMobile } from "hooks/useIsMobile";
+import AdminPage from "./components/Admin/AdminPage";
 import "./App.scss";
 
 function App() {
@@ -44,6 +45,10 @@ function App() {
                         path={"/"}
                         element={<Home cities={cities} />}
                     ></Route>
+
+                    {process.env.REACT_APP_LOCAL_ADMIN === 'true' && (
+                        <Route path="/admin" element={<AdminPage />} />
+                    )}
                 </Routes>
                 <Footer />
             </HashRouter>
