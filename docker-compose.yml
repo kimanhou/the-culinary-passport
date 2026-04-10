@@ -12,6 +12,7 @@ services:
       - CHOKIDAR_USEPOLLING=true
       - REACT_APP_CHAT_API_URL=http://localhost:8787
       - REACT_APP_PLACES_API_URL=http://localhost:8787/places
+      - REACT_APP_LOCAL_ADMIN=true
     depends_on:
       - worker
 
@@ -23,3 +24,4 @@ services:
     volumes:
       - './worker/src:/app/src'
       - './worker/.dev.vars:/app/.dev.vars'
+      - './public:/app/public'
