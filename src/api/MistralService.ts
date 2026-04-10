@@ -1,14 +1,12 @@
 /**
- * Service module for communicating with the Mistral AI chat completion API.
- *
- * Requirements: 6.1, 6.2, 6.3, 2.1
+ * Service module for communicating with the Mistral AI via Cloudflare Worker proxy.
  */
 
 import { ChatMessage } from 'model/ChatMessage';
 
 export type { ChatMessage };
 
-const MISTRAL_API_URL = 'https://api.mistral.ai/v1/chat/completions';
+const API_URL = process.env.REACT_APP_CHAT_API_URL || '';
 
 interface MistralChatResponse {
   choices: Array<{
@@ -20,23 +18,22 @@ interface MistralChatResponse {
 }
 
 export async function sendMessage(
-  messages: ChatMessage[],
-  apiKey: string
+  messages: ChatMessage[]
 ): Promise<string> {
-  const response = await fetch(MISTRAL_API_URL, {
+  if (!API_URL) {
+    throw new Error('Chat API URL not configured');
+  }
+
+  const response = await fetch(API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${apiKey}`,
     },
-    body: JSON.stringify({
-      model: 'mistral-small-latest',
-      messages,
-    }),
+    body: JSON.stringify({ messages }),
   });
 
   if (!response.ok) {
-    throw new Error(`Mistral API error: ${response.status}`);
+    throw new Error(`Chat API error: ${response.status}`);
   }
 
   const data: MistralChatResponse = await response.json();

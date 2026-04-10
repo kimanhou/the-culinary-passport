@@ -20,8 +20,8 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ cityName, foodPlaces, onClose }) 
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const apiKey = process.env.REACT_APP_MISTRAL_API_KEY;
-  const isAvailable = Boolean(apiKey);
+  const apiUrl = process.env.REACT_APP_CHAT_API_URL;
+  const isAvailable = Boolean(apiUrl);
 
   useEffect(() => {
     setMessages([buildWelcomeMessage(cityName)]);
@@ -41,7 +41,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ cityName, foodPlaces, onClose }) 
       const systemMessage: ChatMessage = { role: "system", content: systemPrompt };
       const apiMessages = [systemMessage, ...messages, userMessage];
 
-      const response = await sendMessage(apiMessages, apiKey!);
+      const response = await sendMessage(apiMessages);
       const assistantMessage: ChatMessage = { role: "assistant", content: response };
       setMessages((prev) => [...prev, assistantMessage]);
     } catch {
@@ -53,7 +53,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ cityName, foodPlaces, onClose }) 
     } finally {
       setIsLoading(false);
     }
-  }, [cityName, foodPlaces, apiKey, messages]);
+  }, [cityName, foodPlaces, messages]);
 
   return (
     <div className="chat-panel">
@@ -67,7 +67,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ cityName, foodPlaces, onClose }) 
       <div className="chat-panel-messages">
         {!isAvailable && (
           <div className="chat-unavailable">
-            Chat is currently unavailable. Please configure the API key.
+            Chat is currently unavailable. Please try again later.
           </div>
         )}
         {messages.map((msg, index) => (
