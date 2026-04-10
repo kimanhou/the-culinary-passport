@@ -1,0 +1,10 @@
+name = "culinary-passport-api"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ALLOWED_ORIGIN = "https://kimanhou.github.io"
+
+[env.production.vars]
+ALLOWED_ORIGIN = "https://kimanhou.github.io"
