@@ -9,7 +9,7 @@ import { formatMessage } from "components/Chat/formatMessage";
 import FoodPlace from "model/FoodPlace";
 import { getFoodPlaceId } from "ts/utils";
 import { CityEnum, ToastNotificationEnum } from "ts/enum";
-import FoodPlaceCardFullscreenWrapper from "components/FoodPlaceList/Card/FoodPlaceCardFullscreenWrapper";
+import FoodPlaceCard from "components/FoodPlaceList/Card/FoodPlaceCard";
 import "./ChatPanel.scss";
 
 interface ChatPanelProps {
@@ -116,12 +116,15 @@ const ChatPanel: React.FC<ChatPanelProps> = ({
           role="dialog"
           aria-label="Restaurant card"
         >
-          <div onClick={(e) => e.stopPropagation()}>
-            <FoodPlaceCardFullscreenWrapper
+          <div className="chat-card-inner" onClick={(e) => e.stopPropagation()}>
+            <FoodPlaceCard
               city={cityName as CityEnum}
               foodPlace={selectedFoodPlace}
               onLike={onLike}
               isFullScreen={true}
+              setIsFullScreen={(val) => {
+                if (!val) setSelectedFoodPlace(null);
+              }}
               showToast={showToast}
             />
           </div>
