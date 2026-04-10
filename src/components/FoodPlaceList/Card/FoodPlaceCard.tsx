@@ -179,7 +179,7 @@ const FoodPlaceCard: React.FC<IFoodPlaceCardProps> = (props) => {
             >
                 {props.isFullScreen && <CloseIcon onClick={closeFullScreen} />}
                 <h5>{props.foodPlace.neighborhood}</h5>
-                <h3 onClick={onClickName}>{props.foodPlace.name}</h3>
+                <h3 onClick={onClickName} role="button" tabIndex={0} data-nosnippet>{props.foodPlace.name}</h3>
                 {placesLoading && (
                     <div className="places-loading-skeleton">
                         <div className="skeleton-line" />

@@ -23,6 +23,8 @@
             cursor: pointer;
             white-space: nowrap;
             text-overflow: ellipsis;
+            -webkit-user-select: none;
+            user-select: none;
             &:hover {
                 text-decoration: underline;
                 text-underline-offset: 3px;
