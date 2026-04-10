@@ -8,7 +8,17 @@ services:
     volumes:
       - './src:/app/src'
       - './public:/app/public'
-    env_file:
-      - .env
     environment:
       - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_CHAT_API_URL=http://localhost:8787
+    depends_on:
+      - worker
+
+  worker:
+    build: ./worker
+    command: ["node", "src/local-proxy.js"]
+    ports:
+      - "8787:8787"
+    volumes:
+      - './worker/src:/app/src'
+      - './worker/.dev.vars:/app/.dev.vars'

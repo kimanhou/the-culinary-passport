@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          REACT_APP_MISTRAL_API_KEY: ${{ secrets.REACT_APP_MISTRAL_API_KEY }}
+          REACT_APP_CHAT_API_URL: ${{ secrets.REACT_APP_CHAT_API_URL }}
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
