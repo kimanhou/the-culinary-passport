@@ -8,7 +8,7 @@ const RATE_LIMIT = 10; // max requests per IP per window
 const RATE_WINDOW_MS = 60_000; // 1 minute
 
 // Allowed countries — add country codes here to expand access
-const ALLOWED_COUNTRIES = new Set(["CA", "FR"]);
+const ALLOWED_COUNTRIES = new Set(["CA", "FR", "JP"]);
 
 // In-memory rate limiter (resets on cold start, good enough for side project)
 const ipCounts = new Map<string, { count: number; resetAt: number }>();

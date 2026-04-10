@@ -10,7 +10,7 @@ ALLOWED_ORIGIN = "https://kimanhou.github.io"
 ALLOWED_ORIGIN = "https://kimanhou.github.io"
 
 [observability]
-enabled = false
+enabled = true
 head_sampling_rate = 1
 
 [observability.logs]

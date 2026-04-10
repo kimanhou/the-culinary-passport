@@ -72,7 +72,7 @@ The Worker enforces geo-blocking at the application level. Only requests from al
 To add or remove allowed countries, edit the `ALLOWED_COUNTRIES` set in `worker/src/index.ts`:
 
 ```typescript
-const ALLOWED_COUNTRIES = new Set(["CA", "FR"]);
+const ALLOWED_COUNTRIES = new Set(["CA", "FR", "JP"]);
 ```
 
 Use ISO 3166-1 alpha-2 country codes. After editing, redeploy the Worker.
